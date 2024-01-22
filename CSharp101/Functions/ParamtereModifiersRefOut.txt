@@ -1,0 +1,189 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Parameter Modifiers (ref vs out):
+________________________________________________________________________________________________________________________________________________________________________
+
+Ref Parametreleri: 
+
+*Değişken, metoda referans olarak geçer ve metotta yapılan değişiklikler değişkenin orijinal değerini değiştirir.
+*ref anahtar kelimesi, bir metodun parametreyi referans olarak almasını sağlar.
+*Bu, metodun parametreye yaptığı değişikliklerin, metod dışında da geçerli olacağı anlamına gelir.
+*Parametre, ref anahtar kelimesi ile geçirilmeden önce mutlaka başlatılmalıdır.
+*ref kullanarak değer türleri (value types) veya referans türleri (reference types) geçirebilirsiniz.
+*ref ile işaretlenmiş bir parametre, metoda referans olarak geçer. 
+Bu, metot içinde bu parametreye yapılan değişikliklerin metot dışındaki orijinal değişkeni de etkileyeceği anlamına gelir.
+*ref anahtar kelimesiyle metoda geçirilen değişkenin önceden değer ataması almış olması gereklidir.
+
+Kullanım Amaçları ve Senaryolar:
+
+*Bir metodun birden fazla değeri döndürmesi gerektiğinde.
+*Performans optimizasyonu için büyük veri yapılarını kopyalamadan referansını geçirmek istediğinizde.
+*Değişkenin değerini metod içinde değiştirip, bu değişikliğin metod dışında da geçerli olmasını istediğinizde.
+
+void MetotAdi(ref [Tip] parametreAdi)
+{
+    // Kod bloğu
+}
+
+
+
+public void KareYap(ref int sayi)
+{
+    sayi = sayi * sayi;
+}
+
+*KareYap metodu, referans olarak alınan sayının karesini hesaplar ve orijinal değeri değiştirir.
+
+public class Example
+{
+    static void Main()
+    {
+        int number = 10;
+        AddFive(ref number);
+        Console.WriteLine(number); // Çıktı: 15
+    }
+
+    static void AddFive(ref int number)
+    {
+        number += 5;
+    }
+}
+
+*Bu örnekte, AddFive metodu number değişkenini referans olarak alır ve değerine 5 ekler.
+Main metodundaki number değişkeninin değeri, AddFive metodu çalıştıktan sonra 15 olur.
+
+static void Arttir(ref int sayi)
+{
+    sayi++;
+}
+
+int deger = 5;
+Arttir(ref deger);
+Console.WriteLine(deger);  // Çıktı: 6
+
+ Arttir metodu, ref anahtar kelimesiyle gelen sayi parametresini arttırır. deger isimli değişken metoda ref ile verildiği için, değişiklikler orijinal değişkeni de etkiler.
+________________________________________________________________________________________________________________________________________________________________________
+
+Out Parametreleri: 
+
+*out metota sadece değer döndürmek için referans olarak geçerler ve mutlaka metot içinde atama yapılmalıdır.
+*out anahtar kelimesi, bir metodun parametreyi "sadece çıktı" olarak almasını sağlar.
+*out parametreleri, metod içinde set edilmek zorundadır.
+*out parametreleri, metoda geçirilmeden önce başlatılmamış olabilir.
+*out kullanarak değer türleri veya referans türleri geçirebilirsiniz.,
+*out ile işaretlenmiş bir parametre de referans olarak geçer fakat bu
+parametrenin metot içinde değer ataması almadan kullanılmayacağı garantilidir.
+*out parametresine metot içinde mutlaka bir değer atanmalıdır.
+*out ile metoda geçirilen değişkenin önceden bir değere sahip olmasına gerek yoktur.
+
+Kullanım Amaçları ve Senaryolar:
+*Bir metodun birden fazla değeri döndürmesi gerektiğinde, ancak bu değerlerin metod içinde üretilmesi gerektiğinde.
+*Bir işlemin başarılı olup olmadığını ve aynı zamanda ekstra bilgileri döndürmek istediğinizde (örneğin, bir parsing işlemi).
+
+void MetotAdi(out [Tip] parametreAdi)
+{
+    // Kod bloğu
+    parametreAdi = [değer atama];
+}
+
+
+public bool SayiMi(out int sonuc)
+{
+    string giris = Console.ReadLine();
+    return int.TryParse(giris, out sonuc);
+}
+
+*SayiMi metodu, kullanıcıdan alınan bir girişi tamsayıya dönüştürmeye çalışır ve sonucu sonuc parametresinde döndürür.
+
+public class Example
+{
+    static void Main()
+    {
+        int result;
+        if (TryMultiply(10, 2, out result))
+        {
+            Console.WriteLine(result); // Çıktı: 20
+        }
+    }
+
+    static bool TryMultiply(int a, int b, out int result)
+    {
+        result = a * b;
+        return true;
+    }
+}
+
+Bu örnekte, TryMultiply metodu iki sayıyı çarpar ve sonucu out parametresi aracılığıyla döndürür. Ayrıca, işlemin başarılı olduğunu belirten bir bool değeri döndürür.
+
+static void Olustur(out int sayi)
+{
+    sayi = 10;
+}
+
+int deger;
+Olustur(out deger);
+Console.WriteLine(deger);  // Çıktı: 10
+
+Olustur metodu, out anahtar kelimesiyle gelen sayi parametresine değer ataması yapar. deger isimli değişken, değer ataması almadan metoda verilir ve metot içinde değer atanır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Ref vs Out:
+
+Benzerlikler:
+Her ikisi de metodlara referans türünde parametreler geçirmek için kullanılır.
+Her ikisi de değer türlerini veya referans türleri metodlara referans olarak geçirmenize olanak tanır.
+
+Farklar:
+ref parametreleri metoda geçirilmeden önce başlatılmalıdır; out parametreleri ise başlatılmamış olabilir.
+out parametreleri, metod içinde mutlaka değer ataması almak zorundadır; ref parametreleri için böyle bir zorunluluk yoktur.
+
+Kullanım Senaryoları:
+Eğer metodun, parametre üzerinde çalışmadan önce geçerli bir değere ihtiyacı varsa ve bu değeri değiştirmek istiyorsa, ref kullanmalısınız.
+Eğer metodun parametreyi sadece çıktı olarak kullanacağını biliyorsanız ve metod içinde bu parametreye bir değer atayacaksanız, out kullanmalısınız.
+________________________________________________________________________________________________________________________________________________________________________
+
+
+Ref with Out:
+
+public void BilgileriAl(out string isim, ref int yas)
+{
+    isim = Console.ReadLine();
+    yas++;
+}
+
+*Bu metot, isim için yeni bir değer alırken, yas için referans olarak alınan değerin üzerine bir ekler.
+*Bu metot, isim için yeni bir değer alırken, yas için referans olarak alınan değerin üzerine bir ekler.
+
+static void Islem(ref int a, out int sonuc)
+{
+    sonuc = a * 2;
+    a = 10;
+}
+
+int deger1 = 5;
+int deger2;
+Islem(ref deger1, out deger2);
+Console.WriteLine(deger1);  // Çıktı: 10
+Console.WriteLine(deger2);  // Çıktı: 10
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Ref vs Out Hatalı Kullanımlar:
+
+ref Kullanımının Hatalı Kullanımı:
+
+static void Test(ref int sayi) { }
+
+int deger;
+//Test(ref deger);  // Hata: deger, değer ataması almadan ref ile geçirilemez.
+
+out Kullanımının Hatalı Kullanımı:
+
+static void Test(out int sayi) 
+{ 
+    // Hata: sayi parametresi değer ataması almadan metot sonlandırılamaz.
+}
+
+
+________________________________________________________________________________________________________________________________________________________________________

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<BlogApp.UI.Models.VMs.KonuVMs.KonuListeleVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1 class="text-center">Konular</h1>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p class="text-center">
+                    <a class="btn btn-primary" asp-action="Create">Yeni Konu Ekle</a>
+                </p>
+            }
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                @Html.DisplayNameFor(model => model.KonuID)
+                            </th>
+                            <th class="text-center">
+                                @Html.DisplayNameFor(model => model.KonuAdi)
+                            </th>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <th class="text-center">İşlemler</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    @Html.DisplayFor(modelItem => item.KonuID)
+                                </td>
+                                <td class="text-center">
+                                    <a asp-area="UyePanel" asp-controller="Makale" asp-action="ArticleBySubjectList" asp-route-subjectId="@item.KonuID">@Html.DisplayFor(modelItem => item.KonuAdi)</a>
+
+                                  </td>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <td class="text-center">
+                                        <a asp-action="Update" asp-route-id="@item.KonuID" class="btn btn-primary">Güncelle</a>
+                                        <button class="btn btn-danger" onclick="confirmDelete('@item.KonuID')">Sil</button>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function confirmDelete(id) {
+        if (confirm('Bu konuyu silmek istediğinizden emin misiniz?')) {
+            $.ajax({
+                url: '@Url.Action("Delete", "Konu", new { Area = "AdminPanel" })', 
+                type: 'GET',
+                data: { id: id },
+                success: function (response) {
+                    // Başarılı silme işlemi sonrası yapılacak işlemler.
+                    alert("Konu başarıyla silindi.");
+                    location.reload(); // Sayfayı yenilemek için.
+                },
+                error: function (error) {
+                    // Hata durumunda yapılacak işlemler.
+                    alert("Bir hata oluştu: " + error.responseText);
+                }
+            });
+        }
+    }
+</script>
+
+<style>
+    /* Additional styling if needed */
+    .table th, .table td {
+        vertical-align: middle; /* Align vertically in the middle */
+    }
+</style>

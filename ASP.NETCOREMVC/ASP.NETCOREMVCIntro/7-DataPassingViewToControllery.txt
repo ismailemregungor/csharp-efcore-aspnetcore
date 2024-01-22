@@ -1,0 +1,119 @@
+﻿______________________________________________________________________________________________________
+
+1. QueryString (GET)
+Tanım: URL'de ? işareti sonrasında gelen anahtar-değer çiftleridir.
+Kullanım: Genellikle basit veri aramaları veya filtrelemeler için kullanılır.
+Kod Örneği:
+
+public IActionResult Search(string query)
+{
+    var results = SearchProducts(query); // Ürün arama işlemi
+    return View(results);
+}
+
+<form action="/Product/Search">
+    <input type="text" name="query" />
+    <button type="submit">Ara</button>
+</form>
+
+
+______________________________________________________________________________________________________
+
+2. Request.Form (POST)
+Tanım: Form verilerini POST isteği ile gönderir.
+Kullanım: Kullanıcı girişleri, form gönderimleri gibi durumlar için uygundur.
+Kod Örneği:
+
+[HttpPost]
+public IActionResult Login()
+{
+    var username = Request.Form["username"];
+    var password = Request.Form["password"];
+    // Giriş işlemleri
+    return View();
+}
+
+<form method="post" action="/Account/Login">
+    <input type="text" name="username" />
+    <input type="password" name="password" />
+    <button type="submit">Giriş Yap</button>
+</form>
+
+______________________________________________________________________________________________________
+
+3. IFormCollection (POST)
+Tanım: Form verilerini bir koleksiyon olarak alır.
+Kullanım: Çok sayıda form alanını işlemek için kullanışlıdır.
+Kod Örneği:
+
+Controller (FeedbackController.cs):
+
+[HttpPost]
+public IActionResult SubmitFeedback(IFormCollection form)
+{
+    var feedback = form["feedback"];
+    // Geri bildirim işlemleri
+    return View("Thanks");
+}
+
+
+<form method="post" action="/Feedback/SubmitFeedback">
+    <textarea name="feedback"></textarea>
+    <button type="submit">Gönder</button>
+</form>
+
+______________________________________________________________________________________________________
+
+4. Parametre (POST)
+Tanım: POST isteği ile gönderilen verileri parametre olarak alır.
+Kullanım: Tip güvenliği ve kolaylık için tercih edilir.
+Kod Örneği:
+
+[HttpPost]
+public IActionResult UpdateUser(int userId, string email)
+{
+    // Kullanıcı güncelleme işlemleri
+    return RedirectToAction("UserDetails", new { userId = userId });
+}
+
+<form method="post" action="/User/UpdateUser">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <input type="email" name="email" value="@Model.Email" />
+    <button type="submit">Güncelle</button>
+</form>
+
+
+______________________________________________________________________________________________________
+
+5. Model (POST)
+Tanım: Form verilerini bir model nesnesi olarak alır.
+Kullanım: Karmaşık veri yapılarını ve nesneleri işlemek için idealdir.
+Kod Örneği:
+
+public class RegisterModel
+{
+    public string Username { get; set; }
+    public string Password { get; set; }
+    // Diğer özellikler...
+}
+
+[HttpPost]
+public IActionResult Register(RegisterModel model)
+{
+    // Kayıt işlemleri
+    return View("Success");
+}
+
+
+<form method="post" action="/Account/Register">
+    <input type="text" name="Username" />
+    <input type="password" name="Password" />
+    <button type="submit">Kaydol</button>
+</form>
+
+______________________________________________________________________________________________________
+
+
+
+
+

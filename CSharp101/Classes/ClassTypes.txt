@@ -1,0 +1,86 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Class Types:
+
+########			new		inheritance
+Class						+					+
+Abstract Class		-					+
+Sealed Class			+					-
+Static Class				-					-
+________________________________________________________________________________________________________________________________________________________________________
+
+Class (Standart Sınıf): 
+Bu, C#'ta en yaygın kullanılan sınıf türüdür. Nesne örnekleri oluşturulabilir 
+ve genellikle alanlar, özellikler, metotlar, etkinlikler vb. içerir.
+
+public class Araba
+{
+    public string Marka;
+    public string Model;
+
+    public void Calistir()
+    {
+        // Arabayı çalıştır
+    }
+}
+
+// Özet: Araba, marka ve model bilgilerini içerir ve bir metod içerir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+Abstract Class (Soyut Sınıf): 
+Bu tür sınıflar, kendilerinden doğrudan nesne örnekleri oluşturulamayan, ancak diğer sınıfların temeli 
+olarak kullanılabilen sınıflardır. Genellikle uygulanması gereken metotların bir şablonunu içerir.
+
+public abstract class Sekil
+{
+    public abstract double AlanHesapla(); // Soyut metod, türev sınıflar tarafından uygulanmalıdır.
+}
+
+public class Daire : Sekil
+{
+    public double Yaricap;
+    public override double AlanHesapla()
+    {
+        return Yaricap * Yaricap * Math.PI; // Dairenin alanını hesaplar.
+    }
+}
+
+// Özet: Sekil soyut bir sınıftır ve Daire, Sekil'den türetilmiştir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+Sealed Class (Mühürlü Sınıf): 
+Mühürlü sınıflar, miras alınamayan ve genişletilemeyen sınıflardır. 
+Güvenlik ve performans optimizasyonu için kullanılır.
+
+public sealed class Gunluk
+{
+    public void MesajEkle(string mesaj)
+    {
+        // Günlüğe mesaj ekle
+    }
+}
+
+// Özet: Gunluk mühürlü bir sınıftır, bu yüzden miras alınamaz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Static Class (Statik Sınıf): 
+Bu sınıflar, statik üyeler içeren ve kendilerinden nesne örnekleri oluşturulamayan sınıflardır. 
+Genellikle yardımcı fonksiyonlar için kullanılır.
+
+public static class Yardimci
+{
+    public static string BuyukHarfeCevir(string deger)
+    {
+        return deger.ToUpper(); // Metni büyük harfe dönüştürür.
+    }
+}
+
+// Özet: Yardimci bir statik sınıftır ve bir statik metoda sahiptir.
+
+________________________________________________________________________________________________________________________________________________________________________
+

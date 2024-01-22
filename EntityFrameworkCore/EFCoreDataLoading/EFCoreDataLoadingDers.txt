@@ -1,0 +1,62 @@
+﻿1 - Eager Loading(Include()) * ***
+2 - Lazy Loading
+3 - Explicitly Loading(Load())
+
+Düz EF de varsayılan veri yukleme mekanizması Lazy loading idi....
+Lazy Loading ; CORE da once yasaklandi...
+Sonra geldi, hem extra yukleme yapmak gerekir hem de ayarlarını açmak gerekir...(kötü PERFORMANS)
+
+EAGER LOADING
+HATA Verir...
+NEDEN?
+JOIN olmadan Kategori Adına ulaşmaya çalışıyoruz....
+var result = context.Urunlers;
+Console.WriteLine(result.ToQueryString());
+foreach (var item in result)
+    Console.WriteLine($"{item.UrunId} {item.UrunAdi} {item.Fiyat} {item.Kategori.KategoriAdi}");
+
+SELECT "u"."URUN_ID", "u"."FIYAT", "u"."KATEGORI_ID", "u"."URUN_ADI"
+FROM "URUN"."URUNLER" "u"
+
+var result = context.Urunlers.Include("Kategori");
+Console.WriteLine(result.ToQueryString());
+foreach (var item in result)
+    Console.WriteLine($"{item.UrunId} {item.UrunAdi} {item.Fiyat} {item.Kategori.KategoriAdi}");
+
+SELECT "u"."URUN_ID", "u"."FIYAT", "u"."KATEGORI_ID", "u"."URUN_ADI", "k"."KATEGORI_ID", "k"."KATEGORI_ADI"
+FROM "URUN"."URUNLER" "u"
+LEFT JOIN "URUN"."KATEGORILER" "k" ON "u"."KATEGORI_ID" = "k"."KATEGORI_ID"
+
+EXPLICITLY LOADING
+
+
+Calistiginda...
+Kitap kategorisinin alt elemanları gelmez....
+var kitapKategori = context.Kategorilers.FirstOrDefault(x => x.KategoriAdi == "Kitap");
+Console.WriteLine($"{kitapKategori.KategoriId} {kitapKategori.KategoriAdi} {kitapKategori.Urunlers.Count()} ");
+
+Calistiginda...
+Alt elemanlar gelir...
+ Many(ICollection) olanlr icin Collection()
+var kitapKategori = context.Kategorilers.FirstOrDefault(x => x.KategoriAdi == "Kitap");
+context.Entry(kitapKategori).Collection(x => x.Urunlers).Load(); Console.WriteLine($"{kitapKategori.KategoriId} ({kitapKategori.KategoriAdi} {kitapKategori.Urunlers.Count()} ");
+
+foreach (var item in kitapKategori.Urunlers)
+    Console.WriteLine(item.UrunId + " " + item.UrunAdi);
+
+
+Eger Urun uzerinden Kategoriye gidilecekse...
+var tren = context.Urunlers.FirstOrDefault(x => x.UrunId == 100);
+context.Entry(tren).Reference(x => x.Kategori).Load();
+Console.WriteLine(tren.UrunId + " " + tren.Kategori.KategoriAdi);
+
+Layz Loading
+1-Microsoft.EntityFrameworkCore.Proxies kutuphanesini indir...
+2-Navigation property'ler virtual olarak isaretlenir...
+3-OnConfiguring() meyodunun içerisinde...
+optionsBuilder.UseLazyLoadingProxies();
+
+Lazy loading oldugunda...
+Include() yada Load() metodlarını kullanmadan ithiyac oldugunda dogrudan verileri getirir...
+ Sürekli sorgu yazdığından kötü PERFORMANS dolayısıyla tercih edilmemeli....
+Serilestirme islemleri yapılcaksa Lazy Loading kullanılmamalı...

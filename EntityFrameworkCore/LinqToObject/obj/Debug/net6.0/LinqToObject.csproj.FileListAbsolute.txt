@@ -1,0 +1,30 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\refint\LinqToObject.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\ref\LinqToObject.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\bin\Debug\net6.0\LinqToObject.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\refint\LinqToObject.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\LinqToObject.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\LinqToObject\obj\Debug\net6.0\ref\LinqToObject.dll

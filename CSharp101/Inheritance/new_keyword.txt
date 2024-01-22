@@ -1,0 +1,44 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+new keyword:
+
+new Anahtar Kelimesinin Kullanım Amaçları:
+
+Üyeleri Gizlemek (Member Hiding): 
+*Türetilmiş sınıfta, temel sınıfta tanımlı olan üyeleri gizlemek için kullanılır.
+Bu, türetilmiş sınıfta yeni bir üye tanımlarken yapılır.
+
+Açıkça Bildirme: 
+*new anahtar kelimesini kullanarak, üyenin bilinçli olarak gizlendiğini belirtirsiniz. 
+Bu, kodun okunabilirliğini artırır ve yanlışlıkla üye gizleme hatalarını önler.
+________________________________________________________________________________________________________________________________________________________________________
+new Anahtar Kelimesi ile Üye Gizleme:
+
+Üye gizleme, türetilmiş bir sınıfta, temel sınıfta zaten var olan bir üyeyi yeniden tanımladığınızda oluşur.
+Bu durumda, türetilmiş sınıfın üyesi temel sınıfın üyesini "gizler".
+
+public class BaseClass
+{
+    public void Display()
+    {
+        Console.WriteLine("Display from BaseClass");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void Display()
+    {
+        Console.WriteLine("Display from DerivedClass");
+    }
+}
+
+Bu örnekte, DerivedClass sınıfı, BaseClass sınıfındaki Display metodunu gizler.
+
+new Anahtar Kelimesi ile Üye Gizlemenin Etkileri:
+Türetilmiş Sınıf Tipindeki Bir Nesne Üzerinden Erişim: Türetilmiş sınıf tipindeki bir nesne üzerinden Display metoduna eriştiğinizde, türetilmiş sınıfın metodu çağrılır.
+Temel Sınıf Tipindeki Bir Nesne Üzerinden Erişim: Eğer nesne temel sınıf tipindeyse, temel sınıfın metodu çağrılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+
+
+________________________________________________________________________________________________________________________________________________________________________

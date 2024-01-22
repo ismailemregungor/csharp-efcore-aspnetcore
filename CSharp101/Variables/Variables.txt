@@ -1,0 +1,133 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Variables-Değişkenler:
+
+*Ram üzerinde verileri tutmak-saklamak amacıyla belirli tipte belirlenen alanlardır.
+*C# programlama dilinde ön tanımlı 15 tip vardır.
+*C# dilinde bir değişken tanımlandığında otomatik olarak varsayılan bir değerle başlatılmaz. Bu yüzden değişkeni kullanmadan önce değer atamalısınız.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Değişkenlerin Kapsamı:
+
+int globalDegisken = 10; // Bu değişkene fonksiyonlar dahil olmak üzere her yerden erişebiliriz.
+
+void OrnekFonksiyon()
+{
+    int yerelDegisken = 5; // Bu değişkene sadece bu fonksiyon içerisinden erişilebilir.
+}
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+Types:
+
+>Value Types: Stack'de saklanır, bellek boyutu önceden bellidir.
+
+byte: ramdeki maliyeyi 1 byte +
+sbyte: ramdeki maliyeyi 1 byte + -
+short: ramdeki maliyeyi 2 byte + -
+ushort: ramdeki maliyeyi 2 byte + 
+int: ramdeki maliyeyi 4 byte + - ***
+uint: ramdeki maliyeyi 4 byte +
+long: ramdeki maliyeyi 8 byte + -
+ulong: ramdeki maliyeyi 8 byte +
+
+float: 32 bit
+double: 64 bit 
+decimal: 128 bit
+
+char: 2 byte 
+
+bool:
+
+Bütün Sayı Tipleri:
+
+int tamSayi = 100;     // 32-bit tam sayı
+long buyukTamSayi = 5000000000L; // 64-bit tam sayı
+byte baytTipi = 255;  // 0 ile 255 arasında değer alabilir
+
+Ondalıklı Sayı Tipleri:
+
+float ondalik = 3.14F;    // 32-bit kayan nokta
+double dahaHassas = 5.123456789;  // 64-bit kayan nokta
+decimal maliIslemlerIcin = 10.55M;  // Mali işlemler için daha hassas
+
+Karakter ve Metin Tipleri:
+
+char karakter = 'A';           // Tek bir karakter
+string kelime = "Merhaba Dünya!";  // Karakter dizisi
+
+4. Mantıksal Tip:
+bool dogru = true;
+bool yanlis = false;
+
+>Reference Types: Heap'te saklanır, bellek boyutu belli değildir.
+string
+object
+  
+1 byte = 8 bit
+1 bit => [0,1]
+11111111 max = 255
+00000000 min = 0
+ASCII Nedir?
+________________________________________________________________________________________________________________________________________________________________________
+
+Değer ve Referans Tipleri Arasındaki Fark:
+
+int a = 10;         // değer tipi
+int[] dizi = {1, 2, 3};  // referans tipi
+
+int b = a;         // b'ye a'nın değeri kopyalandı
+int[] dizi2 = dizi;    // dizi2, dizi'nin hafıza adresini gösterir
+
+b = 20;           // a'nın değeri değişmez
+dizi2[0] = 99;      // dizi'nin ilk elemanı da 99 olur
+
+________________________________________________________________________________________________________________________________________________________________________
+İsimlendirme Kuralları ve Notasyonlar?
+
+PascalCase --> GetStatus
+CamelCase --> getStatus(değişkenler, form elemanları, javascript, java)
+MacarCase --> getSts
+KebabCase --> get-status(mvc core tag helpers)
+SnakeCase --> get_status(python)
+
+*C#'ta class, metodlar, property, field'lar PascalCase; metot parametreleri CamelCase tanımlanır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Type Casting-Tip Dönüşümü:
+
+*Implicit Casting (Otomatik Tip Dönüşümü): Bu dönüşüm, veri kaybı olmadan otomatik olarak yapılır. Örneğin, int bir değeri long bir değişkene atayabilirsiniz.
+
+int sayi = 123;
+long buyukSayi = sayi;  // Otomatik olarak int'ten long'a dönüştürülür
+
+
+*Explicit Casting (Zorlanmış Tip Dönüşümü): Bu dönüşüm, veri kaybı riski taşıdığı için manuel olarak gerçekleştirilmesi gerekir. Örneğin, double bir değeri int bir değişkene atarken.
+
+double ondalik = 12.34;
+int tamSayi = (int)ondalik;  // Ondalık kısmı atılır ve double tipi int'e dönüştürülür
+
+*Dönüşüm Fonksiyonları: C# dilinde Convert sınıfı, bir veri tipini diğerine dönüştürmek için kullanılan birçok metod içerir.
+
+string metin = "123";
+int cevrilmisSayi = Convert.ToInt32(metin);  // String tipi int tipine dönüştürülür
+
+*as Anahtar Kelimesi: Referans tipleri arasında güvenli dönüşüm için kullanılır. Dönüşüm başarısız olursa null değerini döndürür.
+
+object obj = "Merhaba";
+string metin = obj as string;  // obj string ise metin'e atanır, değilse metin null olur
+
+*is Anahtar Kelimesi: Bir nesnenin belirli bir tip olup olmadığını kontrol etmek için kullanılır.
+
+object obj = "Merhaba";
+if (obj is string)  // obj'nin string olup olmadığını kontrol eder
+{
+    Console.WriteLine("obj bir string'dir.");
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+il kodu:
+developer command vs 22
+C:\Program Files\Microsoft Visual Studio\2022\Community>ildasm
+______________________________________________________________________________________________________________________________________________________________________

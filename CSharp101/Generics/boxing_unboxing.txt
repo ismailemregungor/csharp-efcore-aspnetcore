@@ -1,0 +1,49 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Generic Collections:
+1-Performans:
+2-Tip Güvenliği:
+________________________________________________________________________________________________________________________________________________________________________
+
+>boxing:
+
+Boxing, bir değer türünün bir object türüne 
+(Object sınıfı veya Object türünden bir referans türü)
+dönüştürülmesini ifade eder.
+
+Bir değer türü boxing işlemi sırasında, değerin bir kopyası 
+heap bellekte oluşturulur ve bu kopya bir referans türüne atanır. 
+Yani, değer türü bir kutu içine yerleştirilir (box) ve bu kutu heap bellekte saklanır.
+
+Boxing işlemi, genellikle performansı olumsuz etkiler, çünkü değeri kopyalamak 
+ve referans türüne dönüştürmek gerektiğinde ek işlem gerektirir.
+
+int deger = 42;
+object kutu = deger; // Boxing işlemi burada gerçekleşir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+>unboxing
+
+Unboxing, bir değer türünün bir referans türünden
+(genellikle Object) çıkarılması işlemidir.
+
+Unboxing işlemi sırasında, heap bellekte saklanan değer türü 
+kutusundan çıkarılır ve uygun değer türüne atanır. 
+Bu işlem, casting veya explicit dönüşüm gerektirir.
+
+Unboxing işlemi, boxing işlemi yapıldıktan sonra değeri 
+tekrar kullanmak istediğinizde kullanılır.
+
+object kutu = 42;
+int deger = (int)kutu; // Unboxing işlemi burada gerçekleşir.
+________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+

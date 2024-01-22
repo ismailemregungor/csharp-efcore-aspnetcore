@@ -1,0 +1,16 @@
+﻿__________________________________________________________________________________________________________________________
+
+Package Manager Console:
+
+migration oluştur: add-migration Init
+
+veritabanının güncelle: update-database
+
+tabloları sil: drop-database
+
+tüm migrationları sil: remove-migration
+
+istenilen migration'a geri dön: update-database Init
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

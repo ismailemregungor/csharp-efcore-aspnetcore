@@ -1,0 +1,43 @@
+﻿____________________________________________________________________________________________________
+
+SOLID:
+
+SOLID prensipleri, nesne yönelimli programlamada temiz, sürdürülebilir 
+ve genişletilebilir kod yazmaya yardımcı olmak için tasarlanmış beş tasarım ilkesidir.
+____________________________________________________________________________________________________
+
+1-Single Responsibility Principle (SRP): 
+
+Her sınıfın yalnızca bir sorumluluğu olmalıdır. 
+Bu, sınıfın değişmesi gereken tek bir nedeni olduğu anlamına gelir. 
+Bu ilke, kodun bakımını ve test edilmesini kolaylaştırır.
+____________________________________________________________________________________________________
+
+2-Open/Closed Principle (OCP): 
+
+open to expansion closed to change
+Sınıflar genişletilmeye açık ancak değişikliğe kapalı olmalıdır. 
+Yeni işlevsellik eklemek için mevcut kodu değiştirmek yerine, yeni kod ekleyerek genişletmeliyiz.
+
+____________________________________________________________________________________________________
+
+3-Liskov Substitution Principle (LSP): 
+
+Alt sınıflar, üst sınıflarının yerine kullanılabilmelidir. 
+Alt sınıf, üst sınıfın davranışını değiştirmemeli veya beklenmeyen sonuçlara yol açmamalıdır.
+Polimorfizimin teroik halidir.
+
+____________________________________________________________________________________________________
+
+4-Interface Segregation Principle (ISP): 
+
+arayüzler, daha küçük ve özelleşmiş arayüzlerle bölünmelidir, 
+böylece sınıflar sadece ihtiyaç duydukları arayüzleri uygularlar.
+____________________________________________________________________________________________________
+
+5-Dependency Inversion Principle (DIP): 
+
+Yüksek seviyeli modüller, düşük seviyeli modüllerden 
+bağımsız olmalı ve bağımlılıklar soyutlamalar aracılığıyla ifade edilmelidir.
+____________________________________________________________________________________________________
+

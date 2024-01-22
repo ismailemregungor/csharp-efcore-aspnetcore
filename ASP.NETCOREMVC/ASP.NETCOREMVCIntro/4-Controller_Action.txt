@@ -1,0 +1,138 @@
+﻿___________________________________________________________________________________________
+
+Controllers:
+
+Tanım ve Amaç:
+Controller sınıfları, kullanıcı isteklerini işleyen sınıflardır.
+Model ile View arasında bir köprü görevi görürler.
+
+Konumlandırma:
+Genellikle Controllers adlı bir klasör içerisinde bulunurlar.
+Sınıf adları genellikle Controller ile biter (örn: HomeController).
+
+Routing ve Eşleşme:
+Bir Controller'a gelen istekler, URL yolu ve HTTP metodu ile belirlenen routing kuralları ile eşleştirilir.
+Route attribute'u ile özel URL yapıları tanımlanabilir.
+
+Action Metotları:
+Controller içindeki her bir metot, bir 'action' olarak kabul edilir.
+Bu metotlar, HTTP GET, POST, PUT, DELETE gibi isteklere yanıt verir.
+
+Parametreler ve Model Binding:
+Action metotları, istekten gelen verileri parametre olarak alabilir.
+Model binding, bu verileri otomatik olarak aksiyon metotlarının parametrelerine dönüştürür.
+
+Dönüş Tipleri:
+Action metotları genellikle IActionResult türünde bir değer döndürür.
+View(), RedirectToAction(), Json() gibi farklı türdeki yanıtlar dönebilirler.
+
+Filtreler:
+Controller veya action seviyesinde, yetkilendirme, hata işleme, loglama gibi önceden tanımlı işlemleri uygulamak için filtreler kullanılabilir.
+
+___________________________________________________________________________________________
+
+Action Methods?
+
+Action'lar, Controller sınıfları içerisinde tanımlanan ve HTTP isteklerine yanıt vermek için kullanılan metotlardır.
+Bu metotlar, kullanıcıdan gelen istekleri işler ve uygun bir yanıt (genellikle bir View) döndürürler. 
+___________________________________________________________________________________________
+
+Action Metotlarının Özellikleri ve Önemli Noktaları
+Tanım ve Konum:
+
+Action metotları, genellikle bir Controller sınıfı içinde tanımlanır.
+HTTP isteklerine (GET, POST, PUT, DELETE vb.) yanıt vermek için kullanılırlar.
+Routing ve Eşleşme:
+
+Action metotlarına gelen istekler, URL yolu ve HTTP metodu (örneğin, GET veya POST) ile eşleşen routing kuralları ile belirlenir.
+Route attribute'u kullanılarak spesifik URL yapıları tanımlanabilir.
+Parametreler ve Model Binding:
+
+Action metotları, HTTP isteğinden gelen verileri parametre olarak alabilir.
+Model binding özelliği, istek verilerinin otomatik olarak aksiyon metotlarının parametrelerine dönüştürülmesini sağlar.
+Dönüş Tipleri:
+
+Action metotlarının dönüş tipleri çeşitlilik gösterebilir: IActionResult, ViewResult, JsonResult, FileResult gibi.
+IActionResult arayüzü, farklı türdeki yanıtları (View, Redirect, JSON, File vb.) kapsar.
+Filtreler ve Öznitelikler:
+
+Action metotlarına öznitelikler (attribute) eklenerek, yetkilendirme, caching, loglama gibi işlemler yapılabilir.
+Authorize, ValidateAntiForgeryToken gibi öznitelikler güvenlik amacıyla sıkça kullanılır.
+Hata Yönetimi:
+
+Hataların yönetimi için try-catch blokları veya özel hata handling filtreleri kullanılabilir.
+___________________________________________________________________________________________
+
+Senaryo: Bir haber portalı uygulamasında, kullanıcılar farklı kategorilerdeki haberleri listeleyebilir ve okuyabilirler.
+
+public class NewsController : Controller
+{
+    public IActionResult Index()
+    {
+        // Haber listesini getir
+        var newsList = GetNews();
+        return View(newsList);
+    }
+
+    [HttpGet("News/Category/{category}")]
+    public IActionResult ByCategory(string category)
+    {
+        // Kategoriye göre haberleri filtrele
+        var filteredNews = GetNewsByCategory(category);
+        return View("Index", filteredNews);
+    }
+
+    // Diğer aksiyon metotları...
+}
+
+___________________________________________________________________________________________
+
+1. ViewResult
+Tanım: ViewResult, bir Razor view dosyasını render eder ve bu içeriği HTML olarak istemciye gönderir.
+Kullanım: Genellikle bir web sayfası döndürmek için kullanılır.
+Örnek: return View();
+___________________________________________________________________________________________
+
+2. ContentResult
+Tanım: ContentResult, düz metin içeriği döndürür.
+Kullanım: Basit metin tabanlı yanıtlar için uygundur.
+Örnek: return Content("Merhaba Dünya");
+___________________________________________________________________________________________
+
+3. JsonResult
+Tanım: JsonResult, bir nesneyi JSON formatına serileştirir ve bu içeriği istemciye gönderir.
+Kullanım: AJAX çağrıları ve RESTful API yanıtları için sıkça kullanılır.
+Örnek: return Json(new { name = "Ali", age = 30 });
+___________________________________________________________________________________________
+
+4. RedirectToActionResult
+Tanım: RedirectToActionResult, bir başka Action metoduna yönlendirme yapar.
+Kullanım: Form işlemlerinden sonra veya belirli bir koşulda kullanıcıyı başka bir sayfaya yönlendirmek için kullanılır.
+Örnek: return RedirectToAction("Index");
+___________________________________________________________________________________________
+
+5. RedirectToRouteResult
+Tanım: RedirectToRouteResult, belirtilen rotaya yönlendirme yapar.
+Kullanım: Daha karmaşık yönlendirmeler ve rotalarla çalışırken kullanılır.
+Örnek: return RedirectToRoute("Default", new { controller = "Home", action = "Index" });
+___________________________________________________________________________________________
+
+6. FileResult
+Tanım: FileResult, bir dosyayı istemciye gönderir.
+Kullanım: Dosya indirmeleri için kullanılır.
+Örnek: return File(filePath, contentType);
+___________________________________________________________________________________________
+
+7. PartialViewResult
+Tanım: PartialViewResult, tam bir sayfa yerine bir parçalı (partial) view render eder.
+Kullanım: AJAX çağrılarıyla sayfanın sadece bir kısmını güncellemek için idealdir.
+Örnek: return PartialView("_MyPartialView", model);
+___________________________________________________________________________________________
+
+8. NotFoundResult ve StatusCodeResult
+Tanım: NotFoundResult, 404 Not Found yanıtı döndürür. StatusCodeResult, belirtilen durum koduyla yanıt verir.
+Kullanım: Hata yönetimi ve özel durum kodlarını döndürmek için kullanılır.
+Örnek: return NotFound(); veya return StatusCode(500);
+___________________________________________________________________________________________
+
+___________________________________________________________________________________________

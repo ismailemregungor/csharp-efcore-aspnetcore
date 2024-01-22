@@ -1,0 +1,53 @@
+﻿__________________________________________________________________________________________________________________________
+
+Entity Framework Core (EF Core) geliştirmesinde genel olarak iki yaklaşım öne çıkar: 
+
+Code First:
+1-Database First
+2-Code-Model First
+__________________________________________________________________________________________________________________________
+
+Database First:
+
+Database-First yaklaşımında, geliştirmeye veritabanı şeması ile başlanır ve bu şemadan yola çıkarak Entity Framework modeli oluşturulur.
+
+Varolan Veritabanı: Bu yaklaşım genellikle zaten mevcut olan ve kullanımda olan bir veritabanı ile çalıştığınızda tercih edilir.
+
+EDMX Dosyası: Modelinizi görsel bir tasarımcı üzerinden yönetmenize olanak tanıyan bir .edmx dosyası oluşturulur.
+
+Tersine Mühendislik: EF Core araçları kullanılarak varolan veritabanı şeması analiz edilir ve buna uygun C# sınıfları ve DBContext nesnesi otomatik olarak oluşturulur.
+
+Senkronizasyon Sorunları: Veritabanında yapılan değişikliklerin model ile senkronize edilmesi gerekebilir, bu bazen manuel müdahale gerektirebilir.
+
+__________________________________________________________________________________________________________________________
+
+Code-Model First:
+
+Code-Model First yaklaşımında ise, veritabanı şeması, C# kodlarında tanımlanan sınıflardan
+(POCO sınıfları) yararlanılarak oluşturulur.
+
+Model Tabanlı Geliştirme: Veritabanı yerine, uygulamanızın model sınıflarını yazarak başlarsınız ve EF Core şemayı bu modellere göre oluşturur.
+
+Veritabanı Oluşturma ve Güncelleme: Model sınıflarınız değiştiğinde, EF Core Migrations aracılığıyla veritabanını oluşturabilir veya güncelleyebilirsiniz.
+
+Tam Kontrol ve Esneklik: Modelinizi tamamen koda dayalı şekilde yönetirsiniz, bu da daha fazla kontrol ve esneklik sağlar.
+
+Eşleme: Veritabanı tabloları, sütunları, ilişkiler vb. detaylar, sınıflar ve özellikler arasında eşleme (mapping) yoluyla tanımlanır.
+
+Migrations: Veritabanı şemanızda yapacağınız değişiklikleri, version kontrol sistemi gibi izlemenize ve yönetmenize olanak tanır.
+__________________________________________________________________________________________________________________________
+
+Database First vs Code-Model First:
+
+Kontrol Seviyesi: Code-First, model üzerinde daha fazla kontrol ve esneklik sunar, Database-First genellikle mevcut bir veritabanı yapısına bağlıdır.
+
+Başlangıç Noktası: Database-First, mevcut bir veritabanından yola çıkar; Code-First ise sıfırdan, kod tabanlı modelleme ile başlar.
+
+Senkronizasyon: Database-First'de veritabanı değişikliklerini modele yansıtmak otomatik olmayabilir ve zorlayıcı olabilir; Code-First'te ise Migrations aracılığıyla bu süreç daha kolay yönetilir.
+
+Görsel Tasarım: Database-First genellikle bir görsel tasarımcı (EDMX editor) ile birlikte gelir; Code-First ise böyle bir araç gerektirmez.
+
+Eğim Eğrisi: Code-First yaklaşımı, Entity Framework ve veri eşlemeyi iyi anlamayı gerektirirken, Database-First daha sezgisel olabilir ve veritabanı tasarımı ile daha aşina olan geliştiriciler için daha uygun olabilir.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

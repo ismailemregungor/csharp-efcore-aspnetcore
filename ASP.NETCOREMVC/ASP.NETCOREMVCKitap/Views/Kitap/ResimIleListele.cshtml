@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<Kitap_VM>
+
+<a asp-action="KitapEkle" class="btn btn-primary">Yeni Kitap Ekle</a>
+<br />
+<br />
+<a asp-action="ResimIleKitapEkle" class="btn btn-danger">Yeni Kitap Ekle(Resim)</a>
+<h2>Tüm kitaplar</h2>
+<table class="table table-striped">
+    @foreach (var kitap in Model)
+    {
+            <tr>
+                <td>@kitap.KitapID</td>
+                <td>@kitap.KitapAdi</td>
+                <td>@kitap.Kategori</td>
+                <td>@kitap.Yazar</td>
+                <td>@kitap.Fiyat</td>
+            @*<td>@kitap.FilePath</td>*@
+                <td><img src="~/KapakResimleri/@kitap.FilePath" width="200px" height="140px" /></td>
+            </tr>
+    }
+</table>
+

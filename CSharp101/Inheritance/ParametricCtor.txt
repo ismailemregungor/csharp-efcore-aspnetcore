@@ -1,0 +1,15 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Parametrik Kurucu:
+
+Tanım: Parametreleri olan kurucular, bir sınıfın yeni bir örneğini başlatırken özel değerler alabilir.
+
+Kullanımı: Sınıfın özelliklerini veya alanlarını başlatmak için başlangıç değerleri sağlamak amacıyla kullanılır.
+
+"base" Anahtar Kelimesi:
+Tanım: "base" anahtar kelimesi, türetilmiş bir sınıftan temel sınıfa erişim sağlar.
+Kullanımı: Genellikle türetilmiş sınıfın kurucusundan temel sınıfın kurucusunu çağırmak için kullanılır. Ayrıca, temel sınıfta tanımlı olan üyelere erişim sağlamak için de kullanılabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

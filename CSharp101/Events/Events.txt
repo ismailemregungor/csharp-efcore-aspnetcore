@@ -1,0 +1,12 @@
+﻿Events - Olay Bazlı Programlama:
+
+#Olay Oluşturma ve Kullanma:
+
+1-Olayın tanımlanabilmesi için yeni bir temsilci tanımlanmalı
+ya da var olan bir delegate kullanılmalı.
+2-Temsilci tipinden olay tanımlanır.
+3-Olayın çalışacağı mekanizma tanımlanmalıdır.
+4-Event'in olduğu sınıfı oluştur(instance).
+5-Olay ile olay oluştuğunda çalışacak metodu yaz ve ilişkilendir(+=).
+6-Eventi Çalıştır.
+

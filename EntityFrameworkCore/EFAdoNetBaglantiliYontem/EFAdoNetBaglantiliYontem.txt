@@ -1,0 +1,11 @@
+﻿__________________________________________________________________________________________________________________________
+
+ADO.NET Bağlantılı Yöntem:
+
+Connection String:
+"User Id=hr; Password=HR; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))"
+
+Kurulumlar:
+
+Nuget  > Oracle.Managed.DataAccess.Core
+__________________________________________________________________________________________________________________________

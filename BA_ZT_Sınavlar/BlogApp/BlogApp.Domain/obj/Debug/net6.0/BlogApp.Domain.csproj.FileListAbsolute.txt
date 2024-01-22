@@ -1,0 +1,48 @@
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.deps.json
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.AssemblyReference.cache
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfoInputs.cache
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfo.cs
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\refint\BlogApp.Domain.dll
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\halkbank2\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\ref\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.deps.json
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\refint\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BlogApp\BlogApp.Domain\obj\Debug\net6.0\ref\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\refint\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\ref\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\bin\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\refint\BlogApp.Domain.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\BlogApp.Domain.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Backend\BA_ZT_Sınavlar\BlogApp\BlogApp.Domain\obj\Debug\net6.0\ref\BlogApp.Domain.dll

@@ -1,0 +1,56 @@
+﻿____________________________________________________________________________________________________
+
+Liskov Substitution Principle (LSP)
+
+Liskov Substitution Principle, alt sınıfların üst sınıflarının yerine geçebilmesi ve aynı şekilde davranabilmesi gerektiğini belirten bir tasarım ilkesidir. Bu, nesne yönelimli programlamada tip güvenliğini ve sınıf hiyerarşisinin doğru kullanımını sağlar.
+____________________________________________________________________________________________________
+Önemli Noktalar
+Değiştirilebilirlik: Bir alt sınıf nesnesi, üst sınıfın nesnesiyle yer değiştirebilmelidir.
+Davranış Uyumluluğu: Alt sınıflar, üst sınıflarının davranışını bozmamalıdır.
+Soyutlama Düzeyi: Alt sınıflar, üst sınıfın sözleşmesine uygun olmalıdır.
+Tasarım Anlayışı: LSP, nesne yönelimli tasarımın doğru anlaşılmasını ve uygulanmasını teşvik eder.
+Sistem Esnekliği: LSP'ye uygun sistemler daha esnek ve genişletilebilirdir.
+____________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları
+Polimorfizm: Farklı sınıfların aynı arayüzü veya sınıfı uygulaması.
+Kod Yeniden Kullanımı: Üst sınıfın kodunu, alt sınıfların yeniden kullanabilmesi.
+Refaktörleme: Kodu yeniden düzenlerken, LSP'ye uygunluğun korunması.
+____________________________________________________________________________________________________
+
+public class Rectangle
+{
+    public virtual int Width { get; set; }
+    public virtual int Height { get; set; }
+
+    public int Area()
+    {
+        return Width * Height;
+    }
+}
+
+public class Square : Rectangle
+{
+    private int _side;
+
+    public override int Width 
+    { 
+        get { return _side; } 
+        set { _side = value; Height = value; }
+    }
+
+    public override int Height 
+    { 
+        get { return _side; } 
+        set { _side = value; Width = value; }
+    }
+}
+
+Açıklama: Bu örnekte, Square sınıfı Rectangle sınıfından türetilmiştir. Square sınıfı, Width ve Height özelliklerini değiştirdiğinde, bunları birbirine bağlar, bu da karenin tanımına uygun olur. Ancak, bu durum Rectangle sınıfının beklentilerini bozmaz ve Square nesnesi Rectangle olarak kullanılabilir. Bu, LSP ilkesine bir örnektir. Ancak, bazı durumlarda bu tür bir kalıtım ilişkisi yanıltıcı olabilir ve sınıf hiyerarşisinin daha dikkatli bir şekilde düşünülmesini gerektirebilir.
+____________________________________________________________________________________________________
+
+____________________________________________________________________________________________________
+
+____________________________________________________________________________________________________
+
+____________________________________________________________________________________________________

@@ -1,0 +1,74 @@
+﻿__________________________________________________________________________________________________________________________
+
+//LINQ sorguları iki şekilde yazılır...
+//1-Expression Tree ***
+//2-Like SQL
+
+// x=>x
+// x=> {....}
+// x=> { return ....}
+// (x,y) => { ...... }
+
+//LINQ Sorguları deffered mode calisir...
+//LINQ sorguları tanımlandığı yerde değil cağrıldığı yerde calisir...
+//ToList(), ToArray(), ToDictionary() => immediate mode da calisir...
+
+//BASKA KONU
+//Entity Framework CORE da..
+//İstenildiğinde SQL cümleleri yazılarak sorgular çalıştırılabilinir...
+var result2 = context.Urunlers.FromSqlRaw("SELECT * FROM URUNLER"); 
+
+foreach (var item in result2)
+    Console.WriteLine($"{item.UrunId} {item.UrunAdi}");
+__________________________________________________________________________________________________________________________
+
+LINQ (Language Integrated Query):
+
+C# programlama dili içinde veri sorgulama ve işleme işlevlerini entegre eden bir özelliktir. 
+LINQ, farklı veri kaynaklarına (veri koleksiyonları, veritabanları, XML, vb.) sorguları 
+uygulamanıza olanak tanır. LINQ, okunması ve yazılması kolay, güçlü ve esnek bir yol sunar.
+__________________________________________________________________________________________________________________________
+
+LINQ Özellikleri:
+
+Tip Güvenliği (Type Safety): LINQ, derleme zamanında tip denetimi sağlar, bu da daha az hata anlamına gelir.
+
+IntelliSense Desteği: Visual Studio'da LINQ sorguları yazarken IntelliSense'den yararlanabilirsiniz.
+
+Hata Denetimi: LINQ sorguları, derleme zamanında hata denetiminden geçer.
+
+Dönüşüm Kolaylığı: Farklı veri kaynakları arasında sorguları kolayca dönüştürebilirsiniz.
+
+Gelişmiş Sorgu Yetenekleri: Karmaşık sorguları yazmanızı ve veriler üzerinde güçlü operasyonlar gerçekleştirmenizi sağlar.
+
+__________________________________________________________________________________________________________________________
+
+LINQ to Objects:
+
+Amaç: Bellek içindeki koleksiyonlar ve genel IEnumerable veya IEnumerable<T> uygulamaları üzerinde sorgu yapmayı sağlar.
+
+Kullanım: Array'ler, listeler, diziler ve diğer bellek içi koleksiyonlar üzerinde kullanılır.
+__________________________________________________________________________________________________________________________
+
+LINQ to SQL:
+
+Amaç: Veritabanı tabloları üzerinde doğrudan LINQ sorguları yazmanıza ve bu sorguların SQL’e dönüştürülmesine olanak tanır.
+
+Kullanım: SQL Server veritabanları ile etkileşimde bulunurken.
+__________________________________________________________________________________________________________________________
+
+Amaç: XML dokümanları üzerinde LINQ sorguları kullanarak veri sorgulama ve manipüle etmeyi sağlar.
+
+Kullanım: XML verilerini işlerken, örneğin yapılandırma dosyaları, veri dosyaları vb.
+__________________________________________________________________________________________________________________________
+
+IEnumerable<T> ve LINQ:
+
+LINQ, IEnumerable<T> veya IQueryable<T> arayüzlerini uygulayan tüm veri tipleri üzerinde 
+sorgular çalıştırabilme yeteneğine sahiptir. Bu, IEnumerable<T>'yi LINQ ile doğrudan uyumlu hale getirir.
+
+IEnumarable interface'ini implemente ettiği için
+LINQ extension metotları koleksiyonlar üzerinde kullanılabilir
+
+
+__________________________________________________________________________________________________________________________

@@ -1,0 +1,14 @@
+﻿__________________________________________________________________________________________________________________________
+
+Code First:
+2-Model First:
+
+
+Kurulumlar:
+
+.NET 6 bir proje için 6.21 sürümlerini yükle.
+
+Nuget > Microsoft.EntityFrameworkCore
+Nuget > Oracle.EntityFrameworkCore
+Nuget > Microsoft.EntityFrameworkCore.Tools
+__________________________________________________________________________________________________________________________

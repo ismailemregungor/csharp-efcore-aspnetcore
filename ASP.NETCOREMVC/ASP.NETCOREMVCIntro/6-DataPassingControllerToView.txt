@@ -1,0 +1,126 @@
+﻿______________________________________________________________________________________________________
+
+1. ViewData
+Tanım: ViewData bir ViewDataDictionary objesidir ve Controller ve View arasında veri taşımak için kullanılır.
+
+Özellikler:
+
+Anahtar-değer çiftleri şeklinde veri saklar.
+Tip güvenli değildir, casting gerektirebilir.
+
+Kod Örneği:
+// Controller'da
+public IActionResult Index()
+{
+    ViewData["Message"] = "Hello from ViewData!";
+    return View();
+}
+
+// View'da (Index.cshtml)
+<h2>@ViewData["Message"]</h2>
+
+______________________________________________________________________________________________________
+
+2. ViewBag
+Tanım: ViewBag dinamik özellikler sağlar ve Controller ve View arasında veri taşımak için kullanılır.
+
+Özellikler:
+
+dynamic türünde olduğu için herhangi bir türe atama yapılabilir.
+Tip güvenli değildir.
+Kod Örneği:
+
+// Controller'da
+public IActionResult Index()
+{
+    ViewBag.Message = "Hello from ViewBag!";
+    return View();
+}
+
+// View'da (Index.cshtml)
+<h2>@ViewBag.Message</h2>
+
+______________________________________________________________________________________________________
+
+3. TempData
+Tanım: TempData kısa süreli veri saklamak için kullanılır, özellikle redirect sonrasında tek seferlik veri aktarımı için idealdir.
+
+Özellikler:
+
+Genellikle string anahtarlar ile veri saklar.
+Session tabanlıdır ve bir sonraki request'e kadar veriyi korur.
+Kod Örneği:
+
+// Controller'da
+public IActionResult Save()
+{
+    TempData["Message"] = "Veri kaydedildi!";
+    return RedirectToAction("Index");
+}
+
+// View'da (Index.cshtml)
+<h2>@TempData["Message"]</h2>
+
+______________________________________________________________________________________________________
+
+4. Model
+Tanım: Model, Controller'dan View'a tip güvenli veri taşımak için kullanılır.
+
+Özellikler:
+
+Genellikle bir sınıf veya basit bir veri türü olabilir.
+Tip güvenli ve veri yapısını koruyan bir yaklaşım sağlar.
+Kod Örneği:
+
+// Controller'da
+public IActionResult Index()
+{
+    var model = new MessageModel { Text = "Hello from Model!" };
+    return View(model);
+}
+
+// View'da (Index.cshtml)
+@model MessageModel
+<h2>@Model.Text</h2>
+
+______________________________________________________________________________________________________
+
+5. ViewModel
+Tanım: ViewModel, View için özelleştirilmiş modeldir ve birden fazla veriyi tek bir objede toplar.
+
+Özellikler:
+
+Birden fazla modeli veya veriyi birleştirir.
+Tip güvenli ve View'a özgü veri yapıları oluşturur.
+Composite bir modeldir.
+
+// Controller'da
+public IActionResult Profile()
+{
+    var viewModel = new UserProfileViewModel 
+    {
+        User = GetUser(),
+        Notifications = GetUserNotifications()
+    };
+    return View(viewModel);
+}
+
+// View'da (Profile.cshtml)
+@model UserProfileViewModel
+<h2>@Model.User.Name</h2>
+<ul>
+    @foreach(var note in Model.Notifications) {
+        <li>@note</li>
+    }
+</ul>
+
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________
+
+
+
+
+

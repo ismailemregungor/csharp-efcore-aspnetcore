@@ -1,0 +1,39 @@
+﻿__________________________________________________________________________________________________________________________
+Entity Durumları ve Özellikleri:
+__________________________________________________________________________________________________________________________
+Added
+Entity, context'e yeni eklendi ve SaveChanges() çağrıldığında veritabanına yeni bir kayıt olarak eklenir.
+Yeni entity'ler için DbSet.Add() veya DbContext.Add() metotları kullanılır.
+Entity'nin tüm özellikleri veritabanına yazılır.
+__________________________________________________________________________________________________________________________
+Unchanged
+Entity context'e yüklendiğinde veya sorgulandığında varsayılan durum budur.
+SaveChanges() çağrıldığında, EF bu tür entity'ler üzerinde herhangi bir işlem yapmaz.
+Veri seti üzerinde bir değişiklik yapılmadıysa bu durum korunur.
+__________________________________________________________________________________________________________________________
+Modified
+Entity'nin özelliklerinden bir veya birkaçı değiştirildi.
+SaveChanges() çağrıldığında, EF sadece değiştirilen özellikleri güncellemek için bir SQL UPDATE komutu gönderir.
+Entity için DbContext.Update() veya property düzeyinde EntityEntry.Property("PropertyName").IsModified = true kullanılabilir.
+__________________________________________________________________________________________________________________________
+Deleted
+Entity silinmek üzere işaretlendi.
+SaveChanges() çağrıldığında, EF veritabanından entity'yi silmek için bir SQL DELETE komutu gönderir.
+Entity'yi silmek için DbSet.Remove() veya DbContext.Remove() metotları kullanılır.
+__________________________________________________________________________________________________________________________
+Detached
+Entity, context tarafından izlenmiyor.
+SaveChanges() çağrıldığında, EF detached entity'ler üzerinde herhangi bir işlem yapmaz.
+Bu durum genellikle entity'nin context tarafından yüklenmediği veya manuel olarak EntityEntry.State özelliğini EntityState.Detached olarak ayarladığınızda oluşur.
+__________________________________________________________________________________________________________________________
+Entry ve SaveChanges Kullanımı:
+Entry metodu, belirli bir entity için EntityEntry nesnesine erişim sağlar ve bu nesne üzerinden entity'nin durumunu ve property'lerini yönetebilirsiniz.
+
+SaveChanges ve SaveChangesAsync metotları, EF Core'un izlediği tüm değişiklikleri veritabanına uygular.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

@@ -1,0 +1,105 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Senaryoları:
+Polimorfizm: Farklı türlerin aynı interface'i uyguladığı durumlarda, "is" ve "as" operatörleri nesnenin hangi türde olduğunu anlamak ve uygun metodları çağırmak için kullanılabilir.
+Hata Önleme: "as" operatörü, InvalidCastException riski olmadan güvenli tür dönüşümü sağlar çünkü dönüşüm başarısız olduğunda istisna fırlatmak yerine "null" döndürür.
+Kodun Okunabilirliği: "is" ve "as" operatörleri, tür kontrollerini ve dönüşümlerini daha okunabilir ve anlaşılır hale getirir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+"is" Operatörü:
+"is" operatörü, bir nesnenin belirli bir tür veya interface'e sahip olup olmadığını kontrol eder.
+Eğer nesne belirtilen türdeyse, operatör "true" döner; aksi halde "false" döner.
+________________________________________________________________________________________________________________________________________________________________________
+
+"as" Operatörü:
+"as" operatörü, bir nesneyi belirli bir türe dönüştürmeye çalışır.
+Eğer dönüşüm başarılı olursa, dönüştürülmüş nesneyi döndürür; aksi halde "null" döndürür.
+________________________________________________________________________________________________________________________________________________________________________
+
+"is" Operatörü Kullanımı 
+
+interface IAnimal
+{
+    void Speak();
+}
+
+class Dog : IAnimal
+{
+    public void Speak() => Console.WriteLine("Woof!");
+}
+
+public static void Main(string[] args)
+{
+    object obj = new Dog();
+
+    if (obj is IAnimal)
+    {
+        Console.WriteLine("Obj, IAnimal interface'ini uyguluyor.");
+    }
+}
+
+// Özet: Bu kod, 'obj' nesnesinin 'IAnimal' interface'ini uygulayıp uygulamadığını kontrol eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+"as" Operatörü Kullanımı 
+
+interface IAnimal
+{
+    void Speak();
+}
+
+class Cat : IAnimal
+{
+    public void Speak() => Console.WriteLine("Meow!");
+}
+
+public static void Main(string[] args)
+{
+    object obj = new Cat();
+    
+    IAnimal animal = obj as IAnimal;
+    if (animal != null)
+    {
+        animal.Speak();  // Output: Meow!
+    }
+}
+
+// Özet: 'obj' nesnesini 'IAnimal' türüne dönüştürmeye çalışır ve başarılı olursa 'Speak' metodunu çağırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+"is" ve "as" Operatörlerinin Birlikte Kullanımı 
+
+interface IWorker
+{
+    void Work();
+}
+
+class Human : IWorker
+{
+    public void Work() => Console.WriteLine("Working!");
+}
+
+public static void Main(string[] args)
+{
+    object obj = new Human();
+
+    if (obj is IWorker worker)
+    {
+        worker.Work();  // Output: Working!
+    }
+    else
+    {
+        IWorker safeWorker = obj as IWorker;
+        if (safeWorker != null)
+        {
+            safeWorker.Work();  // Bu satır sadece dönüşüm başarılıysa çalışır.
+        }
+    }
+}
+
+// Özet: 'obj' nesnesinin 'IWorker' türünde olup olmadığını kontrol eder ve uygun işlemleri gerçekleştirir.
+
+________________________________________________________________________________________________________________________________________________________________________

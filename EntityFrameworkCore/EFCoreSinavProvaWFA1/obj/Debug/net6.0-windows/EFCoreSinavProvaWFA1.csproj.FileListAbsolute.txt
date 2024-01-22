@@ -1,0 +1,98 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Giris.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Oracle.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmAdminYonetimi.resources
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmAnaMenu.resources
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmKitapYonetimi.resources
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmRapor.resources
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmYayinEviYonetimi.resources
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.GenerateResource.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.CopyComplete
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\refint\EFCoreSinavProvaWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\ref\EFCoreSinavProvaWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmGiris.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Giris.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\EFCoreSinavProvaWFA1.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Oracle.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmAdminYonetimi.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmAnaMenu.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmGiris.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmKitapYonetimi.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmRapor.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.frmYayinEviYonetimi.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.GenerateResource.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.csproj.CopyComplete
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\refint\EFCoreSinavProvaWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\EFCoreSinavProvaWFA1.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreSinavProvaWFA1\obj\Debug\net6.0-windows\ref\EFCoreSinavProvaWFA1.dll

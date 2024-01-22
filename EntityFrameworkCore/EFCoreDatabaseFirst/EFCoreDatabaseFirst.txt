@@ -1,0 +1,27 @@
+﻿Entity Framework Core:
+
+*Entity Framework Core aslında Katmanlı Mimarideki DAL(Data Access Layer) katmanını yazıyor.
+
+*Navgiation Property önünde virtual yazması polimorfizm anlamına gelmez.
+*Aslında Lazy Loading kullanmak için yazılmalı ama Lazy loading kullanılmak için etkinleştirilmek zorunda.
+
+Connection String: "User Id=hr; Password=HR; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))"
+
+Code First:
+1-Database First:
+
+Kurulumlar:
+
+Nuget > Microsoft.EntityFrameworkCore
+Nuget > Oracle.EntityFrameworkCore
+Nuget > Microsoft.EntityFrameworkCore.Tools
+
+Package Manager Console:
+
+Veri tabanındaki tüm tabloları Models klasörüne class olarak oluştur:
+
+PM>Scaffold-DbContext "User Id=hr; Password=HR; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))" Oracle.EntityFrameworkCore -o Models
+
+Veri tabanındaki istediğimiz tabloları Models klasörüne class olarak oluştur:
+
+PM> Scaffold-DbContext "User Id=hr; Password=HR; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))" Oracle.EntityFrameworkCore -o Models -tables EMPLOYEES, DEPARTMENTS

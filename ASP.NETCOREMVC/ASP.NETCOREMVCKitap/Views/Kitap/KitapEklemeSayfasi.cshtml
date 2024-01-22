@@ -1,0 +1,45 @@
+﻿@model KitapEkle_VM
+<h2>Ekleme Sayfasi</h2>
+
+<form method="post" asp-action="KitapEkle">
+
+    <table class="table">
+        <tr>
+            @*<td>Kitap Adi</td>*@
+            <td><label asp-for="Kitap.KitapAdi"></label></td>
+            <td><input asp-for="Kitap.KitapAdi" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Kitap.KategoriID"></label></td>
+            <td>
+                <select asp-for="Kitap.KategoriID" asp-items="Model.Kategoriler" class="form-control">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Kitap.YazarID"></label></td>
+            <td>
+                <select asp-for="Kitap.YazarID" asp-items="Model.Yazarlar" class="form-control">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label asp-for="Kitap.Fiyat"></label></td>
+            <td> <input asp-for="Kitap.Fiyat" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Kaydet" class="btn btn-secondary" />
+            </td>
+        </tr>
+
+        @* <select asp-for="Kitap.KategoriID" asp-items="Model.Kategoriler" class="form-control">
+        </select>
+        <select asp-for="Kitap.YazarID" asp-items="Model.Yazarlar" class="form-control">
+        </select>
+        <input asp-for="Kitap.Fiyat" class="form-control" />
+
+        <input  type="submit" value="Kaydet" class="btn btn-secondary"/>*@
+    </table>
+</form>
+

@@ -1,0 +1,24 @@
+﻿__________________________________________________________________________________________________________________________
+
+LINQ to Object?
+
+LINQ to Object, .NET'teki nesnelerin üzerinde sorgulama yapmaya olanak 
+tanıyan bir LINQ (Language Integrated Query) uygulamasıdır. 
+Bu, bellekteki koleksiyonlar üzerinde LINQ sorguları kullanarak veri almanıza, 
+filtrelemenize ve dönüştürmenize izin verir.
+
+Önemli Noktalar:
+
+*LINQ to Object, IEnumerable veya IEnumerable<T> arabirimini uygulayan herhangi bir koleksiyon üzerinde çalışabilir.
+*Bellekteki verilerle çalışır, yani veritabanları veya diğer kaynaklar üzerinde çalışan LINQ to SQL veya LINQ to Entities gibi değildir.
+*Nesnelerinizi filtrelemek, sıralamak, gruplamak ve daha fazlası için güçlü ve esnek bir sorgulama yeteneği sunar.
+__________________________________________________________________________________________________________________________
+Models = Entity = POCO classes
+
+IEnumarable interface'ini implemente ettiği için
+LINQ extension metotları koleksiyonlar üzerinde kullanılabilir
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+

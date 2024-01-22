@@ -1,0 +1,75 @@
+﻿    ___________________________________________________________________________________________
+    
+    CSS'in HTML için yazıldığı yerler:
+___________________________________________________________________________________________
+
+    1. Inline CSS (Satır İçi CSS):
+
+    Inline CSS, HTML etiketlerinin içinde doğrudan stil tanımlamak için kullanılır.
+    Her bir HTML etiketi için ayrı ayrı stil belirlemek mümkündür.
+    Stil tanımlamaları "style" özelliği içinde yapılır.
+
+    <p style="color: blue; font-size: 16px;">Bu bir metin örneğidir.</p>
+
+___________________________________________________________________________________________
+
+    2. Internal CSS (İç CSS):
+
+    Internal CSS, HTML belgesinin head bölümünde style etiketi kullanılarak tanımlanır.
+    Bu stil tanımlamaları, aynı HTML belgesindeki tüm etiketlere uygulanır.
+
+    <head>
+      <style>
+        p {
+          color: green;
+          font-size: 18px;
+        }
+      </style>
+    </head>
+___________________________________________________________________________________________
+
+    3. External CSS (Harici CSS):
+
+    Harici CSS, HTML belgesiyle aynı dizinde veya uzak bir dosyada bulunan bir CSS dosyasından yüklenir.
+    Birden çok HTML belgesi üzerinde aynı stilin kullanılmasını sağlar.
+    
+    HTML dosyası (index.html):
+
+    <link rel="stylesheet" type="text/css" href="stil.css">
+
+    CSS dosyası (stil.css):
+
+    <p>Bu bir metin örneğidir.</p>
+
+    p {
+      color: red;
+      font-size: 20px;
+    }
+___________________________________________________________________________________________
+
+CSS Selectors (CSS Seçiciler):
+
+CSS seçicileri, belirli HTML etiketlerini, sınıfları veya kimlikleri hedeflemek için kullanılır.
+Özel CSS kuralları tanımlamak için kullanılırlar.
+Eğer 1 tane element'de kullanacaksak id kullan, birden fazla element'de kullanacaksak class kullan.
+
+<style>
+  /* Etiket seçici */
+  p {
+    color: blue;
+  }
+
+  /* class seçici */
+  .ozel {
+    font-weight: bold;
+  }
+
+  /* id seçici */
+  #baslik {
+    font-size: 24px;
+  }
+</style>
+
+___________________________________________________________________________________________
+
+box modeling?

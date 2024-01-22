@@ -1,0 +1,132 @@
+﻿______________________________________________________________________________________________________________________________________________________________________
+
+Object initializer:
+
+*Object initializer'lar, constructor'ları kullanarak veya nesne oluşturulduktan sonra 
+ayrı ayrı özellikleri ayarlayarak yapabileceğiniz bir şeyi daha temiz bir syntax ile sağlar.
+
+*Object initializer'lar, bir nesnenin yeni bir örneğini oluştururken, 
+constructor çağırma işleminin hemen ardından özelliklerini ayarlamanıza olanak tanır.
+
+*Bu syntax, özellikle birçok özelliği ayarlamanız gerektiğinde veya constructor'ın 
+tüm özellikler için aşırı yüklemeleri olmadığında kodun okunabilirliğini artırır.
+
+*Object initializer'lar, nesneleri anında tanımlamanıza olanak tanır ve her bir özellik için ayrı ayrı atama gerektirmez.
+
+*Indexer'lar ile object initializer kullanımı, nesneleri başlatırken koleksiyon öğelerine atama yapmayı kolaylaştırır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Basit Object Initializer:
+
+class Book
+{
+    public string Title { get; set; }
+    public string Author { get; set; }
+}
+
+// Kullanım:
+Book book = new Book
+{
+    Title = "Sissoylu",
+    Author = "Brandon Sanderson"
+};
+
+// Özet: Yeni bir kitap nesnesi oluşturur ve özelliklerini başlatır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Liste Özellikleri ile Object Initializer:
+
+class Library
+{
+    public string Name { get; set; }
+    public List<string> Books { get; set; }
+}
+
+// Kullanım:
+Library library = new Library
+{
+    Name = "Merkez Kütüphanesi",
+    Books = new List<string> { "Sissoylu", "Elantris", "Fırtınaışığı Arşivi" }
+};
+
+// Özet: Yeni bir kütüphane nesnesi oluşturur ve kitap listesini başlatır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Object Initializer İçinde Object Initializer
+
+class Author
+{
+    public string Name { get; set; }
+    public Book Book { get; set; }
+}
+
+// Kullanım:
+Author author = new Author
+{
+    Name = "Brandon Sanderson",
+    Book = new Book
+    {
+        Title = "Elantris",
+        Author = "Brandon Sanderson"
+    }
+};
+
+// Özet: Yeni bir yazar nesnesi oluşturur ve iç içe bir kitap nesnesi başlatır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+ Indexer'lar ile Object Initializer:
+
+ class SampleCollection
+{
+    private int[] arr = new int[10];
+    public int this[int i]
+    {
+        get { return arr[i]; }
+        set { arr[i] = value; }
+    }
+}
+
+// Kullanım:
+SampleCollection collection = new SampleCollection
+{
+    [0] = 1,
+    [1] = 2,
+    [2] = 3
+};
+
+// Özet: Yeni bir koleksiyon nesnesi oluşturur ve indexer kullanarak öğelerini başlatır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+class ComplexClass
+{
+    public Dictionary<int, string> Dictionary { get; set; }
+    public string Name { get; set; }
+
+    public ComplexClass()
+    {
+        Dictionary = new Dictionary<int, string>();
+    }
+
+    public string this[int i]
+    {
+        get { return Dictionary.ContainsKey(i) ? Dictionary[i] : null; }
+        set { Dictionary[i] = value; }
+    }
+}
+
+// Kullanım:
+ComplexClass complex = new ComplexClass
+{
+    Name = "Example",
+    [0] = "Zero",
+    [1] = "One"
+};
+
+// Özet: Yeni bir karmaşık sınıf nesnesi oluşturur, özelliklerini ve dictionary öğelerini indexer ile başlatır.
+
+______________________________________________________________________________________________________________________________________________________________________

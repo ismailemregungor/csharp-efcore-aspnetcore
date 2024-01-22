@@ -1,0 +1,50 @@
+﻿@using BlogApp.UI.Models.VMs.MakaleVMs;
+@model MakaleEkleVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="text-center mb-0">Makale Ekle</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Baslik" class="control-label"></label>
+                            <input type="text" asp-for="Baslik" class="form-control" />
+                            <span asp-validation-for="Baslik" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Detay" class="control-label"></label>
+                            <textarea asp-for="Detay" class="form-control"></textarea>
+                            <span asp-validation-for="Detay" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="KonuID" class="control-label"></label>
+                            <td><select asp-items="@(new SelectList(Model.Konular,"KonuID","KonuAdi"))" asp-for="KonuID" class="form-control"></select></td>
+                        </div>
+                        <div class="form-group text-center mt-4">
+                            <button type="submit" class="btn btn-success">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

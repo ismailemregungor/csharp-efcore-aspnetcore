@@ -1,0 +1,52 @@
+﻿____________________________________________________________________________________________________
+
+Open/Closed Principle (OCP) 
+____________________________________________________________________________________________________
+
+Open/Closed Principle, sınıfların genişletilmeye açık ancak değişikliğe kapalı olması gerektiğini belirten bir tasarım ilkesidir. Bu, yeni özellikler eklerken mevcut kodun değiştirilmesini önler.
+____________________________________________________________________________________________________
+
+Önemli Noktalar
+Genişletilebilirlik: Yeni işlevsellikler, mevcut sınıf yapısını değiştirmeden eklenmelidir.
+Değişikliğe Kapalılık: Var olan kod, yeni özellikler eklerken değiştirilmemelidir.
+Soyutlama ve Polimorfizm: OCP'yi uygulamanın ana yolları soyutlama ve polimorfizm kullanmaktır.
+Sürdürülebilirlik: Kodun uzun vadeli sürdürülebilirliğini artırır.
+Yeniden Kullanım: Genişletilebilir ve modüler kod, daha kolay yeniden kullanılabilir.
+____________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları
+Yeni Özelliklerin Eklenmesi: Mevcut sistemlere yeni işlevler eklemek.
+Sistem Genişletmeleri: Uygulamanın genişletilmesi gerektiğinde, mevcut kod tabanının stabil kalması.
+Bakım ve Güncelleme: Sistemi güncellerken mevcut işlevselliğin bozulmaması.
+____________________________________________________________________________________________________
+
+// Base sınıf veya arayüz
+public abstract class Shape
+{
+    public abstract double Area();
+}
+
+// Kare için genişletilmiş sınıf
+public class Square : Shape
+{
+    public double Side { get; set; }
+
+    public override double Area()
+    {
+        return Side * Side;
+    }
+}
+
+// Daire için genişletilmiş sınıf
+public class Circle : Shape
+{
+    public double Radius { get; set; }
+
+    public override double Area()
+    {
+        return Math.PI * Radius * Radius;
+    }
+}
+
+Açıklama: Shape sınıfı, Area metodunu soyut bir şekilde tanımlar. Square ve Circle gibi alt sınıflar, bu metodu kendi şekillerine göre uygular. Yeni bir şekil eklemek istendiğinde, mevcut kodu değiştirmek yerine yeni bir sınıf ekleyerek Shape sınıfını genişletebiliriz. Bu yaklaşım, OCP'ye uygundur ve kodun genişletilmesine izin verirken, mevcut işlevselliği korur.
+____________________________________________________________________________________________________

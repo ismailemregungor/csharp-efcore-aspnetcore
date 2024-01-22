@@ -1,0 +1,184 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Classes:
+
+Özellikleri:
+
+Örneklenemezler (Instantiable Değiller):
+*Soyut sınıfların amacı, başka sınıfların türetilebileceği bir temel sağlamaktır.
+*Abstract sınıflardan doğrudan nesne (örnek) oluşturulamaz. 
+*Yani new AbstractClass() gibi bir ifade kullanılamaz.
+
+Bir veya Daha Fazla Soyut Metot İçerirler: 
+*Abstract sınıflar en az bir  soyut metot (abstract method) içermelidirler. 
+*Soyut metotlar sadece başlıkları (imzası) tanımlanmış, ancak uygulamaları içermeyen metotlardır. 
+*Soyut metodlar, gövdesi olmayan ve türetilmiş sınıflar tarafından uygulanması gereken metodlardır.
+
+Soyut sınıflar somut metodlar da içerebilir: 
+*Abstract sınıflar sadece soyut metotlar içermek zorunda değiller. 
+*Somut metotlar (implementasyonları olan metotlar) da içerebilirler.
+*Yani, içlerinde normal metodlar (gövdeye sahip metodlar) bulunabilir ve 
+bu metodlar türetilmiş sınıflar tarafından kullanılabilir veya geçersiz kılınabilir (override).
+
+Türetilmiş sınıflar soyut metodları uygulamalıdır: 
+*Eğer bir soyut sınıf, soyut bir metod içeriyorsa, 
+bu sınıftan türeyen her sınıf bu soyut metodu uygulamalıdır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Class Kullanım Amaçları ve Senaryolar:
+
+*Ortak Fonksiyonelliği Sağlama: 
+Abstract sınıflar, farklı sınıflar arasında paylaşılan işlevselliği sağlamak için kullanılır. 
+Örneğin, bir şekil sınıfının abstract bir şekilde tanımlanabilmesi ve bu sınıftan türetilen farklı şekil 
+sınıflarının (ör. Dikdörtgen, daire) şekil alanlarını hesaplamaları için kullanılabilir.
+*Ortak özellikleri ve metotları bir araya getirerek kodun daha düzenli ve anlaşılır olmasını sağlar. 
+*En üst class abstract olacak diye birşey yok aradaki sınıflarda abstract class olabilir.
+
+*Arayüz (Interface) Benzeri İşlevsellik: 
+Abstract sınıflar, bir arayüz gibi  soyut metotları tanımlayabilir, ancak somut metotları da içerebilirler. 
+Bu, alt sınıfların bazı metotları uygulamak zorunda kalmadan önce uygulayabilecekleri varsayılan davranışları sağlar.
+
+Polimorfizm: 
+*Soyut sınıflar, C#’ta polimorfizmi kullanmanın bir yoludur. 
+*Çeşitli türetilmiş sınıflar, soyut sınıfın metodlarını farklı şekillerde uygulayabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+Abstract Sınıf Kullanım Yerleri:
+
+En Tepe: Eğer tüm türetilmiş sınıfların ortak bir özelliği veya metodu olacaksa, abstract sınıfı hiyerarşinin en tepesine koymak mantıklı olabilir.
+
+Ara Sınıf: Abstract sınıf, hiyerarşide herhangi bir yerde bulunabilir. Eğer bazı sınıflar ortak özelliklere/metodlara sahipken, 
+diğerleri farklıysa, ortak özellikleri/metodları barındıran bir ara abstract sınıf oluşturabilirsiniz.
+
+Polimorfik Davranış: Abstract sınıflar, türetilmiş sınıfların polimorfik davranmasını sağlamak için kullanılır.
+
+Nasıl Düşünmeliyim?
+
+Ortak Özellikler: Türetilmiş sınıfların paylaşacağı ortak özellikleri ve metodları belirleyin. Bu ortak özellikleri ve metodları abstract sınıfta tanımlayın.
+
+Zorunlu Uygulamalar: Türetilmiş sınıfların uygulamak zorunda olduğu metodları veya özellikleri belirleyin ve bunları abstract metod/özellik olarak tanımlayın.
+
+Genişletilebilirlik: Gelecekte eklenmesi muhtemel yeni sınıfları düşünerek tasarım yapın. Abstract sınıflar, kodunuzu daha genişletilebilir hale getirebilir.
+Soyutlama Seviyesi: Soyutlama seviyenizi belirleyin. Çok fazla soyutlama, kodun anlaşılmasını zorlaştırabilir. İhtiyacınıza göre dengeli bir soyutlama seviyesi bulun.
+________________________________________________________________________________________________________________________________________________________________________
+
+ Basit Soyut Sınıf
+
+ public abstract class Hayvan
+{
+    public abstract void SesCikar();
+}
+
+public class Kopek : Hayvan
+{
+    public override void SesCikar()
+    {
+        Console.WriteLine("Hav Hav!");
+    }
+}
+
+// Özet: Hayvan soyut bir sınıf ve bir soyut metod içeriyor. Kopek sınıfı, bu metodun gerçekleştirilmesini sağlıyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Soyut ve Normal Metodların Bir Arada Kullanımı
+
+public abstract class Sekil
+{
+    public abstract double AlanHesapla();
+
+    public void TasvirEt()
+    {
+        Console.WriteLine("Ben bir şekilim.");
+    }
+}
+
+public class Daire : Sekil
+{
+    public double Yaricap = 5.0;
+    
+    public override double AlanHesapla()
+    {
+        return Yaricap * Yaricap * Math.PI;
+    }
+}
+
+// Özet: Sekil, hem soyut hem de normal metodlar içeriyor. Daire sınıfı, soyut metodu uyguluyor.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Soyut Özellikler (Properties)
+
+public abstract class Insan
+{
+    public abstract string Meslek { get; set; }
+}
+
+public class Doktor : Insan
+{
+    private string meslek;
+
+    public override string Meslek
+    {
+        get { return "Doktor"; }
+        set { meslek = value; }
+    }
+}
+
+// Özet: Insan, bir soyut özellik içeriyor. Doktor sınıfı, bu özelliği uyguluyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Çoklu Türetme ve Soyut Sınıflar
+
+public abstract class Canli
+{
+    public abstract void Beslen();
+}
+
+public abstract class Bitki : Canli
+{
+    // Bitki sınıfı, Beslen metodunu uygulamak zorunda değil çünkü kendisi de soyut.
+}
+
+public class Kaktus : Bitki
+{
+    public override void Beslen()
+    {
+        Console.WriteLine("Ben su ve güneş ışığı ile beslenirim.");
+    }
+}
+
+// Özet: Birden fazla soyut sınıf türetilebilir. Son türetilen sınıf, soyut metodları uygulamalıdır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Soyut Sınıf İle Polimorfizm
+
+public abstract class ElektronikAlet
+{
+    public abstract void Calis();
+}
+
+public class Televizyon : ElektronikAlet
+{
+    public override void Calis()
+    {
+        Console.WriteLine("Televizyon kanalları gösteriliyor.");
+    }
+}
+
+public class Radyo : ElektronikAlet
+{
+    public override void Calis()
+    {
+        Console.WriteLine("Radyo frekansları çalınıyor.");
+    }
+}
+
+// Özet: Farklı sınıflar, aynı soyut metodları farklı şekillerde uygulayarak polimorfizm sağlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

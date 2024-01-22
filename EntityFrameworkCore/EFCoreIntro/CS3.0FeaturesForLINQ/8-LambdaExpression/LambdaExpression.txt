@@ -1,0 +1,21 @@
+﻿__________________________________________________________________________________________________________________________
+
+Lambda Expression:
+
+Default Şablon: (input-parameters) => expression
+
+Önemli Noktalar:
+
+*Anonim metodlar yazmanıza olanak tanır.
+*LINQ sorgularında sıkça kullanılır (örn. Where, Select, OrderBy).
+*Kodu daha temiz ve okunabilir yapar.
+__________________________________________________________________________________________________________________________
+
+var expensiveProducts = products.Where(p => p.Price > 1000).ToList();
+
+// 'expensiveProducts' pahalı ürünlerin listesidir, lambda ifadesi her bir 'Product' için fiyat kontrolü yapar.
+
+Lambda ifadesi p => p.Price > 1000, Where yönteminin bir parçası olarak kullanılır ve 
+yalnızca fiyatı 1000'den fazla olan ürünleri filtreler. Bu basit ve anlaşılır bir şekilde sorgu yazmanızı sağlar.
+
+__________________________________________________________________________________________________________________________

@@ -1,0 +1,61 @@
+﻿__________________________________________________________________________________________________________________________
+
+LINQ ile koleksiyonları dolaşma işlemi genellikle foreach döngüsü ile gerçekleştirilir. 
+Ancak, List<T> sınıfı gibi bazı koleksiyon türleri ForEach adında bir metod sunar. 
+Bu metod, koleksiyon üzerinde dolaşıp her bir eleman için belirtilen bir işlemi yapmanıza olanak tanır.
+__________________________________________________________________________________________________________________________
+
+ForEach bir Action<T> alır, yani her bir eleman için ne yapılacağını belirten bir delegedir.
+ForEach yalnızca List<T> gibi bazı koleksiyonlar üzerinde kullanılabilir; genel bir IEnumerable<T> üzerinde doğrudan kullanılamaz.
+ForEach ile yapılan değişiklikler koleksiyonun kendisini etkiler.
+ForEach metodu void döner ve LINQ'in geri dönüş değeri olan diğer metodları gibi zincirleme (chaining) desteklemez.
+__________________________________________________________________________________________________________________________
+
+List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+numbers.ForEach(number => Console.WriteLine(number));
+
+Bu örnek, her bir sayıyı konsola yazdırır.
+
+
+__________________________________________________________________________________________________________________________
+
+List<string> names = new List<string> { "Alice", "Bob", "Charlie" };
+names.ForEach(name => Console.WriteLine($"Hello, {name}!"));
+
+Bu örnek, her bir ismi selamlayarak konsola yazdırır.
+
+__________________________________________________________________________________________________________________________
+
+List<double> prices = new List<double> { 100.0, 150.5, 200.75 };
+prices.ForEach(price => Console.WriteLine($"Price with tax: {price * 1.2}"));
+
+Bu örnek, her bir fiyata vergi ekleyerek güncel fiyatı konsola yazdırır.
+
+
+__________________________________________________________________________________________________________________________
+
+int sum = 0;
+numbers.ForEach(number => sum += number);
+
+Console.WriteLine($"Total: {sum}");
+
+Bu örnek, sayıların toplamını hesaplar ve konsola yazdırır.
+
+__________________________________________________________________________________________________________________________
+
+List<Person> people = new List<Person>
+{
+    new Person { Name = "Alice", Age = 25 },
+    new Person { Name = "Bob", Age = 30 },
+    new Person { Name = "Charlie", Age = 35 }
+};
+
+people.ForEach(person => person.Age += 1);
+
+people.ForEach(person => Console.WriteLine($"{person.Name} is now {person.Age} years old."));
+
+Bu örnek, her bir kişinin yaşını bir arttırır ve güncellenmiş yaşları konsola yazdırır.
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

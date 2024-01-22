@@ -1,0 +1,61 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+C# Jenerik Sınıflar: Giriş
+
+Jenerik Sınıfların Özellikleri:
+Tür Güvenliği: Jenerikler, tür hatası riskini azaltır. Bu, derleme sırasında hataları yakalamanıza ve runtime'da hataların önüne geçmenize yardımcı olur.
+Yeniden Kullanılabilirlik: Aynı sınıfın farklı türlerle çalışabilmesini sağlar. Bu da kodunuzun daha DRY (Don't Repeat Yourself) olmasına yardımcı olur.
+Performans: Jenerikler, boxing ve unboxing işlemlerini ortadan kaldırarak daha hızlı çalışmasını sağlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Koleksiyonlar: Örneğin, List<T>, Dictionary<TKey, TValue> gibi tür güvenli koleksiyonlar oluşturulabilir.
+Veritabanı İşlemleri: Jenerik repository sınıflarıyla veritabanı işlemleri yapmak.
+Özel veri yapıları: Kendi özel veri yapılarınızı oluştururken jenerikleri kullanabilirsiniz.
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Jenerik Sınıf.ç
+
+public class Box<T>
+{
+    private T item;
+
+    public void Set(T item)
+    {
+        this.item = item;
+    }
+
+    public T Get()
+    {
+        return item;
+    }
+}
+
+public static void Main()
+{
+    var boxOfString = new Box<string>();
+    boxOfString.Set("Hello");
+    Console.WriteLine(boxOfString.Get());  // Çıktı: Hello
+}
+
+// Özet: Bu kod, her türdeki değeri saklayabilen basit bir jenerik sınıf tanımlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Jenerik İki Parametreli Sınıf
+
+public class Pair<T1, T2>
+{
+    public T1 First { get; set; }
+    public T2 Second { get; set; }
+}
+
+public static void Main()
+{
+    var pair = new Pair<string, int> { First = "Age", Second = 25 };
+    Console.WriteLine($"{pair.First}: {pair.Second}");  // Çıktı: Age: 25
+}
+
+// Özet: İki farklı türde veri saklamak için bir çift (pair) sınıfı tanımlar.
+
+________________________________________________________________________________________________________________________________________________________________________

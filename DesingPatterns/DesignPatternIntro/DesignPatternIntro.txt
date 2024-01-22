@@ -1,0 +1,3 @@
+﻿https://www.dofactory.com/net/design-patterns
+
+https://refactoring.guru/design-patterns/mediator

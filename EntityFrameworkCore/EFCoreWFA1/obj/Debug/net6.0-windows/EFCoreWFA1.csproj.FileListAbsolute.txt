@@ -1,0 +1,86 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Oracle.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.GenerateResource.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.CopyComplete
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\refint\EFCoreWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\ref\EFCoreWFA1.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.frmUrun.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\EFCoreWFA1.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Oracle.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.frmUrun.resources
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.GenerateResource.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.csproj.CopyComplete
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\refint\EFCoreWFA1.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\EFCoreWFA1.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreWFA1\obj\Debug\net6.0-windows\ref\EFCoreWFA1.dll

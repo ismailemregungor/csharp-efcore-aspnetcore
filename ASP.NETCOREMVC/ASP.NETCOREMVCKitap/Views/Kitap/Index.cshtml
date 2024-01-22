@@ -1,0 +1,40 @@
+﻿@*JOIN olmadan....*@
+@*@model IEnumerable<Kitap>
+
+<a asp-action="KitapEkle">Yeni Kitap Ekle</a>
+<br />
+<h2>Tüm kitaplar</h2>
+<table>
+    @foreach(var kitap in Model)
+    {
+        <tr>
+        <td>@kitap.KitapID</td>
+        <td>@kitap.KitapAdi</td>
+        <td>@kitap.KategoriID</td>
+        <td>@kitap.YazarID</td>
+        <td>@kitap.Fiyat</td>
+        </tr>
+    }
+</table>*@
+
+
+@*JOIN ile ....*@
+@model IEnumerable<Kitap_VM>
+
+<a asp-action="KitapEklemeSayfasi" class="btn btn-primary">Yeni Kitap Ekle</a>
+<br />
+<br />
+<a asp-action="ResimIleKitapEklemeSayfasi" class="btn btn-danger">Yeni Kitap Ekle(Resim)</a>
+<h2>Tüm kitaplar</h2>
+<table class="table table-striped">
+    @foreach (var kitap in Model)
+    {
+        <tr>
+            <td>@kitap.KitapID</td>
+            <td>@kitap.KitapAdi</td>
+            <td>@kitap.Kategori</td>
+            <td>@kitap.Yazar</td>
+            <td>@kitap.Fiyat</td>
+        </tr>
+    }
+</table>

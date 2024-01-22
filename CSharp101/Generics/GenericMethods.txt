@@ -1,0 +1,74 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Jenerik Metodlar, Özellikler ve Alanlar: Giriş
+________________________________________________________________________________________________________________________________________________________________________
+
+Önemli Noktalar:
+Kod Yeniden Kullanılabilirliği: Jenerikler, farklı türler için aynı işlevselliği sağlayan kodları yeniden kullanmayı mümkün kılar.
+Tür Güvenliği: Jenerikler, hataların derleme zamanında yakalanmasına yardımcı olarak runtime hatalarını azaltır.
+Performans Kazanımları: Jenerikler, boxing ve unboxing işlemlerini ortadan kaldırır, bu da performansı artırır.
+Esneklik: Jenerikler, tür parametreleri aracılığıyla işlevsellik sağlar, bu da kodun çok daha esnek olmasını sağlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Farklı Türlerle Çalışmak: Aynı işlevselliği farklı türlerdeki verilerle kullanabilme.
+Koleksiyonlarla Çalışmak: List, Dictionary gibi tür güvenli koleksiyonların işlenmesi.
+Tür Dönüşümleri: Jenerik metodlar, tür dönüşüm işlemlerini daha güvenli ve kolay hale getirir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Jenerik Metod
+
+public void Display<T>(T item)
+{
+    Console.WriteLine($"Value: {item}");
+}
+
+public static void Main()
+{
+    Display<string>("Hello, Generics!");
+    Display<int>(123);
+}
+
+// Özet: Bu metod, herhangi bir türdeki veriyi kabul eder ve konsola yazdırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Jenerik Dönüş Tipi ile Metod
+
+public T GetDefaultValue<T>()
+{
+    return default(T);
+}
+
+public static void Main()
+{
+    int defaultInt = GetDefaultValue<int>();
+    Console.WriteLine(defaultInt);  // Çıktı: 0
+}
+
+// Özet: Bu metod, belirtilen türün varsayılan değerini döndürür.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Jenerik Feilds: 
+
+public class Calculator<T>
+{
+    public T Number;
+
+    public T DoubleValue()
+    {
+        dynamic value = Number;
+        return value * 2;
+    }
+}
+
+public static void Main()
+{
+    var calculator = new Calculator<int> { Number = 2 };
+    Console.WriteLine(calculator.DoubleValue());  // Çıktı: 4
+}
+
+// Özet: Bu sınıf, değeri ikiye katlayan bir metod içerir.
+
+________________________________________________________________________________________________________________________________________________________________________

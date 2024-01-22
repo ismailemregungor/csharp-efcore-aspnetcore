@@ -1,0 +1,9 @@
+﻿
+SingleThread?
+MultiThread?
+
+Senkron?
+Asenkron?
+
+Async?
+Await?

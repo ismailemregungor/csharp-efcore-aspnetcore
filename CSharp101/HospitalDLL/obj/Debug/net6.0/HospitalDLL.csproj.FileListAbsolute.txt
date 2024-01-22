@@ -1,0 +1,12 @@
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\bin\Debug\net6.0\HospitalDLL.deps.json
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\bin\Debug\net6.0\HospitalDLL.dll
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\bin\Debug\net6.0\HospitalDLL.pdb
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.dll
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\refint\HospitalDLL.dll
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\HospitalDLL.pdb
+C:\Users\iegof\Desktop\CSharp101\HospitalDLL\obj\Debug\net6.0\ref\HospitalDLL.dll

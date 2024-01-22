@@ -1,0 +1,54 @@
+﻿___________________________________________________________________________________________
+
+Tag Helpers:
+
+*Tag Helpers, HTML etiketlerine sunucu tarafı işlevleri ekleyerek,
+Razor View'ların daha okunabilir ve yönetilebilir olmasını sağlar. 
+___________________________________________________________________________________________
+
+En çok kullanılan Tag Helpers'lar:
+
+___________________________________________________________________________________________
+
+1. asp-for
+Amaç: Bir model özelliğini bir form alanına bağlamak.
+Kullanım: Form alanlarında (<input>, <select>, <textarea> vb.) kullanılır.
+Örnek: <input asp-for="Username" /> – Burada Username, modeldeki bir özelliktir.
+
+___________________________________________________________________________________________
+
+2. asp-action ve asp-controller
+Amaç: Form veya linkin hangi aksiyon/metoda yönlendirileceğini belirlemek.
+Kullanım:
+asp-action: Formun veya linkin hangi aksiyona gitmesi gerektiğini belirtir.
+asp-controller: Hangi controller'ın kullanılacağını belirtir.
+Örnek: <form asp-action="Create" asp-controller="Home"> – Home controller'ındaki Create aksiyonuna gider.
+
+___________________________________________________________________________________________
+
+3. asp-route-{value}
+Amaç: URL için rota parametreleri eklemek.
+Kullanım: Linklerde veya form elemanlarında rota parametrelerini tanımlamak için kullanılır.
+Örnek: <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> – id parametresi ile Edit aksiyonuna yönlendirir.
+
+___________________________________________________________________________________________
+
+4. asp-validation-for
+Amaç: Form alanları için doğrulama mesajlarını göstermek.
+Kullanım: Bir form alanının yanında hata mesajlarını göstermek için kullanılır.
+Örnek: <span asp-validation-for="Email"></span> – Email alanı için doğrulama mesajlarını gösterir.
+
+___________________________________________________________________________________________
+
+5. asp-items
+Amaç: Bir <select> listesinin öğelerini belirlemek.
+Kullanım: Dropdown listelerin içeriğini oluşturmak için kullanılır.
+Örnek: <select asp-for="Country" asp-items="Model.CountryList"></select> – CountryList içindeki öğelerle dropdown doldurulur.
+
+___________________________________________________________________________________________
+
+6. asp-area
+Amaç: MVC uygulamalarında "Area" kullanımını yönetmek.
+Kullanım: Büyük projelerde organizasyonu kolaylaştırmak için kullanılır.
+Örnek: <a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Home</a> – Admin area'daki Home controller'ına yönlendirir.
+___________________________________________________________________________________________

@@ -1,0 +1,26 @@
+﻿Kitap Dükkanı Projesi:
+
+*C# dili ve Entity Framework Core ile bir form uygulaması olarak geliştirilecektir.
+*Code First yaklaşımı ile geliştirilecektir.
+*İlişkiler Navigation Property'ler ile kurulacaktır.
+*İsimlendirmeler Türkçe dili ile olacaktır.
+
+>Bir kitapçı için kitaplarla ilgili olarak; Admin kişilere ait yönetim panelini oluşturunuz.
+*Bir kişi sisteme üye değilse(admin) sisteme giriş izni olmayacak.
+*Admin ise kullanıcı adı ve şifre ile sisteme giriş yapmalı.
+*Şifre veritabanında açık olarak tutulmamalı.(MD5 kullanımı)
+*Şifre ile ilgili en az 2 tane kısıt olmalı
+(min length, büyük harf olmalı, en az 1 tane yada en az 1 tane harfler harici karakter olmalı)
+
+>Sisteme giriş yapan yönetici:
+
+*Uygun ekranları görmeli
+
+*CRUD işlemleri yapabilmeli
+
+*Aşağıdaki raporları alabilmeli:
+1-En son eklenen 10 kitap listesi
+2-Yayin Evlerine Göre kitaplar listesi
+3-Satisi durdurulan kitaplar listesi
+(Satişi durdurulan kitap silinmeyecek durumu pasif olacak)
+4-Fiyatına göre Kitaplar listesi

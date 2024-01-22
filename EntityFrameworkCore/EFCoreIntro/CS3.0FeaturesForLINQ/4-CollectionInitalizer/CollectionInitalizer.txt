@@ -1,0 +1,24 @@
+﻿__________________________________________________________________________________________________________________________
+
+Collection Initializer:
+
+Default Şablon: new List<Type> { item1, item2, item3 };
+
+Önemli Noktalar:
+
+*Koleksiyonlara elemanları hızlı bir şekilde eklemenizi sağlar.
+*Koleksiyonlar için uzun Add çağrı dizilerini ortadan kaldırır.
+*Koleksiyonları başlatırken kod okunabilirliğini artırır.
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 1, 2, 3, 4, 5 }; // Collection initializer
+
+var doubled = numbers.Select(x => new { Original = x, Doubled = x * 2 }); // LINQ ve anonymous object initializer
+
+// 'doubled' her bir sayının orijinal ve iki katını içeren anonim bir nesne koleksiyonudur.
+
+Bu örnekte, Select metodunu kullanarak her bir int değer için yeni bir anonim tür koleksiyonu oluşturulur.
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

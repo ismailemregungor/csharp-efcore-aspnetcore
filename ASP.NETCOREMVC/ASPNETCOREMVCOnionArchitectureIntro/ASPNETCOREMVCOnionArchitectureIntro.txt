@@ -1,0 +1,32 @@
+﻿______________________________________________________________________________________________
+
+Onion Notlar:
+
+İçten Dışa Doğru:
+
+Core/Domain(N-katmanlıda Entity katmanına karşılık gelir) --> Models, Entities
+Infrastructure(N-katmanlıda DAL katmanına karşılık gelir) --> DbContext
+Application(N-katmanlıda BLL katmanına karşılık gelir) --> DTO, VM, Services
+Presentation/UI(N-katmanlıda Presentation/UI katmanına karşılık gelir) --> Controller, Views
+______________________________________________________________________________________________
+
+ViewModel Kullanımı:
+
+*ViewModel'ler bağımlılığına göre Presentation ya da Application katmanında kullanılabilir.
+*Mesela Selectlist'te veri listeleyeceksek PresentationLayer'de kullanabiliriz.
+*
+______________________________________________________________________________________________
+
+DTO(Data Transfer Object) Kullanımı:
+
+*
+______________________________________________________________________________________________
+
+AutoMapper Kullanımı:
+
+*Presentation katmanından gelen modellerdeki verileri Application katmanına yollarken
+modelleri eşleştirmek için kullanılır.
+*Map'leme işi genelde Application katmanında halledilir
+*Orjinal model ile, ViewModel veya DTO'yu eşleştirmek için kullanılır.
+______________________________________________________________________________________________
+

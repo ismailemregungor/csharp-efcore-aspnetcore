@@ -1,0 +1,90 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Explicit Interface Implementation
+
+Açık Interface Uygulamasının Özellikleri:
+
+Üye Çakışmalarını Çözme: Birden fazla interface aynı üye imzasına sahipse, açık interface uygulaması hangi üyenin hangi interface için kullanılacağını belirlemenizi sağlar.
+Gizlilik Sağlama: Açıkça uygulanan interface üyeleri, yalnızca interface türüne dönüştürüldüklerinde erişilebilir. Bu, sınıfın diğer yönleriyle etkileşimde bulunmayan client kodları için bir tür gizlilik sağlar.
+Kodun Okunabilirliğini Artırma: Hangi metodun hangi interface'e ait olduğu açıkça belirtildiği için kodun okunabilirliği ve yönetilebilirliği artar.
+
+
+Kullanım Senaryoları:
+Çakışan Üye İsimleri: İki interface'in çakışan üye imzaları olduğu durumlarda, hangi üyenin hangi interface'e ait olduğunu açıkça belirtmek için kullanılır.
+Gizli Fonksiyonellik: Bir sınıfın, belirli interface'leri yalnızca belirli durumlar için uygulaması gerektiğinde, bu işlevselliği gizlemek için kullanılır.
+Daha Temiz API Tasarımı: Açık uygulamalar, sınıfın dışa sunduğu genel API'nin temiz ve odaklanmış kalmasına yardımcı olur, çünkü yalnızca ilgili interface üzerinden erişilebilirler.
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Açık Interface Uygulaması
+
+interface IFirstInterface
+{
+    void MyMethod();
+}
+
+interface ISecondInterface
+{
+    void MyMethod();
+}
+
+public class ExampleClass : IFirstInterface, ISecondInterface
+{
+    void IFirstInterface.MyMethod()
+    {
+        Console.WriteLine("IFirstInterface.MyMethod");
+    }
+
+    void ISecondInterface.MyMethod()
+    {
+        Console.WriteLine("ISecondInterface.MyMethod");
+    }
+}
+
+// Kullanım
+ExampleClass example = new ExampleClass();
+
+// Aşağıdaki satırlar hata verecektir çünkü MyMethod yalnızca interface üzerinden çağrılabilir.
+// example.MyMethod(); 
+
+IFirstInterface first = example;
+first.MyMethod();  // Çıktı: "IFirstInterface.MyMethod"
+
+ISecondInterface second = example;
+second.MyMethod(); // Çıktı: "ISecondInterface.MyMethod"
+
+// Özet: 'ExampleClass', 'IFirstInterface' ve 'ISecondInterface' interface'lerini uygular ve her iki interface için de 'MyMethod' metodunu açıkça tanımlar. Bu metodlar yalnızca ilgili interface türüne cast edildiğinde erişilebilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Açık Interface Uygulamasının Kısıtlamaları
+
+public interface IExample
+{
+    void Test();
+}
+
+public class ExampleImplementation : IExample
+{
+    void IExample.Test() // Açık uygulama
+    {
+        Console.WriteLine("Açık Test Metodu");
+    }
+
+    public void Test() // Sınıfın kendi metodu
+    {
+        Console.WriteLine("Sınıfın Test Metodu");
+    }
+}
+
+// Kullanım
+ExampleImplementation example = new ExampleImplementation();
+example.Test();  // Çıktı: "Sınıfın Test Metodu"
+
+IExample iExample = example;
+iExample.Test(); // Çıktı: "Açık Test Metodu"
+
+// Özet: 'ExampleImplementation' sınıfı, 'Test' metodunu hem kendi içinde hem de 'IExample' interface'i için açıkça uygular. 'example.Test()' çağrıldığında sınıfın kendi metodu çalışır, 'iExample.Test()' çağrıldığında ise interface'in metodu çalışır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

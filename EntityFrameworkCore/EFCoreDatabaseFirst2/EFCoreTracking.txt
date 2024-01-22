@@ -1,0 +1,14 @@
+﻿EFCore Tracking?
+States:
+
+Added
+Modified
+Deleted
+Unchanged
+etc...
+
+*Tracking 
+*No Tracking
+
+SaveChanges:
+*Veritabanına işler ve değişiklikl State'ini Unchanged yapar.

@@ -1,0 +1,42 @@
+﻿__________________________________________________________________________________________________________________________
+
+var keyword:
+
+Default Şablon: var identifier = expression;
+
+Önemli Noktalar:
+
+*Veri tipi derleme zamanında ifadenin türüne göre belirlenir.
+
+*Anonim türlerle ve karmaşık tip dönüşleriyle çalışırken faydalıdır.
+
+*Okunabilirliği artırabilir ve kod tekrarını azaltabilir.
+
+*C# programlamada değişken türünü belirlemek yerine, 
+değişkenin türünü otomatik olarak tespit etmek için kullanılır. Bu özellik, 
+türü açıkça belirtmek yerine kodun daha okunabilir ve esnek olmasına olanak tanır. 
+
+*var bir veri tipi değildir, bir keyword'dur.
+
+
+var d1 = 10;
+//var d1 = "ieg"; --> tip 1 kere belli oldumu değişmez hata verir.
+
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+
+numbers değişkeni List<int> tipindedir ve değeri { 1, 2, 3, 4, 5 } listesidir.
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var evenNumbers = from num in numbers
+                  where num % 2 == 0
+                  select num;
+
+// 'evenNumbers' tipi otomatik olarak IEnumerable<int> olarak belirlenmiştir.
+
+Bu örnekte, var anahtar kelimesi bir LINQ sorgusunun sonucunu tutmak için kullanılmıştır.
+Sorgunun türü otomatik olarak belirlenir, bu durumda IEnumerable<int> olur.
+__________________________________________________________________________________________________________________________
+

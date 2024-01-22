@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "4EuZFlkR4lYHEYAse030qXSmrexd3WNqzZ1ML3BHoJOgdFQ2h4xI2eG1iOlN7QV+6uj+/RgzprfGBuXi9A80BQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaEXE\\BankaEXE.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

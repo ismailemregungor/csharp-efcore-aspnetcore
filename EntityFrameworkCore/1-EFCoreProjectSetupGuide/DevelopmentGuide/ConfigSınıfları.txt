@@ -1,0 +1,98 @@
+﻿__________________________________________________________________________________________________________________________
+
+public class Kitap_CFG : IEntityTypeConfiguration<Kitap>
+    {
+        public void Configure(EntityTypeBuilder<Kitap> builder)
+        {
+            builder.ToTable("KITAPLAR");
+
+            builder.Property(x => x.KitapID)
+                .HasColumnName("KITAP_ID");
+
+            builder.Property(x => x.KitapAdi)
+             .HasColumnName("KITAP_ADI")
+             .HasMaxLength(200)
+             .IsRequired();
+
+            builder.Property(x => x.StokAdedi)
+             .HasColumnName("STOK_ADEDI")
+             .IsRequired(true);
+
+            builder.Property(x => x.Fiyat)
+             .HasColumnName("FIYAT")
+             .IsRequired();
+
+            builder.Property(x => x.KitapDurumu)
+             .HasColumnName("KITAP_DURUMU")
+             .IsRequired(true).HasDefaultValue(KitapDurumu.Aktif);
+
+            builder.Property(x => x.EklemeTarih)
+            .HasColumnName("EKLEME_TARIHI")
+            .IsRequired();
+
+        }
+    }
+__________________________________________________________________________________________________________________________
+
+    public class Kullanici_CFG : IEntityTypeConfiguration<Kullanici>
+    {
+        public void Configure(EntityTypeBuilder<Kullanici> builder)
+        {
+            builder.ToTable("KULLANICILAR");
+
+            builder.Property(x => x.KullaniciID)
+                .UseIdentityColumn(2,1)                
+                .HasColumnName("KULLANICI_ID");
+
+            builder.Property(x => x.Ad)
+             .HasColumnName("AD")
+             .HasMaxLength(20)
+             .IsRequired();
+
+            builder.Property(x => x.Soyad)
+            .HasColumnName("SOYAD")
+            .HasMaxLength(20)
+            .IsRequired();
+
+            builder.Property(x => x.KullaniciAdi)
+             .HasColumnName("KULLANICI_ADI")
+             .HasMaxLength(20)
+             .IsRequired(true);
+
+            builder.Property(x => x.Sifre)
+            .HasColumnName("SIFRE")
+            .HasMaxLength(100)
+            .IsRequired(true);
+
+            builder.HasData(new Kullanici { KullaniciID=1, Ad="Cevdet", Soyad="Korkmaz", KullaniciAdi="cevdo" , Sifre=Utilities.Utility.SifreMD5("cev_123") });
+        }
+    }
+__________________________________________________________________________________________________________________________
+
+    public class Yayinevi_CFG : IEntityTypeConfiguration<Yayinevi>
+    {
+        public void Configure(EntityTypeBuilder<Yayinevi> builder)
+        {
+            builder.ToTable("YAYINEVLERI");
+
+            builder.Property(x => x.YayinEviID)
+                .UseIdentityColumn(4,1)
+                .HasColumnName("YAYINEVI_ID");
+
+            builder.Property(x => x.YayineviAdi)
+             .HasColumnName("YAYINEVI_ADI")
+             .HasMaxLength(200)
+             .IsRequired();
+
+            builder.Property(x => x.Adres)
+             .HasColumnName("ADRES")
+             .IsRequired(false);
+
+
+            builder.HasData(new Yayinevi { YayinEviID = 1, YayineviAdi = "Alfa", Adres = "Kadıkoy" });
+            builder.HasData(new Yayinevi { YayinEviID = 2, YayineviAdi = "Is Bankasi Yayinlari", Adres = "Sisli" });
+            builder.HasData(new Yayinevi { YayinEviID = 3, YayineviAdi = "Gama", Adres = "Besiktas" });
+
+        }
+    }
+__________________________________________________________________________________________________________________________

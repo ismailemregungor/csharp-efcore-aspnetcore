@@ -1,0 +1,345 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Inheritance & Constructor:
+
+*Inheritance, bir sınıfın diğer bir sınıftan türemesi demektir ve C# programlama dilinde 
+yaygın olarak kullanılan bir özelliktir. 
+*Yapıcı metodlar (constructor), bir sınıf örneği oluşturulduğunda otomatik olarak çağrılan özel metodlardır. 
+*Kalıtım ve yapıcı metodlar bir araya geldiğinde, bu metodların çağrılma sırası önem kazanır.
+*Kalıtım sırasında kurucu çağırma sırası, temel sınıftan türetilmiş sınıfa doğru ilerler.
+
+Önemli Noktalar
+
+Çağrılma Sırası: Türemiş bir sınıfın yapıcı metodu çağrıldığında, önce temel sınıfın yapıcı metodu çağrılır, ardından türemiş sınıfın yapıcı metodu çalışır.
+Parametresiz Yapıcı Metodlar: Eğer türemiş sınıfın yapıcı metodunda base() kullanılmamışsa, temel sınıfın parametresiz yapıcı metodu varsayılan olarak çağrılır.
+base() Kullanımı: Türemiş sınıfın yapıcı metodunda base() kullanarak temel sınıfın farklı bir yapıcı metodunu çağırabiliriz.
+Erişilebilirlik: base() ile çağrılabilecek yapıcı metodlar, türemiş sınıfın erişebileceği (public veya protected) yapıcı metodlardır.
+İnitialization Sırası: Önce temel sınıfın alanları başlatılır, sonra türemiş sınıfın alanları.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel Kullanım:
+
+public class Animal
+{
+    public Animal()
+    {
+        Console.WriteLine("Animal constructor");
+    }
+}
+
+public class Dog : Animal
+{
+    public Dog()
+    {
+        Console.WriteLine("Dog constructor");
+    }
+}
+
+Bu örnekte, Dog sınıfının bir örneği oluşturulduğunda önce "Animal constructor" yazdırılır, ardından "Dog constructor" yazdırılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Parametreli Yapıcı Metodlar
+
+public class Animal
+{
+    public Animal()
+    {
+        Console.WriteLine("Animal constructor");
+    }
+}
+
+public class Bird : Animal
+{
+    public Bird(string name)
+    {
+        Console.WriteLine($"Bird constructor, Name: {name}");
+    }
+}
+
+Bu örnekte, Bird sınıfının yapıcı metodu bir parametre alır ve bu parametreyi yazdırır. 
+Bird sınıfının bir örneği oluşturulduğunda önce "Animal constructor" yazdırılır, ardından "Bird constructor, Name: ..." yazdırılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+base() ile Yapıcı Metod Çağırma
+
+public class Animal
+{
+    public Animal()
+    {
+        Console.WriteLine("Animal constructor");
+    }
+}
+
+public class Cat : Animal
+{
+    public Cat() : base()
+    {
+        Console.WriteLine("Cat constructor");
+    }
+}
+
+Bu örnekte, Cat sınıfının yapıcı metodu base() ile temel sınıfın yapıcı metodunu açıkça çağırır. Çıktı sırası "Animal constructor", "Cat constructor" olacaktır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel Sınıfta Parametreli Yapıcı Metod 
+
+public class Animal
+{
+    public Animal(string name)
+    {
+        Console.WriteLine($"Animal constructor, Name: {name}");
+    }
+}
+
+public class Fish : Animal
+{
+    public Fish() : base("Fish")
+    {
+        Console.WriteLine("Fish constructor");
+    }
+}
+
+Bu örnekte, Fish sınıfının yapıcı metodu base("Fish") ile temel sınıfın parametreli yapıcı metodunu çağırır. 
+Çıktı sırası "Animal constructor, Name: Fish", "Fish constructor" olacaktır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel ve Türemiş Sınıflarda Alan Başlatma
+
+public class Animal
+{
+    public Animal(string name)
+    {
+        Console.WriteLine($"Animal constructor, Name: {name}");
+    }
+}
+
+public class Reptile : Animal
+{
+    int age = 5;
+
+    public Reptile() : base("Reptile")
+    {
+        Console.WriteLine($"Reptile constructor, Age: {age}");
+    }
+}
+
+Bu örnekte, Reptile sınıfı temel sınıfın parametreli yapıcı metodunu çağırır ve aynı zamanda kendi alanını başlatır. 
+Çıktı sırası "Animal constructor, Name: Reptile", "Reptile constructor, Age: 5" olacaktır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Çok Seviyeli Kalıtım
+
+public class LivingBeing
+{
+    public LivingBeing()
+    {
+        Console.WriteLine("LivingBeing constructor");
+    }
+}
+
+public class Animal : LivingBeing
+{
+    public Animal()
+    {
+        Console.WriteLine("Animal constructor");
+    }
+}
+
+public class Mammal : Animal
+{
+    public Mammal()
+    {
+        Console.WriteLine("Mammal constructor");
+    }
+}
+
+public class Human : Mammal
+{
+    public Human()
+    {
+        Console.WriteLine("Human constructor");
+    }
+}
+
+Bu örnekte Human, Mammal üzerinden, Mammal Animal üzerinden, ve Animal LivingBeing üzerinden türemiştir.
+Human sınıfının bir örneği oluşturulduğunda çağrılma sırası şu şekilde olacaktır:
+
+LivingBeing constructor
+Animal constructor
+Mammal constructor
+Human constructor
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Parametreli ve Parametresiz Yapıcı Metodlar
+
+public class Plant
+{
+    public Plant()
+    {
+        Console.WriteLine("Plant constructor");
+    }
+
+    public Plant(string type)
+    {
+        Console.WriteLine($"Plant constructor, Type: {type}");
+    }
+}
+
+public class Tree : Plant
+{
+    public Tree() : base("Tree")
+    {
+        Console.WriteLine("Tree constructor");
+    }
+}
+
+public class Oak : Tree
+{
+    public Oak()
+    {
+        Console.WriteLine("Oak constructor");
+    }
+}
+
+Bu örnekte Tree sınıfı, Plant sınıfının parametreli yapıcı metodunu çağırır. Oak sınıfının bir örneği oluşturulduğunda çağrılma sırası şu şekilde olacaktır:
+
+Plant constructor, Type: Tree
+Tree constructor
+Oak constructor
+________________________________________________________________________________________________________________________________________________________________________
+
+Yapıcı Metodlarda Kod Yürütme
+
+public class Shape
+{
+    public Shape()
+    {
+        Console.WriteLine("Shape constructor");
+        Draw();
+    }
+
+    public virtual void Draw()
+    {
+        Console.WriteLine("Drawing a shape");
+    }
+}
+
+public class Circle : Shape
+{
+    public Circle()
+    {
+        Console.WriteLine("Circle constructor");
+    }
+
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle");
+    }
+}
+
+Bu örnekte, Shape sınıfının yapıcı metodu Draw metodunu çağırır. 
+Circle sınıfının bir örneği oluşturulduğunda, Shape sınıfının yapıcı metodu önce çalışır, 
+Draw metodunu çağırır (bu durumda Circle'ın Draw metodunu) ve daha sonra 
+Circle sınıfının yapıcı metodu çalışır. Çağrılma sırası şu şekilde olacaktır:
+
+Shape constructor
+Drawing a circle
+Circle constructor
+________________________________________________________________________________________________________________________________________________________________________
+
+Çoklu Kalıtım ve Erişim Düzeyleri
+
+public class A
+{
+    public A()
+    {
+        Console.WriteLine("A constructor");
+    }
+
+    protected void MethodA()
+    {
+        Console.WriteLine("Method A");
+    }
+}
+
+public class B : A
+{
+    public B()
+    {
+        Console.WriteLine("B constructor");
+        MethodA();
+    }
+}
+
+public class C : B
+{
+    public C()
+    {
+        Console.WriteLine("C constructor");
+    }
+
+    public C(int x) : this()
+    {
+        Console.WriteLine("C constructor with parameter");
+    }
+}
+
+public class D : C
+{
+    public D() : base(5)
+    {
+        Console.WriteLine("D constructor");
+    }
+}
+
+Bu örnekte, D, C üzerinden, C, B üzerinden ve B, A üzerinden türemiştir. D sınıfının bir örneği oluşturulduğunda çağrılma sırası ve yapılan işlemler şu şekilde olacaktır:
+
+A constructor
+B constructor
+Method A
+C constructor
+C constructor with parameter
+D constructor
+________________________________________________________________________________________________________________________________________________________________________
+
+public class OuterClass
+{
+    private class NestedClass
+    {
+        public NestedClass()
+        {
+            Console.WriteLine("NestedClass constructor");
+        }
+    }
+
+    public OuterClass()
+    {
+        Console.WriteLine("OuterClass constructor");
+        new NestedClass();
+    }
+}
+
+public class DerivedClass : OuterClass
+{
+    private class AnotherNestedClass : NestedClass // Hata: NestedClass erişilemez
+    {
+        public AnotherNestedClass()
+        {
+            Console.WriteLine("AnotherNestedClass constructor");
+        }
+    }
+
+    public DerivedClass()
+    {
+        Console.WriteLine("DerivedClass constructor");
+        new AnotherNestedClass();
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+

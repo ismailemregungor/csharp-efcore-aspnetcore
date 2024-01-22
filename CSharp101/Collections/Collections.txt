@@ -1,0 +1,196 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Collections:
+
+*Klasik koleksiyonlar, C# dilinde, nesneleri gruplandırmak ve yönetmek için 
+kullanılan sınıf ve interfaceleri içerir. "System.Collections" ad alanı altında bulunurlar
+
+Diziler ile koleksiyonlar arasındaki farklar:
+
+*Diziler oluşturlmadan önce boyut belli olmalıdır.
+*Koleksiyonlarda ise veriler eklendikçe koleksiyonun
+*boyutu artar.
+________________________________________________________________________________________________________________________________________________________________________
+Koleksiyonların Özellikleri:
+
+Tür Güvenliği: Klasik koleksiyonlar tür güvenli değildir, yani herhangi bir Object türünü kabul ederler. Bu, çalışma zamanında tür dönüşüm hatalarına neden olabilir.
+Performans: Büyük miktarda veri ile çalışırken, tür dönüşümleri nedeniyle performans düşüşü yaşanabilir.
+Esneklik: Farklı yapılar (liste, kuyruk, yığın, vb.) farklı veri yönetimi senaryoları için esneklik sağlar.
+Kapladığı Alan: Genellikle, klasik koleksiyonlar gereğinden fazla bellek kaplar çünkü boxing/unboxing işlemleri gerçekleştirilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Senaryoları:
+
+ArrayList: Dizilerden daha esnek olan, büyüklüğü dinamik olarak değişebilen bir liste gerektiğinde.
+Hashtable: Anahtar-değer çiftlerini hızlı bir şekilde saklamak ve almak istediğinizde.
+Queue: İlk giren ilk çıkar mantığıyla çalışan bir veri yapısına ihtiyacınız olduğunda (örn., veri işleme sırası).
+Stack: Son giren ilk çıkar mantığıyla çalışan bir veri yapısına ihtiyacınız olduğunda (örn., geri alma işlemleri).
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Collection Types:
+
+1-Klasic
+2-Generic
+
+1- Klasik Koleksiyonlar:
+
+*Klasik koleksiyonlar object kabul ettiğinden her türlü tipi taşıyabilir.
+
+ArrayList myArrayList = new ArrayList(); // Nesnelerin listesi
+Hashtable myHashtable = new Hashtable(); // Anahtar/Değer çiftlerinin koleksiyonu
+Queue myQueue = new Queue(); // İlk giren ilk çıkar (FIFO) koleksiyonu
+Stack myStack = new Stack(); // Son giren ilk çıkar (LIFO) koleksiyonu
+
+________________________________________________________________________________________________________________________________________________________________________
+
+*ArrayList:
+
+*Arraylist'e veri eklendikçe boyutu kapasiteyi aştığı anda
+varsayılan olarak 2'nin n.ci kuvveti olarak RAM'de yer açmaya devam eder.
+Bu süreç maliyetli bir süreç olduğu için büyük veri kümelerinde
+RAM üzerinde daha az yer ayırma işlemi yapar. Böyle çalışma nedeni performans'tır.
+Ama Generic Koleksionlar daha performanslıdır.
+
+Performans: ArrayList, performans açısından dizilere benzerdir. Elemanlarının erişimi hızlıdır, ancak eleman eklemeleri veya çıkarmaları zaman alabilir.
+Bellek Yönetimi: Bellek yönetimi, elemanların eklenip çıkarılmasına bağlı olarak dalgalanabilir.
+
+ArrayList Kullanımı:
+
+ArrayList al = new ArrayList();
+al.Add(1);
+al.Add("iki");
+al.Add(new Person { Name = "Ahmet" });
+
+// Özet: Farklı türlerdeki nesneleri tek bir listede saklar.
+
+Önemli Noktalar:
+
+Dinamik Boyut: ArrayList'in boyutu otomatik olarak artar veya azalır.
+Tür Güvenliği Yok: ArrayList, herhangi bir türde nesne eklemeye izin verir (tür güvensiz).
+İndeks Bazlı Erişim: Verilere indeks üzerinden erişilebilir.
+Performans: Büyük veri setleri için ideal değildir, çünkü içeriklerin türünü kontrol etmek için boxing/unboxing işlemi yapar.
+
+ArrayList Metodları ve Özellikleri:
+
+Add(): Nesne eklemek için.
+Remove(): Nesne silmek için.
+RemoveAt(): Belirli bir indeksteki nesneyi silmek için.
+Insert(): Belirli bir indekse nesne eklemek için.
+Contains(): Belirli bir nesnenin ArrayList içinde olup olmadığını kontrol etmek için.
+IndexOf(): Belirli bir nesnenin indeksini almak için.
+Clear(): Tüm öğeleri silmek için.
+Count: ArrayList içindeki öğe sayısını almak için.
+Capacity: ArrayList'in kapasitesini almak veya ayarlamak için.
+IsReadOnly: ArrayList'in salt okunur olup olmadığını kontrol etmek için.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+*Stack Stack:
+
+Stack, verileri son giren, ilk çıkan (Last-In-First-Out, LIFO) mantığına göre 
+yöneten bir koleksiyondur. Elemanlar yığın (stack) yapısına eklenir ve çıkarılır.
+
+Performans: Stack, eleman eklemeleri ve çıkarmaları hızlıdır çünkü yığın (stack) yapısını kullanır. Ancak rastgele erişim daha yavaş olabilir.
+Bellek Yönetimi: Bellek yönetimi, elemanlar eklenip çıkarıldıkça değişir.
+
+Stack Kullanımı:
+
+Stack s = new Stack();
+s.Push("Bir");
+s.Push("İki");
+s.Push("Üç");
+object last = s.Pop(); // "Üç"
+
+// Özet: Son giren ilk çıkar mantığıyla elemanları sırayla işler.
+
+Önemli Noktalar:
+LIFO Prensibi: Stack, verileri "son giren ilk çıkar" (LIFO) prensibine göre saklar.
+Tür Güvenliği Yok: Stack, herhangi bir türde nesne eklemeye izin verir (tür güvensiz).
+Dinamik Boyut: Stack'in boyutu otomatik olarak artar veya azalır.
+Push ve Pop Operasyonları: Stack, veri eklemek için Push ve veri çıkarmak için Pop metodlarını kullanır.
+
+Stack Metodları ve Özellikleri:
+Push(object): Nesne eklemek için.
+Pop(): Stack'in en üstündeki nesneyi çıkarmak ve döndürmek için.
+Peek(): Stack'in en üstündeki nesneyi döndürmek ama çıkarmamak için.
+Contains(object): Stack'in belirli bir nesneyi içerip içermediğini kontrol etmek için.
+Clear(): Stack içindeki tüm öğeleri kaldırmak için.
+Count: Stack içindeki öğe sayısını almak için.
+ToArray(): Stack öğelerini yeni bir diziye kopyalamak için.
+________________________________________________________________________________________________________________________________________________________________________
+
+
+*Queue:
+
+Queue, verileri ilk giren, ilk çıkan (First-In-First-Out, FIFO) mantığına göre 
+yöneten bir koleksiyondur. Elemanlar sıra (queue) yapısında eklenir ve çıkarılır.
+
+Performans: Queue, eleman eklemeleri ve çıkarmaları hızlıdır. Ancak rastgele erişim daha yavaşdır.
+Bellek Yönetimi: Bellek yönetimi, elemanlar eklenip çıkarıldıkça değişir.
+
+Queue Kullanımı:
+
+Queue q = new Queue();
+q.Enqueue("Bir");
+q.Enqueue("İki");
+q.Enqueue("Üç");
+object first = q.Dequeue(); // "Bir"
+
+// Özet: İlk giren ilk çıkar mantığıyla elemanları sırayla işler.
+
+Önemli Noktalar:
+FIFO Prensibi: Queue, verileri "ilk giren ilk çıkar" (FIFO) prensibine göre saklar.
+Tür Güvenliği Yok: Queue, herhangi bir türde nesne eklemeye izin verir (tür güvensiz).
+Dinamik Boyut: Queue'nun boyutu otomatik olarak artar veya azalır.
+Enqueue ve Dequeue Operasyonları: Queue, veri eklemek için Enqueue ve veri çıkarmak için Dequeue metodlarını kullanır.
+
+Queue Metodları ve Özellikleri:
+Enqueue(object): Nesne eklemek için.
+Dequeue(): Queue'nun başındaki nesneyi çıkarmak ve döndürmek için.
+Peek(): Queue'nun başındaki nesneyi döndürmek ama çıkarmamak için.
+Contains(object): Queue'nun belirli bir nesneyi içerip içermediğini kontrol etmek için.
+Clear(): Queue içindeki tüm öğeleri kaldırmak için.
+Count: Queue içindeki öğe sayısını almak için.
+ToArray(): Queue öğelerini yeni bir diziye kopyalamak için.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+*Hashtable:
+
+Anahtar/Değer çiftlerinin koleksiyonu
+
+Performans: Hashtable, anahtar-değer çiftleri için hızlı bir arama sunar. Ancak eleman eklemeleri ve çıkarmaları zaman alabilir.
+Bellek Yönetimi: Bellek yönetimi, elemanlar eklenip çıkarıldıkça değişir.
+
+ Hashtable Kullanımı:
+
+Hashtable ht = new Hashtable();
+ht["Ad"] = "Ahmet";
+ht["Yaş"] = 30;
+
+// Özet: Anahtar-değer çiftleri olarak verileri saklar.
+
+Önemli Noktalar:
+Anahtar/Değer Çiftleri: Hashtable, verileri anahtar/değer çiftleri olarak saklar.
+Benzersiz Anahtarlar: Her anahtar benzersiz olmalıdır; aynı anahtara sahip birden fazla öğe eklenemez.
+Tür Güvenliği Yok: Hashtable, herhangi bir türde anahtar ve değerler eklemeye izin verir (tür güvensiz).
+Dinamik Boyut: Hashtable'ın boyutu otomatik olarak artar veya azalır.
+Hash Kodları: Hashtable, anahtarların hash kodlarını kullanarak verileri depolar ve aramalar yapar.
+
+Hashtable Metodları ve Özellikleri:
+Add(object key, object value): Yeni bir anahtar/değer çifti eklemek için.
+Remove(object key): Belirtilen anahtara sahip öğeyi kaldırmak için.
+ContainsKey(object key): Hashtable'ın belirli bir anahtarı içerip içermediğini kontrol etmek için.
+ContainsValue(object value): Hashtable'ın belirli bir değeri içerip içermediğini kontrol etmek için.
+Clear(): Hashtable içindeki tüm öğeleri kaldırmak için.
+Count: Hashtable içindeki öğe sayısını almak için.
+Keys: Hashtable içindeki tüm anahtarları içeren bir koleksiyon almak için.
+Values: Hashtable içindeki tüm değerleri içeren bir koleksiyon almak için.
+
+________________________________________________________________________________________________________________________________________________________________________

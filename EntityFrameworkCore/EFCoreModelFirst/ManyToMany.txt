@@ -1,0 +1,83 @@
+﻿__________________________________________________________________________________________________________________________
+
+ManyToMany:
+
+Many-to-many ilişkiler, iki tablo arasında bir kaydın diğer tablodaki bir veya daha fazla kayıtla ilişkilendirilebildiği
+ve tersinin de geçerli olduğu durumlarda kullanılır. 
+
+Many-to-Many ilişkisini yönetmek için ara tablo kavramını kullanılır. 
+Ara tablo, iki ana tablo arasındaki ilişkiyi temsil eder ve her iki tabloya ait anahtarları barındırır.
+
+Örneğin, bir öğrenci birden fazla derse kaydolabilir ve bir ders de birden fazla öğrenci tarafından alınabilir.
+Bu tür ilişkiler genellikle ara bir tablo veya join tablosu kullanılarak modellenir.
+__________________________________________________________________________________________________________________________
+
+public class Student
+{
+    public int StudentId { get; set; } // Primary Key
+    public string Name { get; set; }
+
+    // Navigation Property
+    public List<StudentCourse> StudentCourses { get; set; }
+}
+
+public class Course
+{
+    public int CourseId { get; set; } // Primary Key
+    public string CourseName { get; set; }
+
+    // Navigation Property
+    public List<StudentCourse> StudentCourses { get; set; }
+}
+
+// Ara (Join) Tablo
+public class StudentCourse
+{
+    public int StudentId { get; set; } // Foreign Key
+    public int CourseId { get; set; } // Foreign Key
+
+    // Navigation Properties
+    public Student Student { get; set; }
+    public Course Course { get; set; }
+}
+
+Önemli Noktalar:
+
+Ara Tablo: İlişkiyi temsil etmek için genellikle bir ara tablo (join tablo) kullanılır.
+
+Composite Key: Ara tablo, genellikle iki ana tablonun anahtarlarını yabancı anahtar olarak kullanır 
+ve bu anahtarlar birleşik birincil anahtar oluşturur.
+
+Navigation Properties: İlişkili her iki sınıfta da karşılıklı olarak collection navigation properties bulunmalıdır.
+
+__________________________________________________________________________________________________________________________
+
+public class Personel
+{
+    // ... diğer özellikler
+
+    // Personel ve Proje arasında Many-to-Many ilişkisi için navigation property
+    public ICollection<PersonelProje> Projeler { get; set; }
+}
+
+public class Proje
+{
+    // ... diğer özellikler
+
+    // Proje ve Personel arasında Many-to-Many ilişkisi için navigation property
+    public ICollection<PersonelProje> Personeller { get; set; }
+}
+
+public class PersonelProje
+{
+    // Many-to-Many ilişki için ara tablo
+    public int PersonelProjeID { get; set; }
+    public int PersonelID { get; set; }
+    public int ProjeID { get; set; }
+
+    // İlgili varlıklara navigation properties
+    public Proje Proje { get; set; }
+    public Personel Personel { get; set; }
+}
+
+__________________________________________________________________________________________________________________________

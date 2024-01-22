@@ -1,0 +1,58 @@
+﻿__________________________________________________________________________________________________________________________
+
+Entity Framework Core:
+
+*Entity Framework Core aslında Katmanlı Mimarideki DAL(Data Access Layer) katmanını yazıyor.
+
+Connection String: "User Id=hr; Password=HR; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))"
+__________________________________________________________________________________________________________________________
+
+Code First:
+2-Model First:
+
+Kurulumlar:
+
+Nuget > Microsoft.EntityFrameworkCore
+Nuget > Oracle.EntityFrameworkCore
+Nuget > Microsoft.EntityFrameworkCore.Tools
+__________________________________________________________________________________________________________________________
+Oracle Kullanıcı ve Veri Tabanı Oluşturma:
+
+create user personel identified by personel default tablespace users temporary
+tablespace temp;
+grant connect, resource, DBA to personel; 
+__________________________________________________________________________________________________________________________
+Package Manager Console:
+
+migration oluştur: add-migration Init
+veritabanının güncelle: update-database
+tabloları sil: drop-database
+tüm migrationları sil: remove-migration
+istenilen migration'a geri dön: update-database Init
+__________________________________________________________________________________________________________________________
+
+Veritabanı İlişkileri:
+*1 tabloda max 1 adet primary key olabilir.
+
+One-to-One:
+*Id hem Primary Key hemde foreign Key olarak davranır.
+
+One-to-Many:
+
+Many-to-Many:
+*Many-to-Many ilişkide Entity Framework 3.bir veritabanı oluşturur.
+*Oluşan veri tabanında ilişki kurulan modellerin Primary
+Keylerinin birleşimi olan 1 adet Composite Primary Key ve
+iki modelin id'lerini ayrıca Foreign Key olarak tutulur.
+__________________________________________________________________________________________________________________________
+
+CRUD:
+
+*EFCore primary key olarak tanıtılan id'yi auto increment yapar.
+
+Models = Entity = POCO classes
+
+Navigation Property Faydaları:
+join yapamya gerek yok
+pk fk ilişkisi kurmaya gerek yok.
+__________________________________________________________________________________________________________________________

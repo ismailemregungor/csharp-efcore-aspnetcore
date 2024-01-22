@@ -1,0 +1,66 @@
+﻿___________________________________________________________________________________________
+
+Distributed Architecture(Dağıtık Mimari)
+*Client ve Server mimarisi ile çalışan uygulamalardır.
+
+>Server
+>Client
+
+*Mainframe
+>Dummy Client
+	>Strong Client
+		>Dummy Client
+>Weak Server
+	>Strong Server (Cloud)
+___________________________________________________________________________________________
+
+İnternet Programcılığı:
+
+tcp/ip --> güvenli, yavaş
+udp --> güvensiz, hızlı
+http
+https
+ftp
+
+___________________________________________________________________________________________
+
+Web Programcılığı:
+
+ip adresi?
+domain name?
+dns?
+
+Static Web Sitesi?
+*Mesela 1000 ürün için 1000 ayrı sayfa tasarlamak gerekiyor.
+
+Dinamik Web Sitesi?
+*1000 ürün için 1 sayfa tasarlamak yeterli sayfanın içeriği değişiyor
+
+cgi, asp, php, jsp, asp.net
+
+___________________________________________________________________________________________
+
+ASP(Active Server Pages)
+
+*ASP.NET
+	>ASP.NET Web Forms --> .aspx
+	>ASP.NET MVC(Model View Controller - MVC Tasarım Deseni)
+	>ASP.NET Core
+		>>MVC
+		>>Razor Pages --> Web Forms'un laciverti
+
+*Eskiden thread olarak çaışan websiteleri Core ile birlikte bir exe yani bir servis gibi çalışır.
+*NET 5.0'dan sonra 6.0'la birlikte Microsoft radikal değişiklikleregitti (Startup.cs --> Program.cs)
+___________________________________________________________________________________________
+
+kesin bilinmesi gereken konular:
+
+html stateless olması ne demek?
+querystring?
+session?
+cookie?
+___________________________________________________________________________________________
+
+___________________________________________________________________________________________
+
+___________________________________________________________________________________________

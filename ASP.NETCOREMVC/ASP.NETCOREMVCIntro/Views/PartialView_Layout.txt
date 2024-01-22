@@ -1,0 +1,69 @@
+﻿____________________________________________________________________________________________________________________________________
+
+Partial View?
+Partial View, bir web sayfasının yeniden kullanılabilir bir bölümünü temsil eder. Bu, genellikle tekrar eden içerikleri veya ortak layout öğelerini çeşitli sayfalarda kullanmak için idealdir. 
+
+Temel Özellikler
+Yeniden Kullanılabilirlik: Partial View'lar, tekrar eden HTML yapısını farklı sayfalarda yeniden kullanmanıza olanak tanır. Örneğin, bir navigasyon barı veya footer kısmını her sayfada tekrar kullanabilirsiniz.
+
+Bakım Kolaylığı: Ortak bileşenlerde yapılan değişiklikler tüm sayfalarda otomatik olarak güncellenir, bu da bakım sürecini kolaylaştırır.
+
+Modüler Yapı: Web uygulamanızı daha yönetilebilir ve düzenli modüllere ayırmanızı sağlar.
+
+Kod Temizliği: Ana view'larınızı daha temiz ve daha az karmaşık hale getirir, çünkü tekrar eden kodları ayırabilirsiniz.
+
+Kullanım Senaryoları
+Ortak Layout Öğeleri: Header, footer, navigasyon menüleri gibi ortak arayüz bileşenleri için idealdir.
+Form Bileşenleri: Tekrar kullanılabilir form elemanları için kullanılır, örneğin, kullanıcı giriş formları.
+Widget'lar: Hava durumu, haber özetleri gibi dinamik içerikleri gösteren küçük bileşenler.
+____________________________________________________________________________________________________________________________________
+Teknik Detaylar
+Dosya Uzantısı: Partial View'lar genellikle ".cshtml" uzantısına sahiptir.
+Yerleştirme: Razor View Engine, _PartialView.cshtml gibi isimlendirilmiş dosyaları otomatik olarak Partial View olarak tanır.
+Çağırma Yöntemi: @Html.Partial("PartialViewName") veya @Html.RenderPartial("PartialViewName") Razor metodları ile çağırılır.
+____________________________________________________________________________________________________________________________________
+Performans
+RenderPartial vs Partial: Html.RenderPartial() metodu, sonucu doğrudan Response'a yazar ve daha performanslıdır. Html.Partial() ise bir string döndürür ve bu string daha sonra render edilir.
+İyi Uygulamalar
+Bağımsızlık: Partial View'lar, mümkün olduğunca bağımsız olmalı ve gereksiz bağımlılıklardan kaçınmalıdır.
+Veri Aktarımı: Model veya ViewData aracılığıyla veri aktarılabilir, ancak bu verilerin Partial View'ın ihtiyaçlarına uygun olduğundan emin olun.
+
+____________________________________________________________________________________________________________________________________
+
+Layout?
+Layout" terimi, genellikle bir web sayfasının ortak tasarım ve düzen öğelerini ifade eder. Layout, bir web uygulamasındaki birden fazla sayfada tekrar eden HTML yapılarını (header, footer, navigasyon barları vb.) merkezi bir yerden yönetmenizi sağlar. 
+
+Layout'un Temel Özellikleri
+Ortak Yapı: Layout, bir web uygulamasının tüm veya bir kısmı için ortak HTML yapısını (head bölümü, header, footer, menüler vb.) tanımlar.
+
+Düzenin Merkezileştirilmesi: Tüm sayfalar veya belirli sayfalar için ortak bir düzen tanımlar, bu sayede sayfa tasarımında tutarlılık sağlar.
+
+Yeniden Kullanılabilirlik ve Bakım Kolaylığı: Ortak öğelerdeki değişiklikler tek bir dosyadan yapılabilir, bu da web uygulamasının bakımını kolaylaştırır.
+
+Razor View Engine: ASP.NET Core'da Layout, Razor View Engine ile birlikte kullanılır ve .cshtml dosya uzantısına sahiptir.
+____________________________________________________________________________________________________________________________________
+
+Kullanım Senaryoları
+Ortak Elementler: Web uygulamanızın tüm sayfalarında bulunması gereken başlık, altbilgi, navigasyon çubuğu gibi elementler.
+Stil ve Script Referansları: Ortak CSS ve JavaScript dosyalarının dahil edilmesi.
+Meta Etiketleri ve SEO İyileştirmeleri: Tüm sayfalarda bulunması gereken meta etiketleri ve SEO'ya yönelik düzenlemeler.
+____________________________________________________________________________________________________________________________________
+
+Teknik Detaylar
+Varsayılan Layout: _Layout.cshtml genellikle varsayılan layout dosyasıdır ve proje şablonları ile otomatik olarak oluşturulur.
+Tanımlama ve Kullanım: Bir view içinde @{ Layout = "_Layout.cshtml"; } satırı ile hangi layout'un kullanılacağı belirtilir.
+RenderBody Metodu: Layout içinde @RenderBody() metodunu kullanarak, bireysel view içeriğinin nereye render edileceğini belirlersiniz.
+____________________________________________________________________________________________________________________________________
+
+İyi Uygulama Tavsiyeleri
+Kodun Tekrarını Azaltmak: Ortak öğeleri layout'ta merkezileştirerek, sayfalar arasında kod tekrarını önleyin.
+Esnek Tasarım: Farklı layoutlar oluşturarak, uygulamanın farklı bölümleri için farklı düzenler kullanabilirsiniz.
+Düzenin Netliği: Layout'u karmaşık iş mantığından uzak tutmak, kodun okunabilirliğini ve yönetilebilirliğini artırır.
+Performans ve Optimizasyon
+Yüklenme Süresi: Ortak script ve stil dosyalarını layout'ta yüklemek, sayfa yüklenme süresini iyileştirebilir.
+Önbelleğe Alma: Sık kullanılan ve değişmeyen içerikleri önbelleğe alarak performansı optimize edebilirsiniz.
+____________________________________________________________________________________________________________________________________
+
+
+
+____________________________________________________________________________________________________________________________________

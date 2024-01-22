@@ -1,0 +1,15 @@
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\bin\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.exe
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\bin\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.deps.json
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\bin\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.runtimeconfig.json
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\bin\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.dll
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\bin\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.pdb
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.dll
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\refint\ASPNETCOREWebApiDbFirstUrunApiClient.dll
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.pdb
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ASPNETCOREWebApiDbFirstUrunApiClient.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\ASPNETCOREWebApi\ASPNETCOREWebApiDbFirstUrunApiClient\obj\Debug\net6.0\ref\ASPNETCOREWebApiDbFirstUrunApiClient.dll

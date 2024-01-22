@@ -1,0 +1,15 @@
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\CSharp101\Banka\bin\Debug\net6.0\Banka.exe
+C:\Users\iegof\Desktop\CSharp101\Banka\bin\Debug\net6.0\Banka.deps.json
+C:\Users\iegof\Desktop\CSharp101\Banka\bin\Debug\net6.0\Banka.runtimeconfig.json
+C:\Users\iegof\Desktop\CSharp101\Banka\bin\Debug\net6.0\Banka.dll
+C:\Users\iegof\Desktop\CSharp101\Banka\bin\Debug\net6.0\Banka.pdb
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.dll
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\refint\Banka.dll
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.pdb
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\Banka.genruntimeconfig.cache
+C:\Users\iegof\Desktop\CSharp101\Banka\obj\Debug\net6.0\ref\Banka.dll

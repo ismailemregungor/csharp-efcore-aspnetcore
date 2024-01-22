@@ -1,0 +1,174 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+has-a İlişkisi (Kompozisyon):
+
+*has-a ilişkisi, bir sınıfın başka bir sınıfın bir örneğini içermesiyle ifade edilir.
+*Bu desende, bir sınıfın içindeki nesneler, dışarıdan erişilebilen veya sınıf içerisinde saklanabilen bağımsız nesneler olabilir. 
+Bu nesneler sınıfa özellik (property), liste veya constructor aracılığıyla geçirilebilir.
+*Eğer bir sınıf diğer bir sınıfı içeriyorsa ve aralarında "bir parçası" ilişkisi varsa, kompozisyon kullanmalısınız.
+
+Önemli Noktalar:
+
+*Birleştirme: İki sınıf arasında daha esnek bir ilişki sağlar.
+
+*Bağımsızlık: İki sınıf birbirinden bağımsız olarak geliştirilebilir ve değiştirilebilir.
+
+*Ömür Yönetimi: has-a ilişkisi, ömür yönetimi konusunda daha fazla kontrol sağlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kompozisyon Kullanımı:
+
+Property Olarak Tanımlamak:
+
+*Bu durumda, parça olan sınıfın nesnesi bir property olarak tanımlanır.
+
+Avantajları:
+
+*Dışarıdan nesneye erişim mümkündür.
+*Nesnenin yaşam döngüsü, ana sınıfın yaşam döngüsünden bağımsız olabilir.
+
+Dezavantajları:
+*Dışarıdan yanlış kullanıma açık olabilir.
+
+ public class Engine {
+    public void Start() {
+        Console.WriteLine("Engine is starting...");
+    }
+}
+
+public class Car {
+    public Engine CarEngine { get; set; }
+}
+
+class Program {
+    static void Main() {
+        Car myCar = new Car { CarEngine = new Engine() };
+        myCar.CarEngine.Start();
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Constructor İçinde Oluşturmak:
+
+Bu durumda, parça olan sınıfın nesnesi ana sınıfın constructor'ında oluşturulur.
+
+Avantajları:
+*Nesnenin yaşam döngüsü ana sınıfa bağlıdır.
+*Dışarıdan yanlış kullanıma karşı daha korunaklıdır.
+
+Dezavantajları:
+*Nesneye dışarıdan erişim zor veya imkansız olabilir.
+
+public class Battery {
+    public void Charge() {
+        Console.WriteLine("Battery is charging...");
+    }
+}
+
+public class Flashlight {
+    private Battery battery;
+
+    public Flashlight() {
+        this.battery = new Battery();
+    }
+
+    public void TurnOn() {
+        battery.Charge();
+        Console.WriteLine("Flashlight is on.");
+    }
+}
+
+class Program {
+    static void Main() {
+        Flashlight flashlight = new Flashlight();
+        flashlight.TurnOn();
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Liste Olarak Tanımlamak:
+
+Bu durumda, parça olan sınıfların nesneleri bir liste olarak tutulur. Bu, birden fazla nesnenin saklanmasını sağlar.
+
+Avantajları:
+*Birden çok nesneyi saklama imkanı.
+*Nesnelere dışarıdan erişim mümkündür.
+
+Dezavantajları:
+*Listede nesnelerin yönetimi karmaşıklaşabilir.
+
+public class Wheel {
+    public void Rotate() {
+        Console.WriteLine("Wheel is rotating...");
+    }
+}
+
+public class Bicycle {
+    public List<Wheel> Wheels { get; set; } = new List<Wheel>();
+}
+
+class Program {
+    static void Main() {
+        Bicycle bicycle = new Bicycle {
+            Wheels = { new Wheel(), new Wheel() }
+        };
+
+        foreach (var wheel in bicycle.Wheels) {
+            wheel.Rotate();
+        }
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Engine { }
+public class Car 
+{
+    private Engine engine = new Engine();
+}
+
+Özet: Car sınıfı bir Engine'e sahiptir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Wheel { }
+public class Bicycle 
+{
+    private List<Wheel> wheels = new List<Wheel> { new Wheel(), new Wheel() };
+}
+
+Özet: Bicycle sınıfı iki Wheel'e sahiptir.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Person 
+{
+    public string Name { get; set; }
+    public Car Car { get; set; }
+}
+
+Özet: Person sınıfı bir Car'a sahip olabilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class House 
+{
+    public List<Room> Rooms { get; set; }
+}
+public class Room { }
+
+Özet: House sınıfı birçok Room'a sahiptir.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Computer 
+{
+    public CPU CPU { get; set; }
+    public GPU GPU { get; set; }
+}
+public class CPU { }
+public class GPU { }
+
+Özet: Computer sınıfı bir CPU'ya ve bir GPU'ya sahiptir.
+
+________________________________________________________________________________________________________________________________________________________________________

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BankaV2EXE/1.0.0": {
+        "dependencies": {
+          "BankaV2DLL": "1.0.0"
+        },
+        "runtime": {
+          "BankaV2EXE.dll": {}
+        }
+      },
+      "BankaV2DLL/1.0.0": {
+        "runtime": {
+          "BankaV2DLL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankaV2EXE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BankaV2DLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

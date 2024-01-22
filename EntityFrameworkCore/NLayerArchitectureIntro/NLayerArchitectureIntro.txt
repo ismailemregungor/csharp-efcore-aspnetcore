@@ -1,0 +1,51 @@
+﻿N-Layer Architecture
+(n-tier)
+*** Tum katmanlar mumukun oldugunca birbirinden bagimsiz olmalı...
+*** Katmanlı Mimariyi kullanmanın amacı; projeleri fiziksel ve mantıksal olarak kısımlara ayırmaktır...
+
+**** Katmanlar(Genelde)
+     *** DAL(Data Access Layer)
+     *** BLL(Bussiness Logic Layer)
+     *** PL (Presantation Layer)
+     *** Models(Entities)
+
+Konu:Araba,Marka Model
+
+__________________________________________________________________________________________________________________________
+
+N-Layer(N-Tier) Architecture:
+
+*Projelerin fiziksel ve mantıksal olarak parçalara ayrılmasını amaçlar.
+*Her katman mümkün olduğunca birbirinden bağımsız olmalı.
+*Katmanlar DLL olmalı, PL katmanı EXE olmalı.
+
+Soğutma (Decoupling): Katmanlar arası bağımlılıkları 
+azaltarak her bir katmanın bağımsız hale getirilmesi.
+
+Single Responsibility Principle: Her katmanın sadece 
+bir sorumluluğu olmalıdır.
+
+Reusability: Kodun tekrar kullanılabilir olması için 
+genel işlevselliğin ortak katmana yerleştirilmesi.
+
+__________________________________________________________________________________________________________________________
+Katmanlar:
+
+DAL - Data Access Layer
+BLL/BL - Business Logic Layer 
+PL - Presentation Layer
+Models(Entities)
+
+Presentation Layer: Kullanıcı arayüzünü ve kullanıcı etkileşimini yönetir. 
+Konsol uygulamasında bu, kullanıcı girişlerini ve çıktılarını ele alır.
+
+Business Logic Layer (BLL-BL): Uygulamanın iş kurallarını içerir.
+
+Data Access Layer (DAL): Veritabanı ile etkileşimi yönetir. 
+Entity Framework Core, bu katmanın bir parçası olabilir.
+
+Models(Entities): Her katmanda kullanılabilecek ortak kodları içerir.
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

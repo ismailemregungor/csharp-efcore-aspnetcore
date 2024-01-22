@@ -1,0 +1,11 @@
+﻿-->Bir firma icin Personellerin CRUD islemlerini RAM userinde yapan console uygulamasını OOP(Encapsulation, Inheritance, Polyporphism, Abstraction(Interface)) prensiplerini kullanarak yazınız?
+*Id,Ad,Soyad,Adres(İlce)
+*Select Islemleri
+Tum Personeller, Aynı Ilcede oturanlar, Id ye gore Personel verilerini goster.
+*Ekleme
+*Silme(emin misiniz?)
+*Arama Id'ye gore
+*Guncelleme 
+*Menu islemleri
+*CRUD islemleri PersonelManager sınıfı uzerinden yapılmalı.
+*List<T> kullanılmalı ve CRUD işlemleri için List<T>'in hazır methodları kullanılmalı.

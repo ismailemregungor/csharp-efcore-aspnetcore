@@ -1,0 +1,57 @@
+﻿__________________________________________________________________________________________________________________________
+
+First() metodu, koleksiyondaki ilk elemanı döner. Koleksiyon boş ise hata fırlatır.
+
+Last() metodu, koleksiyondaki son elemanı döner. Koleksiyon boş ise hata fırlatır.
+
+Single() metodu, tam olarak bir elemanın bulunmasını bekler. Eğer koleksiyonda bir elemandan fazla veya hiç eleman yoksa hata fırlatır.
+
+Bu metodlar, OrDefault soneki ile kullanıldığında eğer koşulu karşılayan bir eleman bulunamazsa null dönerler (değer tipleri için default değer).
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var firstNumber = numbers.First();
+
+Console.WriteLine(firstNumber); // 1 yazar.
+
+Bu örnek, listeki ilk sayıyı seçer.
+
+__________________________________________________________________________________________________________________________
+
+var firstEvenNumber = numbers.First(n => n % 2 == 0);
+
+Console.WriteLine(firstEvenNumber); // 2 yazar.
+
+Bu örnek, listedeki ilk çift sayıyı seçer.
+
+__________________________________________________________________________________________________________________________
+
+var singleNumber = numbers.Single(n => n == 3);
+
+Console.WriteLine(singleNumber); // 3 yazar.
+
+Bu örnek, 3 değerine eşit tek bir sayıyı seçer.
+
+__________________________________________________________________________________________________________________________
+
+var lastEvenNumber = numbers.Last(n => n % 2 == 0);
+
+Console.WriteLine(lastEvenNumber); // 4 yazar.
+
+Bu örnek, listedeki son çift sayıyı seçer.
+
+__________________________________________________________________________________________________________________________
+
+var safeFirst = numbers.FirstOrDefault(); // Koleksiyon boş ise null döner.
+var safeSingle = numbers.SingleOrDefault(n => n == 10); // Eleman yoksa null döner, birden fazla varsa hata fırlatır.
+
+Console.WriteLine(safeFirst); // 1 yazar veya null döner.
+Console.WriteLine(safeSingle); // null yazar veya hata fırlatır.
+
+Bu örnek, güvenli bir şekilde ilk ve tek eleman seçimi yapar.
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

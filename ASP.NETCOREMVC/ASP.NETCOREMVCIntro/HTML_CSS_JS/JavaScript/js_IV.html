@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function veriGetir()
+        {
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function()
+            {
+                if(xhr.status ==200 && xhr.readyState==4)
+                {
+                    //alert(xhr.responseText);
+                    let data = JSON.parse(xhr.responseText);
+
+                    for(let i=0;i<data.data.length;i++)
+                    {
+                         document.writeln(data.data[i].first_name);
+                         document.writeln("<img src='"+ data.data[i].avatar+"'/>");
+
+                    }
+                }
+            };
+
+            xhr.open("GET","https://reqres.in/api/users?page=1",true);
+            xhr.send();
+        }
+
+        async function  veriGetir2()
+        {
+
+             await fetch("https://reqres.in/api/users?page=1").then(x=>x.text()).then(x=>{alert(x)});
+        }
+    </script>
+</head>
+<body>
+    <button onclick="veriGetir()">Veri Getir</button>
+
+    <button onclick="veriGetir2()">Veri Getir 2</button>
+    <script>
+        //JSON(Javascript Object Notation)
+        //[] =>Dizi
+        //{} =>Object
+        //aa:bb => Property
+
+    </script>
+</body>
+</html>

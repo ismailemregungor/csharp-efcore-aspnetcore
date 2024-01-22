@@ -1,0 +1,160 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+C# Dictionary<TKey, TValue>'ye Giriş
+Dictionary<TKey, TValue> bir koleksiyon sınıfıdır ve anahtar/değer çiftlerini depolar. Her bir anahtar benzersizdir ve bir değerle ilişkilidir.
+
+Önemli Noktalar:
+Performans: Büyük veri setlerinde bile anahtarlar kullanılarak hızlı veri erişimi sağlar.
+Tip Güvenliği: Anahtar ve değer için belirli türleri kabul eder, bu da tür güvenliğini sağlar.
+Esneklik: Verileri alma, ayarlama, kontrol etme vb. işlemler için yöntemler sunar.
+Benzersiz Anahtarlar: Sözlükteki her anahtar benzersizdir, bu da veri bütünlüğünü sağlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Veri Eşleme: Anahtarlar ile değerler arasında bir ilişki kurarak veri eşleme.
+Hızlı Arama: Büyük veri setlerinde hızlı arama yapma.
+Veri Organizasyonu: Verileri düzenli bir şekilde organize etme.
+Koşullu Mantık Basitleştirme: if…else ifadelerinin basitleştirilmesi.
+________________________________________________________________________________________________________________________________________________________________________
+
+Dictionary<string, int> students = new Dictionary<string, int>();
+
+// Özet: Bu kod, string türünde anahtar ve int türünde değer içeren yeni bir sözlük oluşturur.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+students.Add("Ali", 21);
+students.Add("Ayşe", 23);
+
+// Özet: Bu kod, sözlüğe iki öğrenci ekler; isimleri anahtar ve yaşları değer olarak kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+int age = students["Ali"]; 
+
+// Özet: Bu kod, "Ali" anahtarına karşılık gelen yaş değerini alır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+foreach (var student in students)
+{
+    Console.WriteLine($"Name: {student.Key}, Age: {student.Value}");
+}
+
+// Özet: Bu kod, sözlükteki tüm öğrencileri listeler ve isimlerini ve yaşlarını yazdırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Dictionary<string, string> operations = new Dictionary<string, string>
+{
+    { "create", "Creating..." },
+    { "delete", "Deleting..." }
+};
+
+string action = "create"; // Bu değer programın başka bir yerinde belirlenir.
+if (operations.ContainsKey(action))
+{
+    Console.WriteLine(operations[action]);
+}
+
+// Özet: Bu kod, belirli bir işlemi temsil eden bir dizeye karşılık gelen mesajı yazdırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+if (students.ContainsKey("Ayşe"))
+{
+    Console.WriteLine("Ayşe is in the dictionary.");
+}
+
+// Özet: Bu kod, "Ayşe" isminin sözlükte olup olmadığını kontrol eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+students.Remove("Ali");
+
+// Özet: Bu kod, "Ali" anahtarına sahip öğeyi sözlükten kaldırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Bir Telefon Rehberi Uygulaması
+
+using System;
+using System.Collections.Generic;
+
+// Telefon rehberi sınıfı
+public class PhoneBook
+{
+    private Dictionary<string, string> phoneDirectory; // Telefon rehberi
+
+    public PhoneBook()
+    {
+        phoneDirectory = new Dictionary<string, string>(); // Telefon rehberini başlatma
+    }
+
+    // Yeni bir telefon numarası ekleme metodu
+    public void AddContact(string name, string number)
+    {
+        if(phoneDirectory.ContainsKey(name))
+        {
+            Console.WriteLine($"{name} is already in your phone book. The number will be updated.");
+            phoneDirectory[name] = number; // Numarayı güncelle
+        }
+        else
+        {
+            phoneDirectory.Add(name, number); // Yeni giriş ekle
+            Console.WriteLine($"Added {name} to your phone book.");
+        }
+    }
+
+    // Bir kişinin telefon numarasını sorgulama
+    public void GetContact(string name)
+    {
+        if(phoneDirectory.TryGetValue(name, out string number))
+        {
+            Console.WriteLine($"{name}'s phone number is: {number}");
+        }
+        else
+        {
+            Console.WriteLine($"{name} was not found in your phone book.");
+        }
+    }
+
+    // Tüm rehberi listeleme
+    public void DisplayAllContacts()
+    {
+        Console.WriteLine("Your phone book:");
+        foreach (var contact in phoneDirectory)
+        {
+            Console.WriteLine($"Name: {contact.Key}, Phone Number: {contact.Value}");
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        PhoneBook myPhoneBook = new PhoneBook();
+
+        // Rehbere kişileri ekleme
+        myPhoneBook.AddContact("John Doe", "123-456-7890");
+        myPhoneBook.AddContact("Jane Smith", "456-789-0123");
+        
+        // Kişilerin numaralarını sorgulama
+        myPhoneBook.GetContact("John Doe");
+        myPhoneBook.GetContact("Eric Johnson"); // Rehberde olmayan bir isim
+
+        // Tüm rehberi görüntüleme
+        myPhoneBook.DisplayAllContacts();
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

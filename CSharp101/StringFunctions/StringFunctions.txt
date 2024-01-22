@@ -1,0 +1,55 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Strings:
+
+*String'ler, System.String sınıfı tarafından temsil edilir, genellikle string olarak yazılır.
+*C# stringleri sıfır tabanlı dizinlere sahiptir.
+*Stringler, C#'ta değiştirilemezdir (immutable). Yani, bir string üzerinde bir değişiklik yapıldığında, aslında yeni bir string oluşturulur.
+*Stringler arasında + operatörü kullanılarak birleştirme (concatenation) yapılabilir.
+
+string degiskenAdi = "deger";
+
+________________________________________________________________________________________________________________________________________________________________________
+
+*String Functions:
+
+Length:String'in karakter sayısını döndürür.
+
+string metin = "merhaba";
+int uzunluk = metin.Length;  // Çıktı: 7
+________________________________________________________________________________________________________________________________________________________________________
+
+ToUpper & ToLower: String'in tüm karakterlerini büyük veya küçük harfe dönüştürür.
+
+string metin = "Merhaba";
+string buyuk = metin.ToUpper();  // Çıktı: "MERHABA"
+string kucuk = metin.ToLower();  // Çıktı: "merhaba"
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Split: Belirtilen karakterlere göre string'i diziye böler.
+
+string metin = "elma,armut,muz";
+string[] meyveler = metin.Split(',');
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Substring: String'den belirtilen başlangıç indeksinden itibaren bir alt string döndürür.
+
+string metin = "merhaba";
+string sonuc = metin.Substring(2, 4);  // Çıktı: "rhab"
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Replace: String içindeki belirtilen karakter veya string'in diğer bir karakter veya string ile değiştirilmesini sağlar.
+
+string metin = "elma";
+string sonuc = metin.Replace("e", "A");  // Çıktı: "Alma"
+
+________________________________________________________________________________________________________________________________________________________________________
+
+IndexOf:Belirtilen karakter veya string'in ilk kez göründüğü indeksi döndürür.
+
+string metin = "merhaba";
+int index = metin.IndexOf('a');  // Çıktı: 2
+________________________________________________________________________________________________________________________________________________________________________

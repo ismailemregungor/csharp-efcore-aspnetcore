@@ -1,0 +1,46 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Parameter Types:
+*Default (Optional) Parameters ve Named Parameters c# 4.0 sonrası gelmiştir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Default (Optional) Parameters:
+*Varsayılan değer atanmış parametreler, metodu çağırırken belirtilmezse bu varsayılan değerleri alırlar.
+*Normal şartlarda' bir metodun kaç tane tanımlanmış argümeni/parametresi var ise
+metod tanımlanırken okadar parametre gönderilmelidir.
+*Optional parametrelerde ise bir argüman'a varsayılan değeri tanımlarken atanır.
+Sonraki kullanımlarda parametre gönderilmez ise tanımlı değer, gönderilirse gelen değer kullanılır.
+
+public void FonksiyonAdi([Tip] parametre = [değer])
+{
+    // Kod bloğu
+}
+
+Bu, parametre için varsayılan bir değer belirtir.
+
+public void Selamla(string isim = "Misafir")
+{
+    Console.WriteLine($"Merhaba {isim}!");
+}
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Named Parameters:
+
+*Metot çağrılarında, parametrelerin sırası yerine isimleriyle belirtilerek çağrılabilirler.
+*Normal şartlarda bir metod kullanılırken parametreler tanımlandığı sıra ile gönderilmelidir.
+*Named parametre kullanırsa tanımlandığı sıraya gerek olmadan isimleri ile birlikte istenilen sıradan gönderilir.
+
+FonksiyonAdi(parametreAdi: değer);
+Bu, parametre adını belirterek metodu çağırmanıza izin verir.
+
+public void BilgiVer(string isim, int yas)
+{
+    Console.WriteLine($"İsim: {isim}, Yaş: {yas}");
+}
+BilgiVer(yas: 25, isim: "Ahmet");
+
+
+________________________________________________________________________________________________________________________________________________________________________
+

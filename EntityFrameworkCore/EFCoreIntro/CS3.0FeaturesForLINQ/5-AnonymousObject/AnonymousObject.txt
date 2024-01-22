@@ -1,0 +1,21 @@
+﻿__________________________________________________________________________________________________________________________
+
+Anonymous Object:
+
+Default Şablon: new { Property1 = value1, Property2 = value2 };
+
+Önemli Noktalar:
+
+*Geçici veri yapıları oluşturmak için kullanılır.
+*Belirli bir sınıfa ihtiyaç duymadan nesne başlatma.
+*Sorgu sonuçları için ad-hoc türler oluşturmakta kullanılır.
+__________________________________________________________________________________________________________________________
+
+var productInfo = from p in products
+                  select new { p.Id, p.Name };
+
+// 'productInfo' anonim türlerin koleksiyonunu içerir ve her türe 'Id' ve 'Name' özellikleri dahildir.
+
+LINQ sorgusu, her Product nesnesi için yalnızca Id ve Name bilgilerini içeren anonim nesneler oluşturur.
+
+__________________________________________________________________________________________________________________________

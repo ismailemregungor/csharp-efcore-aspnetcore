@@ -1,0 +1,18 @@
+﻿Factory Method Design Pattern
+
+Tanım ve Amaç:
+
+Factory Method Pattern, bir ürünün yaratılma sürecini,
+yaratıcı sınıftan (creator class) alt sınıflara (subclass) devreder.
+Bu pattern, nesnelerin yaratılma sürecini standartlaştırırken aynı
+zamanda alt sınıfların hangi nesnelerin yaratılacağını kontrol etmesine izin verir.
+
+Önemli Noktalar:
+
+Soyutlama ve Esneklik: Yaratma süreci soyutlanarak esneklik sağlanır.
+
+Alt Sınıf Sorumluluğu: Hangi nesnenin yaratılacağını belirlemek alt sınıfların sorumluluğundadır.
+
+Yeniden Kullanım ve Genişletilebilirlik: Kodun genişletilebilirliği ve yeniden kullanımı kolaylaşır.
+
+Bağımlılık Azaltma: Üst düzey sınıflar, somut sınıflara olan bağımlılıklarını azaltır.

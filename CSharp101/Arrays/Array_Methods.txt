@@ -1,0 +1,59 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Array Methods:
+
+Length: Dizinin eleman sayısını döndürür.
+
+int uzunluk = diziAdı.Length;
+
+int[] sayilar = { 1, 2, 3, 4, 5 };
+int uzunluk = sayilar.Length;
+Console.WriteLine(uzunluk);
+________________________________________________________________________________________________________________________________________________________________________
+
+Sort: Diziyi sıralar.
+
+Array.Sort(diziAdı);
+
+int[] dizi = { 3, 1, 4, 1, 5 };
+Array.Sort(dizi);
+foreach (int eleman in dizi)
+{
+    Console.WriteLine(eleman);
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+Reverse: Diziyi tersine çevirir.
+Array.Reverse(diziAdı);
+
+int[] dizi = { 1, 2, 3, 4, 5 };
+Array.Reverse(dizi);
+foreach (int eleman in dizi)
+{
+    Console.WriteLine(eleman);
+}
+____________________________________________________________________________________________________________________________________________________________
+
+IndexOf: Aranan değerin dizideki ilk pozisyonunu döndürür. Bulamazsa -1 döndürür.
+
+int pozisyon = Array.IndexOf(diziAdı, arananİndisNo);
+
+int[] dizi = { 1, 2, 3, 4, 5 };
+int pozisyon = Array.IndexOf(dizi, 3);
+Console.WriteLine(pozisyon);
+____________________________________________________________________________________________________________________________________________________________
+
+Resize: Dizinin boyutunu değiştirir.
+
+Array.Resize(ref diziAdı, yeniUzunluk);
+
+int[] dizi = { 1, 2, 3 };
+Array.Resize(ref dizi, 5);
+dizi[3] = 4;
+dizi[4] = 5;
+foreach (int eleman in dizi)
+{
+    Console.WriteLine(eleman);
+}
+
+____________________________________________________________________________________________________________________________________________________________

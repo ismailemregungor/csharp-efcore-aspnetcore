@@ -1,0 +1,124 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Members:
+
+Abstract Methodlar: Bu metodlar, içi boş metodlardır ve türetilmiş sınıflarda uygulanmalıdır.
+Abstract Properties: Bunlar, get ve/veya set aksiyonları olmayan özelliklerdir ve türetilmiş sınıflarda uygulanmalıdır.
+Soyut Sınıflar: Soyut metodlar veya özellikler içeren sınıflar soyut sınıf olarak işaretlenmelidir ve doğrudan örneklenemez.
+Casting: Bu, bir nesne türünün başka bir nesne türüne dönüştürülmesi işlemidir. Soyut sınıflarda, türetilmiş bir sınıf nesnesi soyut sınıf türüne dönüştürülebilir.
+Type Checking: "is" ve "as" anahtar kelimeleri, nesnelerin belirli türler olup olmadığını kontrol etmek için kullanılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Method:
+
+*Abstract metodlar yalnızca abstract sınıflar içinde tanımlanabilir.
+*Abstract metodların gövdesi olmaz.
+*Alt sınıflar, abstract metodları uygulamak zorundadır.
+*Abstract metodlar, abstract anahtar kelimesi ile tanımlanır.
+
+public abstract class Hayvan
+{
+    public abstract void SesCikar();
+}
+
+public class Kedi : Hayvan
+{
+    public override void SesCikar()
+    {
+        Console.WriteLine("Miyav!");
+    }
+}
+
+// Özet: "Hayvan" soyut bir sınıf ve "SesCikar" soyut bir metottur. "Kedi" sınıfı bu metodu uygular.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Property
+
+*Abstract özellikler yalnızca abstract sınıflar içinde tanımlanabilir.
+*Abstract özelliklerin gövdesi olmaz.
+*Alt sınıflar, abstract özellikleri uygulamak zorundadır.
+*Abstract özellikler, abstract anahtar kelimesi ile tanımlanır.
+
+public abstract class Arac
+{
+    public abstract string Marka { get; set; }
+}
+
+public class Araba : Arac
+{
+    private string marka;
+    
+    public override string Marka
+    {
+        get { return marka; }
+        set { marka = value; }
+    }
+}
+
+// Özet: "Arac" soyut bir sınıf ve "Marka" soyut bir özelliktir. "Araba" sınıfı bu özelliği uygular.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Casting:
+
+public abstract class Sekil
+{
+    public abstract double Alan();
+}
+
+public class Kare : Sekil
+{
+    public double KenarUzunlugu;
+
+    public override double Alan()
+    {
+        return KenarUzunlugu * KenarUzunlugu;
+    }
+}
+
+// Kullanım
+Sekil sekil = new Kare { KenarUzunlugu = 5 };
+double alan = sekil.Alan();  // Casting yapılıyor
+
+// Özet: "Kare" nesnesi, "Sekil" türüne dönüştürülüyor ve "Sekil" sınıfındaki metodlar erişilebilir hale geliyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Type Checking:
+
+public abstract class Canli
+{
+
+}
+
+public class Insan : Canli
+{
+
+}
+
+// Kullanım
+Canli varlik = new Insan();
+
+if (varlik is Insan)
+{
+    Console.WriteLine("Bu varlık bir insandır.");
+}
+
+// veya
+
+Insan insan = varlik as Insan;
+if (insan != null)
+{
+    Console.WriteLine("Bu varlık bir insandır.");
+}
+
+// Özet: "is" ve "as" operatörleri, nesnenin türünü kontrol etmek için kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

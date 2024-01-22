@@ -1,0 +1,40 @@
+﻿___________________________________________________________________________________________
+
+Model?
+
+Tanım: Model, MVC (Model-View-Controller) yapısının "M" kısmını oluşturur ve uygulamanın veri ve iş mantığını temsil eder.
+Görevler: Veri doğrulama, iş kuralları, veritabanı işlemleri ve diğer iş mantığı işlemlerini içerir.
+Yapı: Sınıflar ve özellikler kullanılarak oluşturulur, genellikle veritabanı tablolarını yansıtır.
+
+public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+    // Diğer domain özellikleri...
+}
+
+___________________________________________________________________________________________
+
+ViewModel?
+
+Tanım: ViewModel, View'larda gösterilecek verilerin özelleştirilmiş bir modelidir.
+Özellikler:
+Genellikle bir veya daha fazla Domain Model'in birleşiminden oluşur.
+Kullanıcı arayüzüne özgü veri formatlama ve doğrulamalar içerir.
+Kullanım Alanları: Kullanıcı arayüzüne gönderilecek verilerin hazırlandığı yerler.
+
+public class ProductViewModel
+{
+    public string Name { get; set; }
+    public string FormattedPrice { get; set; }
+    // View için özelleştirilmiş diğer özellikler...
+}
+
+
+___________________________________________________________________________________________
+
+
+___________________________________________________________________________________________
+
+___________________________________________________________________________________________

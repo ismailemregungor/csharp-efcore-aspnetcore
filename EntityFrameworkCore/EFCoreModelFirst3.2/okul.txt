@@ -1,0 +1,16 @@
+﻿Bir okul için;Öğrencilerin ve Eğitmenlerin notunun tutulduğu bir
+uygulamayı C# ve Entity Framework core kullanarak tasarlayınız.
+
+Uygulama rapor olarak;
+*Bir dersi alan öğrencilerin listesi
+*Eğitmenlerin listesi
+*Öğrencilerin aldığı dersler listele (id'ye göre)
+*Eğitmenin verdiği dersler(id'ye göre)
+*Transkript(id'ye göre)
+*Verilen notlar 100'lük sisteme göre verielcektir.
+*Models klasöründe modeller, Data klasöründe context nesnesi oalcaktır.
+*Tablolar code first ile oluşturulacaktır. Navigation Property ve Data Annotation kullan.
+
+create user okul identified by okul default tablespace users temporary
+tablespace temp;
+grant connect, resource, DBA to okul; 

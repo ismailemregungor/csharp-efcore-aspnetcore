@@ -1,0 +1,15 @@
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\bin\Debug\net6.0\SingletonDesingPattern.exe
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\bin\Debug\net6.0\SingletonDesingPattern.deps.json
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\bin\Debug\net6.0\SingletonDesingPattern.runtimeconfig.json
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\bin\Debug\net6.0\SingletonDesingPattern.dll
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\bin\Debug\net6.0\SingletonDesingPattern.pdb
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.csproj.AssemblyReference.cache
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.AssemblyInfoInputs.cache
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.AssemblyInfo.cs
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.dll
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\refint\SingletonDesingPattern.dll
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.pdb
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\SingletonDesingPattern.genruntimeconfig.cache
+C:\Users\halkbank2\Desktop\DesingPatterns\SingletonDesingPattern\obj\Debug\net6.0\ref\SingletonDesingPattern.dll

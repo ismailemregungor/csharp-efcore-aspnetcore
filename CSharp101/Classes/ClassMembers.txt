@@ -1,0 +1,161 @@
+﻿_______________________________________________________________________________________________________________________________________________________________________
+
+Class Members:
+
+Class Members - Sınıf Üyeleri:
+*Bir sınıf, farklı türde üyeler içerebilir. Bu üyeler, sınıfın özelliklerini, davranışlarını ve yeteneklerini tanımlar. Sınıf üyeleri, sınıfa ait bilgi ve eylemleri belirler.
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+Fields (Alanlar):
+
+*Alanlar, bir sınıfın durumunu tutan değişkenlerdir.
+*Genellikle private erişim belirleyicisi ile tanımlanır ve sınıfın metotları tarafından kullanılır.
+
+public class Person
+{
+    private string name; // field
+}
+
+Bu örnekte, Person sınıfı name adında bir alan içermektedir.
+_______________________________________________________________________________________________________________________________________________________________________
+
+Properties (Özellikler):
+
+*Özellikler, alanlara güvenli bir şekilde erişim sağlar.
+*Get ve set blokları kullanılarak değer okuma ve yazma işlemleri yapılır.
+*Property'ler aracıdır.
+*Property ihtiyacı olan veriyi kendisi oluşturur üzerinde veri tutmaz.
+*Property değişkene ulaşmak için kullanılır.
+
+Property Türleri:
+
+
+public class Person
+{
+    private string name;
+
+    public string Name // property
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+
+Bu örnekte, Name özelliği name alanına güvenli erişim sağlar.
+_______________________________________________________________________________________________________________________________________________________________________
+
+Methods (Metotlar):
+
+*Metotlar, bir sınıfın davranışını tanımlayan fonksiyonlardır.
+*Eylemleri gerçekleştirmek ve değerleri hesaplamak için kullanılır.
+
+public class Person
+{
+    public void SayHello() // Metot
+    {
+        Console.WriteLine("Hello!");
+    }
+}
+
+Bu örnekte, SayHello metodu ekrana "Hello!" yazdırır.
+_______________________________________________________________________________________________________________________________________________________________________
+
+Constructors (Yapıcı Metotlar):
+
+*Bir sınıfın örneği oluşturulduğunda çağrılan özel metotlardır.
+*Sınıfın başlangıç durumunu ayarlamak için kullanılır.
+
+public class Person
+{
+    private string name;
+
+    public Person(string name) // Yapıcı Metot
+    {
+        this.name = name;
+    }
+}
+
+Bu örnekte, Person sınıfının yapıcı metodu name alanını başlatır.
+_______________________________________________________________________________________________________________________________________________________________________
+
+Destructors (Yıkıcı Metotlar):
+
+*Bir sınıfın örneği bellekten silinmeden hemen önce çağrılan özel metotlardır.
+*Genellikle kaynak temizleme işlemleri için kullanılır.
+
+public class Person
+{
+    ~Person() // Yıkıcı Metot
+    {
+        Console.WriteLine("Object is being deleted");
+    }
+}
+
+Bu örnekte, Person sınıfının yıkıcı metodu nesne silinmeden önce çağrılır.
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+Events (Olaylar):
+
+*Olaylar, bir olay meydana geldiğinde diğer sınıfların bu olaya tepki vermesini sağlar.
+*Delegate'ler kullanılarak tanımlanır.
+
+public class Person
+{
+    public delegate void NameChangedDelegate(string newName);
+    public event NameChangedDelegate NameChanged; // Olay
+
+    private string name;
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            name = value;
+            NameChanged?.Invoke(name);
+        }
+    }
+}
+
+Bu örnekte, NameChanged olayı, Name özelliği değiştirildiğinde tetiklenir.
+_______________________________________________________________________________________________________________________________________________________________________
+
+Indexers (Dizinleyiciler):
+
+*Bir sınıfı dizi gibi kullanmamıza olanak tanır.
+*this anahtar kelimesi ile tanımlanır.
+
+public class StringArray
+{
+    private string[] array = new string[10];
+
+    public string this[int index] // Dizinleyici
+    {
+        get { return array[index]; }
+        set { array[index] = value; }
+    }
+}
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+Operators (Operatörler):
+
+*Bir sınıfa özel operatörler tanımlamak için kullanılır.
+*operator anahtar kelimesi ile tanımlanır.
+
+public class Box
+{
+    public int Width { get; set; }
+    public int Height { get; set; }
+
+    public static Box operator +(Box a, Box b) // Operatör
+    {
+        return new Box { Width = a.Width + b.Width, Height = a.Height + b.Height };
+    }
+}
+
+Bu örnekte, Box sınıfı + operatörünü kullanarak iki Box nesnesini toplar.
+
+_______________________________________________________________________________________________________________________________________________________________________

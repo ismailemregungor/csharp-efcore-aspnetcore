@@ -1,0 +1,92 @@
+﻿___________________________________________________________________________________________
+
+View?
+
+View Temel Özellikleri
+
+Tanım ve Amaç:
+
+View, MVC (Model-View-Controller) yapısının "V" kısmını temsil eder ve kullanıcıya gösterilen HTML içeriğini oluşturur.
+Controller'dan gelen verileri alır ve bu verileri kullanarak kullanıcıya görsel bir çıktı sunar.
+
+Razor View Engine:
+ASP.NET Core MVC'de varsayılan olarak Razor View Engine kullanılır.
+Razor, HTML içinde C# kodu yazmayı sağlayan bir işaretleme dilidir.
+
+HTML ve C# Entegrasyonu:
+Razor sözdizimi, HTML içinde @ sembolü ile C# ifadelerini ve kod bloklarını kullanmayı sağlar.
+Bu, dinamik içeriklerin kolayca HTML'e entegre edilmesine olanak tanır.
+
+Layouts ve Partial Views:
+View'lar, sayfa düzeni (layout) ve yeniden kullanılabilir bölümler (partial views) için destek sağlar.
+Bu, kod tekrarını azaltır ve uygulamanın bakımını kolaylaştırır.
+
+Model Veri Bağlama:
+View'lar, Controller tarafından sağlanan model verilerini @model direktifi ile alabilir.
+Bu veriler, sayfada dinamik içerik oluşturmak için kullanılır.
+
+Tag Helpers Kullanımı:
+View'lar, HTML etiketlerine sunucu tarafı işlevleri ekleyen Tag Helpers kullanabilir.
+Bu, form elemanları, linkler ve diğer HTML elementlerinin kolay yönetimini sağlar.
+
+Güvenlik:
+Razor, Cross-Site Scripting (XSS) saldırılarına karşı otomatik olarak koruma sağlar.
+Kullanıcı tarafından sağlanan içerikler, HTML olarak işlenmeden önce encode edilir.
+___________________________________________________________________________________________
+
+Razor View Engine Özellikleri
+
+Yapı:
+Razor, .cshtml uzantılı dosyalar kullanır.
+HTML işaretlemesi ile C# kodunu bir araya getirir.
+
+Sözdizimi:
+@ sembolü, Razor sözdiziminde C# kodunu HTML'den ayırmak için kullanılır.
+Örneğin, @DateTime.Now ifadesi, sunucunun mevcut zamanını HTML sayfasına yerleştirir.
+
+HTML ve C# Entegrasyonu:
+Razor, HTML içerisinde döngüler, koşullar ve diğer C# ifadelerini çalıştırabilir.
+Bu sayede, sunucu tarafında dinamik içerik oluşturulabilir.
+
+Layout ve Partial Views:
+Razor, sayfa düzenini (layout) ve tekrar kullanılabilir bileşenleri (partial views) destekler.
+Bu, kodun tekrar kullanımını ve bakımını kolaylaştırır.
+
+Model Bağlantısı:
+View'lar, Controller'dan geçirilen model verilerini @model direktifi ile alabilir.
+Bu veriler, sayfada dinamik içerik oluşturmak için kullanılır.
+
+Tag Helpers:
+Razor, HTML etiketlerine C# özellikleri ekleyerek daha kolay ve okunabilir kod yazmayı sağlar.
+Örneğin, <form asp-action="Submit"> gibi.
+
+Güvenlik:
+Razor, otomatik olarak HTML kodlarındaki çapraz site betikleme (XSS) saldırılarına karşı koruma sağlar.
+Kullanıcı girdileri HTML olarak işlenmeden önce encode edilir.
+
+___________________________________________________________________________________________
+
+Senaryo: Bir kitaplık uygulaması düşünün. Bu uygulamada, kullanıcılara çeşitli kitapların listesi sunulur.
+
+@model IEnumerable<Book>
+
+<h1>Kitap Listesi</h1>
+<ul>
+    @foreach(var book in Model) {
+        <li>@book.Title - @book.Author</li>
+    }
+</ul>
+___________________________________________________________________________________________
+
+cshtml içerisinde cs ve html kodunu beraber kullanma yöntemleri
+
+@*Düz HTML*@
+<a href="~/Home/Index">Home</a>
+
+@*HTML Helper*@
+@Html.ActionLink("Home","Index","Home")
+
+@*Tag Helper*@
+<a asp-action="Index" asp-controller="Home">Home</a>
+<a asp-action="Privacy" asp-controller="Home">Home</a>
+___________________________________________________________________________________________

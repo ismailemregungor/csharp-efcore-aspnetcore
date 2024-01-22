@@ -1,0 +1,6 @@
+﻿__________________________________________________________________________________________________________________________
+
+Range belirli bir aralıkta sıralı sayılar içeren bir dizi oluşturur.
+Reverse bir koleksiyondaki öğelerin sırasını tersine çevirir.
+Repeat belirtilen değeri belirtilen sayıda tekrarlayarak bir koleksiyon oluşturur.
+__________________________________________________________________________________________________________________________

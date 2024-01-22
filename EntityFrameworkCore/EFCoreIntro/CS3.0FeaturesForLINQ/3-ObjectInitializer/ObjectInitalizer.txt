@@ -1,0 +1,19 @@
+﻿__________________________________________________________________________________________________________________________
+
+Object Initializer:
+
+Default Şablon: new ClassName { Property1 = value1, Property2 = value2 };
+
+Önemli Noktalar:
+
+*Nesne oluşturulurken property'lerini tek bir ifade ile set edebilme.
+*Constructor'a ihtiyaç duymadan nesneleri başlatma.
+*Kod temizliği ve anlaşılırlığını artırır.
+__________________________________________________________________________________________________________________________
+
+var newStudent = new Student { Name = "Alice", Age = 20 };
+var studentNames = students.Select(s => new { s.Name, s.Age });
+
+newStudent, bir object initializer kullanılarak oluşturulan yeni bir Student nesnesidir. 
+İkinci satırda ise LINQ sorgusu ile anonim türde yeni bir nesne koleksiyonu oluşturulmuştur.
+__________________________________________________________________________________________________________________________

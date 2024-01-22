@@ -1,0 +1,87 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Constructors/ctor-Yapıcı/Kurucu Metodlar:
+
+*ctor, bir sınıfın örneği oluşturulduğunda çağrılan özel metodlardır. Sınıf adıyla aynı adı taşımalıdır ve geri dönüş tipi olmamalıdır.
+
+*Bir sınıf RAM'de heap bölgesinde oluşturulurken ilk çalışan metoda constructor denir.
+
+*Bir sınıf'ta aşırı yükleyebildiğimiz kadar yani imzaları farklı olduğu sürece n tane constructor oluşturabiliriz.
+
+*Personel personel = new Personel(); ifadesinde constructor Personel() ifadesidir.
+
+*Yapıcılar, nesnelerin geçerli bir başlangıç durumuyla oluşturulmasını sağlar.
+
+*Parametreleri alabilirler, böylece nesnenin başlangıç durumu, oluşturma sırasında sağlanan değerlere göre ayarlanabilir.
+
+*Bir sınıf birden fazla yapıcıya sahip olabilir (constructor overloading).
+
+*Eğer bir sınıf içerisinde bir constructor tanımlaması yapılmazsa compiler default bir constructor tanımlaması yapar.
+
+*Eğer biz parametreli bir constructor oluşturursak compiler default bir constructor oluşturmaz! 
+Çünkü biz class'ı istediğimiz değerlerdeki constructor ile çalıştırmak istediğimizi anlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Ctor Yazma Kuralları:
+*Sınıf ismiyle aynı isimde olmalı
+*Return type yok
+_______________________________________________________________________________________________________________________________________________________________________
+
+Constructor-ctor Kullanım Amaçları:
+
+*Nesnenin başlangıç durumunu ayarlamak yani class'ın nesne örneğine ilk değer ataması yapmak.
+*Nesne oluşturma sırasında gerekli herhangi bir kaynağı başlatmak yani ilk yapılması gereken işlemleri sağlamak.
+*Nesnenin geçerli ve tutarlı bir durumda oluşturulmasını sağlamak veya zorlamak.
+________________________________________________________________________________________________________________________________________________________________________
+
+Default ctor:
+
+public class Person
+{
+    public string Name;
+
+    // Yapıcı
+    public Person()
+    {
+
+    }
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit ctor:
+
+public class Person
+{
+    public string Name;
+
+    // Yapıcı
+    public Person()
+    {
+        Name = "Unknown";
+    }
+}
+
+// Özet: Varsayılan yapıcı, 'Name' özelliğini "Unknown" olarak ayarlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Parametreli ctor:
+
+public class Person
+{
+    public string Name;
+
+    // Yapıcı
+    public Person(string name)
+    {
+        Name = name;
+    }
+}
+
+// Özet: Bu yapıcı, 'Name' özelliğini dışarıdan alınan bir parametreyle ayarlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+C#12 - .NET8'de primary constructor geliyor.
+public class Personel(int id, string id)
+________________________________________________________________________________________________________________________________________________________________________

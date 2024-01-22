@@ -1,0 +1,16 @@
+﻿Toplam 6 sınav
+3 teorik 
+3 uygulama
+oop
+entity framework
+mvc
+
+teorik sınav:
+
+oop prensipleri ayrı ayrı
+stack vs heap vs static
+struct vs class
+boxing unboxing
+ref vs out
+enum?
+constructor?

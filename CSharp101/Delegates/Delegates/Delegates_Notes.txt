@@ -1,0 +1,49 @@
+﻿Delegates - Temsilci:
+
+C# delegates, bir işleve (metoda) referanslar taşıyan 
+ve bu işlevleri çağırmak için kullanılan bir türdür. 
+
+Delegates, metotları taşıyan referanslar olarak işlev görür. 
+Bir delegate, işaret ettiği metotun imzasını (parametre türleri ve dönüş türü) tanır ve çağırır. 
+
+Delegates, metotları taşırken, bu metotların nasıl çağrılacağını ve hangi parametrelerle çağrılacağını bilir.
+
+Delegates Özellikleri:
+
+Metotları Parametre Olarak Geçme: Delegates, bir metodu bir başka metoda 
+parametre olarak geçmenizi sağlar. Bu, dinamik olarak farklı metotları çağırmak için kullanışlıdır.
+
+Metotları Dönme: Delegates, bir metodu başka bir metotun sonucu olarak 
+döndürmenizi olanaklı kılar. Bu, özellikle metotları koşullu olarak seçmek veya sıralamak istediğinizde kullanışlıdır.
+
+Event Handling: Delegates, olayların işlenmesi (event handling) için kullanılır. 
+Bir olayı dinlemek isteyen kod, bir delegatenin bir metodu çağırmasını bekler.
+
+Kullanım Amaçları ve Senaryolar:
+
+Olaylar (Events) İşleme: Delegates, C# olay modelini destekler ve olayları işlemek için kullanılır. Bir olayı dinleyen kod, olayı tetikleyen kodun belirttiği metodu çalıştırır.
+
+Genel İşlevler: Delegates, birden fazla farklı metodu aynı arayüzle çağırmanızı olanaklı kılar. Bu, belirli bir işlevi yürütmek için farklı metotları kullanmak istediğinizde faydalıdır.
+
+İş Parçacığı (Multithreading) Programlaması: Delegates, çoklu iş parçacığı programlamasında metotları farklı iş parçacıklarında veya süreçlerde çağırmak için kullanılabilir.
+
+Genel Metotların Çağrılması: Delegates, dinamik olarak belirli bir metodu çağırmanıza olanak tanır. Bu, metotları çalışma zamanında seçmek ve çağırmak için kullanışlıdır.
+
+LINQ (Dil Entegre Sorgu) Kullanımı: LINQ sorguları, delegates kullanarak filtreleme, sıralama ve projeksiyon gibi işlemleri kolayca gerçekleştirir.
+
+Act ve Func Delegates:
+
+C# programlama dilinde, Action ve Func iki sık kullanılan önceden tanımlanmış 
+(built-in) delegate türüdür. Her ikisi de metotları temsil edebilir, ancak farklı amaçlara ve imzalara sahiptirler.
+
+*İsim bağımsız çalışır
+*C#'ta metot taşır ve koleksiyon yapısındadır.
+*Hangi metotları taşır?
+*Bir Delegate'in metot taşıyabilmesi için taşıyacağı
+metodları imzaları(parametre sayısı ve parametre türü) 
+ve return type'larının aynı olması gerekir.
+*Delegates 
+
+Multicast Delegates:
+
+*Birden fazla metodu taşıyan delegelere multicast delegates denir.

@@ -1,0 +1,36 @@
+﻿<h1>
+	Merhaba MVC
+</h1>
+
+@*Düz HTML*@
+<a href="~/Home/Index">Home</a>
+
+@*HTML Helper*@
+@Html.ActionLink("Home","Index","Home")
+
+@*Tag Helper*@
+<a asp-action="Index" asp-controller="Home">Home</a>
+<a asp-action="Privacy" asp-controller="Home">Home</a>
+
+<script>
+
+	function msgBox(msg) {
+		alert(msg);
+	}
+
+</script>
+
+<style>
+	h2{
+		color:orange;
+	}
+</style>
+
+<button onclick='msgBox("naber")'>Tıkla</button>
+
+@{
+	for (int i = 0; i < 5; i++)
+	{
+		<h1>Merhaba @i</h1>
+	}
+}

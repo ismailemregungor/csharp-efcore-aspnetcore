@@ -1,0 +1,93 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Extending Interfaces:
+
+Interface'in Genişletilmesinin Özellikleri:
+
+Tekrar Kullanılabilirlik: Mevcut interface'lerde tanımlanmış işlevsellikler, yeni interface'ler oluşturulurken yeniden kullanılabilir.
+Esneklik: Bir sınıf, birden çok interface'i uygulayarak çeşitli işlevler kazanabilir.
+Soyutlama: Interface'ler, gerçekleştirim detaylarını gizler ve yalnızca ilgili işlevleri tanımlar, bu da yüksek düzeyde soyutlama sağlar.
+
+Kullanım Senaryoları:
+
+Farklı Kaynaklardan Özelliklerin Birleştirilmesi: Farklı interface'lerden gelen özelliklerin ve işlevlerin bir sınıfta birleştirilmesi gerektiğinde.
+Ortak İşlevsellik: Farklı sınıfların ortak işlevselliği paylaşması gerektiğinde, bu işlevsellik bir interface'de tanımlanır ve ilgili tüm sınıflar tarafından uygulanır.
+Sürdürülebilirlik ve Bakım Kolaylığı: Sistemin gelecekteki genişlemeleri ve değişiklikleri için hazırlık yaparken.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Tek Bir Interface'i Genişletme
+________________________________________________________________________________________________________________________________________________________________________
+
+// Temel interface
+public interface IAnimal
+{
+    void Eat();
+}
+
+// 'IAnimal' interface'ini genişleten başka bir interface
+public interface IBird : IAnimal
+{
+    void Fly();
+}
+
+// 'IBird' interface'ini uygulayan bir sınıf
+public class Sparrow : IBird
+{
+    public void Eat()
+    {
+        Console.WriteLine("Sparrow eats seeds.");
+    }
+
+    public void Fly()
+    {
+        Console.WriteLine("Sparrow flies.");
+    }
+}
+
+// Özet: 'Sparrow' sınıfı, 'IBird' interface'ini ve dolayısıyla 'IAnimal' interface'ini uygular. Bu, 'Sparrow' sınıfının hem 'Eat' hem de 'Fly' metotlarını uygulaması gerektiği anlamına gelir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Birden Fazla Interface'i Genişletme
+
+// İlk temel interface
+public interface IWalk
+{
+    void Walk();
+}
+
+// İkinci temel interface
+public interface ISwim
+{
+    void Swim();
+}
+
+// İki interface'i genişleten yeni bir interface
+public interface IAmphibian : IWalk, ISwim
+{
+}
+
+// 'IAmphibian' interface'ini uygulayan bir sınıf
+public class Frog : IAmphibian
+{
+    public void Walk()
+    {
+        Console.WriteLine("Frog walks.");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("Frog swims.");
+    }
+}
+
+// Özet: 'Frog' sınıfı, 'IAmphibian' interface'ini uygular, bu da 'IWalk' ve 'ISwim' interface'lerini genişletir. Bu, 'Frog' sınıfının hem 'Walk' hem de 'Swim' metotlarını uygulaması gerektiği anlamına gelir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

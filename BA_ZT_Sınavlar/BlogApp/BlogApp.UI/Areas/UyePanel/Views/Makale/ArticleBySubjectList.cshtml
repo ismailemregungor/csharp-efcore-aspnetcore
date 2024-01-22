@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BlogApp.UI.Models.VMs.MakaleVMs.MakaleListeleVM>
+
+@{
+    ViewData["Title"] = "UserArticleList";
+}
+
+<div class="container-fluid mt-3">
+    <h1 class="text-center">Konuya Göre Makale Listesi</h1>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="text-center">
+                    <th>@Html.DisplayNameFor(model => model.MakaleID)</th>
+                    <th>@Html.DisplayNameFor(model => model.Baslik)</th>
+                    <th>@Html.DisplayNameFor(model => model.EklemeTarihi)</th>
+                    <th>Konu</th>
+                    <th>Yazar Kullanıcı Adı</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@Html.DisplayFor(modelItem => item.MakaleID)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Baslik)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EklemeTarihi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Konu.KonuAdi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AppUser.UserName)</td>
+                        <td>@Html.ActionLink("Makale Detay", "Detail", new { id=item.MakaleID}, new{ @class = "btn btn-primary"})</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+</div>

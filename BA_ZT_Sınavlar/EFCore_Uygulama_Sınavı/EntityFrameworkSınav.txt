@@ -1,0 +1,18 @@
+----------------------------------------------------------------------------------------
+EntityFramework Uygulama Sınav Kriterleri:
+
+context + ilişki = 20 puan
+veritabanı oluşması = 20 puan
+crud işlemleri = 20 puan
+clean code =  10 puan
+rapor olarak istenilen sorgu sonuçları 4*5 = 20 puan
+login işlemi = 10 puan
+
+*silmede remove yerine state değiştirme olabilir.
+----------------------------------------------------------------------------------------
+EntityFramework Teorik Sınav
+
+https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx
+
+bu sitedeki bilgileri oku
+----------------------------------------------------------------------------------------

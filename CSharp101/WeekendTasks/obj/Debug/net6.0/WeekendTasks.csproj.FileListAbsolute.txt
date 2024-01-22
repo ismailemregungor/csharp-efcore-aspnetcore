@@ -1,0 +1,5 @@
+C:\Users\iegof\Desktop\CSharp101\WeekendTasks\obj\Debug\net6.0\WeekendTasks.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\WeekendTasks\obj\Debug\net6.0\WeekendTasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\WeekendTasks\obj\Debug\net6.0\WeekendTasks.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\WeekendTasks\obj\Debug\net6.0\WeekendTasks.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\WeekendTasks\obj\Debug\net6.0\WeekendTasks.csproj.CoreCompileInputs.cache

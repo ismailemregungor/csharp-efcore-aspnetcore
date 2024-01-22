@@ -1,0 +1,59 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+is-a İlişkisi (Kalıtım):
+
+*is-a ilişkisi, nesne yönelimli programlamada kalıtım (inheritance) ile ifade edilir. 
+Bu ilişki türünde, bir alt sınıf (derived class), üst sınıf (base class)’ın bir türüdür.
+
+*Eğer bir sınıf diğer sınıfın genelleştirilmiş bir versiyonuysa, yani "bir tür" ilişkisi varsa, kalıtım kullanmalısınız.
+
+Önemli Noktalar:
+
+*Genelleme-Spesifikasyon: Alt sınıf, üst sınıfın genelleştirilmiş bir versiyonudur 
+ve üst sınıfın tüm özelliklerini ve davranışlarını miras alır.
+
+*Polimorfizm: is-a ilişkisi, polimorfizm uygulamak için kullanılabilir.
+
+*Sürdürülebilirlik ve Genişletilebilirlik: is-a ilişkisi, kodun sürdürülebilirliğini ve genişletilebilirliğini artırır.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Animal { }
+public class Dog : Animal { }
+
+Özet: Dog sınıfı Animal sınıfından türetilmiştir. Yani her Dog, bir Animal'dır.
+
+________________________________________________________________________________________________________________________________________________________________________
+public class Bird : Animal 
+{
+    public void Fly() 
+    {
+        Console.WriteLine("The bird is flying");
+    }
+}
+
+Özet: Bird sınıfı da bir Animal'dır ve uçma yeteneğine sahiptir.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Sparrow : Bird { }
+
+Özet: Sparrow, Bird ve dolayısıyla Animal'ın bir türüdür.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class FlyingFish : Animal 
+{
+    public void Swim() 
+    {
+        Console.WriteLine("The flying fish is swimming");
+    }
+    public void Fly() 
+    {
+        Console.WriteLine("The flying fish is flying");
+    }
+}
+
+Özet: FlyingFish, Animal sınıfından türetilmiştir ve hem uçabilir hem de yüzebilir.
+_______________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+

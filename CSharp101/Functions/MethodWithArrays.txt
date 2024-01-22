@@ -1,0 +1,95 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Metotlar ve Dizilerin beraber kullanımı:
+*Diziler, metotlara parametre olarak geçirilebilir. Böylece, metot içinde bu diziler üzerinde işlem yapabilirsiniz.
+
+public [Dönüş Tipi] FonksiyonAdi([Tip][] parametreAdi)
+{
+    // Kod bloğu
+}
+
+public int DiziToplami(int[] sayilar)
+{
+    int toplam = 0;
+    foreach(int sayi in sayilar)
+    {
+        toplam += sayi;
+    }
+    return toplam;
+}
+
+DiziToplami metodu, bir tamsayı dizisini parametre olarak alır ve bu dizideki tüm sayıların toplamını döndürür.
+________________________________________________________________________________________________________________________________________________________________________
+
+Params:
+
+*params anahtar kelimesi, metotlara değişken sayıda argüman gönderilmesini sağlar.
+Bu, özellikle bilinmeyen sayıda değerle çalışmanız gerektiğinde oldukça kullanışlıdır.
+
+*Bir metodun aynı parametre tipinde birden fazla değer alması gerektiği durumlarda 
+birden fazla aynı isimde method yazmak yerine params kullanarak 
+değişken sayıda aynı tip parametre alan methodlar yazabiliriz.
+
+*"params" anahtar kelimesi yalnızca bir metodu çağırırken son parametre 
+olarak kullanılabilir ve yalnızca bir tane "params" parametresi olabilir.
+
+*"params" ile tanımlanan dizi, 0 veya daha fazla öğe içerebilir.
+Diğer parametreler "params" parametresinin önünde bulunmalıdır.
+
+*Çağırılan metot, "params" kullanılarak istenilen sayıda argümanla çağrılabilir.
+Metot çağrısı sırasında, "params" kullanılan parametre, bir dizi olarak işlenir.
+"params" herhangi bir sayıda argümanı kabul edebilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Dizi ve Params Kullanımı:
+
+public int Toplam(params int[] sayilar)
+{
+    int toplam = 0;
+    foreach(int sayi in sayilar)
+    {
+        toplam += sayi;
+    }
+    return toplam;
+}
+
+Toplam metodu, belirsiz sayıda tamsayıyı parametre olarak alabilir ve bu sayıların toplamını döndürür.
+
+public void Ekle(params string[] isimler)
+{
+    foreach(string isim in isimler)
+    {
+        Console.WriteLine(isim + " eklendi.");
+    }
+}
+
+Ekle metodu, belirsiz sayıda ismi parametre olarak alır ve her bir ismi eklediğini belirten bir mesaj yazar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Dizi Değerini Değiştirme:
+
+public void DiziDegerleriniSifirla(int[] dizi)
+{
+    for(int i = 0; i < dizi.Length; i++)
+    {
+        dizi[i] = 0;
+    }
+}
+
+DiziDegerleriniSifirla metodu, bir tamsayı dizisini parametre olarak alır ve tüm elemanlarını 0'a ayarlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Params ile Karışık Parametreler:
+
+public void BilgileriYaz(string baslik, params string[] detaylar)
+{
+    Console.WriteLine(baslik);
+    foreach(string detay in detaylar)
+    {
+        Console.WriteLine("- " + detay);
+    }
+}
+
+BilgileriYaz metodu, bir başlık ve belirsiz sayıda detayı parametre olarak alır, ardından bu başlığı ve detayları ekrana yazar.
+________________________________________________________________________________________________________________________________________________________________________

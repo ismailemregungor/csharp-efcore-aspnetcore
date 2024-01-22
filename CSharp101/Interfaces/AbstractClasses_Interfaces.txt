@@ -1,0 +1,41 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Sınıflar ve Interface'ler Arasında Seçim Yapmak:
+Durum Paylaşımı: Abstract sınıflar, durum paylaşımını destekler (alanlar yoluyla). Eğer durum paylaşımı gerekiyorsa, abstract sınıf kullanmak daha uygun olabilir.
+Soyutlama Seviyesi: Eğer tamamen soyut bir sözleşme sağlamak istiyorsanız ve herhangi bir uygulama detayı sağlamak istemiyorsanız, bir interface kullanmak daha iyidir.
+Çoklu Kalıtım: C# çoklu kalıtıma izin vermez, bu yüzden bir sınıf birden çok sınıftan türemez. Ancak, bir sınıf birden çok interface'i uygulayabilir. Çoklu kalıtım gerekiyorsa, interface'ler kullanılmalıdır.
+Tasarım Sağlamlığı: Eğer gelecekteki değişikliklerin mevcut kodu bozmasını engellemek istiyorsanız, interface'ler kullanmak daha iyidir çünkü yeni metodlar eklendiğinde, bu metodları uygulayan tüm sınıflar güncellenmek zorundadır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Abstract Class:
+
+Durum Paylaşımı: Evet, alanlar yoluyla durum paylaşımını destekler.,
+İmplementasyon: Metodlar için varsayılan implementasyon sağlayabilir.
+Çoklu Kalıtım: Hayır, çoklu kalıtıma izin verilmez.
+Erişim Belirleyicileri: Erişim belirleyicilerini (public, private, vs.) destekler.
+Eklenen Metodlar: Alt sınıfların kırılmasına neden olmadan metodlar ekleyebilir.
+Modifikatörler	: 	'abstract', 'virtual', 'override' modifikatörleri kullanılabilir.
+Katılım Zorunluluğu: Bazı metodlar zorunlu, bazıları isteğe bağlı olabilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface: 
+
+Durum Paylaşımı: Hayır, durum paylaşımını desteklemez.
+İmplementasyon: C# 8.0'dan itibaren varsayılan implementasyonlar sağlayabilir.
+Çoklu Implementasyon: Evet, bir sınıf birden çok interface'i uygulayabilir.
+Erişim Belirleyicileri: Tüm metodlar varsayılan olarak public'tir; erişim belirleyicileri kullanılamaz.
+Eklenen Metodlar: Yeni bir metod eklendiğinde, tüm uygulayan sınıfları güncellemek gerekir.
+Modifikatörler	: Sadece 'default' uygulamalar için 'virtual' benzeri davranışlar.
+Katılım Zorunluluğu: Tüm metodlar uygulayan sınıf tarafından uygulanmalıdır (varsayılan implementasyonlar hariç).
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

@@ -1,0 +1,125 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Enum (Sıralı Tip):
+
+*Bir enum (sıralı tip), bir değişkenin alabileceği değerlerin belirli bir kümesini temsil eden özel bir veri türüdür. 
+
+*Bu değerler, sabitlerin (constants) bir listesini temsil eder ve genellikle belirli bir değeri sembolik bir şekilde ifade etmek için kullanılırlar.
+
+*String ifadeler ile tamsayi değerleri eşleştirmek için kullanılır.
+
+*Enumlar tanımlanırken numerik değerler tanımlanmaz ise 0'dan başlayarak
+n'e doğru birer birer arttırılır.
+
+*Arada herhangi bir enum elamanına tamsayı değer verilirse bir sonraki
+elamanın tam sayı değeri diğerinden bir fazla olacaktır.
+
+*Ya da tüm enum elemanlarına tamsayi değerler verielbilir.
+
+*Enum'ların alabileceği değerler sadece tamsayi değerlerdir.
+
+Enum değerleri, varsayılan olarak 0'dan başlayarak artan bir sıra numarası alır. Ancak, bu numaraları özelleştirebilirsiniz.
+
+Enum değerlerine, değer atamaları yaparak veya özel bir değerle başlatarak özel değerler atayabilirsiniz.
+
+Enum türleri, karşılaştırma işlemleri için kullanışlıdır. İki enum değerini karşılaştırabilir ve eşitlik veya büyüklük küçüklük kontrolü yapabilirsiniz.
+________________________________________________________________________________________________________________________________________________________________________
+
+Özellikler:
+
+Enumlar, sabitlerin daha okunabilir bir şekilde kullanılmasını sağlar. Örneğin, bir günü temsil eden sayısal bir değer yerine Days.Monday gibi sembolik bir değer kullanabilirsiniz.
+Enumlar, genellikle belirli bir aralıktaki değerleri ifade etmek için kullanılır. Örneğin, bir haftanın günlerini temsil etmek için bir enum kullanabilirsiniz.
+Enumlar, int veya başka bir temel veri türünden türetildiği için, temel veri türleriyle kolayca işlem yapabilirsiniz.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları:
+
+İlgili değerlerin sınırlı bir listesini ifade etmek için kullanılır. Örneğin, bir kart destesini temsil etmek için bir enum kullanabilirsiniz.
+Değerlerin anlamını ve kullanımını daha açık ve anlaşılır hale getirmek için kullanılır. 
+Örneğin, bir fonksiyonun döndürebileceği sonuçları enum değerleri olarak tanımlayarak kodun okunabilirliğini artırabilirsiniz.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Customer
+{
+    public enum CustomerType
+    {
+        Regular,
+        Premium
+    }
+
+    public string Name { get; set; }
+    public CustomerType Type { get; set; }
+}
+
+Yukarıdaki örnekte, Customer sınıfı içinde CustomerType adında bir enum tanımladık. Her müşteri nesnesi artık bir müşteri türüne (CustomerType) sahip olabilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Order
+{
+    public enum OrderStatus
+    {
+        New,
+        InProgress,
+        Shipped,
+        Delivered
+    }
+
+    public int OrderId { get; set; }
+    public OrderStatus Status { get; set; }
+}
+
+Yukarıdaki örnekte, Order sınıfında OrderStatus adında bir enum tanımladık ve her sipariş nesnesinin bir sipariş durumu (OrderStatus) olacak.
+________________________________________________________________________________________________________________________________________________________________________
+
+Enum Kullanım Senaryoları:
+
+Switch İfadeleri ile Kullanma:
+
+OrderStatus status = GetOrderStatus(); // Sipariş durumunu al
+
+switch (status)
+{
+    case OrderStatus.New:
+        Console.WriteLine("Sipariş yeni.");
+        break;
+    case OrderStatus.InProgress:
+        Console.WriteLine("Sipariş işleniyor.");
+        break;
+    case OrderStatus.Shipped:
+        Console.WriteLine("Sipariş sevkedildi.");
+        break;
+    case OrderStatus.Delivered:
+        Console.WriteLine("Sipariş teslim edildi.");
+        break;
+    default:
+        Console.WriteLine("Geçersiz sipariş durumu.");
+        break;
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Enum Değerlerini Listeleme:
+
+foreach (OrderStatus status in Enum.GetValues(typeof(OrderStatus)))
+{
+    Console.WriteLine(status);
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Enum Değerlerini Karşılaştırma
+
+if (order.Status == OrderStatus.Shipped)
+{
+    Console.WriteLine("Sipariş sevkedildi.");
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+

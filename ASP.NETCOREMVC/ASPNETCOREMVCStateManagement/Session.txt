@@ -1,0 +1,84 @@
+﻿__________________________________________________________________________________________________
+
+"Session" (Oturum), kullanıcıya özgü verileri sunucu tarafında
+saklamak için kullanılan bir mekanizmadır.Bir kullanıcının web uygulaması 
+ile etkileşimi süresince, farklı istekler arasında veri tutmak için sessionlar kullanılır. 
+
+__________________________________________________________________________________________________
+
+Session'un Temel Özellikleri
+
+Kullanıcıya Özgü Saklama: Her kullanıcı için benzersiz bir session oluşturulur ve bu session kullanıcının tarayıcı oturumunun süresi boyunca devam eder.
+
+Sunucu Tarafında Depolama: Session verileri sunucu tarafında saklanır, bu da güvenlik açısından önemlidir çünkü hassas veriler istemci tarafında saklanmaz.
+
+ID ile Tanımlama: Her session, benzersiz bir session ID ile tanımlanır. Bu ID genellikle kullanıcının tarayıcısına bir cookie olarak gönderilir.
+
+Sınırlı Ömür: Sessionlar belirli bir süre için aktif kalır. Kullanıcı belirli bir süre boyunca etkileşimde bulunmazsa, session sona erer.
+
+Esnek Veri Saklama: Sessionlar, çeşitli türlerdeki verileri saklayabilir (örneğin, dizeler, nesneler, sayılar).
+
+__________________________________________________________________________________________________
+
+Kullanım Senaryoları
+
+Kullanıcı Özgü Ayarlar: Kullanıcı tercihleri, dil seçimleri gibi kişisel ayarların saklanması.
+
+Oturum Bilgileri: Kullanıcı oturum bilgileri ve kimlik doğrulama tokenları.
+
+Geçici Veri Saklama: Alışveriş sepeti, form verileri gibi geçici bilgilerin saklanması.
+__________________________________________________________________________________________________
+
+Teknik Detaylar ve Uygulama
+
+Session Etkinleştirme: ASP.NET Core'da session'ı kullanabilmek için, Startup.cs dosyasında middleware olarak eklenmesi ve yapılandırılması gerekir.
+
+Veri Erişimi: Session verilerine HttpContext.Session aracılığıyla erişilir.
+
+Veri Türleri: Sadece basit veri türleri doğrudan saklanabilir. Nesneleri saklamak için önce serileştirmek gerekir.
+
+__________________________________________________________________________________________________
+
+Session Middleware'ın Yapılandırılması:
+
+İlk olarak, Startup.cs dosyasında Session middleware'ı eklemelisiniz. 
+ConfigureServices metodunda services.AddSession() çağrısını yaparak Session servisini ekleyin.
+Configure metodunda, app.UseSession() middleware'ını ekleyerek Session'ı etkinleştirin.
+Session Kullanımı:
+
+Controller'larda veya Razor sayfalarında, HttpContext.Session nesnesi üzerinden Session'a erişebilirsiniz.
+Session verilerini ayarlamak için SetString ve SetInt32 gibi metotları, verileri almak için GetString ve GetInt32 gibi metotları kullanabilirsiniz.
+__________________________________________________________________________________________________
+
+// Session'a veri ekleme
+HttpContext.Session.SetString("SessionKey", "SessionValue");
+
+// Session'dan veri alma
+var myValue = HttpContext.Session.GetString("SessionKey");
+
+__________________________________________________________________________________________________
+
+Session Yaşam Süresi
+
+__________________________________________________________________________________________________
+
+Yapılandırma:
+
+Session süresini Startup.cs dosyasında AddSession metoduna parametre olarak geçebilirsiniz.
+Örneğin, services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); }); ifadesi, Session süresini 30 dakika olarak ayarlar.
+Idle Timeout:
+
+IdleTimeout özelliği, kullanıcı etkin olmadığında Session'ın ne kadar süreyle açık kalacağını belirler. Eğer bu süre içinde herhangi bir istek yapılmazsa, Session sonlandırılır.
+Session Sonlandırma:
+
+Kullanıcı oturumu sonlandırıldığında veya belirtilen süre aşımı gerçekleştiğinde, Session sona erer.
+Süre Uzatma:
+
+Kullanıcı etkileşimde bulundukça (yeni istekler gönderdikçe), Session süresi yeniden başlar.
+Önemli Notlar:
+
+Session süresinin çok uzun ayarlanması, sunucu kaynaklarının gereksiz kullanımına yol açabilir.
+Güvenlik açısından, hassas bilgilerin Session'da saklanmaması veya şifrelenmesi önerilir.
+__________________________________________________________________________________________________
+
+__________________________________________________________________________________________________

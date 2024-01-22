@@ -1,0 +1,40 @@
+﻿______________________________________________________________________________________________________
+
+wwwroot klasörü, web uygulamasının statik dosyalarını (örneğin, CSS, JavaScript, resimler)
+barındıran özel bir klasördür. Bu klasör, web sunucusunun doğrudan istemcilere erişime izin verdiği tek klasördür.
+
+______________________________________________________________________________________________________
+
+wwwroot Klasörü
+Statik Dosya Sunucu: wwwroot, statik dosyaları saklamak için standart yerdir. Bu, CSS, JavaScript, resimler, fontlar gibi istemci tarafında çalışan dosyaları içerir.
+
+Güvenlik: Statik dosya sunucusu yalnızca bu klasördeki dosyalara hizmet eder, bu da uygulamanın diğer kısımlarını istemci tarafından doğrudan erişime karşı korur.
+
+Dosya Yapısı: wwwroot içindeki dosya yapısı, URL yolu yapısını yansıtır. Örneğin, wwwroot/css/site.css dosyasına http://<your-app>/css/site.css üzerinden erişilir.
+______________________________________________________________________________________________________
+
+wwwroot'a Nasıl Erişilir
+Statik Dosya Middleware'ını Yapılandırma:
+
+ASP.NET Core uygulamanızda statik dosyalara hizmet etmek için, Startup.cs dosyasında UseStaticFiles middleware'ını yapılandırmanız gerekir.
+Configure metodunda app.UseStaticFiles(); çağrısı yaparak statik dosya sunucusunu etkinleştirin.
+HTML, CSS ve JavaScript'te Erişim:
+
+HTML içinde statik dosyalara <link> veya <script> etiketleriyle erişilebilir. Örneğin: <link rel="stylesheet" href="~/css/site.css">
+JavaScript dosyalarına <script src="~/js/site.js"></script> kullanarak erişilebilir.
+Razor View'larda Erişim:
+
+Razor view'larında ~/ (tilde-slash) kullanarak wwwroot içindeki dosyalara erişim sağlayabilirsiniz.
+Örneğin, @Url.Content("~/css/site.css") ifadesi ile CSS dosyasının yolunu alabilirsiniz.
+Göreceli URL Kullanımı:
+
+Göreceli URL'ler, wwwroot klasöründeki dosyalar için kullanılır. Örneğin, /images/logo.png URL'si wwwroot/images/logo.png dosyasına işaret eder.
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________
+
+______________________________________________________________________________________________________

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Brand>
+
+<h2>Brand List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Brand ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var brand in Model)
+        {
+            <tr>
+                <td>@brand.BrandID</td>
+                <td>@brand.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button><a asp-controller="Brand" asp-action="Create">Create New Brand</a></button>
+    
+

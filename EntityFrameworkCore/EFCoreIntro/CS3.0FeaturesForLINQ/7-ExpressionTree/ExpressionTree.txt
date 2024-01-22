@@ -1,0 +1,20 @@
+﻿__________________________________________________________________________________________________________________________
+
+Expression Tree:
+
+Default Şablon: Expression<Func<Type, ReturnType>> expression = item => item.Property;
+
+Önemli Noktalar:
+
+*LINQ to SQL gibi sorgu sağlayıcıları için sorguların ağaç yapılarını oluşturur.
+*Sorguların run-time'da derlenip değerlendirilmesini sağlar.
+*Dinamik sorgu oluşturma ve değiştirme işlemleri yapılmasına imkan tanır.
+__________________________________________________________________________________________________________________________
+
+Expression<Func<Product, bool>> isExpensive = p => p.Price > 1000;
+// Bu expression ağacı daha sonra LINQ to SQL gibi teknolojiler tarafından kullanılabilir.
+
+isExpensive, bir Product'ın pahalı olup olmadığını kontrol eden bir expression tree'dir. 
+Bu, özellikle veritabanı sorgularını dinamik olarak inşa etmek ve çalıştırmak için kullanılır.
+
+__________________________________________________________________________________________________________________________

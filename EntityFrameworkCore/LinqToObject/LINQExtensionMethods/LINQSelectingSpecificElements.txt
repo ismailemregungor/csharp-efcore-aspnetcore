@@ -1,0 +1,18 @@
+﻿__________________________________________________________________________________________________________________________
+
+Distinct() metodu, koleksiyondan yinelenen öğeleri çıkartarak benzersiz elemanları getirir.
+DistinctBy() metodu (EF Core 5.0'dan itibaren), bir özelliğe göre yinelenen öğeleri çıkartır.
+Take() metodu, koleksiyondan belirli sayıda eleman alır.
+TakeWhile() metodu, bir koşul sağlandığı sürece eleman alır.
+TakeLast() metodu, koleksiyonun sonundan belirli sayıda eleman alır.
+Skip() metodu, koleksiyondan belirli sayıda elemanı atlar.
+SkipWhile() metodu, bir koşul sağlandığı sürece elemanları atlar.
+SkipLast() metodu, koleksiyonun sonundan belirli sayıda elemanı atlar.
+Chunk() metodu (C# 9.0 ve .NET 5.0 itibaren), koleksiyonu belirli boyutlardaki parçalara böler.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

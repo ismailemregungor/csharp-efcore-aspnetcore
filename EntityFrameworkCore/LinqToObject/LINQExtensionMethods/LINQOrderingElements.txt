@@ -1,0 +1,78 @@
+﻿__________________________________________________________________________________________________________________________
+
+OrderBy() metodu, belirtilen bir anahtara göre koleksiyon elemanlarını artan sırada sıralar.
+__________________________________________________________________________________________________________________________
+
+OrderByDescending() ise belirtilen bir anahtara göre koleksiyon elemanlarını azalan sırada sıralar.
+__________________________________________________________________________________________________________________________
+
+Her iki metod da lambda ifadeleri kullanarak sıralama kriterini belirlemenizi sağlar.
+Sonuçlar yine IEnumerable<T> türünde döner ve orijinal koleksiyonun sıralanmış bir versiyonunu temsil eder.
+Sıralama stabil olabilir, yani eğer iki öğenin sıralama anahtarı aynıysa, orijinal sıralarını koruyacaklardır.
+
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 4, 2, 7, 3, 9 };
+var sortedNumbers = numbers.OrderBy(n => n);
+
+foreach (var num in sortedNumbers)
+{
+    Console.WriteLine(num); // 2, 3, 4, 7, 9 yazar.
+}
+
+Bu örnek, numbers listesindeki sayıları artan sırada sıralar.
+__________________________________________________________________________________________________________________________
+
+var sortedNumbersDescending = numbers.OrderByDescending(n => n);
+
+foreach (var num in sortedNumbersDescending)
+{
+    Console.WriteLine(num); // 9, 7, 4, 3, 2 yazar.
+}
+
+Bu örnek, numbers listesindeki sayıları azalan sırada sıralar.
+__________________________________________________________________________________________________________________________
+
+var people = new List<Person>
+{
+    new Person { FirstName = "John", LastName = "Doe" },
+    new Person { FirstName = "Jane", LastName = "Smith" },
+    new Person { FirstName = "Anne", LastName = "Jenkins" }
+};
+
+var sortedPeople = people.OrderBy(p => p.LastName);
+
+foreach (var person in sortedPeople)
+{
+    Console.WriteLine($"{person.FirstName} {person.LastName}");
+}
+
+Bu örnek, Person nesnelerinin listesini soyadlarına göre sıralar.
+
+
+__________________________________________________________________________________________________________________________
+
+var multiSortedPeople = people.OrderBy(p => p.LastName).ThenBy(p => p.FirstName);
+
+foreach (var person in multiSortedPeople)
+{
+    Console.WriteLine($"{person.FirstName} {person.LastName}");
+}
+
+Bu örnek, önce soyadlarına ve sonra verilen adlara göre sıralar, birden fazla sıralama kriteri sağlar.
+
+__________________________________________________________________________________________________________________________
+
+var dates = new List<DateTime> { DateTime.Now, DateTime.UtcNow, DateTime.Today };
+var sortedDates = dates.Select(date => new { Date = date, DayOfWeek = date.DayOfWeek })
+                       .OrderBy(x => x.DayOfWeek);
+
+foreach (var dateInfo in sortedDates)
+{
+    Console.WriteLine($"{dateInfo.Date} - {dateInfo.DayOfWeek}");
+}
+
+Bu örnek, DateTime objelerini içeren bir koleksiyonu, haftanın gününe göre sıralar ve her tarihi anonim bir tür olarak gösterir.
+
+__________________________________________________________________________________________________________________________
+

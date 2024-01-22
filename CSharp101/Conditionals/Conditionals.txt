@@ -1,0 +1,71 @@
+﻿Conditionals-Şartı Yapılar:
+
+if: Bir koşulun doğru olup olmadığını kontrol eder.
+else if: Önceki "if" koşulunun yanlış olması durumunda başka bir koşulu kontrol eder.
+else: Önceki tüm koşullar yanlışsa çalıştırılır.
+Ternary If (?:): Kısa bir "if-else" yapısıdır.
+switch case: Bir değişkenin belirli değerlere göre farklı kod bloklarını çalıştırmasını sağlar.
+
+*if:
+
+int sayi = 10;
+if (sayi > 5)
+{
+    Console.WriteLine("Sayı 5'ten büyüktür.");
+}
+
+*else if:
+
+int puan = 75;
+if (puan >= 90)
+{
+    Console.WriteLine("AA");
+}
+else if (puan >= 80)
+{
+    Console.WriteLine("BA");
+}
+else
+{
+    Console.WriteLine("BB");
+}
+
+*if, else if, else:
+
+int puan = 75;
+if (puan >= 90)
+{
+    Console.WriteLine("AA");
+}
+else if (puan >= 80)
+{
+    Console.WriteLine("BA");
+}
+else
+{
+    Console.WriteLine("BB");
+}
+
+*Ternary If:
+int yas = 20;
+string durum = yas >= 18 ? "Yetişkin" : "Çocuk";
+
+________________________________________________________________________________________________________________________________________________________________________
+
+switch/case:
+
+char harf = 'B';
+switch (harf)
+{
+    case 'A':
+        Console.WriteLine("Harf A'dır.");
+        break;
+    case 'B':
+        Console.WriteLine("Harf B'dir.");
+        break;
+    default:
+        Console.WriteLine("Tanımlı bir harf değil.");
+        break;
+}
+
+________________________________________________________________________________________________________________________________________________________________________

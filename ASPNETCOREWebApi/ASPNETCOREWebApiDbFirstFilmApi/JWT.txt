@@ -1,0 +1,3 @@
+﻿https://jwt.io/#debugger-io
+
+https://onnurkarakus.medium.com/net-core-web-api-ve-jwt-token-189ed336d615

@@ -1,0 +1,13 @@
+﻿DLL(Dynamic Link Library):
+
+*Main() metodu olmaz.
+*Doğrudan çalıştırılamazlar.
+*exe dosyaya ihtiyaç duyarlar.
+
+DLL nasıl oluşturulur?:
+
+Add>New Project>ClassLibrary
+
+DLL proje diğer projelerden nasıl kullanılır?
+
+Add>Project Reference>DLL projeyi seç

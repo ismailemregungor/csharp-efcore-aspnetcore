@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Category>
+
+<h2>Kategori List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kategori ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.CategoryID</td>
+                <td>@category.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button><a asp-controller="Category" asp-action="Create">Create New Category</a></button>
+
+

@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "BankaDLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BankaDLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankaDLL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BankaDLL/1.0.0": {
+      "type": "project",
+      "path": "../BankaDLL/BankaDLL.csproj",
+      "msbuildProject": "../BankaDLL/BankaDLL.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "BankaDLL >= 1.0.0",
+      "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\iegof\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaEXE\\BankaEXE.csproj",
+      "projectName": "BankaEXE",
+      "projectPath": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaEXE\\BankaEXE.csproj",
+      "packagesPath": "C:\\Users\\iegof\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaEXE\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\iegof\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaDLL\\BankaDLL.csproj": {
+              "projectPath": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\BankaDLL\\BankaDLL.csproj"
+            },
+            "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj": {
+              "projectPath": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\iegof\\Desktop\\BA-ZT-Yazılım Uzman Yardımcısı\\BT-ZA-Codes\\CSharp101\\VezneDLL\\BankaDLL.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

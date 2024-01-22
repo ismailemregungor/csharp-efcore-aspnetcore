@@ -1,0 +1,87 @@
+﻿___________________________________________________________________________________________
+
+ASP.NET Core MVC?
+
+ASP.NET Core MVC, Microsoft tarafından geliştirilen, 
+web uygulamaları ve API'ler oluşturmak için kullanılan modern, 
+açık kaynaklı ve yüksek performanslı bir çerçevedir. 
+ASP.NET Core, .NET Core platformunun bir parçasıdır ve eski ASP.NET 4.x'ten farklı 
+olarak çapraz platform desteği sunar. MVC (Model-View-Controller), yazılım tasarımında 
+kullanılan bir desendir ve ASP.NET Core MVC bu deseni web uygulamalarında uygulamanızı kolaylaştırır.
+___________________________________________________________________________________________
+
+ASP.NET Core MVC Özellikleri:
+
+Çapraz Platform Desteği: Windows, macOS ve Linux dahil olmak üzere farklı işletim sistemlerinde çalışabilir.
+
+Hafif ve Modüler: ASP.NET Core, gereksiz bileşenleri yüklemenize gerek kalmadan sadece ihtiyacınız olan özellikleri içerecek şekilde özelleştirilebilir.
+
+Yüksek Performans: ASP.NET Core, önceki sürümlere göre daha hızlıdır ve düşük bellek kullanımı sunar, bu da özellikle yüksek trafiğe sahip uygulamalar için idealdir.
+
+MVC Deseni: Model-View-Controller mimarisi, uygulamanın farklı katmanlarını (veri modeli, kullanıcı arayüzü ve kontrol mantığı) ayrı tutar, bu da bakımı ve geliştirmeyi kolaylaştırır.
+
+Güçlü Yönlendirme Sistemi: URL'lerinizi yönetmek ve uygulamanızda gezinmek için esnek ve kolayca yapılandırılabilir bir yönlendirme sistemi sunar.
+
+Entegre DI Konteyneri: Dependency Injection (Bağımlılık Enjeksiyonu), ASP.NET Core'da yerleşik olarak gelir, bu da test edilebilirliği ve sınıflar arasındaki bağımlılıkların yönetimini kolaylaştırır.
+
+Razor Sayfaları: MVC'ye alternatif olarak, Razor Sayfaları, sayfa odaklı senaryolar için daha basit bir programlama modeli sunar.
+
+Güvenlik Özellikleri: Kimlik doğrulama, yetkilendirme, CSRF koruması ve daha fazlası gibi güvenlik özellikleri yerleşik olarak gelir.
+
+API Desteği ve Swagger Entegrasyonu: RESTful API'ler oluşturmak için gerekli araçları sağlar ve Swagger/OpenAPI ile kolayca entegre edilebilir.
+
+Gelişmiş Yapılandırma Seçenekleri: Uygulama ayarlarını yönetmek için esnek yapılandırma seçenekleri ve çevresel ayarlar.
+
+Kapsamlı Belge ve Topluluk Desteği: Microsoft ve açık kaynak topluluğu tarafından sağlanan geniş kapsamlı belgeler ve aktif bir geliştirici topluluğu.
+___________________________________________________________________________________________
+
+MVC - Model View Controller:
+
+___________________________________________________________________________________________
+
+1. Model
+Tanım: Model, uygulamanın veri yapısını ve iş kurallarını temsil eder. 
+Veritabanı ile etkileşimde bulunan ve verileri işleyen kısım burasıdır.
+
+Özellikleri:
+Veri doğrulama ve veritabanı entegrasyonunu içerir.
+Veri transfer nesneleri (DTO'lar) ve veritabanı tablolarını temsil eder.
+İş mantığı ve veri manipülasyonu için metotlar içerebilir.
+Örnek Senaryo: Bir e-ticaret uygulamasında, Product modeli ürünün fiyatı, adı, açıklaması gibi özellikleri ve stok durumunu kontrol eden metotları içerir.
+
+___________________________________________________________________________________________
+
+2. View
+Tanım: View, kullanıcıya gösterilen arayüzü temsil eder. HTML, CSS ve JavaScript kullanılarak oluşturulur.
+Özellikleri:
+Kullanıcı etkileşimleri için arayüzü oluşturur.
+Razor View Engine kullanarak C# kodları ile HTML üretir.
+Model verilerini alıp kullanıcıya görsel olarak sunar.
+Örnek Senaryo: Product modeli için bir View, ürünlerin listelendiği bir sayfa olabilir. Ürün adı, fiyatı ve bir satın alma butonu içerebilir.
+
+___________________________________________________________________________________________
+
+3. Controller
+Tanım: Controller, Model ve View arasında bir köprü görevi görür. Kullanıcı isteklerini alır, modelle etkileşime geçer ve bir View döndürür.
+Özellikleri:
+HTTP isteklerini işler ve yanıtlar.
+İş mantığını yürütür ve gerekirse modeli günceller.
+Hangi View'in gösterileceğine karar verir.
+Örnek Senaryo: ProductController bir kullanıcının ürün listesini görüntüleme isteğini alabilir, Product modelinden veri çeker ve bu verileri ürün listesi View'ına aktarır.
+
+___________________________________________________________________________________________
+
+Controller Notlar:
+
+Controller içerisindeki metotlara action yada aksiyon deriz.
+Bir controller içerisinde varsayılan aksiyon index'tir
+Varsayılan Controller HomeController'dır.
+Controller View'den bağımsız çalışır istersek string,json, view etc... döndürürüz.
+
+>Başlangıç controlü ve action'u belirlemek için Program.cs içerisinde düzenleme yapılır:
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Baslangic}/{action=Index}/{id?}");
+
+___________________________________________________________________________________________

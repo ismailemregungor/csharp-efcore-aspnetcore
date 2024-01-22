@@ -1,0 +1,12 @@
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\bin\Debug\net6.0\BankaV2DLL.deps.json
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\bin\Debug\net6.0\BankaV2DLL.dll
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\bin\Debug\net6.0\BankaV2DLL.pdb
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.dll
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\refint\BankaV2DLL.dll
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\BankaV2DLL.pdb
+C:\Users\iegof\Desktop\CSharp101\BankaV2DLL\obj\Debug\net6.0\ref\BankaV2DLL.dll

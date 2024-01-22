@@ -1,0 +1,12 @@
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\bin\Debug\net6.0\BurgerKingDLL.deps.json
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\bin\Debug\net6.0\BurgerKingDLL.dll
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\bin\Debug\net6.0\BurgerKingDLL.pdb
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.dll
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\refint\BurgerKingDLL.dll
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\BurgerKingDLL.pdb
+C:\Users\iegof\Desktop\CSharp101\BurgerKingDLL\obj\Debug\net6.0\ref\BurgerKingDLL.dll

@@ -1,0 +1,69 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Nullable Types:
+
+*Nullable value types, C# dilinde değeri boş (null) olabilen veri türlerini temsil eder. 
+*Genellikle, veri türleri değerle (int, double, bool, vb.) temsil edilir ve null bir değere sahip olamazlar. 
+*Ancak bazen, bir değişkenin bir değeri olmadığını veya belirsiz olduğunu ifade etmek için nullable türler gereklidir.
+*Bu, özellikle veritabanından gelen verileri işlerken veya kullanıcı tarafından girilen verileri işlerken kullanışlıdır.
+
+
+*Değer tipleri null değer alamaz!
+*Değer tipini Nullable yaparak değer tipini null değer 
+atanmış gibi davranması sağlanır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Değer ve Boş Durumu: Nullable bir veri türü, normal bir değere (örneğin, int) sahip olabilir ve aynı zamanda null (değer yok) olabilir. Örneğin, int? bir int türünün nullable hali olarak ifade edilir.
+
+Nullable Operatörler: Nullable veri türleri üzerinde çalışmak için özel operatörler vardır. Bu operatörler, null değerlerle çalışırken hata almanızı önler.
+
+HasValue ve Value: Nullable bir değişkenin değerinin null olup olmadığını kontrol etmek için HasValue özelliği kullanılır. Değerine erişmek için ise Value özelliği kullanılır. Ancak Value'ya erişirken, eğer değer null ise bir istisna (exception) fırlatılır, bu nedenle HasValue kontrolü yapmak önemlidir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Veritabanı İşlemleri: Veritabanı kaynaklarından alınan veriler genellikle nullable olabilir. Örneğin, bir kullanıcının telefon numarası veritabanında kayıtlı değilse, bu alan nullable bir türle temsil edilebilir.
+
+Kullanıcı Girdileri: Kullanıcıların bazı alanları doldurmadığı veya belirli verileri eksik bıraktığı durumları işlerken nullable türler kullanışlıdır.
+
+Mantık ve Durum İfadeleri: Programlar içinde, bir durumun tanımlanmış veya tanımsız (null) olduğunu ifade etmek gerekli olabilir. Nullable türler bu tür durumları temsil etmek için kullanılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+int? nullableInt = null; // null değerli bir int değişken
+Console.WriteLine(nullableInt); // Çıktı: 
+Console.WriteLine(nullableInt.HasValue); // Çıktı: False
+
+________________________________________________________________________________________________________________________________________________________________________
+
+int? nullableInt = 42; // int değişkenine değer atama
+if (nullableInt.HasValue)
+{
+    int value = nullableInt.Value; // Değerine erişme
+    Console.WriteLine(value); // Çıktı: 42
+}
+else
+{
+    Console.WriteLine("nullableInt is null.");
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+int? nullableInt = null;
+if (nullableInt != null)
+{
+    int value = (int)nullableInt; // nullableInt null değilse dönüşüm yapabiliriz
+    Console.WriteLine(value);
+}
+else
+{
+    Console.WriteLine("nullableInt is null.");
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+int? nullableInt = null;
+int result = nullableInt ?? 0; // nullableInt null ise 0 değerini kullan
+Console.WriteLine(result); // Çıktı: 0
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

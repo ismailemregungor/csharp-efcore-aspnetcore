@@ -1,0 +1,71 @@
+﻿__________________________________________________________________________________________________________________________
+
+OneToMany:
+
+*Bu ilişki türünde, bir kayıt başka bir tablodaki birden fazla kayıtla ilişkilendirilebilir.
+
+*Bir one-to-many ilişkisi, bir ana varlık ile bir veya daha fazla bağlı varlık arasındaki ilişkiyi ifade eder.
+Örneğin, bir bölümün birden fazla personeli olabilir ama her personel yalnızca bir bölüme ait olabilir.
+
+__________________________________________________________________________________________________________________________
+
+Ne Zaman One-to-Many İlişki Kullanmalısınız?
+
+*Bir nesne türünün başka bir nesne türünün birden çok örneğini içermesi gerektiğinde (örneğin, bir blogun birden çok posta sahip olması gibi).
+
+*Relational veritabanı tasarımında "birçok" kısmı koleksiyon olarak temsil edilecekse (örneğin, bir Blog tablosu ve bir Post tablosu).
+__________________________________________________________________________________________________________________________
+
+public class Blog
+{
+    public int BlogId { get; set; } // Primary Key
+    public string Name { get; set; }
+    public string Url { get; set; }
+
+    // Navigation Property
+    public List<Post> Posts { get; set; }
+}
+
+public class Post
+{
+    public int PostId { get; set; } // Primary Key
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public int BlogId { get; set; } // Foreign Key
+
+    // Navigation Property
+    public Blog Blog { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+
+Önemli Noktalar:
+
+Foreign Key: Post sınıfında BlogId özelliği, her postun hangi bloga ait olduğunu belirten foreign key olarak işlev görür.
+__________________________________________________________________________________________________________________________
+
+public class Bolum
+{
+    public int BolumId { get; set; } // Birincil Anahtar
+    public string BolumAdi { get; set; }
+
+    // Navigation Property - Bir bölümde birden çok personel olabilir.
+    public ICollection<Personel> Personeller { get; set; }
+}
+
+public class Personel
+{
+    public int PersonelID { get; set; } // Birincil Anahtar
+    public string Ad { get; set; }
+    public string Soyad { get; set; }
+    public double Maas { get; set; }
+
+    // ForeignKey Attribute ile BolumID'nin Bolum tablosunun Birincil Anahtarı ile ilişkili olduğunu belirtiyoruz.
+    [ForeignKey("Bolum")]
+    public int BolumID { get; set; }
+    
+    // Navigation Property - Bir personel yalnızca bir bölüme aittir.
+    public Bolum Bolum { get; set; }
+}
+
+__________________________________________________________________________________________________________________________

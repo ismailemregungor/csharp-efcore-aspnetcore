@@ -1,0 +1,116 @@
+﻿______________________________________________________________________________________________________________________________________________________________________
+
+Sealed Class:
+
+Final Sınıf: sealed anahtar kelimesiyle işaretlenen bir sınıf, final sınıf olarak da bilinir ve miras alınamaz.
+Performans Artışı: Bazen, sanal metot çağrılarının devre dışı bırakılması performansı artırabilir çünkü sanal metot çağrıları genellikle normal metot çağrılardan daha maliyetlidir. sealed sınıflar bu avantajı sağlayabilir.
+Tasarım Kısıtlamaları: sealed sınıflar ve metotlar, bir API'nin veya sınıfın belirli bir şekilde kullanılmasını zorunlu kılar, çünkü türetilmiş sınıflar onları değiştiremez.
+
+*Kalıtım Alınamazlar (Inheritable Değiller): Sealed sınıflardan 
+başka bir sınıf kalıtım alamaz. Yani, sealed sınıflardan türetilen alt sınıflar oluşturulamaz.
+
+*Örneklenirler (Instantiable): Sealed sınıflardan nesne (örnek) oluşturulabilir. 
+Yani new SealedClass() gibi bir ifade kullanılabilir.
+______________________________________________________________________________________________________________________________________________________________________
+
+Sealed Class Kullanım Amaçları ve Senaryolar:
+
+*Güvenlik ve Sabitlik Sağlama: Sealed sınıflar, belirli bir sınıfın yapısının 
+veya davranışının değiştirilmesini engelleyerek kodun güvenli ve sabit 
+kalmasına yardımcı olur. Özellikle çerçeve sınıfları için kullanışlıdır.
+
+*Mükemmel Tasarımın Korunması: Bir sınıfın tasarımının mükemmel olduğu ve bu tasarımın 
+değiştirilmemesi gerektiği durumlarda sealed sınıflar kullanılır. Bu, hatalı veya istenmeyen 
+kalıtım ve işlevsellik eklemesini önler.
+
+Optimizasyon ve Performans: Sealed sınıflar, derleyiciye belirli optimizasyon olanakları sunar, çünkü bu sınıfların alt sınıflarının oluşturulması ve işlenmesi gerekmeyeceğini bilir.
+______________________________________________________________________________________________________________________________________________________________________
+
+Sealed Sınıf:
+
+public sealed class Motor
+{
+    public int Hacim { get; set; }
+
+    public Motor(int hacim)
+    {
+        Hacim = hacim;
+    }
+}
+
+// Özet: "Motor" sınıfı sealed olarak işaretlenmiştir, yani başka hiçbir sınıf "Motor" sınıfından türemez.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Sealed Metot:
+
+public class Arac
+{
+    public virtual void Calistir()
+    {
+        Console.WriteLine("Araç çalıştırıldı.");
+    }
+}
+
+public class Otomobil : Arac
+{
+    public sealed override void Calistir()
+    {
+        base.Calistir();
+        Console.WriteLine("Otomobil çalıştırıldı.");
+    }
+}
+
+// Özet: "Otomobil" sınıfındaki "Calistir" metodu, türetilmiş sınıflarda geçersiz kılınmayacak şekilde sealed olarak işaretlenmiştir.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+public sealed class HesapMakinesi
+{
+    public int Topla(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+// Kullanım
+var hesapMakinesi = new HesapMakinesi();
+int sonuc = hesapMakinesi.Topla(3, 4);
+Console.WriteLine(sonuc); // Çıktı: 7
+
+// Özet: "HesapMakinesi" sınıfı sealed olduğu için doğrudan kullanılır ve miras alınamaz.
+
+
+______________________________________________________________________________________________________________________________________________________________________
+
+public class Arac
+{
+    public virtual void Calistir()
+    {
+        Console.WriteLine("Araç çalıştırıldı.");
+    }
+}
+
+public class Otomobil : Arac
+{
+    public sealed override void Calistir()
+    {
+        base.Calistir();
+        Console.WriteLine("Otomobil çalıştırıldı.");
+    }
+}
+
+public class ElektrikliOtomobil : Otomobil
+{
+    // Aşağıdaki kod bir hata verir çünkü "Calistir" metodu "Otomobil" sınıfında sealed olarak işaretlenmiştir.
+    /*
+    public override void Calistir()
+    {
+        Console.WriteLine("Elektrikli otomobil çalıştırıldı.");
+    }
+    */
+}
+
+// Özet: "ElektrikliOtomobil" sınıfı, "Calistir" metodunu geçersiz kılamaz çünkü bu metod üst sınıfında sealed olarak işaretlenmiştir.
+
+______________________________________________________________________________________________________________________________________________________________________

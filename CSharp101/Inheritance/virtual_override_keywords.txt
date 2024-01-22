@@ -1,0 +1,82 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+virtual Anahtar Kelimesi:
+
+Tanım: virtual anahtar kelimesi, bir metodun, özellikle ya da endeksleyicinin türetilmiş sınıflar tarafından geçersiz kılınabileceğini belirtir.
+
+Kullanım: virtual anahtar kelimesi, temel sınıftaki bir metodu tanımlarken kullanılır.
+
+Özellikler:
+virtual metotlar varsayılan bir uygulamaya sahip olabilir.
+virtual metotlar türetilmiş sınıflar tarafından geçersiz kılınabilir (override).
+
+________________________________________________________________________________________________________________________________________________________________________
+
+override Anahtar Kelimesi:
+
+Tanım: override anahtar kelimesi, bir türetilmiş sınıfta, temel sınıfta virtual olarak işaretlenmiş bir metodun geçersiz kılınacağını belirtir.
+Kullanım: override anahtar kelimesi, türetilmiş sınıfta, geçersiz kılınacak metodu tanımlarken kullanılır.
+Özellikler:
+override metodu, temel sınıftaki virtual metotla aynı imzaya (isim, dönüş tipi ve parametreler) sahip olmalıdır.
+override metodu, temel sınıftaki virtual metodun varsayılan uygulamasını değiştirmek için kullanılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Özet:
+virtual anahtar kelimesi, bir metodun veya özelliğin türetilmiş sınıflar tarafından geçersiz kılınabileceğini belirtir.
+override anahtar kelimesi, türetilmiş sınıfta, virtual olarak işaretlenmiş bir metodun veya özelliğin geçersiz kılınmasını sağlar.
+Bu mekanizmalar, C# programlama dilinde polimorfizmi uygulamak ve nesne yönelimli programlamanın avantajlarından faydalanmak için kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some generic sound");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Animal myAnimal = new Animal();
+        myAnimal.MakeSound();  // "Some generic sound" yazdırır.
+
+        Dog myDog = new Dog();
+        myDog.MakeSound();  // "Bark" yazdırır.
+
+        Animal mySecondAnimal = new Dog();
+        mySecondAnimal.MakeSound();  // "Bark" yazdırır, polimorfizm sayesinde.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+public class Cat : Animal
+{
+    // Cat sınıfı, MakeSound metodunu geçersiz kılmıyor.
+    // Bu durumda, Cat nesneleri temel sınıfın MakeSound metodunu kullanır.
+}
+
+class Program
+{
+    static void Main()
+    {
+        Cat myCat = new Cat();
+        myCat.MakeSound();  // "Some generic sound" yazdırır.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

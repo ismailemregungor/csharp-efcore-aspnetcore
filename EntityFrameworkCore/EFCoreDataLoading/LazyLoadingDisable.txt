@@ -1,0 +1,46 @@
+﻿__________________________________________________________________________________________________________________________
+
+Entity Framework ve EF Core Nedir?
+
+Entity Framework, .NET ile veritabanı işlemlerini nesne odaklı bir yaklaşımla yapmamıza olanak tanır.
+Entity Framework Core, EF'nin daha hafif ve platform bağımsız bir sürümüdür ve .NET Core ile uyumlu olarak çalışır.
+
+__________________________________________________________________________________________________________________________
+
+Lazy Loading Nedir?
+
+Lazy loading, ilişkili verileri yalnızca ihtiyaç duyulduğunda yükleyen bir EF özelliğidir.
+Bu, performansı artırabilir ancak beklenmeyen veritabanı sorgularına neden olabilir.
+__________________________________________________________________________________________________________________________
+
+Entity Framework'de Lazy Loading'i Devre Dışı Bırakma:
+
+Entity Framework:
+
+Düz EF'de, lazy loading varsayılan olarak etkindir ve devre dışı bırakmak için aşağıdaki yöntemleri kullanabilirsiniz:
+İlk olarak, projenize "System.Data.Entity" adlı assembly'yi eklemelisiniz.
+Ardından, DbContext sınıfınızı oluştururken, Configuration.LazyLoadingEnabled özelliğini false olarak ayarlayabilirsiniz:
+
+public YourDbContext() : base("YourConnectionString")
+{
+    this.Configuration.LazyLoadingEnabled = false;
+}
+
+__________________________________________________________________________________________________________________________
+
+Entity Framework'de Lazy Loading'i Devre Dışı Bırakma:
+
+EF Core:
+
+EF Core'da, lazy loading varsayılan olarak devre dışıdır ve etkinleştirmek için aşağıdaki adımları izleyebilirsiniz:
+İlk olarak, projenize "Microsoft.EntityFrameworkCore.Proxies" adlı NuGet paketini eklemelisiniz.
+DbContext sınıfınızı oluştururken, UseLazyLoadingProxies yöntemini kullanarak etkinleştirebilirsiniz
+
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    optionsBuilder.UseLazyLoadingProxies();
+}
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

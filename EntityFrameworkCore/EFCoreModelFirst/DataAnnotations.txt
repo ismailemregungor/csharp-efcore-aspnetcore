@@ -1,0 +1,5 @@
+﻿Model First:
+
+Data Annotations:
+
+*AOP (Attribute Oriented Programing)

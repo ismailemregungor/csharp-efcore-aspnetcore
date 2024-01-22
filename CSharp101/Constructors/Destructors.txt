@@ -1,0 +1,70 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Deconstructors(Destructure):
+
+*Yıkıcılar, bir sınıfın örneği artık kullanılmadığında çağrılan özel metodlardır. 
+
+*Sınıf adının önünde bir tilde işareti (~) ile tanımlanır ve geri dönüş tipi olmamalıdır.
+
+*Bir sınıfta max 1 tane olabilir
+
+*Tanımlanırken ~ ön ekiyle yazılır.
+
+*Performans açısından kullanılması tavsiye edilmez.
+
+*Garbage Collector nesneyi RAM'den silerken çalışır
+
+*IDisposable interface'ını kullanmak gerekir.
+
+*Yıkıcılar genellikle nesne yok edildiğinde kaynakları serbest bırakmak için kullanılır.
+
+*C# garbage collector tarafından ne zaman çağrılacakları kesin olmadığından, 
+kaynakların anında serbest bırakılması gerekiyorsa, yıkıcıların yerine 
+IDisposable arayüzünün kullanılması önerilir.
+
+IDisposable:
+
+*IDisposable, bir sınıfın kaynakları serbest bırakabileceği bir arayüz sağlar. "Dispose" metodunu içermelidir.
+*IDisposable, nesnenin kaynakları anında serbest bırakmasını sağlar.
+"using" ifadesiyle birlikte kullanıldığında, nesnenin kapsamdan çıkmasıyla otomatik olarak Dispose metodu çağrılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Yıkıcı:
+public class Person
+{
+    // Yıkıcı
+    ~Person()
+    {
+        // kaynakları serbest bırakma işlemleri
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+// Özet: Yıkıcı, nesne garbage collector tarafından toplandığında çağrılır.
+
+IDisposable Implementasyonu:
+
+public class ResourceHolder : IDisposable
+{
+    public void Dispose()
+    {
+        // kaynakları serbest bırakma işlemleri
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+// Özet: IDisposable'ı implemente eden sınıf, Dispose metodunu içermelidir.
+
+'using' ile IDisposable Kullanımı:
+
+using (ResourceHolder holder = new ResourceHolder())
+{
+    // holder ile işlemler
+} // holder.Dispose() otomatik çağrılır
+
+// Özet: 'using' bloğu, nesnenin kapsamdan çıkmasıyla otomatik olarak Dispose metodunu çağırır.
+
+________________________________________________________________________________________________________________________________________________________________________

@@ -1,0 +1,359 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Interfaces-Arayüzler:
+
+Interface Özellikleri:
+
+Sözleşme: 
+*Interface'ler, bir sınıfın hangi metodları veya özellikleri uygulayacağını belirtir, ancak nasıl uygulanacağına dair ayrıntıları içermez.
+
+*Uygulama Zorunluluğu: Bir sınıf bir interface'i uyguladığında, interface'in tüm üyelerini uygulamak zorundadır.
+
+*Çoklu Kalıtım: C# tekil kalıtımı destekler ancak bir sınıf birden fazla interface'i uygulayabilir, bu da çoklu kalıtımın bir formunu sağlar.
+
+Varsayılan Uygulamalar: C# 8.0'dan itibaren, interface üyeleri varsayılan uygulamalar ile tanımlanabilir. Ancak, bu uygulamalar durum bilgisi içeremez (yani, alanları doğrudan kullanamazlar).
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface Kullanım Amaçları ve Senaryoları
+
+***Türetmede sınıflar arasında olusan hiyerarşik yapıyı kırmak yada esnetmek amacıyla kullanılır.
+
+***Loosly Coupling(Gevşek Bağlı) yapılar geliştirmek için kullanılır.
+
+***Sınıflara yetenek kazandırmak için kullanılır.
+
+***C# programalama dilinde multiple inheritance olmamasından kaynaklanan dezavantajı
+kapatmak için kullanılır.
+
+***Bir hiyerarşik düzen içerisindeki sınıfları herhangi bir interface'e göre uygulayıp
+uygulamadıklarına göre yakalarız.
+
+*Sınıfları Framework uyumlu uyumlu hale getirmek için kullanılır.
+*Plug-In türü uygulamalar geliştirmek için kullanılır.
+*Asenkron uygulama geliştirmek için kullanılır.
+*WCF(Contract) ile servis yazarken kullanılırdı.
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface Yazma:
+
+Interface tanımlarken I ile başlanır.
+Normal şartlarda interface içerisinde tanımlanmış olan üyelerin gövdeleri olmaz
+ama sonradan gelen yenilikle interface'deki yapıların gövdeleri olabilir.
+Ama bu tanımlama sadece interface için geçerlidir. Yani Interface üzerinden ulaşılabilir.
+Değişken tanımlanamaz.
+
+*Bir metodun parametresi Interface ne zaman bekler?
+
+as ve is operatörleri:
+
+as operatörü tipi dönüşümü yapar çeviremezse null atar
+is operatörü kıyaslama yapar
+
+Interface'ın Abstract Class arasındaki en büyük fark:
+
+"Abstract Class, bir sınıf hiyerarşisinde kök (root) bir sınıf veya düğüm görevi görür 
+ve miras alan sınıflar bu hiyerarşik yapıya uyar. Interface ise bir sınıf hiyerarşisinde 
+kök veya herhangi bir düğüme bağlanabilir. Bu, sınıfların daha fazla esneklik kazanmasına 
+ve hiyerarşik yapıya bağımlılığın azalmasına olanak tanır."
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Türetmede sınıflar arasında oluşan hiyerarşik yapıyı kırmak ya da esnetmek amacıyla kullanılır.
+
+public interface IKonusturabilir
+{
+    void Konus();
+}
+
+public class Kus : IKonusturabilir
+{
+    public void Konus()
+    {
+        Console.WriteLine("Cik cik");
+    }
+}
+
+public class Robot : IKonusturabilir
+{
+    public void Konus()
+    {
+        Console.WriteLine("Bip bip");
+    }
+}
+
+Bu örnekte, IKonusturabilir adında bir interface tanımlanmış ve Kus ile Robot sınıfları bu interface'i implemente etmiştir. 
+Burada, Kus ve Robot sınıfları arasında herhangi bir hiyerarşik ilişki yoktur ancak her ikisi de 
+IKonusturabilir interface'ini implemente ederek Konus metoduna sahip olmuşlardır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Loosly Coupling (Gevşek Bağlı) Yapılar Geliştirmek:
+
+public interface ILogger
+{
+    void LogMessage(string message);
+}
+
+public class FileLogger : ILogger
+{
+    public void LogMessage(string message)
+    {
+        // Burada dosyaya loglama işlemi gerçekleşir.
+        Console.WriteLine($"Dosyaya Loglandı: {message}");
+    }
+}
+
+public class DatabaseLogger : ILogger
+{
+    public void LogMessage(string message)
+    {
+        // Burada veritabanına loglama işlemi gerçekleşir.
+        Console.WriteLine($"Veritabanına Loglandı: {message}");
+    }
+}
+
+public class LogManager
+{
+    private readonly ILogger _logger;
+
+    public LogManager(ILogger logger)
+    {
+        _logger = logger;
+    }
+
+    public void Log(string message)
+    {
+        _logger.LogMessage(message);
+    }
+}
+
+// Kullanım
+ILogger fileLogger = new FileLogger();
+ILogger dbLogger = new DatabaseLogger();
+
+LogManager logManager = new LogManager(fileLogger); // Burada dosya loglayıcı kullanılıyor.
+logManager.Log("Bir mesaj");  // Çıktı: "Dosyaya Loglandı: Bir mesaj"
+
+logManager = new LogManager(dbLogger); // Burada veritabanı loglayıcı kullanılıyor.
+logManager.Log("Bir mesaj");  // Çıktı: "Veritabanına Loglandı: Bir mesaj"
+
+// Özet: 'ILogger' interface'i, 'FileLogger' ve 'DatabaseLogger' sınıfları tarafından uygulanır ve 'LogManager' bu interface üzerinden işlem yapar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Sınıflara Yetenek Kazandırmak:
+
+public interface IYuzebilir
+{
+    void Yuz();
+}
+
+public class Balik : IYuzebilir
+{
+    public void Yuz()
+    {
+        Console.WriteLine("Balık yüzüyor.");
+    }
+}
+
+public class Kopek : IYuzebilir
+{
+    public void Yuz()
+    {
+        Console.WriteLine("Köpek yüzüyor.");
+    }
+}
+
+Bu örnekte, IYuzebilir adında bir interface tanımlanmış ve Balik ile Kopek sınıfları bu interface'i 
+implemente ederek Yuz metoduna sahip olmuşlardır.
+Burada her iki sınıf da yüzme yeteneğine sahip olmuştur.
+________________________________________________________________________________________________________________________________________________________________________
+
+Multiple Inheritance Sorununu Çözmek:
+
+public interface IUcabilir
+{
+    void Uc();
+}
+
+public interface IAtabilir
+{
+    void At();
+}
+
+public class Superman : IUcabilir, IAtabilir
+{
+    public void Uc()
+    {
+        Console.WriteLine("Superman uçuyor.");
+    }
+
+    public void At()
+    {
+        Console.WriteLine("Superman ateş ediyor.");
+    }
+}
+
+Bu örnekte, Superman sınıfı hem IUcabilir hem de IAtabilir interface'lerini implemente ederek,
+her iki interface'in metodlarını kullanabilir hale gelmiştir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface'e Göre Sınıfları Filtrelemek:
+
+List<IYuzebilir> yuzebilenler = new List<IYuzebilir>
+{
+    new Balik(),
+    new Kopek(),
+};
+
+foreach (var yuzebilen in yuzebilenler)
+{
+    yuzebilen.Yuz();
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+is Operatörü: Bir nesnenin belirli bir tür veya interface tipinde olup olmadığını kontrol etmek için kullanılır.
+
+public void IslemYap(object nesne)
+{
+    if (nesne is IYuzebilir yuzebilen)
+    {
+        yuzebilen.Yuz();
+    }
+    else
+    {
+        Console.WriteLine("Bu nesne yüzebilir bir nesne değil.");
+    }
+}
+
+Bu örnekte, IslemYap metoduna gelen nesne, IYuzebilir interface'ini implemente edip etmediği kontrol edilmektedir. 
+Eğer nesne bu interface'i implemente ediyorsa, Yuz metodu çağrılmaktadır.
+________________________________________________________________________________________________________________________________________________________________________
+
+as Operatörü: Bir nesneyi belirli bir tür veya interface tipine güvenli bir şekilde dönüştürmek için kullanılır. Eğer dönüşüm başarılı olmazsa, null değer döndürür.
+
+public void IslemYap(object nesne)
+{
+    IYuzebilir yuzebilen = nesne as IYuzebilir;
+    if (yuzebilen != null)
+    {
+        yuzebilen.Yuz();
+    }
+    else
+    {
+        Console.WriteLine("Bu nesne yüzebilir bir nesne değil.");
+    }
+}
+
+Bu örnekte, IslemYap metoduna gelen nesne, IYuzebilir tipine dönüştürülmeye çalışılmaktadır. 
+Eğer dönüşüm başarılı olursa, Yuz metodu çağrılmaktadır. Başarılı olmazsa, "Bu nesne yüzebilir bir nesne değil." mesajı yazdırılmaktadır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface tipinde referans oluşturma:
+
+public interface IArac
+{
+    void Calistir();
+}
+
+public class Araba : IArac
+{
+    public void Calistir()
+    {
+        Console.WriteLine("Araba çalıştırıldı.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IArac arac = new Araba();
+        arac.Calistir();
+    }
+}
+
+Bu örnekte, IArac isimli bir interface ve bu interface'i implemente eden Araba isimli bir sınıf bulunmaktadır. 
+Main metodu içinde IArac tipinde bir referans oluşturulmuş ve bu referansa Araba sınıfının bir örneği atanmıştır.
+
+Bellekte ne olur?
+
+Araba Nesnesi: new Araba() ifadesi ile Araba sınıfının bir örneği oluşturulur ve bellekte bu nesne için yer ayrılır.
+
+IArac Referansı: IArac arac ifadesi ile IArac tipinde bir referans oluşturulur. Bu referans, Araba sınıfının örneğini göstermektedir.
+
+Polimorfizm: arac.Calistir(); satırında, arac referansı üzerinden Calistir metodu çağrıldığında, 
+runtime sırasında Araba sınıfındaki Calistir metodunun çağrılmasını sağlar. 
+Bu, polimorfizmin bir örneğidir ve C# dilinin bu tip durumları yönetme yeteneğinden kaynaklanmaktadır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Bir Interface ve Varsayılan Uygulaması
+
+public interface ITest
+{
+    void Show();
+    
+    // C# 8.0'dan itibaren varsayılan uygulamalar eklenebilir.
+    void DefaultShow()
+    {
+        Console.WriteLine("Varsayılan Gösterim");
+    }
+}
+
+public class Test : ITest
+{
+    public void Show()
+    {
+        Console.WriteLine("Özel Gösterim");
+    }
+}
+
+// Kullanım
+ITest test = new Test();
+test.Show();          // Çıktı: "Özel Gösterim"
+test.DefaultShow();  // Çıktı: "Varsayılan Gösterim"
+
+// Özet: 'ITest' interface'inde 'Show' ve 'DefaultShow' metodları tanımlanmıştır. 'Test' sınıfı, 'Show' metodunu uygular ancak 'DefaultShow' için varsayılan uygulamayı kullanır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Varsayılan Uygulamanın Override Edilmesi
+
+public interface ITest
+{
+    void Show();
+    
+    // Varsayılan uygulama
+    void DefaultShow()
+    {
+        Console.WriteLine("Varsayılan Gösterim");
+    }
+}
+
+public class OverrideTest : ITest
+{
+    public void Show()
+    {
+        Console.WriteLine("Özel Gösterim");
+    }
+
+    // Varsayılan uygulamanın override edilmesi
+    public void DefaultShow()
+    {
+        Console.WriteLine("Override Gösterim");
+    }
+}
+
+// Kullanım
+ITest test = new OverrideTest();
+test.Show();          // Çıktı: "Özel Gösterim"
+test.DefaultShow();  // Çıktı: "Override Gösterim"
+
+// Özet: 'OverrideTest' sınıfı, 'DefaultShow' metodunu override eder ve kendi uygulamasını sağlar, böylece varsayılan uygulama yerine bu çalışır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

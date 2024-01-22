@@ -1,0 +1,88 @@
+﻿__________________________________________________________________________________________________________________________
+OneToOne:
+
+public class User
+{
+    [Key] // Primary Key tanımlaması
+    public int UserId { get; set; }
+    public string Username { get; set; }
+
+    // Navigation Property
+    public UserProfile UserProfile { get; set; }
+}
+
+public class UserProfile
+{
+    [Key]
+    [ForeignKey("User")] // User sınıfıyla ilişkilendirme
+    public int UserId { get; set; } // User sınıfının Primary Key'ini Foreign Key olarak kullanır
+    public DateTime DateOfBirth { get; set; }
+    public string Bio { get; set; }
+
+    // Navigation Property
+    public User User { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+
+OneToMany:
+
+public class Bolum
+{
+    public int BolumId { get; set; } // Birincil Anahtar
+    public string BolumAdi { get; set; }
+
+    // Navigation Property - Bir bölümde birden çok personel olabilir.
+    public ICollection<Personel> Personeller { get; set; }
+}
+
+public class Personel
+{
+    public int PersonelID { get; set; } // Birincil Anahtar
+    public string Ad { get; set; }
+    public string Soyad { get; set; }
+    public double Maas { get; set; }
+
+    // ForeignKey Attribute ile BolumID'nin Bolum tablosunun Birincil Anahtarı ile ilişkili olduğunu belirtiyoruz.
+    [ForeignKey("Bolum")]
+    public int BolumID { get; set; }
+    
+    // Navigation Property - Bir personel yalnızca bir bölüme aittir.
+    public Bolum Bolum { get; set; }
+}
+__________________________________________________________________________________________________________________________
+
+ManyToMany:
+
+public class Student
+{
+    public int StudentId { get; set; } // Primary Key
+    public string Name { get; set; }
+
+    // Navigation Property
+    public ICollection<StudentCourse> StudentCourses { get; set; }
+}
+
+public class Course
+{
+    public int CourseId { get; set; } // Primary Key
+    public string CourseName { get; set; }
+
+    // Navigation Property
+    public ICollection<StudentCourse> StudentCourses { get; set; }
+}
+
+// Ara (Join) Tablo
+public class StudentCourse
+{
+    public int StudentCourseId { get; set; }
+    public int StudentId { get; set; } // Foreign Key
+    public int CourseId { get; set; } // Foreign Key
+
+    // Navigation Properties
+    public Student Student { get; set; }
+    public Course Course { get; set; }
+}
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

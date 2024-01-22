@@ -1,0 +1,103 @@
+﻿__________________________________________________________________________________________________________________________
+
+LINQ Join operatörü, SQL'deki JOIN işlemine benzer bir şekilde, iki koleksiyonu birleştirmeyi 
+ve bunların özelliklerine göre eşleşmelerini sağlar. İki farklı koleksiyon üzerinde birleştirme 
+işlemi yaparak, eşleşen öğeleri birleştirir ve yeni bir sonuç dizisi oluşturur.
+__________________________________________________________________________________________________________________________
+
+Join operatörü dört parametre alır: ikinci koleksiyon, birinci koleksiyondan anahtar seçici, ikinci koleksiyondan anahtar seçici ve iki koleksiyondan gelen öğeleri nasıl birleştireceğinizi belirleyen bir sonuç seçici.
+İlk anahtar seçici ile ikinci anahtar seçici eşleştiğinde, sonuç seçiciye gönderilir ve sonuç koleksiyonunda birleştirilmiş bir öğe oluşturur.
+Join operatörü iç ve dış anahtarlar arasında eşitlik tabanlı birleştirme yapar.
+Eğer birleştirme anahtarı eşleşmelerinde tekrarlar varsa, çapraz çarpım oluşturulur (yani, her eşleşme için bir sonuç).
+__________________________________________________________________________________________________________________________
+
+var employees = new List<Employee> { /* ... */ };
+var departments = new List<Department> { /* ... */ };
+
+var employeeDepartmentJoin = employees.Join(
+    departments,
+    employee => employee.DepartmentId,
+    department => department.Id,
+    (employee, department) => new
+    {
+        EmployeeName = employee.Name,
+        DepartmentName = department.Name
+    }
+);
+
+foreach (var item in employeeDepartmentJoin)
+{
+    Console.WriteLine($"{item.EmployeeName} works in {item.DepartmentName}");
+}
+
+Bu örnek, çalışanları ilgili departmanlarla birleştirir ve çalışanın ismi ile departmanın ismini içeren anonim bir nesne oluşturur.
+
+__________________________________________________________________________________________________________________________
+
+var employeeProjects = employees.Join(
+    projects,
+    employee => new { employee.Id, employee.DepartmentId },
+    project => new { Id = project.LeaderId, project.DepartmentId },
+    (employee, project) => new { employee.Name, project.Title }
+);
+
+Bu örnek, çalışanların projelerle hangi departmanda ve hangi lider altında çalıştıklarına göre birleştirir.
+
+
+__________________________________________________________________________________________________________________________
+
+var employeeDepartmentProjectJoin = employees.Join(
+    departments,
+    employee => employee.DepartmentId,
+    department => department.Id,
+    (employee, department) => new { employee, department }
+).Join(
+    projects,
+    ed => ed.employee.Id,
+    project => project.LeaderId,
+    (ed, project) => new
+    {
+        EmployeeName = ed.employee.Name,
+        DepartmentName = ed.department.Name,
+        ProjectTitle = project.Title
+    }
+);
+
+Bu örnek, çalışanları önce departmanlarla daha sonra bu sonucu projelerle birleştirir.
+
+_________________________________________________________________________________________________________________________
+
+var query = from employee in employees
+            join department in departments on employee.DepartmentId equals department.Id
+            select new
+            {
+                Employee = employee.Name,
+                Department = department.Name
+            };
+
+Bu örnek, sorgu ifadesi (query syntax) kullanarak birleştirme işlemi yapar.
+__________________________________________________________________________________________________________________________
+
+var departmentEmployees = departments.GroupJoin(
+    employees,
+    department => department.Id,
+    employee => employee.DepartmentId,
+    (department, employeeGroup) => new
+    {
+        Department = department.Name,
+        Employees = employeeGroup
+    }
+);
+
+foreach (var department in departmentEmployees)
+{
+    Console.WriteLine(department.Department);
+    foreach (var employee in department.Employees)
+    {
+        Console.WriteLine($"  {employee.Name}");
+    }
+}
+
+Bu örnek, her departman için o departmandaki çalışanların bir listesini içeren bir gruplaştırma işlemi yapar.
+
+__________________________________________________________________________________________________________________________

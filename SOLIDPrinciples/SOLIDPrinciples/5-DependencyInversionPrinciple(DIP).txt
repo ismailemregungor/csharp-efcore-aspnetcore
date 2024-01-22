@@ -1,0 +1,155 @@
+﻿____________________________________________________________________________________________________
+
+Dependency Inversion Principle (DIP)
+
+Dependency Inversion Principle (DIP), yüksek seviyeli modüllerin düşük seviyeli modüllere doğrudan bağımlı olmaması gerektiğini ve her iki tür modülün de soyutlamalara bağlı olması gerektiğini belirten bir tasarım ilkesidir. Bu, kodun esnekliğini ve modülerliğini artırır.
+____________________________________________________________________________________________________
+
+Önemli Noktalar
+Soyutlamalara Bağımlılık: Modüller, somut sınıflar yerine arayüzler veya soyut sınıflara bağımlı olmalıdır.
+Yüksek ve Düşük Seviyeli Modül Ayrımı: Yüksek seviyeli iş kurallarını içeren modüller ile düşük seviyeli operasyonel detayları içeren modüller arasında ayrım yapılır.
+Esneklik ve Değişikliklere Adaptasyon: DIP, kodun değişikliklere ve yeni gereksinimlere daha kolay adapte olmasını sağlar.
+Test Edilebilirlik: Soyutlamalar, birim testlerinin yazılmasını kolaylaştırır.
+Kodun Yeniden Kullanımı: Soyutlamalar, kodun farklı bağlamlarda yeniden kullanılmasını kolaylaştırır
+____________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları
+Modüler Kodlama: Kodun modüler ve esnek olmasını sağlamak.
+Bağımlılık Enjeksiyonu: Bağımlılıkların yönetimi ve değiştirilmesi.
+Birim Testlerinin Kolaylaştırılması: Test edilebilirlik için kodun soyutlanması.
+____________________________________________________________________________________________________
+
+// Yanlış Yaklaşım
+public class UserDataAccess
+{
+    public User GetUser(int id)
+    {
+        // Veritabanına doğrudan erişim ve User nesnesini döndürme
+    }
+}
+
+public class UserService
+{
+    UserDataAccess dataAccess = new UserDataAccess();
+
+    public User GetUser(int id)
+    {
+        return dataAccess.GetUser(id);
+    }
+}
+
+// Doğru Yaklaşım
+public interface IUserRepository
+{
+    User GetUser(int id);
+}
+
+public class SqlUserRepository : IUserRepository
+{
+    public User GetUser(int id)
+    {
+        // SQL veritabanı erişimi
+    }
+}
+
+public class UserService
+{
+    private IUserRepository _userRepository;
+
+    public UserService(IUserRepository userRepository)
+    {
+        _userRepository = userRepository;
+    }
+
+    public User GetUser(int id)
+    {
+        return _userRepository.GetUser(id);
+    }
+}
+
+Açıklama: Yanlış yaklaşımda, UserService sınıfı doğrudan UserDataAccess sınıfına bağlıdır. Bu bağımlılık, kodun esnekliğini ve test edilebilirliğini azaltır. Doğru yaklaşımda ise, IUserRepository gibi bir arayüz kullanılır. UserService sınıfı, bu arayüzün bir uygulamasına bağlıdır. Bu yapı, UserService sınıfının veritabanı erişim yönteminden bağımsız olmasını sağlar ve DIP ilkesine uygun bir yapı oluşturur. Bu yaklaşım, kodun bakımını ve genişletilmesini kolaylaştırır, ayrıca birim testlerinin yazılmasını basitleştirir.
+____________________________________________________________________________________________________
+
+1. Constructor Injection
+Önemli Noktalar
+Bağımlılıkların İnşa Aşamasında Sağlanması: Bağımlılıklar, nesnenin oluşturucusu (constructor) aracılığıyla sağlanır.
+Güçlü Bağımlılık: Nesnenin tüm ömrü boyunca bağımlılığın değişmemesi.
+İmmutability: Oluşturulduktan sonra bağımlılıkların değiştirilememesi.
+Kullanım Senaryoları
+Uygulamanın başlangıcında, bağımlılıkların sabit olması gereken durumlar.
+Bağımlılık enjeksiyonu gerektiren frameworkler veya kütüphaneler.
+____________________________________________________________________________________________________
+
+public interface IDatabase
+{
+    void Save(string data);
+}
+
+public class SqlDatabase : IDatabase
+{
+    public void Save(string data)
+    {
+        // Veritabanına kaydetme işlemi
+    }
+}
+
+public class UserService
+{
+    private readonly IDatabase _database;
+
+    public UserService(IDatabase database)
+    {
+        _database = database;
+    }
+
+    public void SaveUser(User user)
+    {
+        _database.Save(user.Name);
+    }
+}
+
+____________________________________________________________________________________________________
+
+2. Property Injection
+Önemli Noktalar
+Setter Metodları Üzerinden Bağımlılık Sağlanması: Bağımlılıklar, nesnenin özelliklerine (property) atama yoluyla sağlanır.
+Esneklik: Nesnenin oluşturulmasından sonra bağımlılıkları değiştirebilme.
+Kullanım Senaryoları
+Frameworkler ve kütüphaneler, bağımlılıkları otomatik olarak enjekte ettiğinde.
+Bağımlılıkların dinamik olarak değiştirilmesi gerektiğinde.
+____________________________________________________________________________________________________
+
+public class EmailService
+{
+    public IDatabase Database { get; set; }
+
+    public void SendEmail(string message)
+    {
+        Database.Save(message);
+    }
+}
+
+Açıklama: EmailService sınıfı, Database özelliği üzerinden bir IDatabase nesnesi alır. Bu, nesnenin oluşturulduktan sonra bağımlılığının atanmasına izin verir.
+____________________________________________________________________________________________________
+
+3. Method Injection
+Önemli Noktalar
+Metod Çağrısında Bağımlılık Sağlanması: Bağımlılıklar, metod parametreleri aracılığıyla sağlanır.
+Çalışma Zamanı Esnekliği: Her metod çağrısında bağımlılıkları değiştirebilme.
+Kullanım Senaryoları
+Bağımlılığın sadece belirli bir metod için gerekli olduğu durumlar.
+Bağımlılıkların metod bazında dinamik olarak değiştirilmesi gerektiğinde.
+
+public class ReportGenerator
+{
+    public void GenerateReport(IDatabase database, Report report)
+    {
+        database.Save(report.Content);
+    }
+}
+
+Açıklama: ReportGenerator sınıfı, GenerateReport metodunun çağrısı sırasında bir IDatabase nesnesi alır. Bu, metodun her çağrısında farklı bir IDatabase örneği kullanılmasına izin verir.
+
+
+____________________________________________________________________________________________________
+

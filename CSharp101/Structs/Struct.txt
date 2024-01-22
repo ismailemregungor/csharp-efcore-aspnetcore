@@ -1,0 +1,129 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Structs:
+
+Özellikleri:
+
+Değer Tipi: Struct'lar değer tipidir. Bu, bir struct'ın başka bir struct'a atandığında, değerlerin kopyalandığı anlamına gelir.
+
+Hafıza Yönetimi: Struct'lar bellekte stack üzerinde saklanır (ancak bir sınıfın bir parçası olarak kullanılıyorsa heap üzerinde de saklanabilirler).
+
+Alanlar ve Özellikler: Struct'lar, alan (field) ve özellik (property) içerebilir.
+
+Metotlar: Struct'lar metotlar içerebilir.
+
+Constructor: Struct'lar parametre alabilen constructor'lara sahip olabilir, ancak parametresiz constructor tanımlayamazlar.
+
+Inheritance: Struct'lar başka bir sınıf veya struct'tan türemezler, ancak interface'leri uygulayabilirler.
+
+Boxing ve Unboxing: Struct bir object'e atandığında veya bir interface referansına atandığında boxing işlemi yapılır. Tersine, bu durumdan geri döndürülmek istendiğinde unboxing işlemi yapılır.
+
+*Microsoft bir veri yapısının boyutu 16 byte'ı aşmıyorsa struct kullanmayı aşıyorsa class kullanmayı öneriyor.
+
+*Guid bir struct'tur.
+
+Kullanım Senaryoları
+Hafif Veri Taşıma: Küçük ve basit veri taşıma işlemleri için kullanışlıdır.
+Hızlı Erişim: Hafızada contiguously (bitişik) saklandığı için hızlı erişim sağlar.
+Immutable Veri Yapıları: Değiştirilemez veri yapıları oluşturmak için kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Struct Tanımlama
+
+struct Point
+{
+    public int X, Y;
+}
+
+Point p = new Point();
+p.X = 10;
+p.Y = 20;
+Console.WriteLine($"X: {p.X}, Y: {p.Y}");
+
+Bu örnekte, Point adında basit bir struct tanımlanmış ve bu struct'tan bir örnek oluşturulmuştur. Örneğin X ve Y alanlarına değer atandıktan sonra bu değerler ekrana yazdırılmıştır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+ Constructor Kullanımı
+
+ struct Point
+{
+    public int X, Y;
+
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+}
+
+Point p = new Point(10, 20);
+Console.WriteLine($"X: {p.X}, Y: {p.Y}");
+
+Bu örnekte, Point struct'ına bir constructor eklenmiştir. Bu constructor iki parametre almakta ve bu parametreler ile struct'ın X ve Y alanlarını initialize etmektedir.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Metot Kullanımı
+
+struct Point
+{
+    public int X, Y;
+
+    public double CalculateDistance()
+    {
+        return Math.Sqrt(X * X + Y * Y);
+    }
+}
+
+Point p = new Point { X = 10, Y = 20 };
+double distance = p.CalculateDistance();
+Console.WriteLine($"Distance: {distance}");
+
+________________________________________________________________________________________________________________________________________________________________________
+
+ Interface Implementasyonu
+
+ public interface IMovable
+{
+    void Move(int dx, int dy);
+}
+
+struct Point : IMovable
+{
+    public int X, Y;
+
+    public void Move(int dx, int dy)
+    {
+        X += dx;
+        Y += dy;
+    }
+}
+
+Point p = new Point { X = 10, Y = 20 };
+p.Move(5, 5);
+Console.WriteLine($"X: {p.X}, Y: {p.Y}");
+
+Bu örnekte, Point struct'ı IMovable interface'ini implemente etmektedir. Move metodu, Point'i belirtilen kadar hareket ettirir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Boxing ve Unboxing
+
+struct Point
+{
+    public int X, Y;
+}
+
+Point p = new Point { X = 10, Y = 20 };
+object boxed = p; // Boxing
+Point unboxed = (Point)boxed; // Unboxing
+Console.WriteLine($"X: {unboxed.X}, Y: {unboxed.Y}");
+
+Bu örnekte, Point struct'ı bir object'e atanmakta ve bu işlem sırasında boxing yapılmaktadır. Daha sonra, bu object tekrar Point tipine çevrilmekte ve unboxing yapılmaktadır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

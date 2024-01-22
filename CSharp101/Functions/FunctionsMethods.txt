@@ -1,0 +1,92 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Functions-Methods:
+
+*Bir fonksiyon, belirli bir işlevi gerçekleştirmek için yazılan kod bloğudur. 
+*Methodlar kodu organize etmenin ve tekrarlanabilirliği artırmanın yanı sıra, kod karmaşıklığını azaltmanın bir yoludur.
+*Metodla giden metodla gider çünkü methodlar stackte saklanır ve stack LIFO şeklinde çalışır yani son giren ilk çıkıyor. 
+*Metod çağrılıp işini yaptığı an stack'ten çıkar.
+*Method Oluşturma Formulü:Access Modifiers  > ReturnType > MethodName > (Parameters) {}
+
+[erişimBelirteci] [geriDönüşTipi] FonksiyonAdı([parametreler])
+{
+    // Kod bloğu
+}
+
+Erişim Belirteci: Fonksiyonun erişim seviyesini belirtir (örn. public, private).
+Geri Dönüş Tipi: Fonksiyonun geri döndüreceği değerin veri tipini belirtir (void geri dönüş yapmayacağını belirtir).
+Parametreler: Fonksiyonun alacağı değerleri belirtir.
+Return: Fonksiyonun geri döneceği değeri belirtir. void bir fonksiyon için return kullanılmaz.
+________________________________________________________________________________________________________________________________________________________________________
+
+Method-Types:
+
+*Bir metot, tanımlandığı dönüş tipinde bir değer döndürmelidir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Void Metotlar: Bu tür metotlar işlemi gerçekleştirdikten sonra herhangi bir değer döndürmezler.
+
+ public void MetotAdi()
+{
+    // Kod bloğu
+}
+
+public void Selamla()
+{
+    Console.WriteLine("Merhaba!");
+}
+_______________________________________________________________________________________________________________________________________________________________________
+
+Değer Döndüren Metotlar:Bu metot tipi belirtilen dönüş tipinde bir değer döndürür.
+
+public [DönüşTipi] MetotAdi()
+{
+    // Kod bloğu
+    return [değer];
+}
+
+public int KaresiniAl(int sayi)
+{
+    return sayi * sayi;
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Parametre Alan Metotlar: Bu metot tipi dışarıdan bir veya birden fazla parametre alır.
+
+public void MetotAdi([ParametreTipi1] parametre1, [ParametreTipi2] parametre2)
+{
+    // Kod bloğu
+}
+
+public string IsimYazdir(string ad, string soyad)
+{
+    return ad + " " + soyad;
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+
+Recursive - Özyinelemeli Methods:
+Kendi içinde kendisini tekrar çağırır. Base case olmadan sonsuz bir döngüye girebilirler.
+
+public [DönüşTipi] MetotAdi([Parametreler])
+{
+    if ([base case şartı])
+    {
+        return [base case değeri];
+    }
+    return MetotAdi([güncellenmiş parametreler]);
+}
+
+public int Faktoriyel(int n)
+{
+    if (n == 1)
+        return 1;
+    return n * Faktoriyel(n - 1);
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+

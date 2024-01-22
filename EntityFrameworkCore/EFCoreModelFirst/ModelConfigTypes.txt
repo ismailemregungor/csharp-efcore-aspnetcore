@@ -1,0 +1,14 @@
+﻿/*
+     * Tablo ve sütunlar ile ilgili Oracle üzerindeki ilişki, tip, ad, vc ayarlar
+     * 3 farklı şekilde yapılabilir.
+     * 
+     * 1-Data Annotations
+     * Modele tanımlanır.
+     * Model karışık hale gelir, okunabilirliği azaltır.
+     * 
+     * 2-Fluent API 
+     * *Tüm ayarlar OnModelCreating() metodu içerisinde tanımlanır.
+     * 
+     * 3-Fluent API(IEntityTypeConfiguration) interface'ini uygulayarak
+     * *Her model için ayrı bir configuration sınıfı oluşturulur.
+     */

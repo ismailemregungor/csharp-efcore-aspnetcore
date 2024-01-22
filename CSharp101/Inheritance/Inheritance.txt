@@ -1,0 +1,113 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Inheritance:
+
+*Kalıtım (Inheritance), nesne tabanlı programlamada bir sınıfın özelliklerinin başka bir sınıfa
+aktarılması işlemidir. 
+*Bu, kodun yeniden kullanılabilirliğini artırır ve kod organizasyonunu iyileştirir.
+
+Önemli Noktalar
+
+Tekli Miras: C# dilinde bir sınıf yalnızca bir başka sınıftan türeyebilir (tekli miras).
+Base (Temel) ve Derived (Türemiş) Sınıflar: Temel sınıftaki özellikler, türemiş sınıfta kullanılabilir.
+Accessibility: Miras alınan özelliklerin erişilebilirliği, erişim belirleyicilerine (public, protected, private, internal) bağlıdır.
+Özel Üye Çağrısı: Türemiş sınıfın yapıcısı içerisinden base anahtar kelimesi ile temel sınıfın yapıcısını çağırabiliriz.
+Polymorphism: Türemiş sınıflar, temel sınıftaki metodları yeniden tanımlayabilir (override edebilir).
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel Inheritance:
+
+public class Animal
+{
+    public string Name { get; set; }
+    public void Eat()
+    {
+        Console.WriteLine("Yemek yiyor");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Havlıyor");
+    }
+}
+
+Bu kod örneğinde Dog sınıfı, Animal sınıfından türemiştir. Dog sınıfı, Animal sınıfındaki tüm public ve protected üyelere erişebilir.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Yapıcı Fonksiyon ve Base Çağrısı:
+
+public class Bird : Animal
+{
+    public Bird(string name)
+    {
+        Name = name;
+        Console.WriteLine($"{name} bir kuş oluşturuldu.");
+    }
+}
+
+Bu kod örneğinde, Bird sınıfının yapıcı fonksiyonu name parametresi alır ve bu değeri temel sınıfın Name özelliğine atar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Method Override
+
+public class Cat : Animal
+{
+    public new void Eat()
+    {
+        Console.WriteLine("Kedi yemek yiyor");
+    }
+}
+
+Bu kod örneğinde, Cat sınıfı Animal sınıfının Eat metodunu override eder. Bu, Cat sınıfının örnekleri Eat metodu çağrıldığında "Kedi yemek yiyor" mesajını yazdırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+base Anahtar Kelimesi Kullanımı
+
+public class Parrot : Bird
+{
+    public Parrot(string name) : base(name)
+    {
+        Console.WriteLine($"{name} bir papağan.");
+    }
+}
+
+Bu kod örneğinde, Parrot sınıfı Bird sınıfından türemiştir ve yapıcı fonksiyonu içerisinde base anahtar kelimesi ile temel sınıfın yapıcısını çağırır.
+________________________________________________________________________________________________________________________________________________________________________
+
+protected Üye Kullanımı
+
+public class Fish : Animal
+{
+    protected void Swim()
+    {
+        Console.WriteLine("Balık yüzüyor");
+    }
+}
+
+public class Goldfish : Fish
+{
+    public void Dive()
+    {
+        Swim();
+        Console.WriteLine("Altın balığı dalmaya başladı");
+    }
+}
+
+Bu kod örneğinde, Fish sınıfı Swim isimli protected bir metod içerir. Bu metod yalnızca Fish sınıfından ve türemiş sınıflardan erişilebilir. 
+Goldfish sınıfı Fish sınıfından türemiştir ve Swim metodunu kullanabilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Multiple Inheritance:
+
+Parametrik Constructor:
+*Silindir sınıfı oluşturulurken mutlaka Daire sınıfının ctor'una 
+parametre aktarılmadılır.
+*Bunun için base keyword'u ile veri aktarımı yaparız.
+
+________________________________________________________________________________________________________________________________________________________________________

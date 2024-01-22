@@ -1,0 +1,192 @@
+﻿_____________________________________________________________________________________
+Kurulumlar:
+
+Nuget > Microsoft.EntityFrameworkCore
+Nuget > Oracle.EntityFrameworkCore
+Nuget > Microsoft.EntityFrameworkCore.Tools
+Nuget > Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Nuget > Microsoft.AspNetCore.Identity.UI
+
+_____________________________________________________________________________________
+
+--> Eğer DB First Devam edeceksek:
+
+Package Manager Console:
+
+Scaffold-DbContext "User Id=product; Password=product; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))" Oracle.EntityFrameworkCore -o Models
+
+_____________________________________________________________________________________
+
+--> Eğer Model First Devam edeceksek:
+
+*Model sınıflarını oluştur
+*Context dosyasını oluştur.
+
+_____________________________________________________________________________________
+
+Program.cs
+
+builder.Services.AddDbContext<ModelContext>();
+
+builder.Services.AddDefaultIdentity<IdentityUser>();
+
+--> sonra şöyle olacak
+
+builder.Services.AddDbContext<ModelContext>(x => x.UseOracle(builder.Configuration.GetConnectionString("ConnStr")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ModelContext>();
+
+--> sonra şöyle olacak
+
+builder.Services
+    .AddDefaultIdentity<IdentityUser>(x => { x.SignIn.RequireConfirmedEmail = false; })
+    .AddEntityFrameworkStores<ModelContext>();
+
+--> sonra şöyle olacak
+
+    builder.Services
+    .AddIdentity<AppUser, AppRole>(x => { x.SignIn.RequireConfirmedEmail = false; })
+    .AddEntityFrameworkStores<FilmContext>().AddRoles<AppRole>();
+
+_____________________________________________________________________________________
+
+PM> add-migration AddIdentity
+
+--> Yukarıdaki komutu yazınca aşağıdaki hatayı verirse:
+
+The entity type 'IdentityUserLogin<string>' requires a primary key to be defined. 
+If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. 
+For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943
+
+_____________________________________________________________________________________
+
+--> Aşağıdakileri ModelContext sınıfı içerisine ekle:
+
+OnConfiguring() Metodu içerisine:
+
+base.OnConfiguring(optionsBuilder);
+
+OnCreating() Metodu içerisine:
+
+base.OnModelCreating(modelBuilder);
+
+_____________________________________________________________________________________
+
+Add > New Scaffold Item > Identity > Add
+Register, Login, Logout seç context dosyasını göster.
+_____________________________________________________________________________________
+
+Program.cs üzerindeki aşağıdaki kodu yorum satırına al
+
+var connectionString = builder.Configuration.GetConnectionString("ModelContextConnection")
+?? throw new InvalidOperationException("Connection string 'ModelContextConnection' not found.");
+
+_____________________________________________________________________________________
+
+Program.cs üzerindeki aşağıdaki kodu yorum satırına al
+
+
+builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<FilmContext>();
+_____________________________________________________________________________________
+
+Views > Shared > _Layout.cshtml içerisinde ilgili kısma aşağıdaki kodu ekle:
+
+            <div>
+                @Html.Partial("_LoginPartial")
+            </div>
+
+_____________________________________________________________________________________
+
+Program.cs içerisine aşağıdaki kodu ekle ve register login aktifleşicek.
+
+app.MapRazorPages();
+
+_____________________________________________________________________________________
+
+Register.cshtml.cs
+
+--> Emaili kaldırmak için aşağıdakileri yorum satırına al.
+
+//private readonly IEmailSender _emailSender;
+
+/*IEmailSender emailSender*/
+
+//_emailSender = emailSender;
+
+_____________________________________________________________________________________
+
+Input Model class'ına gel:
+
+            [Required]
+            [Display(Name = "Ad")]
+            public string Ad { get; set; }
+
+            [Required]
+            [Display(Name = "UserName")]
+            public string Soyad { get; set; }
+
+            [Required]
+            [Display(Name = "UserName")]
+            public string UserName { get; set; }
+
+            [Required]
+            [EmailAddress]
+            [Display(Name = "Email")]
+            public string Email { get; set; }
+_____________________________________________________________________________________
+
+OnPostAsync() class'ına gel
+
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
+                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+
+                user.Ad = Input.Ad;
+                user.Soyad = Input.Soyad;
+
+
+-->aşağıdaki kodlar yorum satırında olsun
+
+                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                    //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+                    //var callbackUrl = Url.Page(
+                    //    "/Account/ConfirmEmail",
+                    //    pageHandler: null,
+                    //    values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
+                    //    protocol: Request.Scheme);
+
+                    //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+_____________________________________________________________________________________
+
+Login.cshtml.cs
+
+            //[Required]
+            //[EmailAddress]
+            //public string Email { get; set; }
+
+            [Required]
+            public string UserName { get; set; }
+
+            OnPostAsync():
+
+var result = await _signInManager.PasswordSignInAsync(Input.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+Login.cshtml
+_____________________________________________________________________________________
+
+_____________________________________________________________________________________
+
+_____________________________________________________________________________________
+
+_____________________________________________________________________________________
+
+Register:
+
+deneme@gmail.com
+Deneme.123456
+
+_____________________________________________________________________________________
+
+
+_____________________________________________________________________________________

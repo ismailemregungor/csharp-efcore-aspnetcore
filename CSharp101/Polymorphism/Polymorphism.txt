@@ -1,0 +1,149 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Polymorphism:
+
+Polimorfizm, aynı işlemlerin farklı nesneler üzerinde çalışabilme yeteneğini ifade eder. 
+Bu, kodun daha esnek ve yeniden kullanılabilir olmasını sağlar, çünkü aynı kod parçası, farklı nesneleri işleyebilir.
+
+Polimorfizmin Özellikleri:
+Aynı İsimli Metodlar: Polimorfizm, aynı isimle çağrılan farklı metotların oluşturulmasına izin verir. Bu metotlar aynı arabirimi (imzanın uygunluğunu) paylaşır.
+
+Çok Biçimlilik (Many Forms): Polimorfizm, bir metodu veya işlemi, farklı nesneler üzerinde çalışabilecek şekilde tasarlamamızı sağlar.
+
+Miras (Inheritance): Sınıflar arasında miras yoluyla veya arabirimler (interface) aracılığıyla polimorfizm uygulanabilir.
+
+Geç Bağlama (Late Binding): Çalışma zamanında hangi yöntemin çağrılacağı belirlenir. Bu, metotların dinamik olarak bağlandığı anlamına gelir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Method Overloading (Metot Aşırı Yükleme):
+
+public class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+Metot aşırı yükleme, aynı isme sahip fakat farklı parametre listelerine sahip metotların tanımlanmasını ifade eder. 
+Hangi metotun çağrılacağı, argümanların türüne göre belirlenir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Method Overriding (Metot Geçersiz Kılma):
+
+public class Shape
+{
+    public virtual void Draw()
+    {
+        Console.WriteLine("Çizim yapıldı.");
+    }
+}
+
+public class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Daire çizildi.");
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface Polimorfizmi (Arayüz Polimorfizmi):
+
+public interface IDrawable
+{
+    void Draw();
+}
+
+public class Circle : IDrawable
+{
+    public void Draw()
+    {
+        Console.WriteLine("Daire çizildi.");
+    }
+}
+
+public class Square : IDrawable
+{
+    public void Draw()
+    {
+        Console.WriteLine("Kare çizildi.");
+    }
+}
+
+Metot geçersiz kılma, bir üst sınıftan miras alan alt sınıfların aynı isimli ve parametre listeli metotları,
+davranışlarını değiştirebilmelerini sağlar. Bu, miras ve sanal metotların kullanılmasıyla gerçekleştirilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Interface Polimorfizmi (Arayüz Polimorfizmi):
+
+Arayüzler, farklı sınıfların aynı arayüzü uygulayarak bir arayüz tipi altında birleşmelerini sağlar.
+Bu, çok biçimliliği teşvik eder ve nesneleri bağlama yeteneği sağlar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Çoklu Miras (Multiple Inheritance) ve Arayüzler:
+
+C#, çoklu mirası doğrudan sınıf mirası olarak desteklemez, ancak bir sınıf birden fazla arabirimi (interface) uygulayabilir. Bu, çoklu miras benzeri işlevselliği sağlar.
+
+public interface IFlyable
+{
+    void Fly();
+}
+
+public interface ISwimmable
+{
+    void Swim();
+}
+
+public class Bird : IFlyable
+{
+    public void Fly()
+    {
+        Console.WriteLine("Kuş uçuyor.");
+    }
+}
+
+public class Fish : ISwimmable
+{
+    public void Swim()
+    {
+        Console.WriteLine("Balık yüzüyor.");
+    }
+}
+
+public class Duck : IFlyable, ISwimmable
+{
+    public void Fly()
+    {
+        Console.WriteLine("Ördek uçuyor.");
+    }
+
+    public void Swim()
+    {
+        Console.WriteLine("Ördek yüzüyor.");
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Polimorfik Nesne Kullanımı:
+
+Shape[] shapes = new Shape[] { new Circle(), new Square() };
+
+foreach (var shape in shapes)
+{
+    shape.Draw();
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+

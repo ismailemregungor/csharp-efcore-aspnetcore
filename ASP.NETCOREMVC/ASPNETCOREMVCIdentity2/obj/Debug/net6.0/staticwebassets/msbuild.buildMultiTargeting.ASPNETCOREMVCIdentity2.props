@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ASPNETCOREMVCIdentity2.props" />
+</Project>

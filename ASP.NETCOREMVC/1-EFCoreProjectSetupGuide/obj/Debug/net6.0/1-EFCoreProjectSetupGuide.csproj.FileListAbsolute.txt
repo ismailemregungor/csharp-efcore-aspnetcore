@@ -1,0 +1,12 @@
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.deps.json
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.pdb
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\refint\1-EFCoreProjectSetupGuide.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.pdb
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\ref\1-EFCoreProjectSetupGuide.dll

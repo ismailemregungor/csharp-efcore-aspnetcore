@@ -1,0 +1,36 @@
+﻿@using BlogApp.UI.Models.VMs.AppUserVMs
+@model AppUserListeleVM
+
+<div class="container-fluid mt-3">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr class="text-center">
+                    <th>Id</th>
+                    <th>Kullanıcı Adı</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Mail</th>
+                    <th>Telefon Numarası</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td>
+                        @Html.ActionLink(Model.Id.ToString(), "UserArticleList", "Makale", new { id = Model.Id, area = "UyePanel" }, new { @class = "link" })
+                    </td>
+
+                    <td>@Model.UserName</td>
+                    <td>@Model.Ad</td>
+                    <td>@Model.Soyad</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.PhoneNumber</td>
+                    <td>
+                        <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-primary">Güncelle</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

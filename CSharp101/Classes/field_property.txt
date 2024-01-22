@@ -1,0 +1,146 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Field vs Property:
+
+*Field ve property'ler, bir sınıfın durumunu yönetir. Bu iki kavram, veri saklama şekilleri 
+ve bu verilere erişim kontrolü açısından birbirlerinden farklıdır.
+
+*Field'lar doğrudan değişkenlerdir, property'ler ise bu değişkenlere kontrollü erişim sağlayan metodlardır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Field:
+
+*Sınıfın veya yapının içindeki bir değişkeni temsil eder. 
+Doğrudan erişime izin verir ve erişim belirleyicileri ile kısıtlanabilir.
+
+public class MyClass
+{
+    private int myField;
+}
+
+// Özet: myField, private bir field olarak doğrudan erişime kapalıdır. 
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Property:
+
+*Bir field'ın değerini almayı veya ayarlamayı (get/set) kontrol eden özel metodlar kümesidir. 
+Bu, veriye erişimi ve işlemeyi yönetmek için kullanılır.
+
+public class MyClass
+{
+    private int myField;
+
+    public int MyProperty
+    {
+        get { return myField; }
+        set { myField = value; }
+    }
+}
+
+// Özet: myField, private bir field olarak doğrudan erişime kapalıdır. MyProperty, bu field'ın değerini dışarıya açık bir şekilde get ve set eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Auto Property:
+
+*C# tarafından otomatik olarak arka plana bir field yerleştiren 
+ve basitleştirilmiş property tanımlama yoludur. Kodun okunabilirliğini artırır.
+
+public class MyClass
+{
+    public int MyProperty { get; set; }
+}
+
+// Özet: MyProperty, otomatik oluşturulmuş bir backing field ile get ve set işlemlerini destekler. Kullanıcıya görünmez.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Semi Auto Property: 
+
+*Set erişimcisinin (accessor) erişim düzeyini sınırlayan, 
+fakat get erişimcisine izin veren otomatik property'lerdir.
+
+public class MyClass
+{
+    public int MyProperty { get; private set; }
+
+    public MyClass(int value)
+    {
+        MyProperty = value; // Yapıcı metod içinden atama yapılabilir.
+    }
+}
+
+// Özet: MyProperty sadece sınıf içinden set edilebilir. Dışarıdan sadece okunabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+ Read-Only Auto Property:
+
+ public class MyClass
+{
+    public int MyProperty { get; }
+
+    public MyClass(int value)
+    {
+        MyProperty = value; // Yapıcı metod içinden atama yapılabilir.
+    }
+}
+
+// Özet: MyProperty sadece okunabilir ve değeri sadece yapıcı metod içinde set edilebilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Gelişmiş Property Kullanımları:
+
+*Veri Doğrulama için Property: Değer atanmadan önce verinin geçerliliğini kontrol eder, bu sayede nesnenin iç durumunun bütünlüğü korunur.
+
+public class Person
+{
+    private int age;
+    public int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value < 0 || value > 150)
+                throw new ArgumentException("Invalid age value");
+            age = value;
+        }
+    }
+}
+
+// Özet: Age property'si, atanacak yaş değerinin 0 ile 150 arasında olmasını garanti eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+*Hesaplanan Property: Genellikle diğer alanlara veya property'lere dayalı dinamik bir değer hesaplar. Yalnızca 'get' erişimcisi içerir.
+
+public class Rectangle
+{
+    public double Length { get; set; }
+    public double Width { get; set; }
+
+    public double Area
+    {
+        get { return Length * Width; }
+    }
+}
+
+// Özet: Area, Length ve Width property'lerine dayalı olarak hesaplanır; ayrıca bir setter'a sahip değildir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+*Otomatik Uygulanan Property: Compiler tarafından arkada oluşturulan gizli bir alanı kullanır; manuel 'backing field' gerektirmez.
+
+public class Car
+{
+    public string Model { get; set; }
+    public int Year { get; set; }
+}
+
+// Özet: Model ve Year, otomatik uygulanan property'lerdir ve arka planda otomatik olarak alan oluşturulur.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+

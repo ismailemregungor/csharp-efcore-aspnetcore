@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using LessonTasks.StokYonetimi.Interfaces;
+
+namespace LessonTasks.StokYonetimi.Models
+{
+    public class Bulgur : Urun, ISonKullanimTarihiGecebilir, IDeformeOlabilir
+    {
+        public DateTime SonKullanimTarihi { get; set; }
+        public Bulgur(DateTime SonKullanimTarihi, int urunId, string urunAdi) : base(urunId, urunAdi)
+        {
+            this.SonKullanimTarihi = SonKullanimTarihi;
+        }
+
+        public bool SonKullanmaTarihiGecmisMi(DateTime tarih)
+        {
+            if (SonKullanimTarihi < tarih)
+            {
+                return true;
+            }
+            return false;
+
+        }
+
+        public bool DeformeOlmusMu(string durum)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

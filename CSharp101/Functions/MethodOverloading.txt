@@ -1,0 +1,96 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Method Overloading (Metot Aşırı Yükleme):
+
+*Method overloading, aynı isimde fakat farklı parametre listesiyle birden fazla metot tanımlama yeteneğidir.
+Bu, kodun daha okunabilir ve yeniden kullanılabilir olmasını sağlar. 
+Farklı kullanım senaryolarında aynı isimli metodu kullanabilme yeteneği, 
+kodun genel yapısını ve tasarımını basit ve tutarlı tutar.
+*Aynı isimli bir metodun birden fazla yazılmasıdır.
+*İmzası farklı olmak kaydıyla metotları aşırı yükleyebiliriz.
+*Metot İmzası nedir?
+1.parametre sayısı
+2.parametre tipi
+*Özetle imzaları farklı olmak kaydıyla aynı isimde n adet metodu oluşturabiliriz.
+
+
+Parametre Sayısı ve Parametre Tipi(Method İmzası):
+*Aşırı yüklenmiş metotlar, parametre sayısının ve/veya parametre türünün farklı olmasıyla ayırt edilir.
+
+Dönüş Tipi: 
+
+*Metot aşırı yüklemesinde dönüş tipinin farklı olması işe yaramaz. 
+Parametre sayısı veya türü değişmeden sadece dönüş tipi değiştirilerek metot aşırı yüklenemez.
+
+public [Dönüş Tipi] MetotAdi([Parametre Tipi] parametre)
+{
+    // Kod bloğu
+}
+
+public [Dönüş Tipi] MetotAdi([Farklı Parametre Tipi] farkliParametre)
+{
+    // Kod bloğu
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Farklı Parametre Sayısıyla Aşırı Yüklenmiş Metotlar:
+
+public int Topla(int a, int b)
+{
+    return a + b;
+}
+
+public int Topla(int a, int b, int c)
+{
+    return a + b + c;
+}
+
+Topla adında iki aşırı yüklenmiş metot var. İlk metot iki tamsayıyı, ikinci metot ise üç tamsayıyı toplar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Farklı Parametre Türleriyle Aşırı Yüklenmiş Metotlar:
+
+public int Carp(int a, int b)
+{
+    return a * b;
+}
+
+public double Carp(double a, double b)
+{
+    return a * b;
+}
+
+Carp adında iki aşırı yüklenmiş metot var. İlki iki tamsayının, ikincisi ise iki ondalık sayının çarpımını döndürür.
+________________________________________________________________________________________________________________________________________________________________________
+
+Karışık Parametre Türleriyle Aşırı Yüklenmiş Metotlar:
+
+public string Birlestir(string a, int b)
+{
+    return a + b.ToString();
+}
+
+public string Birlestir(string a, string b)
+{
+    return a + b;
+}
+
+ İki farklı türde parametre alan Birlestir adında iki aşırı yüklenmiş metot bulunmaktadır.
+________________________________________________________________________________________________________________________________________________________________________
+
+public void BilgiYaz(string isim, int yas)
+{
+    Console.WriteLine($"İsim: {isim}, Yaş: {yas}");
+}
+
+public void BilgiYaz(int yas, string isim)
+{
+    Console.WriteLine($"Yaş: {yas}, İsim: {isim}");
+}
+
+BilgiYaz adında iki aşırı yüklenmiş metot bulunmaktadır. Parametrelerin türü aynıdır ancak sıralamaları farklıdır.
+
+________________________________________________________________________________________________________________________________________________________________________
+

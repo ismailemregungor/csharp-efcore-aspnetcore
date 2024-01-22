@@ -1,0 +1,31 @@
+﻿Algoritma?
+-Popüler Algoritmalar?
+-Akış diyagramları?
+-Pseudo code?
+
+Bilgisayar?
+-Yazılım?
+-Donanım?
+-Compiler?Compile süreci?
+-.NET'de compile süreci 2 adım
+-Yarı İletken Teknolojisi?
+-exe(main metodu) ve com dosyaları?
+-Bir uygulama çalıştırıldığında arkada ne olur? RAM vs
+-RAM?ROM?BIOS?
+-Değişkeler nerede saklanır?
+-RAM'in bölgeleri(.NET): stack, heap, static
+-C#'ta CLR, garbage Collector
+
+Programlama dilleri?
+-sıralı --> basic, gw basic
+-fonksiyonel --> c, pascal
+-object oriented --> c++, java, c#
+
+Bir programlama dili ile .NET, JAVA, .NET Core kıyaslaması?
+-Java'da Platform bağımsızlık?
+-.NET'da Platform bağımsızlık?
+
+.NET Core'la birlikte ne oldu?
+-Platform bağımsızlık
+-Asenkron programlama
+

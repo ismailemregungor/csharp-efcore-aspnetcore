@@ -1,0 +1,67 @@
+﻿
+@ViewData["Mesaj"]
+@ViewBag.Message
+
+<h2>Urun Sinifi ile Gelen Verileri Yazdır</h2>
+
+<div>
+    <h3>ViewData ile Yazdır</h3>
+    @ViewData["urun1"]
+
+    @{
+        Urun urun = (Urun)ViewData["urun1"];
+    }
+
+    <table>
+        <tr>
+            <td>@urun.UrunID</td>
+            <td>@urun.UrunAdi</td>
+            <td>@urun.Fiyat</td>
+        </tr>
+    </table>
+
+    <h2>ViewData Liste Kullanımı</h2>
+
+    @foreach (Urun item in (List<Urun>)ViewData["liste1"])
+    {
+        <br />
+        @item.UrunID @item.UrunAdi @item.Fiyat
+    }
+    
+
+</div>
+
+<div>
+    <h3>ViewBag ile Yazdır</h3>
+
+    @ViewBag.Product1.UrunID
+    @ViewBag.Product1.UrunAdi
+    @ViewBag.Product1.Fiyat
+
+    <h2>ViewBag Liste Kullanımı</h2>
+
+    @foreach (Urun item in ViewBag.List1)
+    {
+        <br />
+        @item.UrunID @item.UrunAdi @item.Fiyat
+    }
+</div>
+
+<div>
+    <h2>Özel Durum</h2>
+
+    @foreach (Urun item in ViewBag.test)
+    {
+        <br />
+        @item.UrunID @item.UrunAdi @item.Fiyat
+    }
+</div>
+
+
+
+
+
+
+
+
+

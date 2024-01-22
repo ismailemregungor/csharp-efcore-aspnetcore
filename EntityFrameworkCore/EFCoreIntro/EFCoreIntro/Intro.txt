@@ -1,0 +1,42 @@
+﻿__________________________________________________________________________________________________________________________
+ADO (Active Database Object):
+
+ADO, özellikle .NET öncesi dönemlerde kullanılan bir teknolojiydi.
+Bağlantılı yöntemlerle veritabanına erişim sağlar. Bu, veritabanıyla doğrudan etkileşim gerektirir.
+ADO, veritabanı işlemlerini program tarafından kontrol etmeyi sağlar.
+ADO'nun dezavantajlarından biri, güvenlik açısından zayıf olmasıdır çünkü SQL enjeksiyon saldırılarına karşı hassastır.
+ADO ile veri erişimi düşük seviyeli olduğu için, kod karmaşıklığına ve tekrara yol açabilir.
+
+__________________________________________________________________________________________________________________________
+
+ADO.NET (.NET Framework):
+1.Bağlantılı Yöntem
+2.Bağlantısız Yöntem
+
+ADO.NET, .NET Framework içinde yer alan bir veritabanı erişim kütüphanesidir.
+Bağlantılı ve bağlantısız yöntemler sunar. Bağlantılı yöntemler, doğrudan veritabanı bağlantısı gerektirirken, bağlantısız yöntemler veriyi bellekte işler ve daha sonra veritabanına yazmayı sağlar.
+ADO.NET, veritabanı işlemlerini daha etkili bir şekilde yönetmeyi sağlar ve veri setlerini kolayca taşımanızı sağlar.
+ADO.NET, SQL enjeksiyonuna karşı daha güvenlidir, ancak hala güvenlik önlemleri alınması gerekir.
+ADO.NET, performansı artırmak ve kod tekrarını azaltmak için tasarlanmıştır.
+
+__________________________________________________________________________________________________________________________
+
+ORM (Object-Relational Mapping): 
+*C# gibi nesne odaklı programlama dilleriyle ilişkisel 
+veritabanları arasındaki veri etkileşimini kolaylaştırmak için 
+kullanılan bir yazılım tasarım desenidir.
+
+ORM, veritabanındaki tabloları, sorguları ve ilişkileri C# gibi dillerdeki 
+nesnelere ve kodlara dönüştürerek, veri erişimini ve işlemlerini daha 
+basit ve daha verimli hale getirir. 
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+Entity Framework:
+
+Entity Framework (EF), .NET tabanlı bir ORM (Object-Relational Mapping) çerçevesidir.
+EF, bağlantısız nesne yönelimli bir yaklaşım sunar. Veritabanı tablolarını .NET sınıflarıyla eşleştirir ve LINQ (Language Integrated Query) kullanarak veritabanı sorgularını oluşturmanızı sağlar.
+EF, veritabanı ile .NET uygulamaları arasında bir köprü görevi görür. Bu, geliştiricilere daha yüksek seviyede soyutlama sağlar ve kod yazma sürecini hızlandırır.
+EF'nin avantajlarından biri, nesne yönelimli programlamayı teşvik etmesidir, bu da kodun daha okunaklı ve bakımı daha kolay olmasını sağlar.
+Dezavantajı, bazen karmaşık sorguların düşük seviyeli performans sorunlarına yol açabileceği ve özellikle büyük veritabanlarıyla çalışırken dikkat edilmesi gerektiğidir.
+__________________________________________________________________________________________________________________________

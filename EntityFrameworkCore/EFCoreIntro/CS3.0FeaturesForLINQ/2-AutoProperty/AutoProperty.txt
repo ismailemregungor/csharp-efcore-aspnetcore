@@ -1,0 +1,37 @@
+﻿__________________________________________________________________________________________________________________________
+
+Auto Property:
+
+Default Şablon: public int MyProperty { get; set; }
+
+Önemli Noktalar:
+
+*Backing field olmadan property tanımlamanıza olanak tanır.
+*Okuma-yazma ya da yalnızca-okuma auto property'ler tanımlanabilir.
+*Kod sadeliğini ve sürdürülebilirliğini artırır.
+
+__________________________________________________________________________________________________________________________
+
+public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    // Auto-implemented properties burada kullanılıyor
+}
+
+var products = new List<Product>
+{
+    new Product { Id = 1, Name = "Apple" },
+    new Product { Id = 2, Name = "Banana" }
+};
+
+var productNames = from p in products
+                   select p.Name;
+
+// 'productNames' her ürünün isimlerini içeren bir koleksiyondur.
+
+Product sınıfında, Id ve Name özellikleri auto-implemented properties olarak kullanılır.
+LINQ sorgusunda bu property'ler doğrudan erişilebilir ve seçilebilir.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

@@ -1,0 +1,35 @@
+﻿__________________________________________________________________________________________________________________________
+
+GroupBy() metodu, bir koleksiyon içindeki öğeleri bir anahtara göre gruplar.
+Gruplama işlemi sonucu, anahtar değeri ve o anahtara sahip öğelerin koleksiyonlarından oluşan bir dizi alınır.
+Gruplar, genellikle bir döngü ile veya başka LINQ operasyonlarıyla işlenir.
+__________________________________________________________________________________________________________________________
+
+var pets = new[]
+{
+    new { Type="Dog", Name="Rex" },
+    new { Type="Cat", Name="Whiskers" },
+    new { Type="Dog", Name="Fido" },
+    new { Type="Cat", Name="Sassy" }
+};
+
+var groupedPets = pets.GroupBy(p => p.Type);
+
+foreach (var group in groupedPets)
+{
+    Console.WriteLine("Pet Type: " + group.Key);
+    foreach (var pet in group)
+    {
+        Console.WriteLine(" - " + pet.Name);
+    }
+}
+
+Bu örnek, evcil hayvanları türlerine göre gruplar ve her bir grubu ayrı ayrı yazdırır.
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

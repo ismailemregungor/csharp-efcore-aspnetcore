@@ -1,0 +1,19 @@
+﻿Mediator Design Pattern
+
+Tanım ve Amaç:
+
+Mediator Design Pattern, nesneler arasındaki iletişimi
+merkezileştirerek karmaşıklığı azaltmayı amaçlar. 
+Bu pattern, birçok nesne arasındaki doğrudan iletişimi azaltarak, 
+nesneleri bir aracı (mediator) üzerinden haberleştirmeyi sağlar.
+
+Önemli Noktalar:
+
+Merkezi Kontrol: Nesneler arası iletişim, Mediator aracılığıyla kontrol edilir.
+
+Azaltılmış Bağlantı Karmaşıklığı: Nesneler birbirleriyle doğrudan değil, 
+Mediator üzerinden iletişim kurarlar.
+
+Kolay Bakım ve Genişletilebilirlik: Mediator, sistemi genişletmeyi ve değiştirmeyi kolaylaştırır.
+
+Esneklik: Nesneler, Mediator'un arayüzünü kullanarak esnek bir şekilde iletişim kurabilirler.

@@ -1,0 +1,5 @@
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\2-OpenClosedPrinciple\obj\Debug\net6.0\2-OpenClosedPrinciple.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\2-OpenClosedPrinciple\obj\Debug\net6.0\2-OpenClosedPrinciple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\2-OpenClosedPrinciple\obj\Debug\net6.0\2-OpenClosedPrinciple.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\2-OpenClosedPrinciple\obj\Debug\net6.0\2-OpenClosedPrinciple.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\2-OpenClosedPrinciple\obj\Debug\net6.0\2-OpenClosedPrinciple.csproj.CoreCompileInputs.cache

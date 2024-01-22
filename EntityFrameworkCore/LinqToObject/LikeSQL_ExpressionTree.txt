@@ -1,0 +1,39 @@
+﻿__________________________________________________________________________________________________________________________
+
+SQL Benzeri Sorgulama (Query Syntax):
+
+Okunabilirliği yüksektir ve SQL sorgularına benzer.
+Koleksiyonlar üzerinde from, select, where, orderby gibi anahtar kelimeler kullanır.
+Karmaşık sorgular için uygun olabilir.
+
+__________________________________________________________________________________________________________________________
+
+Expression Trees:
+
+LINQ sorgularını temsil eden veri yapılarıdır.
+Runtime'da sorguların nasıl uygulanacağını dinamik olarak değiştirebilir.
+Genellikle dinamik sorgular oluşturmak veya sorgu davranışını değiştirmek için kullanılır.
+__________________________________________________________________________________________________________________________
+
+// SQL benzeri sorgulama ile bir listeyi filtreleme
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+
+var evenNumbers = from n in numbers
+                  where n % 2 == 0
+                  select n;
+
+Bu sorgu numbers listesindeki çift sayıları seçer ve evenNumbers koleksiyonuna atar.
+
+// Lambda ifadeleri ile filtreleme
+var evenNumbers = numbers.Where(n => n % 2 == 0);
+
+Bu ifade, numbers listesindeki çift sayıları Where metodunu kullanarak seçer ve evenNumbers koleksiyonuna atar.
+__________________________________________________________________________________________________________________________
+
+// Birden fazla LINQ metodunu zincirleme
+var sortedEvenNumbers = numbers.Where(n => n % 2 == 0).OrderBy(n => n);
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+

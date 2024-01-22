@@ -1,0 +1,82 @@
+﻿
+__________________________________________________________________________________________________________________________
+
+EFCoreDataLoading:
+
+*Entity Framework Core (EF Core) veri yükleme mekanizmaları, veritabanından veri getirme yöntemleridir
+ve üç temel türü vardır: eager loading, explicit loading ve lazy loading. 
+Her biri farklı senaryolarda kullanışlıdır ve performans açısından farklı sonuçlar doğurabilir.
+
+__________________________________________________________________________________________________________________________
+
+1-Eager Loading:
+
+
+Eager loading, bir sorgu sırasında ilişkili veriyi hemen yüklemek için kullanılır. 
+Bu, genellikle Include metodunu kullanarak yapılır.
+
+Include kullanılarak ilişkili veri tabanı tabloları önceden yüklenir.
+Çoklu seviye ilişkiler için ThenInclude kullanılabilir.
+Büyük veri setlerinde performans sorunlarına neden olabilir.
+__________________________________________________________________________________________________________________________
+
+Basit Eager Loading: Bir öğrencinin notlarını öğrenciyle birlikte yükleme.
+var öğrenciler = context.Öğrenciler.Include(o => o.Notlar).ToList();
+
+Çoklu İlişkileri İçeren Eager Loading: Bir öğrencinin notlarını ve o notların ilişkili dersleriyle birlikte yükleme.
+
+var öğrenciler = context.Öğrenciler
+                        .Include(o => o.Notlar)
+                        .ThenInclude(n => n.Ders)
+                        .ToList();
+__________________________________________________________________________________________________________________________
+
+2-Explict Loading:
+
+Explicit loading, Load metodunun çağrılmasıyla ilişkili verinin açıkça yüklendiği bir mekanizmadır. 
+Bu, genellikle daha sonra gerekecek veriler için kullanılır
+
+Veriye ihtiyaç duyulduğu anda yükleme yapılır.
+Collection veya Reference metodları kullanılır.
+İhtiyaç halinde yükleme daha kontrollüdür.
+__________________________________________________________________________________________________________________________
+
+Explicit Loading: Bir öğrenciye ait notları ayrı bir sorgu ile yükleme.
+
+var öğrenci = context.Öğrenciler.Find(öğrenciId);
+context.Entry(öğrenci).Collection(o => o.Notlar).Load();
+
+__________________________________________________________________________________________________________________________
+
+3-Lazy Loading
+
+Lazy loading, veriye erişildiği anda otomatik olarak yüklenmesi anlamına gelir. 
+Bu, EF Core’un lazy loading özelliklerini etkinleştirmek için proxy sınıflar 
+veya sanal navigasyon özellikleri kullanılarak yapılır.
+
+Erişim sırasında otomatik yükleme.
+Sanal navigasyon özelliklerinin kullanılması gerekir.
+Performansı olumsuz etkileyebilecek sıkıntılı sorgulara yol açabilir.
+__________________________________________________________________________________________________________________________
+
+Kurulum:
+
+*Nuget > Microsoft.EntityFrameworkCore.Proxies
+*Navigation Property'ler virtual olarak işaretlenir.
+*Context sınıfındaki OnConfugiring() metodu içerisinde aşağıdaki kod eklenmeli
+optionsBuilder.UseLazyLoadingProxies();
+__________________________________________________________________________________________________________________________
+
+Lazy Loading: Proxy kullanarak bir öğrencinin notlarını erişildiğinde yükleme.
+
+// Proxy oluşturma ve lazy loading etkinleştirmek için context yapılandırması gerekir.
+var öğrenci = context.Öğrenciler.Find(öğrenciId);
+var notlar = öğrenci.Notlar; // İlk erişimde veritabanından yüklenir.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+

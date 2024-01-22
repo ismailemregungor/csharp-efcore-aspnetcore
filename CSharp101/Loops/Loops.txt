@@ -1,0 +1,96 @@
+﻿Loops-Döngüler:
+
+for: Belirli bir sayıda tekrar yapılması gereken işlemler için kullanılır.
+while: Koşul doğru olduğu sürece döngüyü sürdürür.
+do-while: En az bir kere kod bloğunu çalıştırır ve sonra koşulu kontrol eder.
+foreach: Koleksiyonlardaki (örn. diziler, listeler) her eleman üzerinde dolaşmak için kullanılır.
+break: Döngüyü sonlandırmak için kullanılır.
+continue: Döngünün geri kalanını atlayıp bir sonraki iterasyona geçer.
+________________________________________________________________________________________________________________________________________________________________________
+
+*for:
+
+for (başlangıç değeri; koşul; artış/azalış)
+{
+    // Kod bloğu
+}
+
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+while:
+
+while (koşul)
+{
+    // Kod bloğu
+}
+
+int sayac = 0;
+while (sayac < 5)
+{
+    Console.WriteLine(sayac);
+    sayac++;
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+do-while:
+
+do
+{
+    // Kod bloğu
+} while (koşul);
+
+int deger = 0;
+do
+{
+    Console.WriteLine(deger);
+    deger++;
+} while (deger < 5);
+
+________________________________________________________________________________________________________________________________________________________________________
+
+foreach:
+*sadece readonly
+*iteration variable'ı sadece get()'dir. set() metodu yoktur (iteration variable only has get methot)
+*sadece koleksiyonlar üzerinde çalışır
+*IEnumarable arayüzünü uygulamış sınıflar üzerinde çalışır.
+*lenght'e yani koleksiyon eleman sayısına gerek yok, indis değişkenine gerek yok, 
+*arttırma azaltmaya yaklaşma durumuna gerek yok
+*sadece Get() metodu var MoveNext() ve Reset() 'diye iki fonksiyonu var. 
+*foreach içerisinde set() işlemi yapılamaz
+
+*Bu 4 döngü içerisinde birbirinden yapısal olarak farklı olan hangisidir?
+cevap: foreach
+
+foreach (değişken_türü değişken_adı in koleksiyon)
+{
+    // Kod bloğu
+}
+
+string[] meyveler = { "elma", "muz", "armut" };
+foreach (string meyve in meyveler)
+{
+    Console.WriteLine(meyve);
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+break ve continue:
+
+for (int j = 0; j < 10; j++)
+{
+    if (j == 5) break;
+    if (j % 2 == 0) continue;
+    Console.WriteLine(j);
+}
+______________________________________________________________________________________________________________________________________________________________________
+
+Döngülerin Karakteristik Durumları:
+1-Ne kadar çalışacagı belli olan(Sonlu)
+2-Ne kadar çalışacağo belli olmayan(Sonsuz)
+
+________________________________________________________________________________________________________________________________________________________________________

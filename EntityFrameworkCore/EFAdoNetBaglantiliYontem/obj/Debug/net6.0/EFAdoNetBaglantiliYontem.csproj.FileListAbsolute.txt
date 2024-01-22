@@ -1,0 +1,72 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.CopyComplete
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\refint\EFAdoNetBaglantiliYontem.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\ref\EFAdoNetBaglantiliYontem.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\EFAdoNetBaglantiliYontem.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.csproj.CopyComplete
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\refint\EFAdoNetBaglantiliYontem.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\EFAdoNetBaglantiliYontem.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFAdoNetBaglantiliYontem\obj\Debug\net6.0\ref\EFAdoNetBaglantiliYontem.dll

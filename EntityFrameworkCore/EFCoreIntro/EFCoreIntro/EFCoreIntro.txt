@@ -1,0 +1,88 @@
+﻿__________________________________________________________________________________________________________________________
+
+ORM (Object-Relational Mapping)
+
+*ORM, nesne yönelimli programlama dillerinde kullanılan bir tekniktir 
+ve veritabanındaki tabloları sanki programınızın içindeki sınıflarmış gibi kullanmanızı sağlar
+
+Veritabanı Soyutlaması: ORM, veritabanı tablolarınızı nesne olarak kodlarınız içinde temsil eder. 
+Böylece SQL sorguları yazmak yerine, nesne yönelimli kod yazarak veri işleyebilirsiniz.
+
+Verimlilik: Karmaşık sorgular ve ilişkileri yönetmek için SQL yerine, nesne yönelimli dili kullanabilirsiniz.
+Bu, geliştirme sürecini hızlandırabilir.
+
+Dil Bağımsızlığı: ORM kütüphaneleri, farklı programlama dilleri için mevcuttur ve aynı mantığı takip eder,
+böylece dil değişse bile ORM kullanımı çok benzer kalır.
+
+Veritabanı Bağımsızlığı: Çoğu ORM, çeşitli veritabanları arasında kolay geçiş yapmanızı sağlar. 
+Yani, PostgreSQL'den MySQL'e geçiş yaparken, sadece ORM yapılandırmasını değiştirmeniz gerekir, sorgularınız aynı kalabilir.
+__________________________________________________________________________________________________________________________
+
+Entity Framework Core Nedir?
+
+*Entity Framework Core (EF Core), Microsoft tarafından geliştirilen, açık kaynaklı, hafif, 
+genişletilebilir ve platformlar arası bir Object-Relational Mapper (ORM) aracıdır. 
+.NET uygulamalarında veritabanları ile etkileşimde bulunmak için kullanılır.
+
+__________________________________________________________________________________________________________________________
+
+Entity Framework Core Özellikleri?
+
+*Platformlar Arası Uyumluluk: EF Core, .NET Core ile uyumlu olarak çalışır 
+ve bu sayede Windows, macOS ve Linux üzerinde çalışabilen uygulamalar geliştirebilirsiniz.
+
+*LINQ Desteği: Güçlü tür denetimli sorgulama imkanı sağlar ve Language Integrated Query (LINQ) 
+ile veritabanı sorgularını kolayca yazabilirsiniz.
+
+*Code-First Yaklaşımı: Modelinizi C# kodu olarak yazabilir ve EF Core, 
+bu modeli kullanarak veritabanı şemasını oluşturabilir veya güncelleyebilir.
+
+*Migrations: Uygulamanızın veritabanı şemasındaki değişiklikleri y
+önetmek ve izlemek için kullanılır.
+
+*Performans: Önceki sürümlere göre optimize edilmiş sorgular ve 
+hafif tasarım sayesinde yüksek performans sunar.
+
+*İzleme ve Diagnostik: EF Core, sorgularınız ve veritabanı bağlantınız 
+üzerinde detaylı izleme ve diagnostik bilgiler sağlar.
+
+*Modülerlik: İhtiyacınız olan özelliklere göre paketleri seçebilir 
+ve uygulamanıza ekleyebilirsiniz.
+
+*Global Query Filters: Bir model sınıfı için global olarak uygulanacak 
+sorgu filtrelerini tanımlamanıza olanak tanır.
+__________________________________________________________________________________________________________________________
+
+EFCore Tracking?
+
+*Tracking, EF Core'un bir veritabanındaki verileri temsil eden 
+varlık nesnelerinin (entity objects) değişikliklerini izlemesi 
+ve DbContext'e yapılan değişikliklerin veritabanına nasıl 
+yansıtılacağını belirlemesi anlamına gelir.
+
+EF Core'da varlıklar şu durumlarla izlenebilir:
+
+Unchanged: Varlık yüklendiği andan itibaren herhangi bir değişikliğe uğramamışsa.
+Modified: Varlık üzerinde bir veya daha fazla özellik değiştirildiğinde.
+Added: Varlık yeni oluşturuldu ve henüz veritabanına eklenmediğinde.
+Deleted: Varlık silinmek üzere işaretlendiğinde.
+Detached: Varlık herhangi bir izleme context'i tarafından takip edilmiyor.
+
+EF Core, varlıkları izleyerek SaveChanges() veya SaveChangesAsync() metotları çağrıldığında yapılacak işlemleri belirler:
+
+Added durumundaki varlıklar için INSERT işlemleri,
+Modified durumundaki varlıklar için UPDATE işlemleri,
+Deleted durumundaki varlıklar için DELETE işlemleri gerçekleştirir.
+
+AsNoTracking() metodu kullanılarak sorgu no-tracking olarak işaretlenir 
+ve bu varlık üzerindeki değişiklikler EF Core tarafından izlenmez. 
+Bu, özellikle büyük veri setleri okunurken ve veri manipülasyonunun 
+gerekmediği raporlama gibi işlemlerde önemli performans kazançları sağlar.
+
+// Tracking query
+var userWithTracking = context.Users.FirstOrDefault(u => u.Id == 1);
+
+// No-Tracking query
+var userWithoutTracking = context.Users.AsNoTracking().FirstOrDefault(u => u.Id == 1);
+
+__________________________________________________________________________________________________________________________

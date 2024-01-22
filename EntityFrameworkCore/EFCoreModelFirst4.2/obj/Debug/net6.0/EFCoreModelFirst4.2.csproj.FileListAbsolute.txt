@@ -1,0 +1,104 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Humanizer.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Oracle.EntityFrameworkCore.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.CopyComplete
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\refint\EFCoreModelFirst4.2.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\ref\EFCoreModelFirst4.2.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\EFCoreModelFirst4.2.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Humanizer.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Oracle.EntityFrameworkCore.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.csproj.CopyComplete
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\refint\EFCoreModelFirst4.2.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\EFCoreModelFirst4.2.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreModelFirst4.2\obj\Debug\net6.0\ref\EFCoreModelFirst4.2.dll

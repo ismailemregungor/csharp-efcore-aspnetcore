@@ -1,0 +1,90 @@
+﻿_____________________________________________________________________________________
+Kurulumlar:
+
+Nuget > Microsoft.EntityFrameworkCore
+Nuget > Oracle.EntityFrameworkCore
+Nuget > Microsoft.EntityFrameworkCore.Tools
+Nuget > Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Nuget > Microsoft.AspNetCore.Identity.UI
+
+Package Manager Console:
+
+Scaffold-DbContext "User Id=product; Password=product; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER=DEDICATED)(SID = orcl)))" Oracle.EntityFrameworkCore -o Models
+
+_____________________________________________________________________________________
+
+Program.cs
+
+builder.Services.AddDbContext<ModelContext>();
+
+builder.Services.AddDefaultIdentity<IdentityUser>();
+
+--> sonra şöyle olacak
+
+builder.Services.AddDbContext<ModelContext>(x => x.UseOracle(builder.Configuration.GetConnectionString("ConnStr")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<ModelContext>();
+
+--> sonra şöyle olacak
+
+builder.Services
+    .AddDefaultIdentity<IdentityUser>(x => { x.SignIn.RequireConfirmedEmail = false; })
+    .AddEntityFrameworkStores<ModelContext>();
+
+_____________________________________________________________________________________
+
+PM> add-migration AddIdentity
+
+--> Yukarıdaki komutu yazınca aşağıdaki hatayı verirse:
+
+The entity type 'IdentityUserLogin<string>' requires a primary key to be defined. 
+If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. 
+For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943
+
+_____________________________________________________________________________________
+
+--> Aşağıdakileri ModelContext sınıfı içerisine ekle:
+
+OnConfiguring() Metodu içerisine:
+
+base.OnConfiguring(optionsBuilder);
+
+OnCreating() Metodu içerisine:
+
+base.OnModelCreating(modelBuilder);
+
+_____________________________________________________________________________________
+
+Add > New Scaffold Item > Identity > Add
+Register, Login, Logout seç context dosyasını göster.
+_____________________________________________________________________________________
+
+Program.cs üzerindeki aşağıdaki kodu yorum satırına al
+
+var connectionString = builder.Configuration.GetConnectionString("ModelContextConnection")
+?? throw new InvalidOperationException("Connection string 'ModelContextConnection' not found.");
+_____________________________________________________________________________________
+
+Views > Shared > _Layout.cshtml içerisinde ilgili kısma aşağıdaki kodu ekle:
+
+            <div>
+                @Html.Partial("_LoginPartial")
+            </div>
+
+_____________________________________________________________________________________
+
+Program.cs içerisine aşağıdaki kodu ekle ve register login aktifleşicek.
+
+app.MapRazorPages();
+
+_____________________________________________________________________________________
+
+Register:
+
+deneme@gmail.com
+Deneme.123456
+
+_____________________________________________________________________________________
+
+
+_____________________________________________________________________________________

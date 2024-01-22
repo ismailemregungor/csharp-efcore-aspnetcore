@@ -1,0 +1,122 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Object Oriented Programming:
+
+*Gerçek dünya nesnelerini ve onların etkileşimlerini modelleyerek karmaşık problemleri çözme yaklaşımıdır.
+______________________________________________________________________________________________________________________________________________________________________
+
+1-Kapsülleme (Encapsulation):
+
+*Kapsülleme, bir nesnenin iç detaylarını gizleyerek ve sadece gerekli bilgileri dışa açarak kodun daha güvenli hale getirilmesidir.
+*Erişim belirleyiciler (public, private, protected, internal, protected internal) kullanılarak gerçekleştirilir.
+*Özelliklere erişimi kontrol etmek için get ve set metotları kullanılır.
+
+public class Employee
+{
+    private int salary;
+
+    public void SetSalary(int s)
+    {
+        if (s > 0)
+            salary = s;
+        else
+            Console.WriteLine("Salary cannot be negative");
+    }
+
+    public int GetSalary()
+    {
+        return salary;
+    }
+}
+
+Bu örnekte, salary özelliği private olarak tanımlanmıştır ve sadece SetSalary ve GetSalary metotları üzerinden erişilebilir.
+
+public class Employee
+{
+    private string name;
+
+    public string GetName()
+    {
+        return name;
+    }
+
+    public void SetName(string newName)
+    {
+        name = newName;
+    }
+}
+
+// Özet: 'Employee' sınıfı, 'name' değişkenini kapsüller ve dış dünya ile etkileşim için kamu erişimcileri sağlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+2-Miras/Kalıtım/Türetme (Inheritance): 
+
+*Kalıtım, bir sınıfın başka bir sınıfın özelliklerini ve metotlarını miras almasını sağlar.
+*Bu, kodun yeniden kullanılabilirliğini artırır ve sürdürülebilirliği sağlar.
+
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking");
+    }
+}
+
+Bu örnekte, Dog sınıfı Animal sınıfından türemiştir ve Eat metodu ile birlikte Bark metoduna da sahiptir.
+_______________________________________________________________________________________________________________________________________________________________________
+
+3-Soyutlama (Abstraction):
+
+*Soyutlama, bir nesnenin karmaşık işleyişini gizleyerek sadece gerekli bilgileri ve işlemleri dışa açar.
+*Abstrakt sınıflar ve arayüzler (interfaces) kullanılarak gerçekleştirilir.
+
+public abstract class Shape
+{
+    public abstract void Draw();
+}
+
+public class Circle : Shape
+{
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle");
+    }
+}
+
+Bu örnekte, Shape abstrakt bir sınıftır ve Draw abstrakt bir metodtur. Circle sınıfı Shape sınıfından türemiştir ve Draw metodunu gerçekleştirmiştir.
+abstract>overriode
+_______________________________________________________________________________________________________________________________________________________________________
+
+4-Çok Biçimlilik (Polymorphism): 
+*Çok biçimlilik, aynı arayüzün farklı sınıflar tarafından farklı şekillerde uygulanmasını sağlar.
+*Metod aşırı yükleme (overloading) ve metod geçersiz kılma (overriding) ile gerçekleştirilir.
+
+public class Animal
+{
+    public virtual void Sound()
+    {
+        Console.WriteLine("Some sound");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void Sound()
+    {
+        Console.WriteLine("Barking");
+    }
+}
+
+Bu örnekte, Dog sınıfı Animal sınıfından türemiştir ve Sound metodunu geçersiz kılarak kendi versiyonunu sunmuştur.
+polimorphism uygulanacak metodu virtual ile uygulanmış metodu ise override ile işaretliyoruz.
+virtual>override
+_______________________________________________________________________________________________________________________________________________________________________

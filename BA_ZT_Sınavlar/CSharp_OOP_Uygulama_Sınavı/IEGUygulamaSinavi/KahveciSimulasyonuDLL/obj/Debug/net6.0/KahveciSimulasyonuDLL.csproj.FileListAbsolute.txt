@@ -1,0 +1,36 @@
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.deps.json
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.AssemblyReference.cache
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfoInputs.cache
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfo.cs
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\refint\KahveciSimulasyonuDLL.dll
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\halkbank2\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\ref\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.deps.json
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfo.cs
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\refint\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\iegof\Desktop\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\ref\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\bin\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\refint\KahveciSimulasyonuDLL.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\KahveciSimulasyonuDLL.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\CSharp_OOP\IEGUygulamaSinavi\KahveciSimulasyonuDLL\obj\Debug\net6.0\ref\KahveciSimulasyonuDLL.dll

@@ -1,0 +1,34 @@
+﻿Banka Simülasyonu:
+
+*Bir bankada müşteriler sırayla işlemlerini yapmaktadırlar.
+*Müşterilere hizmet veren vezneler(2-3 adet) vardır.
+*Müşteriler 3 farklı işlem yapabilmektedirler ve her işlemin ayrı bir süresi olacaktır.
+*Bir müşteri rastgele bir işlem ile vezneye gelecektir.
+*Veznedeki çalışanların durumu müsait yada mesgul olabilir.
+*Veznedeki çalışanların durumu musait olduğunda yeni müşteri vezneye gitmelidir.
+*Müşteri vezneye gittiğinde vezne durumu meşgul duruma gelmelidir.
+
+Havale işlemi süresi 5dk.
+Para çekme işlemi süresi 7dk.
+Para yatırma işlemi süresi 2dk.
+
+*Yukarıdaki isterleri verilen simülasyon sistemini geliştirecek sınıfları veya detaylı sınıf hiyerarşisini console uygulaması olarak C# dili ile tasarlayınız. 
+Tasarleken OOP prensipleri ve clean code kuralları dikkate alınmalıdır. 
+*CRUD işlemlerini yaparken Collection methodlarını kullanınız, linq kullanmayınız.
+*İsimlendirmeleri Türkçe dili kullanarak belirleyiniz.
+*Console uygulamasının isterlerinin simüle edilidği Program.cs kodlarınıda yazınız.
+
+Classes:
+Banka--> Manager Sınıfı
+Vezne
+Müşteriler
+Personeller
+Vezne
+Kisi
+Islem
+
+Enums:
+IslemTipi
+VezneDurumu
+
+etc...

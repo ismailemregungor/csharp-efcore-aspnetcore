@@ -1,0 +1,5 @@
+﻿Func?
+Expression?
+Func vs Expression?
+
+Expression daha performanslıdır.

@@ -1,0 +1,5 @@
+﻿.NET Framework 2001
+.NET core 2023
+
+*CLR?
+*BCL?

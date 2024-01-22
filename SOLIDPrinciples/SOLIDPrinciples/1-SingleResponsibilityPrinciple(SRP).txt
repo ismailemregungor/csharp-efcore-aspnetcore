@@ -1,0 +1,44 @@
+﻿____________________________________________________________________________________________________
+
+Single Responsibility Principle (SRP):
+
+SRP, bir sınıfın sadece bir sorumluluğa sahip olması gerektiğini belirten bir tasarım ilkesidir. Bu ilke, kodun bakımını ve anlaşılabilirliğini artırır.
+
+____________________________________________________________________________________________________
+Önemli Noktalar
+Tek Sorumluluk: Bir sınıf yalnızca bir işi yapmalıdır.
+Bakım Kolaylığı: Sorumluluklar ayrıldığında, kodun bakımı daha kolaydır.
+Test Edilebilirlik: Tek bir sorumluluğa odaklanan sınıflar, test etmek için daha basittir.
+Düşük Bağımlılık: SRP, sınıflar arası bağımlılıkları azaltır.
+Değişikliklere Karşı Esneklik: Tek bir sorumluluk taşıyan sınıflar, değişikliklere daha esnek bir şekilde adapte olabilirler.
+Kullanım Amaçları ve Senaryoları
+Modülerlik: Uygulamanın modüler bir yapıda olması, her modülün belirli bir işlevi yerine getirmesi.
+Bakım ve Güncelleme: Bir sınıfın işlevselliğini güncellerken, diğer işlevler üzerinde yan etkilerin azaltılması.
+Yeniden Kullanılabilirlik: Belirli bir işlevi gerçekleştiren sınıfların başka yerlerde yeniden kullanılabilmesi.
+____________________________________________________________________________________________________
+Kullanım Amaçları ve Senaryoları
+Modülerlik: Uygulamanın modüler bir yapıda olması, her modülün belirli bir işlevi yerine getirmesi.
+Bakım ve Güncelleme: Bir sınıfın işlevselliğini güncellerken, diğer işlevler üzerinde yan etkilerin azaltılması.
+Yeniden Kullanılabilirlik: Belirli bir işlevi gerçekleştiren sınıfların başka yerlerde yeniden kullanılabilmesi.
+____________________________________________________________________________________________________
+
+public class User
+{
+    public void Register(string email, string password)
+    {
+        // Kullanıcı kaydı işlemleri
+    }
+}
+
+public class EmailService
+{
+    public void SendEmail(string message)
+    {
+        // E-posta gönderme işlemleri
+    }
+}
+
+
+Açıklama: User sınıfı sadece kullanıcı kaydıyla ilgilenirken, EmailService sınıfı e-posta gönderme işlemlerini yönetiyor. Bu şekilde her sınıf yalnızca bir sorumluluğa sahip olur, bu da SRP ilkesine uygundur. Bu ayrım, kodun bakımını ve genişletilmesini kolaylaştırır.
+
+____________________________________________________________________________________________________

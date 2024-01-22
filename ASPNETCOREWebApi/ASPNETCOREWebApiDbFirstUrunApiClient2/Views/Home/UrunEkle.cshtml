@@ -1,0 +1,50 @@
+﻿@model Urun
+
+@{
+    ViewData["Title"] = "UrunEkle";
+}
+
+<h1>UrunEkle</h1>
+
+<h4>Urun</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UrunEkle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UrunId" class="control-label"></label>
+                <input asp-for="UrunId" class="form-control" />
+                <span asp-validation-for="UrunId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrunAdi" class="control-label"></label>
+                <input asp-for="UrunAdi" class="form-control" />
+                <span asp-validation-for="UrunAdi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UrunFiyati" class="control-label"></label>
+                <input asp-for="UrunFiyati" class="form-control" />
+                <span asp-validation-for="UrunFiyati" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KategoriId" class="control-label"></label>
+                <input asp-for="KategoriId" class="form-control" />
+                <span asp-validation-for="KategoriId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

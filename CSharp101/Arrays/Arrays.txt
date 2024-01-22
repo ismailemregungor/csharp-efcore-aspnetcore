@@ -1,0 +1,76 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Arrays-Diziler:
+
+*Aynı türden birçok değeri tek bir değişken adı altında saklamamızı sağlar.
+*Aynı tip verileri tutan
+*boyutu önceden belirlenmiş
+*verilere indis üzerinden ulaşabileceğimiz
+*verilerin sıra ile tutulduğu 
+*veri yapısıdır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+Düzenli Diziler:
+
+*1 boyutlu:
+tip[] diziAdı = new tip[uzunluk];
+
+int[] sayilar = new int[3];
+sayilar[0] = 10;
+sayilar[1] = 20;
+sayilar[2] = 30;
+
+Çok Boyutlu Diziler: Matris benzeri yapılarda kullanılır.
+*2 boyutlu:
+tip[,] diziAdı = new tip[satırSayısı, sütunSayısı];
+
+int[,] matris = 
+{
+    {1, 2},
+    {3, 4},
+    {5, 6}
+};
+
+int[,] matris = 
+{
+    {1, 2},
+    {3, 4},
+    {5, 6}
+};
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        Console.Write(matris[i, j] + " ");
+    }
+    Console.WriteLine();
+}
+
+
+*3 boyutlu:
+
+Düzensiz Diziler:
+
+*jagged array
+________________________________________________________________________________________________________________________________________________________________________
+
+Diziler ve Döngüler Hakkında Önemli Noktalar:
+
+for Döngüsü İle Dizi Kullanımı: Dizi elemanlarına indeks numarası ile erişilir.
+
+int[] numaralar = { 1, 2, 3, 4, 5 };
+for (int i = 0; i < numaralar.Length; i++)
+{
+    Console.WriteLine(numaralar[i]);
+}
+
+
+foreach Döngüsü İle Dizi Kullanımı: Dizi elemanlarına direkt olarak erişilir.
+
+string[] meyveler = { "elma", "muz", "armut" };
+foreach (string meyve in meyveler)
+{
+    Console.WriteLine(meyve);
+}

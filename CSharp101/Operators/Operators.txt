@@ -1,0 +1,38 @@
+﻿Operators-Operatörler
+
+*1 Operandlı(i++, i--, ++i, --i)
+*2 Operandlı(4+5, 6%3)
+*3 Operandlı(? : )
+*Aritmatiksel(+ - * /)
+*Atama(= += -= *= /=)
+*Mantıksal(&&(ve) ||(veya) !(not)
+*Karşılaştırma(> < >= <= == !=)
+
+Aritmetik Operatörler: Bu operatörler matematiksel işlemleri gerçekleştirmek için kullanılır (+, -, *, /, %, ++, --).
+Karşılaştırma Operatörleri: Bu operatörler iki değeri karşılaştırmak için kullanılır (==, !=, >, <, >=, <=).
+Mantıksal Operatörler: Bu operatörler mantıksal işlemleri gerçekleştirmek için kullanılır (&&, ||, !).
+Atama Operatörleri: Bu operatörler değerleri değişkenlere atamak için kullanılır (=, +=, -=, *=, /=, %=, ...).
+Bitwise Operatörleri: Bu operatörler bit düzeyinde işlemler gerçekleştirmek için kullanılır (&, |, ^, ~, <<, >>).
+
+*Atama operatöründe operandlar tip olarak birbirine eşit olmalı
+*Karşılaştırma operatörü geriye boolean yani true-false döndürür..
+
+Doğruluk Tabloları:
+
+*AND
+0 0 --> 0 
+0 1 --> 0
+1 0 --> 0
+1 1 --> 1
+
+*OR
+0 0 --> 0 
+0 1 --> 1
+1 0 --> 1
+1 1 --> 1
+
+*NOT
+!0 --> 1
+!1 --> 0
+________________________________________________________________________________________________________________________________________________________________________
+

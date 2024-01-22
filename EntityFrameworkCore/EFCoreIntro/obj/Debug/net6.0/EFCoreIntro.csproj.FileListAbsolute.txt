@@ -1,0 +1,30 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\refint\EFCoreIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\ref\EFCoreIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\bin\Debug\net6.0\EFCoreIntro.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\refint\EFCoreIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\EFCoreIntro.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\EFCoreIntro\obj\Debug\net6.0\ref\EFCoreIntro.dll

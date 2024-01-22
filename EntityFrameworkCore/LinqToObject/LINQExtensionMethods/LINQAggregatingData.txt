@@ -1,0 +1,13 @@
+﻿__________________________________________________________________________________________________________________________
+
+Count() ile koleksiyondaki eleman sayısı bulunur.
+Average() ile sayısal değerlerin ortalaması hesaplanır.
+Sum() ile sayısal değerlerin toplamı alınır.
+Min() ve Max() ile sırasıyla en küçük ve en büyük değerler bulunur.
+MinBy() ve MaxBy() ile belirli bir özelliğe göre en küçük veya en büyük öğeler bulunur.
+Aggregate() ile özelleştirilmiş toplama işlemleri yapılabilir.
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

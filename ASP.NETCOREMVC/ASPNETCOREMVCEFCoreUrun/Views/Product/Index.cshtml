@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Product>
+
+<body>
+    <div class="container mt-5">
+        <h2>Ürünler</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Brand</th>
+                    <th>Category</th>
+                    <th>Image</th> 
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.ProductID</td>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.Description</td>
+                        <td>@product.Brand?.Name</td>
+                        <td>@product.Category?.Name</td>
+@*                        <td>
+                            <img src="@Url.Content(product.ImagePath)" alt="Product Image" style="height: 50px;" />
+                            
+                        </td> *@
+                        <td><img src="~/images/@product.ImagePath" width="100px" height="100px" /></td>
+
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@product.ProductID" class="btn btn-primary btn-sm">Güncelle</a>
+                            <a asp-action="Delete" asp-route-id="@product.ProductID" class="btn btn-danger btn-sm">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-action="Create" class="btn btn-success">Yeni Ürün Ekle</a>
+    </div>
+</body>

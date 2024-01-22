@@ -1,0 +1,76 @@
+﻿____________________________________________________________________________________________________
+
+Interface Segregation Principle (ISP)
+
+Interface Segregation Principle (ISP), sınıfların kullanmadıkları arayüzleri uygulamak zorunda kalmaması gerektiğini belirten bir tasarım ilkesidir. Bu ilke, daha temiz ve odaklanmış kod yazmayı teşvik eder.
+____________________________________________________________________________________________________
+
+Önemli Noktalar
+Arayüz Ayrımı: Büyük, genel arayüzler küçük, özelleşmiş arayüzlerle ayrılmalıdır.
+Özelleşme: Sınıflar sadece ihtiyaç duydukları işlevselliği içeren arayüzleri uygulamalıdır.
+Esneklik: Küçük arayüzler, kodun daha esnek ve modüler olmasını sağlar.
+Bakım Kolaylığı: Arayüzlerin ayrılması, kodun bakımını ve anlaşılabilirliğini artırır.
+Yeniden Kullanılabilirlik: Özelleşmiş arayüzler, daha geniş bir kullanım yelpazesi için uygun olabilir.
+____________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları
+Modüler Kodlama: Kodun modüler ve yeniden kullanılabilir olmasını sağlamak.
+Sürdürülebilirlik: Sınıfların sadece gerçekten ihtiyaç duydukları işlevselliği içermesi, sürdürülebilirliği artırır.
+Bağımlılık Yönetimi: Sınıfların gereksiz bağımlılıklardan kaçınması.
+____________________________________________________________________________________________________
+
+// Yanlış Yaklaşım
+public interface IMachine
+{
+    void Print(Document d);
+    void Scan(Document d);
+    void Fax(Document d);
+}
+
+public class MultiFunctionPrinter : IMachine
+{
+    public void Print(Document d) { /* Yazdırma işlemi */ }
+    public void Scan(Document d) { /* Tarama işlemi */ }
+    public void Fax(Document d) { /* Faks işlemi */ }
+}
+
+// Doğru Yaklaşım
+public interface IPrinter
+{
+    void Print(Document d);
+}
+
+public interface IScanner
+{
+    void Scan(Document d);
+}
+
+public class Printer : IPrinter
+{
+    public void Print(Document d) { /* Yazdırma işlemi */ }
+}
+
+public class Scanner : IScanner
+{
+    public void Scan(Document d) { /* Tarama işlemi */ }
+}
+
+public class MultiFunctionMachine : IPrinter, IScanner
+{
+    private IPrinter printer;
+    private IScanner scanner;
+
+    public MultiFunctionMachine(IPrinter printer, IScanner scanner)
+    {
+        this.printer = printer;
+        this.scanner = scanner;
+    }
+
+    public void Print(Document d) { printer.Print(d); }
+    public void Scan(Document d) { scanner.Scan(d); }
+}
+
+Açıklama: Yanlış yaklaşımda, IMachine arayüzü birden fazla işlevi içerir ve bu, sınıfların kullanmadıkları işlevleri de uygulamalarını gerektirir. Doğru yaklaşımda ise, IPrinter ve IScanner gibi özelleşmiş arayüzler kullanılır. Bu, sınıfların sadece ihtiyaç duydukları işlevleri uygulamalarını sağlar ve ISP ilkesine uygun bir yapı oluşturur. Bu yaklaşım, kodun daha esnek, anlaşılır ve bakımı kolay olmasını sağlar.
+____________________________________________________________________________________________________
+
+____________________________________________________________________________________________________

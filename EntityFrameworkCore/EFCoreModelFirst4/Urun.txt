@@ -1,0 +1,9 @@
+﻿UrunAdi, fiyati, ve kategori bilgilerini tutan bir oracle veritabanını
+EF Core code first yöntemiyle oluşturup;
+
+Bilgi Ekleme
+Listeleme(id'ye göre arama, tüm ürünler, kategori adina göre ürünler)
+Güncelleme
+Silme
+
+gibi CRUD işlemlerini LINQ ile yapan C# Console uygulamasını geliştiriniz.

@@ -1,0 +1,23 @@
+﻿___________________________________________________________________________________________
+HTML?
+
+HTML sayfaları compile edilmez yorumlanır.
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+https://www.w3schools.com/html/default.asp
+___________________________________________________________________________________________
+Links:
+___________________________________________________________________________________________
+Images:
+
+*Image tag'inin width height değerlerini küçültmek
+resmin boyutunu mb yada kb cinsten küçüldüğü anlamına gelmez.
+___________________________________________________________________________________________
+
+Forms:
+
+*verilerin client'den serever'a gönderilmesi işlemine post ve postback denir.
+*form'un methodu post olursa psotback, get olursa querystring üzerinden gider.
+___________________________________________________________________________________________

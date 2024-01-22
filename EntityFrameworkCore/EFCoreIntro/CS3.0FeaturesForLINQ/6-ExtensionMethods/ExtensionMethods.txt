@@ -1,0 +1,44 @@
+﻿__________________________________________________________________________________________________________________________
+
+//1-Extension metodlar static sınıflara yazılmalı...
+//2-O zaman yazılacak metodlarda static olmalı...
+//3-Metodun ilk parametresinde nereye ekleneceği belirtilir, eger baska parametrelere ihtiyac varsa 2. parametreden itibaren yazılır...
+__________________________________________________________________________________________________________________________
+
+Extension Methods:
+
+Default Şablon: public static ReturnType MethodName(this Type parameter, AdditionalParameters)
+
+Önemli Noktalar:
+
+*Mevcut türler için yeni metodlar eklemenize olanak tanır.
+*LINQ'nun esnekliğini ve yeniden kullanılabilirliğini artırır.
+*Static sınıflar içinde tanımlanır ve ilk parametre this anahtar kelimesi ile belirtilir.
+
+Extension Methods:
+
+1-Extension methodlar static sınıflara yazılır.
+2-EM'lar static olmalıdır.
+3-Metodun ilk parametresinde nereye ekleneceği belirtilir,
+eğer başka parametrelere ihtiyaç varsa 2. parametreden
+itibaren yazılır.
+
+__________________________________________________________________________________________________________________________
+
+public static class MyExtensions
+{
+    public static IEnumerable<Student> FilterByAge(this IEnumerable<Student> studentEnum, int age)
+    {
+        foreach (Student s in studentEnum)
+        {
+            if (s.Age >= age) yield return s;
+        }
+    }
+}
+
+// Kullanımı:
+var filteredStudents = students.FilterByAge(18);
+
+FilterByAge bir extension metodu olarak tanımlanmış ve LINQ sorguları gibi davranabilir, belirli bir yaşa göre öğrencileri filtreler.
+
+__________________________________________________________________________________________________________________________

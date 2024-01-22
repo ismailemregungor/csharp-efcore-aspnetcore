@@ -1,0 +1,51 @@
+﻿__________________________________________________________________________________________________________________________
+
+*Oluşturulan Context sınıfı DbContext sınıfından kalıtılır ve aşağıdaki işlemler yapılır.
+__________________________________________________________________________________________________________________________
+Default Constructor:
+
+        public KitapContext()
+        {
+            
+        }
+__________________________________________________________________________________________________________________________
+DBContext sınıfından gelen Constructor:
+        public KitapContext(DbContextOptions<KitapContext> options):base(options) 
+        {
+            
+        }
+__________________________________________________________________________________________________________________________
+
+Tablo Tanımlamaları:
+
+        public DbSet<Kullanici> Kullanicilar { get; set; }
+        public DbSet<Kitap> Kitaplar { get; set; }
+        public DbSet<Yayinevi> Yayinevleri { get; set; }
+__________________________________________________________________________________________________________________________
+
+OnConfiguring Metodu:
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+
+            optionsBuilder.UseOracle("User Id = kitap; Password = kitap; Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 127.0.0.1)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SID = orcl)))");
+        }
+
+__________________________________________________________________________________________________________________________
+
+OnModelCreating Metodu:
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new Kullanici_CFG());
+            modelBuilder.ApplyConfiguration(new Yayinevi_CFG());
+            modelBuilder.ApplyConfiguration(new Kitap_CFG());
+        }
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

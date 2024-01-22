@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       h1,h2{
+         /*Açıklama satırı*/
+         /*Grouping selectors */
+          color:gray;
+       }
+
+       /*div icindeki tum H1 lere uygula... */
+       div h1{
+        color:orange;
+       }
+
+       /*Sadece cocuklara uygula, torunlara uygulama...  */
+       div.kutu>h1{
+        color:green;
+        background-color: gray;
+       }
+
+        /*Kendisinden sonraki ilk elemente uygula...*/
+       /* div+h1{
+       
+        color:steelblue;
+       } */
+
+       /*Kendisinden sonraki tum elemente uygula...*/
+       div~h1{
+        
+        color:steelblue;
+       }
+
+       /* tr:nth-child(odd)
+       {
+         background-color: lightblue;
+       }
+       tr:nth-child(even)
+       {
+         background-color: lightcoral;
+       } */
+       tr:nth-child(3n)
+       {
+         background-color: lightblue;
+       }
+       tr:nth-child(3n+1)
+       {
+         background-color: lightcoral;
+       }
+       tr:nth-child(3n+2)
+       {
+         background-color: lightgreen;
+       }
+       tr:first-child
+       {
+         background-color: black;
+       }
+
+       a{
+        color:orange;
+        text-decoration: none;
+        font-size: 40px;
+
+       }
+       a:hover{
+        color:gray;
+        text-decoration: underline;
+        font-size: 40px;
+        
+       }
+
+       .box{
+        width: 300px;
+        height: 300px;
+        background-color:lightblue;
+        border: 1px dashed gray;
+       }
+       .box:hover{
+        width: 300px;
+        height: 300px;
+        border: 1px solid #333333;
+        background-color:lightgray;
+       }
+    </style>
+</head>
+<body>
+    <h1>Merhaba</h1>
+    <h2>Dunya</h2>
+
+    <div>
+        <h1>Div içinde H1</h1>
+         <div class="kutu">
+            aaaa
+            <h1>kutu içinde H1</h1>
+            <span>
+                <h1>span icinde H1</h1>
+            </span>
+         </div>
+        <h1>Div içinde H1</h1>
+    </div>
+    <h1>Div den sonra....1</h1>
+    <h1>Div den sonra....2</h1>
+    <h1>Div den sonra....3</h1>
+
+    <table border="1">
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+    </table>
+
+    <a href="http://www.google.com">Google</a>
+    <a href="http://www.yahoo.com">Yahoo</a>
+    <a href="http://www.Gmail.com">Gmail</a>
+    <br><br><br>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

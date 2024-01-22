@@ -1,0 +1,226 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+this keyword:
+
+*"this" bir metodun veya özelliğin içinde kullanıldığında, o metod veya özellik içindeki mevcut sınıf örneğini (nesnesini) işaret eder.
+*"this" aynı isimli yerel değişkenlerle sınıf üyeleri arasındaki belirsizliği giderir.
+*Yapıcılar arası (constructor chaining) çağrılar yapmak için "this" kullanılır; bu, bir yapıcıdan diğerine geçiş yapmayı sağlar.
+*"this" anahtar kelimesi, genişletme metodları yazarken de kullanılabilir, ancak bu durumda genişletilen tipin bir örneğini ifade eder.
+
+this Kullanım Amaçları:
+
+*Sınıf üyelerine erişimde,
+*Aynı sınıf içinde birden fazla yapıcı tanımlarken (constructor chaining),
+*Mevcut örneği döndüren metodlarda kullanılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Sınıf Üyelerine Erişim:
+
+class TestClass
+{
+    private int value;
+
+    public TestClass(int value)
+    {
+        this.value = value; // "this" kullanımı, yerel değişken ile üye değişken arasındaki farkı belirtir.
+    }
+}
+
+this.value:  this anahtar kelimesi, sınıfın mevcut örneğini ifade eder, dolayısıyla this.value sınıfın value adlı alanına erişimi sağlar.
+value: Yapıcı metoda parametre olarak verilen value'yi temsil eder. Bu parametre, metoda dışarıdan verilen değeri taşır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Mevcut Örneği Döndüren Metodlar:
+
+class TestClass
+{
+    private int value;
+
+    public TestClass SetValue(int newValue)
+    {
+        this.value = newValue;
+        return this; // Mevcut örneği döndürür.
+    }
+}
+
+// Özet: SetValue metodu, "this" anahtar kelimesini kullanarak güncellenmiş mevcut sınıf örneğini döndürür.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Aynı İsimli Değişkenlerde "this" Kullanımı:
+
+class TestClass
+{
+    private string name;
+
+    public TestClass(string name)
+    {
+        this.name = name; // "this" kullanımı, yerel değişken ile üye değişken arasındaki farkı belirtir.
+    }
+}
+
+// Özet: "this.name" sınıfın üye değişkenini, "name" ise yapıcıdaki parametreyi ifade eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Genişletme Metodunda "this":
+
+public static class ExtensionMethods
+{
+    public static void Print(this TestClass obj)
+    {
+        Console.WriteLine(obj.ToString());
+    }
+}
+
+// Özet: "Print" metodunu, TestClass türündeki bir objeye uygulamak için "this" kelimesi kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+ctor'da this kullanma - ctorlar arasında geçiş yapma (constructor chaining):
+
+*Constructor chaining, sınıfın birden fazla yapıcısının olduğu durumlarda kod tekrarını önlemek için kullanılır.
+*"this" anahtar kelimesi, bir yapıcıdan başka bir yapıcıya geçiş yapmayı sağlar.
+*"this" kullanılarak çağrılan yapıcı, çağrı yapan yapıcıdan önce çalışır.
+*"this" kullanımı, yapıcıların birbirlerini tamamlayıcı şekilde çalışmasını sağlar, böylece nesne başlatma işlemleri merkezi ve düzenli bir şekilde gerçekleştirilir.
+
+public ClassName(paramType1 param1, paramType2 param2, ...) : this(otherParams)
+{
+
+}
+
+Temel "this" Kullanımı::
+
+class TestClass
+{
+    private int value;
+    private string name;
+
+    // İlk yapıcı
+    public TestClass(int value) : this(value, "Default")
+    {
+        // Bu yapıcı, aşağıdaki yapıcıyı çağırır.
+    }
+
+    // İkinci yapıcı
+    public TestClass(int value, string name)
+    {
+        this.value = value;
+        this.name = name;
+    }
+}
+
+// Özet: İlk yapıcı, "this" anahtar kelimesi ile ikinci yapıcıyı çağırır ve "name" için varsayılan bir değer belirtir.
+
+
+class TestClass
+{
+    public TestClass(int a) : this(a, 5)
+    {
+    }
+
+    public TestClass(int a, int b)
+    {
+        // burada a ve b ile işlemler yapılır.
+    }
+}
+
+// Özet: İlk yapıcı, ikinci yapıcıyı "this" ile çağırıyor ve b için varsayılan bir değer ayarlıyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Birden Çok Yapıcı İle "this" Kullanımı:
+
+class TestClass
+{
+    private int a, b, c;
+
+    public TestClass(int a) : this(a, 5)
+    {
+    }
+
+    public TestClass(int a, int b) : this(a, b, 10)
+    {
+    }
+
+    public TestClass(int a, int b, int c)
+    {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+}
+
+// Özet: Her yapıcı, bir sonraki yapıcıyı "this" ile çağırıyor ve eksik parametreler için varsayılan değerler ayarlıyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+"this" İle Yapıcı Zincirleme:
+
+class TestClass
+{
+    private string name;
+    private int age;
+
+    public TestClass() : this("Default")
+    {
+    }
+
+    public TestClass(string name) : this(name, 18)
+    {
+    }
+
+    public TestClass(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+// Özet: Yapıcılar, önceki yapıcıyı "this" ile çağırarak zincirleme bir yapı oluşturur.
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+Varsayılan Değerler İle "this" Kullanımı:
+
+class TestClass
+{
+    private double size;
+    private string label;
+
+    public TestClass(double size) : this(size, "No label")
+    {
+    }
+
+    public TestClass(double size, string label)
+    {
+        this.size = size;
+        this.label = label;
+    }
+}
+
+// Özet: İlk yapıcı, ikinci yapıcıyı "this" ile çağırıyor ve "label" için varsayılan bir değer ayarlıyor.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+"this" Kullanımının Kısıtlamaları:
+
+class TestClass
+{
+    public TestClass(int a) : this(a, 5)
+    {
+    }
+
+    public TestClass(int a, int b)
+    {
+        // burada a ve b ile işlemler yapılır.
+    }
+
+    // Aşağıdaki gibi bir kullanım geçerli değildir.
+    // public TestClass(int a, int b, int c) : this(a, b) : this(a) // Geçersiz!
+}
+
+// Özet: Bir yapıcıdan yalnızca bir yapıcı çağırılabilir; çoklu "this" çağrılarına izin verilmez.
+
+________________________________________________________________________________________________________________________________________________________________________

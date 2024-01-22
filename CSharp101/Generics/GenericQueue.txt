@@ -1,0 +1,66 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+C# Queue<T> Sınıfına Giriş
+Queue<T> bir koleksiyon sınıfıdır ve öğeleri FIFO mantığına göre depolar. Bu, özellikle olay sıraları, iş yükü yönetimi ve her türlü durumda, öğelerin sırayla işlenmesi gerektiğinde kullanışlıdır.
+
+Önemli Noktalar:
+FIFO Mantığı: Queue, öğeleri ilk giren ilk çıkar mantığına göre işler.
+Tip Güvenliği: Belirli bir türdeki öğeleri depolar, bu da tür güvenliğini sağlar.
+Performans: Öğeleri eklemek ve kaldırmak için optimize edilmiş yöntemler sunar, bu da yüksek performans sağlar.
+Esneklik: Öğeleri geri almak, göz atmak ve daha fazlası için yöntemler sunar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Olay Sıraları: Olayların sırayla işlenmesini gerektiren sistemlerde kullanılır.
+İş Yükü Yönetimi: Görevlerin veya isteklerin sırayla işlenmesi gereken durumlarda kullanılır.
+Veri Akışı Yönetimi: Verilerin sıralı bir şekilde işlenmesi gerektiği durumlar için idealdir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Queue<string> myQueue = new Queue<string>();
+
+// Özet: Bu kod, string türünde yeni bir kuyruk oluşturur.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+myQueue.Enqueue("First");
+myQueue.Enqueue("Second");
+
+// Özet: Bu kod, kuyruğa iki öğe ekler.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+string firstInLine = myQueue.Dequeue();
+
+// Özet: Bu kod, kuyruktaki ilk öğeyi çıkarır ve çıkarılan öğeyi döndürür.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+string firstItem = myQueue.Peek();
+
+// Özet: Bu kod, kuyruktaki ilk öğeyi döndürür ancak kuyruktan çıkarmaz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+if (myQueue.Count == 0)
+{
+    Console.WriteLine("The queue is empty.");
+}
+
+// Özet: Bu kod, kuyruğun boş olup olmadığını kontrol eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+foreach (string item in myQueue)
+{
+    Console.WriteLine(item);
+}
+
+// Özet: Bu kod, kuyruktaki tüm öğeleri listeler.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

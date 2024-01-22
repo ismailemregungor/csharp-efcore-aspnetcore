@@ -1,0 +1,107 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Indexers - Indeksleyiciler:
+
+*"Indexer"lar, C# programlama dilinde bir sınıf veya yapı nesnesini dizi gibi kullanmanızı sağlar. 
+Dizilerin yaptığı gibi, index operatorünü kullanarak nesne örneklerindeki belirli öğelere erişebilirsiniz.
+*Indexer'lar this anahtar kelimesi kullanılarak tanımlanır, bu sayede nesne örnekleri dizilere benzer şekilde erişilebilir.
+*Indexer'lar genellikle bir get ve set accessor ile birlikte gelir, bunlar dizi öğelerine erişimi kontrol eder.
+*Index parametreleri genellikle tamsayıdır, ancak farklı türler kullanabilirsiniz.
+*Range checks önemlidir, çünkü geçersiz bir indekse erişmek IndexOutOfRangeException hatasına neden olabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Indexer:
+
+class SampleCollection
+{
+    private int[] arr = new int[10];
+
+    public int this[int i]
+    {
+        get { return arr[i]; }
+        set { arr[i] = value; }
+    }
+}
+
+// Özet: Bu sınıf, dışarıdan bir dizi gibi kullanılabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Farklı Veri Türüyle Indexer:
+
+class Dictionary
+{
+    private Dictionary<string, string> dictionary = new Dictionary<string, string>();
+
+    public string this[string key]
+    {
+        get { return dictionary[key]; }
+        set { dictionary[key] = value; }
+    }
+}
+
+// Özet: Bu örnek, string anahtarlarla çalışan bir indexer göstermektedir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kısıtlı Erişimli Indexer:
+
+class ReadonlyCollection
+{
+    private int[] arr = new int[10];
+
+    public int this[int i]
+    {
+        get { return arr[i]; }
+    }
+}
+
+// Özet: Bu örnek, yalnızca-okunabilir bir indexer sağlar. Dışarıdan değer atanamaz.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Çoklu Indexer:
+
+class MultiDimensional
+{
+    private int[,] arr = new int[10,10];
+
+    public int this[int x, int y]
+    {
+        get { return arr[x, y]; }
+        set { arr[x, y] = value; }
+    }
+}
+
+// Özet: Bu örnek, çok boyutlu bir dizi için indexer sağlar.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Hata Kontrollü Indexer:
+
+class SafeCollection
+{
+    private int[] arr = new int[10];
+
+    public int this[int i]
+    {
+        get
+        {
+            if (i < 0 || i >= arr.Length)
+                throw new IndexOutOfRangeException("Invalid index!");
+            return arr[i];
+        }
+        set
+        {
+            if (i < 0 || i >= arr.Length)
+                throw new IndexOutOfRangeException("Invalid index!");
+            arr[i] = value;
+        }
+    }
+}
+
+// Özet: Bu sınıf, indeks hatası kontrolü yaparak dışarıdan bir dizi gibi güvenli bir şekilde kullanılabilir.
+
+________________________________________________________________________________________________________________________________________________________________________

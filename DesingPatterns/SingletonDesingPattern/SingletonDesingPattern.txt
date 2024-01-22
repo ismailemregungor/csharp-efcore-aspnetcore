@@ -1,0 +1,22 @@
+﻿
+Singleton Design Pattern
+
+Tanım ve Amaç:
+
+Singleton Design Pattern, bir sınıfın yalnızca bir nesne örneğine 
+sahip olmasını sağlar.Bu pattern, global bir erişim noktası sunar 
+ve aynı anda sadece bir nesne örneğinin oluşturulduğundan emin olur.
+
+Önemli Noktalar:
+
+Tek Örnek Garantisi: Singleton, sınıfın yalnızca bir örneğini garanti eder.
+
+Erişilebilirlik: Bu tek örnek, uygulamanın herhangi bir yerinden erişilebilir olmalıdır.
+
+Tembellik (Lazy Instantiation): Nesne, ihtiyaç duyulana kadar oluşturulmayabilir, 
+kaynak kullanımını optimize eder.
+
+Eşzamanlılık Kontrolü: Çoklu-thread ortamlarında, eş zamanlı erişimlerde 
+sınıfın uygun şekilde davranmasını sağlamak önemlidir.
+
+Statik Üye Kullanımı: Singleton genellikle statik bir üye aracılığıyla erişilir.

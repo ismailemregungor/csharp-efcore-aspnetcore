@@ -1,0 +1,65 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+C# Stack<T> Tipine Giriş
+Stack<T> bir koleksiyon sınıfıdır ve öğeleri LIFO mantığına göre depolar. Bu, özellikle geri alma işlemleri, gezinme geçmişi ve diğer LIFO tabanlı senaryolarda kullanışlıdır.
+
+Önemli Noktalar:
+LIFO Mantığı: Stack, öğeleri son giren ilk çıkar mantığına göre işler.
+Tip Güvenliği: Belirli bir türdeki öğeleri depolar, bu da tür güvenliğini sağlar.
+Performans: Öğeleri eklemek ve kaldırmak için optimize edilmiş yöntemler sunar, bu da yüksek performans sağlar.
+Esneklik: Öğeleri geri almak, göz atmak ve daha fazlası için yöntemler sunar.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Geri Alma İşlemleri: Bir işlemi geri almak için önceki durumları saklama.
+Navigasyon Geçmişi: Bir uygulama veya web tarayıcısında gezinme geçmişi saklama.
+Yığın Belleği Yönetimi: Yerel değişkenler ve işlev çağrıları için yığın bellek yönetimi.
+Dil İşlemesi: Dil ayrıştırıcıları ve derleyicilerde kullanım için ara ifadelerin saklanması.
+________________________________________________________________________________________________________________________________________________________________________
+
+Stack<string> books = new Stack<string>();
+
+// Özet: Bu kod, string türünde yeni bir yığın oluşturur.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+books.Push("The Great Gatsby");
+books.Push("1984");
+
+// Özet: Bu kod, yığına iki kitap ekler.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+string topBook = books.Pop();
+
+// Özet: Bu kod, yığındaki en üstteki kitabı çıkarır ve çıkarılan kitabı döndürür.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+string currentBook = books.Peek();
+
+// Özet: Bu kod, yığındaki en üstteki kitabı döndürür ancak yığından çıkarmaz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+if (books.Count == 0)
+{
+    Console.WriteLine("The stack is empty.");
+}
+
+// Özet: Bu kod, yığının boş olup olmadığını kontrol eder.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+foreach (string book in books)
+{
+    Console.WriteLine(book);
+}
+
+// Özet: Bu kod, yığındaki tüm kitapları listeler.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

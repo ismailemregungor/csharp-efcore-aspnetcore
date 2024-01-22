@@ -1,0 +1,30 @@
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.exe
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.deps.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.runtimeconfig.json
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\refint\NLayerArchitectureIntro.dll
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.pdb
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\ref\NLayerArchitectureIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.exe
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.runtimeconfig.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\bin\Debug\net6.0\NLayerArchitectureIntro.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\refint\NLayerArchitectureIntro.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\NLayerArchitectureIntro.genruntimeconfig.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\NLayerArchitectureIntro\obj\Debug\net6.0\ref\NLayerArchitectureIntro.dll

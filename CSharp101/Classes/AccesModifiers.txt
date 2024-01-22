@@ -1,0 +1,205 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Access Modifiers:
+
+*Erişim belirleyicileri (Access Modifiers), C# dilinde bir sınıf, metod, ya da özellik gibi 
+üye ve türlerin başka kodlar tarafından nasıl erişilebileceğini belirleyen anahtar kelimelerdir. 
+*Erişim belirleyiciler, nesne yönelimli programlamanın önemli bir parçası olan kapsülleme prensibini sağlar.
+
+Default Şablonlar:
+
+*class: Varsayılan olarak internal olarak ayarlanmıştır. 
+Yani, sınıf sadece tanımlandığı assembly (derleme) içerisinden erişilebilirdir.
+
+*method, property, field: Varsayılan olarak private olarak ayarlanmıştır. 
+Yani, bunlar sadece tanımlandıkları sınıf içerisinden erişilebilirdir.
+
+private: Tanımlanan üye, yalnızca içinde tanımlandığı sınıf tarafından erişilebilir.
+public: Üye, herhangi bir sınıf veya metod tarafından erişilebilir.
+protected: Üye, içinde tanımlandığı sınıf ve bu sınıftan türetilen sınıflar tarafından erişilebilir.
+internal: Üye, kendi tanımlandığı derleme/assembly içinden erişilebilir, fakat diğer derlemelerden erişilemez.
+protected internal: Üye, tanımlandığı derlemede veya türetilmiş sınıflar aracılığıyla erişilebilir.
+private protected: Üye, yalnızca içinde tanımlandığı sınıf ve bu sınıftan türetilmiş olan, aynı derlemedeki/assembly'deki sınıflar tarafından erişilebilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Public:
+*Her yerden erişilebilir.
+*Erişim kısıtlaması yoktur.
+
+public class PublicClass
+{
+    public int PublicField;
+}
+
+public class TestClass
+{
+    public void TestMethod()
+    {
+        PublicClass obj = new PublicClass();
+        obj.PublicField = 10; // Bu alan her yerden erişilebilir.
+    }
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+Private:
+*Yalnızca tanımlandığı sınıf içerisinden erişilebilir.
+*En sıkı erişim seviyesidir.
+
+public class PrivateClass
+{
+    private int PrivateField;
+}
+
+public class TestClass
+{
+    public void TestMethod()
+    {
+        PrivateClass obj = new PrivateClass();
+        // obj.PrivateField = 10; // Hata! Bu alan yalnızca PrivateClass içerisinden erişilebilir.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Protected:
+*Tanımlandığı sınıf ve bu sınıftan türeyen sınıflardan erişilebilir.
+
+public class BaseClass
+{
+    protected int ProtectedField;
+}
+
+public class DerivedClass : BaseClass
+{
+    public void TestMethod()
+    {
+        ProtectedField = 10; // Bu alan erişilebilir çünkü DerivedClass, BaseClass'tan türemiş bir sınıftır.
+    }
+}
+
+public class AnotherClass
+{
+    public void TestMethod(BaseClass obj)
+    {
+        // obj.ProtectedField = 10; // Hata! Bu alan yalnızca BaseClass ve türemiş sınıflarından erişilebilir.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Internal:
+*Yalnızca tanımlandığı proje (assembly) içerisinden erişilebilir.
+
+internal class InternalClass
+{
+    public int PublicField;
+}
+
+public class TestClass
+{
+    public void TestMethod()
+    {
+        InternalClass obj = new InternalClass();
+        obj.PublicField = 10; // Bu alan erişilebilir çünkü InternalClass aynı projede tanımlanmış.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Protected Internal:
+*Tanımlandığı sınıf, türemiş sınıflar ve aynı proje içerisinden erişilebilir.
+
+public class BaseClass
+{
+    protected internal int ProtectedInternalField;
+}
+
+public class DerivedClass : BaseClass
+{
+    public void TestMethod()
+    {
+        ProtectedInternalField = 10; // Erişilebilir
+    }
+}
+
+public class AnotherClass
+{
+    public void TestMethod(BaseClass obj)
+    {
+        obj.ProtectedInternalField = 10; // Erişilebilir, çünkü aynı proje içerisinde
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Private Protected:
+*Yalnızca tanımlandığı sınıftan ve bu sınıftan türeyen sınıflardan, aynı zamanda aynı proje içerisinden erişilebilir.
+
+public class BaseClass
+{
+    private protected int PrivateProtectedField;
+}
+
+public class DerivedClass : BaseClass
+{
+    public void TestMethod()
+    {
+        PrivateProtectedField = 10; // Erişilebilir
+    }
+}
+
+public class AnotherClass
+{
+    public void TestMethod(BaseClass obj)
+    {
+        // obj.PrivateProtectedField = 10; // Hata! Erişilemez, çünkü bu sınıf BaseClass'tan türememiş.
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+public class A
+{
+    private int x = 10;
+    protected int y = 20;
+    internal int z = 30;
+    public int t = 40;
+}
+
+public class B : A
+{
+    public void Yazdir()
+    {
+        Console.WriteLine(y); // Erişilebilir
+        // Console.WriteLine(x); // Erişilemez, çünkü x private
+        Console.WriteLine(z); // Erişilebilir, çünkü aynı derlemedeyiz
+        Console.WriteLine(t); // Erişilebilir
+    }
+}
+
+public class C
+{
+    A a = new A();
+    
+    public void Yazdir()
+    {
+        Console.WriteLine(a.z); // Erişilebilir, çünkü aynı derlemedeyiz
+        Console.WriteLine(a.t); // Erişilebilir
+        // Console.WriteLine(a.x); // Erişilemez, çünkü x private
+        // Console.WriteLine(a.y); // Erişilemez, çünkü y protected ve C, A'dan türemiyor
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

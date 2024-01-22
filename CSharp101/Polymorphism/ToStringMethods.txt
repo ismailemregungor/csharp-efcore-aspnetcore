@@ -1,0 +1,102 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+ToString() Metodu
+Özellikleri:
+
+Object Sınıfından Miras Alınır: Tüm C# sınıfları, Object sınıfından türetildiği için varsayılan olarak ToString() methodunu miras alır.
+
+Override Edilebilir: Bu method, sınıfın ihtiyacına göre override edilebilir, böylece sınıfın kendine özgü bir dize temsilini döndürebilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları:
+
+Dize Temsili Oluşturma: ToString(), bir nesnenin insanlar tarafından okunabilir bir dize temsilini döndürerek nesneyi tanımlamak veya hata ayıklamak için kullanılır.
+
+Deger Tipini Dizeye Dönüştürme: Değer tipleri (int, double, bool, vb.) ToString() kullanılarak dizeye dönüştürülebilir.
+________________________________________________________________________________________________________________________________________________________________________
+
+Değer Tipinin ToString() Kullanımı
+
+int number = 42;
+string numberString = number.ToString(); // Değer tipinin ToString() kullanılır.
+
+Console.WriteLine(numberString); // "42" şeklinde bir çıktı alırsınız.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Override Edilmemiş ToString()
+
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+
+Person person = new Person { Name = "John", Age = 30 };
+string personString = person.ToString(); // Default ToString() kullanılır.
+
+Console.WriteLine(personString); // "Namespace.Person" şeklinde bir çıktı alabilirsiniz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+ToString() Override Edilmiş
+
+public class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public override string ToString()
+    {
+        return $"{Name}, {Age} yaşında";
+    }
+}
+
+Person person = new Person { Name = "John", Age = 30 };
+string personString = person.ToString(); // Override edilmiş ToString() kullanılır.
+
+Console.WriteLine(personString); // "John, 30 yaşında" şeklinde bir çıktı alırsınız.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Özelleştirilmiş ToString() ile Polimorfizm
+
+public class Animal
+{
+    public string Name { get; set; }
+    
+    public virtual string Speak()
+    {
+        return "Hayvan konuşuyor";
+    }
+
+    public override string ToString()
+    {
+        return $"{Name}: {Speak()}";
+    }
+}
+
+public class Dog : Animal
+{
+    public override string Speak()
+    {
+        return "Hav hav!";
+    }
+}
+
+public class Cat : Animal
+{
+    public override string Speak()
+    {
+        return "Miyav!";
+    }
+}
+
+Animal[] animals = { new Dog { Name = "Buddy" }, new Cat { Name = "Whiskers" } };
+
+foreach (var animal in animals)
+{
+    Console.WriteLine(animal.ToString());
+}
+
+________________________________________________________________________________________________________________________________________________________________________

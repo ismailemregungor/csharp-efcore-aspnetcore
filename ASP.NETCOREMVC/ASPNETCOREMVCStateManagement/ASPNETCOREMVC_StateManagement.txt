@@ -1,0 +1,66 @@
+﻿__________________________________________________________________________________________________
+
+State Management (Durum Yönetimi):
+
+Uygulamaların farklı istekler veya kullanıcı oturumları boyunca veri tutmasına olanak tanır.
+
+__________________________________________________________________________________________________
+
+1- Query String (Sorgu Dizgisi)
+*Client tarafında tutulur.
+
+
+Tanım ve Özellikler: 
+URL'nin bir parçası olarak veri iletimi sağlar.
+Kullanıcı arayüzünden veya başka bir web sayfasından geçirilen parametreler için kullanışlıdır.
+
+Önemli Noktalar:
+URL'de görünür olduğu için hassas veriler için uygun değildir.
+URL uzunluğu sınırlamaları vardır.
+
+__________________________________________________________________________________________________
+
+2- Cookies (Çerezler)
+*Client tarafında tutulur.
+*Cookie kullanırken bir yaşam süresi verilmelidir.
+
+Tanım ve Özellikler: 
+
+Çerezler, kullanıcının tarayıcısında saklanan küçük veri parçalarıdır.
+Kullanıcı ayarları veya oturum bilgileri gibi verileri saklamak için kullanılır.
+
+Önemli Noktalar:
+
+Güvenlik açısından hassastır; hassas verileri saklamak için uygun değildir.
+Kullanıcılar çerezleri tarayıcılarından silebilir veya engelleyebilir.
+
+__________________________________________________________________________________________________
+
+3- Session (Oturum)
+*Server/Sunucu tarafında tutulur.
+
+
+Tanım ve Özellikler: 
+
+Session, kullanıcının tarayıcı oturumu boyunca veri saklamak için kullanılır. 
+Sunucu tarafında depolanır ve her kullanıcı için benzersiz bir session ID'si vardır.
+
+Önemli Noktalar:
+Session verisi kullanıcıya özeldir ve diğer kullanıcılar tarafından erişilemez.
+Session, sunucu kaynaklarını kullanır ve büyük miktarda veri saklamak için uygun değildir.
+ASP.NET Core'da, session depolamasını yapılandırmak için AddSession ve UseSession metodları kullanılır.
+
+Session ile State Management'ın Özellikleri
+Sunucu Tarafında Depolama: Session verileri sunucu tarafında depolanır, bu nedenle büyük miktarda veri saklamak genellikle önerilmez.
+Benzersiz Session ID: Her kullanıcı için benzersiz bir session ID'si vardır ve bu ID, kullanıcının tarayıcısında bir çerez olarak saklanabilir.
+Güvenlik: Session, hassas verileri saklamak için kullanılabilir, çünkü veriler sunucu tarafında saklanır ve şifreleme ile korunabilir.
+Yapılandırma Seçenekleri: Session süresi, zaman aşımı ve diğer yapılandırmalar kolayca ayarlanabilir.
+
+
+Session Kullanabilmek İçin Prgram.cs içerisine aşağıdaki kodlar eklenir.
+
+Program.cs:
+
+builder.Services.AddSession();
+app.UseSession();
+__________________________________________________________________________________________________

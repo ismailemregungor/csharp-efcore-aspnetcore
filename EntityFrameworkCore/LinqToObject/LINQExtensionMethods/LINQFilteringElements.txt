@@ -1,0 +1,73 @@
+﻿__________________________________________________________________________________________________________________________
+
+Where() metodu, koleksiyon içerisindeki elemanları belirtilen koşula göre filtreler.
+__________________________________________________________________________________________________________________________
+
+Bir lambda ifadesi alır ve bu ifadeye göre her elemanı koşulla karşılaştırır.
+Koşulu sağlayan elemanlar yeni bir koleksiyon olarak döner.
+Dönen koleksiyon tipi IEnumerable<T>'dir, yani filtrelenmiş bir koleksiyon sıralı bir şekilde geriye döner.
+__________________________________________________________________________________________________________________________
+
+var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+var evenNumbers = numbers.Where(n => n % 2 == 0);
+
+foreach (var num in evenNumbers)
+{
+    Console.WriteLine(num); // 2, 4, 6 yazar.
+}
+
+Bu örnek, çift sayıları filtreler.
+__________________________________________________________________________________________________________________________
+
+var people = new List<Person>
+{
+    new Person { Name = "John", Age = 30 },
+    new Person { Name = "Jane", Age = 25 },
+    new Person { Name = "Billy", Age = 17 }
+};
+
+var adults = people.Where(p => p.Age >= 18);
+
+foreach (var person in adults)
+{
+    Console.WriteLine(person.Name); // John, Jane yazar.
+}
+
+Bu örnek, yetişkin kişileri (18 yaş ve üzeri) filtreler.
+__________________________________________________________________________________________________________________________
+
+var fruits = new List<string> { "apple", "banana", "cherry", "date" };
+var fruitsWithA = fruits.Where(fruit => fruit.Contains("a"));
+
+foreach (var fruit in fruitsWithA)
+{
+    Console.WriteLine(fruit); // apple, banana, date yazar.
+}
+
+Bu örnek, içinde 'a' harfi geçen meyveleri filtreler.
+__________________________________________________________________________________________________________________________
+
+var filteredPeople = people.Where(p => p.Age >= 18 && p.Name.StartsWith("J"));
+
+foreach (var person in filteredPeople)
+{
+    Console.WriteLine($"{person.Name} - {person.Age}");
+}
+
+Bu örnek, hem 18 yaş ve üzeri olan hem de ismi "J" ile başlayan kişileri filtreler.
+
+
+__________________________________________________________________________________________________________________________
+
+var sortedAdults = people.Where(p => p.Age >= 18)
+                         .OrderBy(p => p.Age);
+
+foreach (var person in sortedAdults)
+{
+    Console.WriteLine($"{person.Name} - {person.Age}");
+}
+
+Bu örnek, yetişkinleri önce filtreler sonra yaşlarına göre sıralar.
+
+
+__________________________________________________________________________________________________________________________

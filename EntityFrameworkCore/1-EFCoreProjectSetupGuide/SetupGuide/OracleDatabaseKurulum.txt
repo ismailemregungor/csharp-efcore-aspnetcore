@@ -1,0 +1,23 @@
+﻿__________________________________________________________________________________________________________________________
+
+Oracle Kullanıcı Oluşturma:
+
+*Oracle'da sys veritabnına giriş yapılır ve user oluşturma.
+
+create user personel identified by personel default tablespace users temporary
+tablespace temp;
+grant connect, resource, DBA to personel; 
+
+__________________________________________________________________________________________________________________________
+
+Oracle Veritabanı Oluşturma:
+
+*Yukarıdaki oluşturulan user'a bağlı olarak veritabanı oluşturulur.
+
+name: personelDB
+username: personel
+password: personel
+SID: orcl
+
+Test>Save>Connect
+__________________________________________________________________________________________________________________________

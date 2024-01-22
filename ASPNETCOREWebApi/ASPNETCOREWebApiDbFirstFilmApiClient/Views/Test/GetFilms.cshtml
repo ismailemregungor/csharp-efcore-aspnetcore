@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Film>
+
+<table class="table table-striped">
+	@foreach (var film in Model)
+	{
+		<tr>
+			<td>@film.FilmID</td>
+			<td>@film.FilmAdi</td>
+			<td>@film.Puan</td>
+			<td>@film.Sure</td>
+		</tr>
+	}
+</table>

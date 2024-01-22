@@ -1,0 +1,114 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Classes:
+
+Class vs Object:
+
+Class-Sınıf:
+
+*Sınıflar, bir nesnenin özelliklerini (fields) ve davranışlarını (methods) tanımlayan kod şablonlarıdır.
+*Bir sınıf, nesnelerin bir modelidir. Nesnelerin oluşturulacağı şablonu veya taslağı temsil eder.
+*Class soyut bir kavramdır, Object somut bir kavramdır.
+
+Object-Nesne: 
+
+*Nesne, sınıfın bir örneği yani instance'idir. Sınıf, bir nesnenin nasıl görüneceğini ve davranacağını tanımlar.
+*Sınıfın bir örneğidir ve sınıfın özellikleri ve davranışlarına sahiptir.
+*Object Class'ların RAM'ın Heap bölgesinde oluşmuş halidir.
+
+Instance - Örnek:
+*Sınıfın hafızadaki somut bir örneğidir. Her örnek kendi durum bilgisine sahiptir.
+
+ClassName objectName = new ClassName();
+
+public class Car
+{
+    public string color;
+
+    public Car(string color)
+    {
+        this.color = color;
+    }
+}
+
+Car myCar = new Car("red");
+
+// 'Car' sınıfından 'myCar' adında yeni bir nesne oluşturduk.
+// Car = Car Sınıfı
+// myCar = Car sınıfının nesne örneği
+// Car(); = Car sınıfının constructor yani kurucu metodu temsil ediyor
+
+ÖNEMLİ NOTLAR:
+
+*Instance: Somutlaştırma.
+*Class ile object aynı şey değildir.
+*Class şablon, object, class'ın ram'de oluşmuş halidir.
+*Bir Class için new dediğimiz an class'ların heap'te nesne örneği oluşur.
+*Stack'teki class'ın adresi heapteki nesneyi işaret eder.
+*C#'ta herşer Object sınıfından türemiştir.
+*Encapsulation'a göre bir sınıf içerisindeki 
+her field(değişkenler) mutlaka dışarıya kapatılmalıdır!
+*Class seviyesinde varsayılan erişim belirleyicisi private'dir.
+*Dll seviyesinde varsayılan erişim belrleyicisi internal'dır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Sınıf Tanımlama (Class Definition):
+
+public class Person
+{
+    // Sınıf üyeleri
+    public string name; // özellik
+    public int age; // özellik
+
+    public void Speak() // metod
+    {
+        Console.WriteLine("Hello!");
+    }
+}
+
+// Özet: 'Person' adında bir sınıf tanımladık, 'name' ve 'age' özellikleri ve 'Speak' adında bir metodu var.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Nesne Oluşturma (Creating an Object):
+
+Person person1 = new Person();
+person1.name = "John";
+person1.age = 30;
+
+// Özet: 'Person' sınıfından 'person1' adında bir nesne oluşturduk ve özelliklerine değer atadık.
+
+Farklı Nesne Örnekleri (Different Object Instances):
+
+Person person2 = new Person();
+person2.name = "Alice";
+person2.age = 25;
+
+// Özet: Aynı sınıftan farklı bir nesne daha oluşturduk ('person2') ve kendi özelliklerine farklı değerler atadık.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Nesne Metodları (Object Methods):
+
+person1.Speak(); // Ekrana "Hello!" yazdırır.
+
+// Özet: 'person1' nesnesinin 'Speak' metodunu çağırdık.
+________________________________________________________________________________________________________________________________________________________________________
+
+Erişim Belirleyicileri ve Sınıf Üyeleri (Access Modifiers and Class Members):
+
+public class ExampleClass
+{
+    public int publicNumber; // Her yerden erişilebilir.
+    private int privateNumber; // Sadece sınıf içinden erişilebilir.
+
+    public void SetPrivateNumber(int newNumber)
+    {
+        privateNumber = newNumber; // private değişkene erişim sağlayan public metod.
+    }
+}
+
+// Özet: Erişim belirleyicileri kullanarak sınıf üyelerine erişimi kontrol ettik.
+
+________________________________________________________________________________________________________________________________________________________________________

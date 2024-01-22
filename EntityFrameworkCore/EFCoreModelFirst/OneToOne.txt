@@ -1,0 +1,75 @@
+﻿__________________________________________________________________________________________________________________________
+OneToOne:
+
+*İki veri modeli arasında kurulan ve her iki modelden sadece birer örneğin birbirine referans verdiği bir ilişkidir.
+
+*One-to-one ilişkiler, özellikle bir varlığın detaylarının başka bir tabloda saklanması gerektiğinde kullanılır.
+
+*One-to-one ilişkinin genel mantığı, bir varlığın detay bilgilerinin başka bir varlık içinde tutulması
+ve bu iki varlığın birbirine doğrudan bağlı olmasıdır. Bu ilişki türü, detay bilgilerinin isteğe bağlı olması
+veya detay bilgilerinin veritabanında ayrı bir tablo olarak düzenlenmesi gereken durumlarda kullanışlıdır.
+
+__________________________________________________________________________________________________________________________
+
+Ne Zaman One-to-One İlişki Kullanmalısınız?:
+
+İki nesne arasında sıkı bir ilişki varsa ve her biri diğerine özgü ise (örneğin, bir kullanıcının sadece bir profil bilgisi olması).
+
+Performans veya tasarım tercihleri nedeniyle bazı bilgileri ayrı tablolarda tutmak istediğinizde (örneğin, hassas kullanıcı profil bilgileri).
+
+__________________________________________________________________________________________________________________________
+
+public class User
+{
+    [Key] // Primary Key tanımlaması
+    public int UserId { get; set; }
+    public string Username { get; set; }
+
+    // Navigation Property
+    public UserProfile UserProfile { get; set; }
+}
+
+public class UserProfile
+{
+    [Key]
+    [ForeignKey("User")] // User sınıfıyla ilişkilendirme
+    public int UserId { get; set; } // User sınıfının Primary Key'ini Foreign Key olarak kullanır
+    public DateTime DateOfBirth { get; set; }
+    public string Bio { get; set; }
+
+    // Navigation Property
+    public User User { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+
+Önemli Noktalar:
+
+ForeignKey Attribute: Bağımlı sınıfta ForeignKey attribute'unu kullanarak ilişkili sınıfın anahtarını belirtmek gerekir.
+
+Key Attribute: One-to-One ilişkide, genellikle bağımlı sınıfın anahtarı aynı zamanda yabancı anahtar olarak işaretlenir.
+
+Eşleşme ve Sıralama: One-to-One ilişkide her iki tablonun da eşleşen kayıtları aynı sırada olmalıdır; aksi halde, EF Core yanıltıcı hatalar fırlatabilir.
+__________________________________________________________________________________________________________________________
+
+public class Personel
+{
+    public int PersonelID { get; set; }
+    // Diğer özellikler...
+
+    // Personel ve PersonelDetay arasında One-to-One ilişki
+    public PersonelDetay PersonelDetay { get; set; }
+}
+
+public class PersonelDetay
+{
+    [ForeignKey("Personel")]
+    public int PersonelDetayID { get; set; }
+    // Diğer özellikler...
+
+    // Navigation property olarak Personel referansı
+    public Personel Personel { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+

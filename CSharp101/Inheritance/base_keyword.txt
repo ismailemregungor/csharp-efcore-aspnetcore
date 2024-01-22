@@ -1,0 +1,164 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+base keyword:
+
+*base bir sınıfın kurucusundan doğrudan temel sınıfın kurucusunu çağırmak için kullanılır. 
+Bu, temel sınıfın kurucusunun, türetilmiş sınıfın kurucusu tarafından belirli parametrelerle özelleştirilmiş bir versiyonunu çağırma imkanı sunar.
+
+Önemli Noktalar:
+
+Türetilmiş sınıflar, temel sınıflarının tüm kurucularını otomatik olarak miras almazlar.
+Eğer türetilmiş sınıfın bir kurucusu tanımlanmışsa, o zaman temel sınıfın parametresiz kurucusu (varsayılan kurucu) otomatik olarak çağrılır.
+base kullanarak, türetilmiş sınıfın kurucusundan farklı bir temel sınıf kurucusunu çağırabilirsiniz.
+________________________________________________________________________________________________________________________________________________________________________
+
+base Anahtar Kelimesinin Kullanım Amaçları:
+
+*Temel Sınıfın Yapıcı Metodunu Çağırmak: Türetilmiş sınıfın yapıcı metodu içinden temel sınıfın yapıcı metodunu çağırmak için base kullanılır.
+
+*Temel Sınıfın Üyelerine Erişmek: Türetilmiş sınıfta, temel sınıfın üyelerine (alanlar, özellikler, metodlar vb.) erişmek için kullanılır.
+
+*Ezilmiş (Overridden) Metodları Çağırmak: Türetilmiş sınıfta ezilmiş bir metodu içinden, temel sınıftaki orijinal metodu çağırmak için kullanılır.
+
+*Temel Sınıftaki Gizlenmiş (Hidden) Üyelere Erişmek: Eğer türetilmiş sınıfta temel sınıfta bulunan bir üye yeniden tanımlanmışsa 
+(new anahtar kelimesi ile), base anahtar kelimesi temel sınıftaki orijinal üyeye erişmek için kullanılır.
+
+________________________________________________________________________________________________________________________________________________________________________
+ Temel Sınıfın Yapıcı Metodunu Çağırmak
+
+ public class BaseClass
+{
+    public BaseClass()
+    {
+        Console.WriteLine("BaseClass constructor called.");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public DerivedClass() : base()
+    {
+        Console.WriteLine("DerivedClass constructor called.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DerivedClass obj = new DerivedClass();
+    }
+}
+
+Çıktı:
+BaseClass constructor called.
+DerivedClass constructor called.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel Sınıfın Üyelerine Erişmek
+
+public class BaseClass
+{
+    public int x = 10;
+}
+
+public class DerivedClass : BaseClass
+{
+    public int x = 20;
+
+    public void Display()
+    {
+        Console.WriteLine("Derived x: " + x); // DerivedClass'ın x'ini yazdırır.
+        Console.WriteLine("Base x: " + base.x); // BaseClass'ın x'ini yazdırır.
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DerivedClass obj = new DerivedClass();
+        obj.Display();
+    }
+}
+
+Çıktı:
+Derived x: 20
+Base x: 10
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Ezilmiş Metodları Çağırmak:
+
+public class BaseClass
+{
+    public virtual void Show()
+    {
+        Console.WriteLine("Show from BaseClass");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public override void Show()
+    {
+        base.Show(); // BaseClass'taki Show() metodunu çağır.
+        Console.WriteLine("Show from DerivedClass");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DerivedClass obj = new DerivedClass();
+        obj.Show();
+    }
+}
+
+Çıktı:
+Show from BaseClass
+Show from DerivedClass
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Temel Sınıftaki Gizlenmiş Üyelere Erişmek
+
+public class BaseClass
+{
+    public void Display()
+    {
+        Console.WriteLine("Display from BaseClass");
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void Display()
+    {
+        base.Display(); // BaseClass'taki Display() metodunu çağır.
+        Console.WriteLine("Display from DerivedClass");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        DerivedClass obj = new DerivedClass();
+        obj.Display();
+    }
+}
+Çıktı:
+Display from BaseClass
+Display from DerivedClass
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________
+
+________________________________________________________________________________________________________________________________________________________________________

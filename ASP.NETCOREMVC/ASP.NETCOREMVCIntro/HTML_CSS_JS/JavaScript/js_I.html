@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Javascript -->
+    <noscript>
+        Tarayıcınızın JS destegi kapali...
+    </noscript>
+    <script>
+        var d1="Merhaba";
+        var d2='Naber';
+        var d3 =12;
+        var d4 = 12.55;
+        var d5 = true;
+        var d6 = new Object();
+        var d7 = {};
+        var d8 = [];
+        var d9 = new Array();
+        
+        console.log("Console kısmına yaz...");
+        document.writeln(typeof(d1));
+        document.writeln("<br>");
+        document.writeln(typeof(d2));
+        document.writeln("<br>");
+        document.writeln(typeof(d3));
+        document.writeln("<br>");
+        document.writeln(typeof(d4));
+        document.writeln("<br>");
+        document.writeln(typeof(d5));
+        document.writeln("<br>");
+        document.writeln(typeof(d6));
+        document.writeln("<br>");
+        document.writeln(typeof(d7));
+        document.writeln("<br>");
+        document.writeln(typeof(d8));
+        document.writeln("<br>");
+        document.writeln(typeof(d9));
+        document.writeln("<br>");
+     </script>   
+
+     <script>
+        //var yerine let kullanıız...
+
+        //sartifadeleri : if-else switch-case
+        
+        let sayi=10;
+        if(sayi==10)
+            document.writeln("sayi 10'a esit");
+
+         //== icerige bakar...
+         //=== tipe bakar...
+         let x=5,y="5";
+         document.writeln(x==y);
+         document.writeln(x===y);
+
+
+     </script>
+
+     <script>
+        //donguler
+        //for, while, do-while
+
+        //let kullanınız...
+        for(var i=0;i<5;i++)
+          document.writeln(i);
+          
+          document.writeln(i);
+        
+          let dizi=[4,5,7,8,3];
+
+          dizi[0]=111;
+          //for-of
+        
+          document.writeln("<br>");
+          for(let x of dizi)
+            document.writeln(x);
+          //for-in
+          document.writeln("<br>");
+          for(let x in dizi)
+            document.writeln(dizi[x]);
+
+          //foreach
+          //N.S.A. ;Foreach ile değisillik yapılmaz
+          dizi.forEach(x=>{x=3;}); 
+
+        //   document.writeln("<br>");
+        //   for(let x in dizi)
+        //     dizi[x]=2;
+
+          document.writeln("<br>");
+          for(let x of dizi)
+            document.writeln(x);
+     </script>
+</body>
+</html>

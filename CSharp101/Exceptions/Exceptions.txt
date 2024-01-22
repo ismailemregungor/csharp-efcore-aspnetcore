@@ -1,0 +1,194 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Exceptions-Hatalar:
+
+>Mantık Hataları (Logic Errors): 
+*Bu hatalar derleme veya çalışma zamanında meydana gelmez,
+fakat programın beklenen çıktısını vermemesine neden olur.
+
+>Çalışma Zamanı Hataları (Runtime Errors):
+*Programın çalışması sırasında meydana gelen hatalardır.
+Bu tür hatalar genellikle geçerli bir kaynaktan kaynaklanır
+ve genellikle try-catch bloğuyla yakalanabilir.
+
+>Derleme Hataları (Compile-Time Errors) / Design-Time(Syntax) Hataları:
+*Bunlar, programınızı derlerken meydana gelen hatalardır. 
+Örneğin, değişkenin tanımlanmamış olması veya yanlış bir syntax kullanılması.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Hata Yönetimi (Exceptions Handling):
+
+*İstisna işleme, bir hata meydana geldiğinde programın çökmeden
+kontrollü bir şekilde sonlandırılmasını ve hatanın işlenmesini sağlar.
+
+*Performans sorunu yaşanmasın diye her hata veya sorun için istisna kullanmak yerine, 
+duruma ve ihtiyaca göre farklı hata işleme stratejilerini(koşullar ile) 
+kullanmayı düşünmek önemlidir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+try: 
+*Hata olasılığı bulunan kodlar bu blok içine yerleştirilir.
+
+catch: 
+*Eğer try bloğundaki kodlar bir hata varsa, 
+bu blok çalışır ve istisna bilgilerini yakalar.
+*Birden fazla catch bloğu kullanıldığı bir senaryoda en genel hata 
+en sondaki catch bloğunda yakalanır. Özelden genele doğru gider.
+
+*finally: 
+finally bloğu, hata olsa da olmasa da her zaman çalışır. 
+Genellikle kaynakların temizlenmesi gibi işlemler için kullanılır.
+
+throw:Özel bir istisna fırlatmak için kullanılır.
+
+try
+{
+    // Potansiyel olarak hata verebilecek kodlar
+}
+catch (Exception ex)
+{
+    // Hata durumunda yapılacak işlemler
+}
+finally
+{
+    // Hata olsa da olmasa da çalışacak kodlar
+}
+________________________________________________________________________________________________________________________________________________________________________
+
+Try-Catch:
+
+try
+{
+    int sonuc = 10 / 0;
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("Bir sayıyı sıfıra bölemezsiniz.");
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Try-Catch-Finally:
+
+StreamReader reader = null;
+try
+{
+    reader = new StreamReader("dosya.txt");
+    string line = reader.ReadLine();
+    Console.WriteLine(line);
+}
+catch (FileNotFoundException ex)
+{
+    Console.WriteLine("Dosya bulunamadı.");
+}
+finally
+{
+    if (reader != null)
+    {
+        reader.Close();
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Birden Fazla Catch Bloğu:
+
+try
+{
+    // Kodunuz
+}
+catch (CustomException ex)
+{
+    // Özel istisna türünü ele al
+}
+catch (Exception ex)
+{
+    // Genel istisnaları ele al
+}
+
+try
+{
+    int a = 10;
+    int b = 0;
+    int sonuc = a / b;
+}
+catch (DivideByZeroException ex)
+{
+    Console.WriteLine("Bölme hatası.");
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Genel bir hata oluştu.");
+}
+
+b değişkeninin değeri 0 olduğundan, bir bölme hatası meydana gelir ve ilgili catch bloğu çalışır.
+________________________________________________________________________________________________________________________________________________________________________
+
+ Throw Kullanımı:
+
+int yas = -5;
+if (yas < 0)
+{
+    throw new ArgumentException("Yaş negatif olamaz.");
+}
+
+Yaş değeri negatif olarak girildiğinde özel bir hata fırlatıyoruz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Finally Kullanımı:
+
+FileStream fs = null;
+try
+{
+    fs = new FileStream("dosya.txt", FileMode.Open);
+    // Dosya işlemleri...
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+finally
+{
+    if (fs != null)
+    {
+        fs.Close();
+    }
+}
+
+Dosya işlemleri tamamlandığında veya bir hata oluştuğunda, finally bloğu sayesinde dosya kapatılır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Basit Hata Yakalama:
+
+try
+{
+    int[] dizi = new int[2];
+    dizi[5] = 10;  // Bu satır hata verecek
+}
+catch (IndexOutOfRangeException ex)
+{
+    Console.WriteLine("Dizi indeksi sınırların dışında.");
+}
+
+Dizide olmayan bir indekse erişim sağlamaya çalıştığımız için IndexOutOfRangeException hatası yakalanmıştır.
+________________________________________________________________________________________________________________________________________________________________________
+
+Özel Hata Sınıfı Oluşturma:
+
+public class NegativeAgeException : Exception
+{
+    public NegativeAgeException(string message) : base(message) { }
+}
+
+void SetPersonAge(int age)
+{
+    if (age < 0)
+    {
+        throw new NegativeAgeException("Yaş değeri negatif olamaz.");
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________________________

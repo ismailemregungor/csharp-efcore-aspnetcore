@@ -1,0 +1,62 @@
+﻿<h2>QueryString</h2>
+<form method="get" action="~/VeriAl/QueryStringYakala">
+    <input type="text" id="id" name="id" />
+    <input type="text" id="ad" name="ad" />
+    <input type="text" id="fiyat" name="fiyat" />
+    <input type="submit" value="Gonder" />
+
+</form>
+<h2>Request FORM</h2>
+<form method="post" asp-action="ReqFormYakala">
+    <input type="text" id="id" name="id" />
+    <input type="text" id="ad" name="ad" />
+    <input type="text" id="fiyat" name="fiyat" />
+    <input type="submit" value="Gonder" />
+
+</form>
+
+<h1>IFormCollection</h1>
+<form method="post" asp-action="IFormCollecsionYakala">
+<input type="text" id="id" name="id" />
+<input type="text" id="ad" name="ad" />
+<input type="text" id="fiyat" name="fiyat" />
+<input type="submit" value="Gonder" />
+</form>
+
+<h1>Parametre Kullanimi</h1>
+<form method="post" asp-action="ParametreYakala">
+    <input type="text" id="id" name="id" />
+    <input type="text" id="ad" name="ad" />
+    <input type="text" id="fiyat" name="fiyat" />
+    <input type="submit" value="Gonder" />
+</form>
+
+<h1>Model Kullanimi</h1>
+<form method="post" asp-action="ModelYakala">
+    <input type="text" id="id" name="UrunID" />
+    <input type="text" id="ad" name="UrunAdi" />
+    <input type="text" id="fiyat" name="Fiyat" />
+    <input type="submit" value="Gonder" />
+</form>
+
+@model Urun
+
+
+@*Model importu gerekli*@
+<h1>Model Kullanimi - HTML Helper</h1>
+<form method="post" asp-action="ModelKullanimi">
+
+    @Html.TextBoxFor(x=>x.UrunID)
+    @Html.TextBoxFor(x=>x.UrunAdi, "", new {type = "password", style = "border: 1px solid blue" })
+    @Html.TextBoxFor(x=>x.Fiyat)
+    <input type="submit" value="Gonder" />
+</form>
+
+<h1>Model Kullanimi - TAG Helper</h1>
+<form method="post" asp-action="ModelKullanimi">
+    <input asp-for="UrunID"/>
+    <input asp-for="UrunAdi" type="password" style="border: 1px solid blue" />
+    <input asp-for="Fiyat" type="text" />
+    <input type="submit" value="Gonder" />
+</form>
+

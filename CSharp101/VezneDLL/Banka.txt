@@ -1,0 +1,26 @@
+﻿Bir bankada müşteriler sırayla işlemlerini yapmaktadırlar.
+Müşterilere hizmet veren vezneler(2-3 adet) vardır.
+Müşteriler 3 farklı işlem yapabilmektedirler ve her işlemin ayrı bir süresi olacaktır.
+Bir müşteri rastgele bir işlem ile vezneye gelecektir.
+Veznedeki çalışanların durumu boş ya da dolu olabilir.
+Veznedeki çalışanların durumu boş olduğunda yeni müşteri vezneye gitmeli.
+Müşteri vezneye gittiğinde vezne durumu meşgul olacak.
+
+Havale işlemi süresi 5dk.
+Para çekme işlemi süresi 7dk.
+Para yatırma işlemi süresi 2dk.
+
+Bu sistemi geliştirecek sınıfları veya sınıf hiyerarşisini C# dili ile tasarlayınız.
+(OOP prensiplerini uygulanmalıdır.)
+
+Classes:
+Banka--> Manager Sınıfı
+Vezne
+Müşteriler
+Personeller
+Vezne
+
+Problem daha büyük olsaydı farklı manager sınıfları oluşturulmalı!
+VezneManager
+MusteriManager
+

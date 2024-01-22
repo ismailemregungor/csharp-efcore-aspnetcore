@@ -1,0 +1,23 @@
+mvc nedir?
+model?
+view?
+controller?
+controllerden view'a veri aktarma?
+view'den controllera veri aktarma?
+model view nedir?
+action'un geriye dönüş tipleri?
+jsonresult?, viewresult?, contentresult?
+razor? razor page? razor syntax?
+@model? Model?
+partial view?: component, yeinden kukllanılabilir, sayfanın bir bölümndeki parça viewler
+layout?: sayfanın genel şablonu, header, footer, eski adı masterpage
+session?
+session'a nasıl ulaşırız?: http context üzerinden
+session nasıl ekleriz?
+session yaşam süresi?
+wwwroot? wwwroot'a nasıl ulaşılır? app.UseStaticFiles();
+routing?
+viewbag ve viewdata arasındaki fark?
+viewbag ve viewdata biribirinin yerine kullanma?
+SelectList kullanımı nasıl olmalı? datasource, id, ad
+program.cs içeriği ile ilgili?

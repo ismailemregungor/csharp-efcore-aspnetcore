@@ -1,0 +1,15 @@
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\bin\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.exe
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\bin\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.deps.json
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\bin\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.runtimeconfig.json
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\bin\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\bin\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.pdb
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\refint\ASPNETCOREMVCAsynchronousProgramming.dll
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.pdb
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ASPNETCOREMVCAsynchronousProgramming.genruntimeconfig.cache
+C:\Users\halkbank2\source\repos\ASP.NETCOREMVC\ASPNETCOREMVCAsynchronousProgramming\obj\Debug\net6.0\ref\ASPNETCOREMVCAsynchronousProgramming.dll

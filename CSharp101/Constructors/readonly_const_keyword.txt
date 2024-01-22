@@ -1,0 +1,92 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Readonly VS Const:
+________________________________________________________________________________________________________________________________________________________________________
+
+const:
+
+*Compile zamanında değeri belirlenir ve değiştirilemez.
+*Her zaman statik olarak değerlendirilir ve static anahtar kelimesi olmadan statik bir alanda saklanır.
+*Yalnızca değer türleri, string veya null için kullanılabilir.
+
+const Kullanımı:
+
+class Circle
+{
+    public const double Pi = 3.14159;
+
+    public static double CalculateArea(double radius)
+    {
+        return Pi * radius * radius;
+    }
+}
+
+// Özet: Pi sabit bir değerdir ve metot içinde kullanılabilir.
+
+ Method İçinde const:
+
+ class ConstInMethod
+{
+    public void MyMethod()
+    {
+        const string methodName = "MyMethod";
+        Console.WriteLine($"Method Name: {methodName}");
+    }
+}
+
+// Özet: methodName sabit bir değişkendir ve yalnızca MyMethod içinde kullanılabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+readonly:
+
+
+*Run-time sırasında değeri atanabilir ve yalnızca constructor'larda veya değişken tanımında ayarlanabilir.
+*Hem statik hem de örnek değişkenler için kullanılabilir.
+*Herhangi bir tür için kullanılabilir.
+
+readonly Kullanımı:
+
+class ReadonlyExample
+{
+    public readonly int readonlyField;
+
+    public ReadonlyExample(int value)
+    {
+        readonlyField = value;
+    }
+}
+
+// Özet: readonlyField yalnızca constructor içinde atanabilir.
+
+Statik readonly:
+
+class StaticReadonly
+{
+    public static readonly string Name;
+
+    static StaticReadonly()
+    {
+        Name = "StaticReadonlyClass";
+    }
+}
+
+// Özet: Name, static bir readonly alan ve static constructor içinde atanmıştır.
+
+readonly Struct İçinde:
+
+struct ReadonlyStruct
+{
+    public readonly int X;
+    public readonly int Y;
+
+    public ReadonlyStruct(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+}
+
+// Özet: X ve Y readonly alanlar ve yalnızca constructor içinde atanabilirler.
+
+________________________________________________________________________________________________________________________________________________________________________

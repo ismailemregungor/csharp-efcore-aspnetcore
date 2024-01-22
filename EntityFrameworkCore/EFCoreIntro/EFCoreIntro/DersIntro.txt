@@ -1,0 +1,171 @@
+﻿*SINAVDA BU BÖLÜMDEN SORULAR VAR
+__________________________________________________________________________________________________________________________
+
+ADO (Active Database Object):
+
+ADO, özellikle .NET öncesi dönemlerde kullanılan bir teknolojiydi.
+Bağlantılı yöntemlerle veritabanına erişim sağlar. Bu, veritabanıyla doğrudan etkileşim gerektirir.
+ADO, veritabanı işlemlerini program tarafından kontrol etmeyi sağlar.
+ADO'nun dezavantajlarından biri, güvenlik açısından zayıf olmasıdır çünkü SQL enjeksiyon saldırılarına karşı hassastır.
+ADO ile veri erişimi düşük seviyeli olduğu için, kod karmaşıklığına ve tekrara yol açabilir.
+
+Microsoft'un veritabanlarıyla iletişim kurmak için oluşturduğu bir programlama modelidir.
+COM (Component Object Model) tabanlı bir yapıya sahiptir.
+Veri bağlantısı, komut gönderme ve veri okuma gibi işlemler için nesneler sunar.
+Daha çok eski, özellikle Visual Basic 6.0 ve erken dönem ASP ile kullanılmıştır.
+__________________________________________________________________________________________________________________________
+ADO.NET (.NET Framework) (2001):
+
+.NET Framework ile birlikte gelen, ADO'nun daha modern ve esnek bir versiyonudur.
+XML tabanlı veri alışverişi ve daha iyi performans için optimize edilmiştir.
+Hem bağlantılı hem de bağlantısız senaryolarda kullanılabilir.
+1- Bağlantılı Yöntem (Connected Approach):
+
+Uygulama ile veritabanı arasında sürekli bir bağlantı gerektirir.
+Connection: Veritabanına bağlanmak için kullanılan nesnedir. Bağlantı dizesi içerir ve bağlantıyı yönetir.
+Command: Veritabanına SQL sorguları göndermek için kullanılır. Sorgu sonuçlarını almak veya veritabanını güncellemek için kullanılabilir.
+DataReader: Command nesnesi ile çalışan ve sorgu sonuçlarını okuyan hızlı ve salt okunur bir akış sağlar.
+2- Bağlantısız Yöntem (Disconnected Approach):
+
+Uygulama ile veritabanı arasındaki bağlantı, veri alışverişinden sonra kapatılabilir.
+Veriler, bağlantısız nesneler aracılığıyla önbelleğe alınır ve işlenir.
+DataSet: Veritabanından alınan verileri hafızada tutan bir veri konteyneridir.
+DataAdapter: Veritabanı ile DataSet arasında veri aktarımını sağlayan köprü görevi görür. Veritabanından verileri okuyup DataSet'e doldurur ve DataSet'teki değişiklikleri veritabanına geri yazar.
+Bu iki yaklaşım, .NET uygulamalarında veri erişim stratejilerini belirlemede önemli bir rol oynar. Bağlantılı yöntem, gerçek zamanlı ve sürekli veri güncellemeleri gerektiren durumlarda; bağlantısız yöntem ise, önbelleğe alınmış veriler üzerinde çalışma ve ağ kaynaklarını daha az kullanma ihtiyacı olduğunda tercih edilir.
+__________________________________________________________________________________________________________________________
+2008 yılında(C# 3.0 => .NET Framework 3.5)
+LINQ(Language Integrated Query)
+LINQ to Object
+LINQ to SQL
+LINQ to XML
+__________________________________________________________________________________________________________________________
+LINQ to SQL Classes(ORM Tool)(Sql Server)
+Database First
+Model First
+__________________________________________________________________________________________________________________________
+C# 4.0 (2010)
+Entity Framework(Diger veritabanı destegi geldi...)
+EF 4.0
+Code First
+Database First
+Model First
+__________________________________________________________________________________________________________________________
+Code First oncesi(Model First, Database First)
+Neden Yazılım Firmaları Microsot'u zorlamış ????
+* **Connection string yapısı çok karmaşık
+* **Arka planda yuzlerce satırlık kodlar olusturyor...
+***Bu nedenle, uzun vadede çok yonetilebilir değil...
+***Designer kullanımı var...
+***Uzun vadede OOP kullanımına pek uygun değil...
+__________________________________________________________________________________________________________________________
+Entity Framework CORE(2016)
+Lazy Loading ilk basta gelmedi, sonradan geldi...
+Kullanımı zorlastirildi(ekstra kutuphane yuklenmeli ve ayarları yapılmalı..)
+__________________________________________________________________________________________________________________________
+LINQ
+C# 3.0 da LINQ için gelen yenilikler...
+1 - var kullanımı
+2 - Auto Property
+3 - Object Initializer
+4 - Collection Initializer
+5 - Anonymous Object
+6 - Extension Methods
+7 - Expression Tree
+8 - Lambda Expression
+__________________________________________________________________________________________________________________________
+
+ADO (Active Database Object):
+ADO.NET (.NET Framework):
+1.Bağlantılı Yöntem
+2.Bağlantısız Yöntem
+
+__________________________________________________________________________________________________________________________
+
+C# 3.0 (2008)
+LINQ (Language Integrated Query):
+1. LINQ to Objects:
+2. LINQ to SQL:
+3. LINQ to XML:
+
+Data != Object
+
+LINQ to SQL Classes:
+*Microsoft ilk ORM Toolu
+*Sadece SQL serverde çalışır.
+1.Database First
+2.Model First
+
+__________________________________________________________________________________________________________________________
+
+Code First öncesi:
+*Database First, Model First yöntemleri vardı.
+****Neden yazılım firmaları microsoftu code first'e zorlamış?
+*Connection stringler uzun ve çok karışıktı.
+*Arka planda yüzlerce satırlık kodlar oluşturuyordu.
+*Designer kullanımı vardı.
+*Uzun vadede OOP kullanımına uygun değildi.
+*Bu nedenlerle uzun vadede yönetilebilir değildi.
+
+C# 4.0(2010)
+Entity Framework
+*Diğer veri tabalarına destek geldi
+
+Entity Framework 4.0
+Code First
+1.Db First
+2.Model First
+__________________________________________________________________________________________________________________________
+
+Entity Framework Core (2016)
+*Lazy loading ilk  başta yoku, sonradan geldi.
+*Kullanımı zorlaştırıldı(ekstra kütüphane yüklenmeli ve ayarlama yapılmalı)
+__________________________________________________________________________________________________________________________
+
+LINQ:
+*Microsoft LINQ'yi C#'a entegre debilmek için dilde radikal değişikliklere gitmiştir.
+**C# 3.0'da LINQ için gelen yenilikler
+
+1-var keyword kullanımı
+2-Auto property
+3-Object Initializer
+4-Collection Initializer
+5-Anonymous Object
+6-Extension Methods
+7-Expression Tree
+8-Lambda Expression
+
+__________________________________________________________________________________________________________________________
+
+
+__________________________________________________________________________________________________________________________
+
+ADO.NET (.NET Framework):
+1.Bağlantılı Yöntem
+2.Bağlantısız Yöntem
+
+ADO.NET, .NET Framework içinde yer alan bir veritabanı erişim kütüphanesidir.
+Bağlantılı ve bağlantısız yöntemler sunar. Bağlantılı yöntemler, doğrudan veritabanı bağlantısı gerektirirken, bağlantısız yöntemler veriyi bellekte işler ve daha sonra veritabanına yazmayı sağlar.
+ADO.NET, veritabanı işlemlerini daha etkili bir şekilde yönetmeyi sağlar ve veri setlerini kolayca taşımanızı sağlar.
+ADO.NET, SQL enjeksiyonuna karşı daha güvenlidir, ancak hala güvenlik önlemleri alınması gerekir.
+ADO.NET, performansı artırmak ve kod tekrarını azaltmak için tasarlanmıştır.
+
+__________________________________________________________________________________________________________________________
+
+ORM (Object-Relational Mapping): 
+*C# gibi nesne odaklı programlama dilleriyle ilişkisel 
+veritabanları arasındaki veri etkileşimini kolaylaştırmak için 
+kullanılan bir yazılım tasarım desenidir.
+
+ORM, veritabanındaki tabloları, sorguları ve ilişkileri C# gibi dillerdeki 
+nesnelere ve kodlara dönüştürerek, veri erişimini ve işlemlerini daha 
+basit ve daha verimli hale getirir. 
+
+__________________________________________________________________________________________________________________________
+Entity Framework:
+
+Entity Framework (EF), .NET tabanlı bir ORM (Object-Relational Mapping) çerçevesidir.
+EF, bağlantısız nesne yönelimli bir yaklaşım sunar. Veritabanı tablolarını .NET sınıflarıyla eşleştirir ve LINQ (Language Integrated Query) kullanarak veritabanı sorgularını oluşturmanızı sağlar.
+EF, veritabanı ile .NET uygulamaları arasında bir köprü görevi görür. Bu, geliştiricilere daha yüksek seviyede soyutlama sağlar ve kod yazma sürecini hızlandırır.
+EF'nin avantajlarından biri, nesne yönelimli programlamayı teşvik etmesidir, bu da kodun daha okunaklı ve bakımı daha kolay olmasını sağlar.
+Dezavantajı, bazen karmaşık sorguların düşük seviyeli performans sorunlarına yol açabileceği ve özellikle büyük veritabanlarıyla çalışırken dikkat edilmesi gerektiğidir.
+__________________________________________________________________________________________________________________________

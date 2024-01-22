@@ -1,0 +1,42 @@
+﻿@model ProductViewModel
+
+<body>
+    <div class="container mt-5">
+        <h2>Ürün Ekle</h2>
+
+        <form asp-action="Create" method="post" class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Product.Name">Name</label>
+                <input asp-for="Product.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Price">Price</label>
+                <input asp-for="Product.Price" class="form-control" />
+            </div>
+
+             <div class="form-group">
+                <label asp-for="Product.Description">Description</label>
+                <input asp-for="Product.Description" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.BrandID">Brand</label>
+                <select asp-for="Product.BrandID" asp-items="Model.Brands" class="form-control">
+                    <option value="">-- Select Brand --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CategoryID">Category</label>
+                <select asp-for="Product.CategoryID" asp-items="Model.Categories" class="form-control">
+                    <option value="">-- Select Category --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" class="form-control" name="image" />
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</body>
+

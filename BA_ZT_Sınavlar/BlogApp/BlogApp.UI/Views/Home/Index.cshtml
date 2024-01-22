@@ -1,0 +1,40 @@
+﻿@using BlogApp.UI.Models.VMs.MakaleVMs;
+@model IEnumerable<MakaleListeleVM>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid mt-3">
+    <h1 class="text-center mb-4">Makale Listesi</h1>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr class="text-center">
+                    <th>@Html.DisplayNameFor(model => model.MakaleID)</th>
+                    <th>@Html.DisplayNameFor(model => model.Baslik)</th>
+                    <th>@Html.DisplayNameFor(model => model.EklemeTarihi)</th>
+                    <th>Konu</th>
+                    <th>Yazar Kullanıcı Adı</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td>@Html.DisplayFor(modelItem => item.MakaleID)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Baslik)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EklemeTarihi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Konu.KonuAdi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AppUser.UserName)</td>
+                        <td>
+                            @Html.ActionLink("Detay", "Detail", new { id=item.MakaleID}, new{ @class = "btn btn-primary"})
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

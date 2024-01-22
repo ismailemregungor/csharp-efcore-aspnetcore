@@ -1,0 +1,5 @@
+C:\Users\iegof\Desktop\CSharp101\ObjectRelationships\obj\Debug\net6.0\ObjectRelationships.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\CSharp101\ObjectRelationships\obj\Debug\net6.0\ObjectRelationships.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\CSharp101\ObjectRelationships\obj\Debug\net6.0\ObjectRelationships.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\CSharp101\ObjectRelationships\obj\Debug\net6.0\ObjectRelationships.AssemblyInfo.cs
+C:\Users\iegof\Desktop\CSharp101\ObjectRelationships\obj\Debug\net6.0\ObjectRelationships.csproj.CoreCompileInputs.cache

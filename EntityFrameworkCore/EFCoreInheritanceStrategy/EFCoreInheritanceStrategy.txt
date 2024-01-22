@@ -1,0 +1,117 @@
+﻿__________________________________________________________________________________________________________________________
+EFCoreInheritanceStrategy - EFCore Miras Stratejisi
+
+//Entity Framework CORE da Mirsa kullanımı
+//1-TPH (Table Per Hierachy)
+//2-TPT (Table Per Type) //EF Core 7.01 Daha sade kullanım
+//3-TPC (Table Per Concrete) !!EF core >7.0
+
+//TPH
+//*** Normalization yok....
+//*** JOIN olmadığından hızlı...
+__________________________________________________________________________________________________________________________
+1-Table per Hierarchy (TPH):
+*Normalizasyon yok.
+*Join olmadığından hızlı.
+
+Tek bir tablo, tüm sınıfların özelliklerini içerir.
+Miras hiyerarşisindeki her sınıf için bir "Discriminator" sütunu eklenir.
+Discriminator, her veri satırının hangi türden olduğunu belirtir.
+
+Performans: Genellikle TPT ve TPC'ye göre daha iyi performans sunar çünkü sorgularda katılım (join) yapılmaz.
+Basitlik: Yapı basit ve anlaşılır olup, ORM tarafında ekstra işlemler gerektirmez.
+Sütun İsrafı: Alt sınıflara özgü sütunlar boş kalabilir (null), bu da veritabanında yer israfına yol açabilir.
+
+public class BillingDetail
+{
+    public int BillingDetailId { get; set; }
+    public string Owner { get; set; }
+    public string Number { get; set; }
+}
+
+public class BankAccount : BillingDetail
+{
+    public string BankName { get; set; }
+    public string Swift { get; set; }
+}
+
+public class CreditCard : BillingDetail
+{
+    public string CardType { get; set; }
+    public string ExpiryMonth { get; set; }
+    public string ExpiryYear { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+2-Table per Type (TPT):
+
+Her sınıf kendi tablosuna sahip olur.
+Üst sınıfın tablosuyla birincil/anahtar (PK-FK) ilişki üzerinden birleştirilir.
+
+Verimlilik: TPH'ye kıyasla daha verimli veri depolama, çünkü boş alan yok.
+Sorgu Karmaşıklığı: Katılım gerektiğinden sorgular TPH'ye göre daha karmaşık olabilir.
+Esneklik: Veritabanı şeması daha esnek ve değişikliklere daha açık olabilir.
+
+// Üst sınıf için tablo
+public class BillingDetail
+{
+    public int BillingDetailId { get; set; }
+    public string Owner { get; set; }
+    public string Number { get; set; }
+}
+
+// BankAccount için ayrı bir tablo
+public class BankAccount : BillingDetail
+{
+    public string BankName { get; set; }
+    public string Swift { get; set; }
+}
+
+// CreditCard için ayrı bir tablo
+public class CreditCard : BillingDetail
+{
+    public string CardType { get; set; }
+    public string ExpiryMonth { get; set; }
+    public string ExpiryYear { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+3-Table per Concrete Class (TPC):
+
+Her somut sınıf kendi tablosuna sahip olur.
+Ortak alanlar her tabloda tekrar eder.
+
+Veri Yeniden Kullanımı: Veri yeniden kullanımı yoktur; her tablo kendi verilerini içerir.
+Veritabanı Yapısı: Her somut sınıf için ayrı bir tablo vardır.
+Esneklik ve Yalıtım: Her sınıfın değişiklikleri diğerlerini etkilemez.
+
+// BankAccount için tamamen ayrı bir tablo
+public class BankAccount
+{
+    public int BankAccountId { get; set; }
+    public string Owner { get; set; }
+    public string Number { get; set; }
+    public string BankName { get; set; }
+    public string Swift { get; set; }
+}
+
+// CreditCard için tamamen ayrı bir tablo
+public class CreditCard
+{
+    public int CreditCardId { get; set; }
+    public string Owner { get; set; }
+    public string Number { get; set; }
+    public string CardType { get; set; }
+    public string ExpiryMonth { get; set; }
+    public string ExpiryYear { get; set; }
+}
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________
+
+__________________________________________________________________________________________________________________________

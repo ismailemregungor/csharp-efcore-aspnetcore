@@ -1,0 +1,12 @@
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\bin\Debug\net6.0\SOLIDPrinciples.deps.json
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\bin\Debug\net6.0\SOLIDPrinciples.dll
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\bin\Debug\net6.0\SOLIDPrinciples.pdb
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.csproj.AssemblyReference.cache
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.AssemblyInfoInputs.cache
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.AssemblyInfo.cs
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.csproj.CoreCompileInputs.cache
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.dll
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\refint\SOLIDPrinciples.dll
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\SOLIDPrinciples.pdb
+C:\Users\halkbank2\source\repos\SOLIDPrinciples\SOLIDPrinciples\obj\Debug\net6.0\ref\SOLIDPrinciples.dll

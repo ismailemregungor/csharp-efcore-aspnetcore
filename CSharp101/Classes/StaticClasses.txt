@@ -1,0 +1,171 @@
+﻿______________________________________________________________________________________________________________________________________________________________________
+
+Static Classes:
+
+*Örneklenemez: static sınıflar new anahtar kelimesi ile örneklenemez.
+
+*Yalnızca Static Üyeler: static sınıflar yalnızca static metotlar, özellikler, alanlar veya olaylar içerebilir.
+
+*Genişletilemez: static sınıflar türetilmiş sınıflar tarafından genişletilemez (miras alınamaz).
+
+*Yapıcı Kısıtlamaları: static sınıflar yalnızca static yapıcıları içerebilir ve bu yapıcılar parametre almaz.
+
+*Hafıza Yönetimi: static sınıflar ve üyeleri, uygulamanın yaşam süresi boyunca bellekte belleğin static bölümünde saklanır.
+
+*Nesne Oluşturmadan Erişilebilirlik: Static sınıfların üyelerine sınıf adı 
+üzerinden doğrudan erişilebilirler. Yani nesne oluşturmadan kullanılabilirler.
+
+*Static Üyeler: Static sınıfların içindeki üyeler de static olmalıdır. 
+Bu, her nesnenin kendi kopyalarını oluşturmadığı anlamına gelir.
+
+*Kalıtım Alınamaz: Static sınıfların sadece static metotlar içerdiği 
+ve dolayısıyla kalıtım alınamadığı unutulmamalıdır.
+
+*Instance'ı 1 kez oluşur ve oluşan kopya RAM'deki static bölümünde yer alır.
+
+Static Class Kullanım Amaçları ve Senaryolar:
+
+Yardımcı Sınıflar (Helper Classes): Static sınıflar genellikle yardımcı işlevlere 
+sahip metotları içerir. Örneğin, matematiksel işlemler yapmak için kullanabilirsiniz.
+
+Sabit Değerler (Constants): Sık kullanılan sabit değerleri içeren sınıfları 
+static yapabilirsiniz. Böylece bu değerleri kolayca erişebilirsiniz.
+
+Tek Bir Örnek Yeterli Durumlar (Singleton): Bazı senaryolarda sadece bir örneğin varlığı yeterlidir. 
+Bu durumda, bir static sınıf kullanarak bu örneği saklayabilirsiniz.
+
+Extension Metotları: C# gibi dillerde, extension metotlar static sınıflarda tanımlanır 
+ve mevcut sınıflara yeni metotlar eklemek için kullanılır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Members:
+
+Sınıf Seviyesinde: static üyeler, sınıf seviyesinde bulunur ve sınıfın tüm örnekleri tarafından paylaşılır.
+
+Örnek Bağımsız: static üyeler, sınıf örneklerinden bağımsızdır; doğrudan sınıf üzerinden erişilir.
+
+Bellek Verimliliği: Tek bir bellek alanı kaplarlar çünkü yalnızca bir kopyaları vardır, bu da bellek kullanımını optimize eder.
+
+Global Erişim: Programın herhangi bir yerinden erişilebilirler.
+
+Özellikler ve Kullanım Senaryoları:
+
+Global Durum Yönetimi: Uygulama genelinde kullanılacak sabit değerler veya yapılandırma ayarları gibi global bilgileri saklamak için kullanılır.
+
+Yardımcı Fonksiyonlar: Örneklemeye ihtiyaç duymayan genel yardımcı fonksiyonlar oluşturmak için kullanılır.
+
+Singleton Pattern: Singleton tasarım deseni, bir sınıfın yalnızca bir örneğine sahip olmasını sağlamak için statik üyeleri kullanır.
+
+Fabrika Metodları: Sınıflar için örnek oluşturma sorumluluğunu almak için kullanılır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Field:
+
+class Sayac
+{
+    public static int deger = 0;
+}
+
+// Kullanım
+Sayac.deger += 1;
+Console.WriteLine(Sayac.deger);  // Çıktı: 1
+
+// Özet: 'deger', tüm 'Sayac' örnekleri tarafından paylaşılan statik bir alandır.
+
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Property;
+
+class Ayarlar
+{
+    public static string Url { get; set; } = "https://ornek.com";
+}
+
+// Kullanım
+Console.WriteLine(Ayarlar.Url);  // Çıktı: "https://ornek.com"
+
+// Özet: 'Url', başlangıç değeri atanmış bir static property'dir.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Method
+
+class Matematik
+{
+    public static int KareAl(int num)
+    {
+        return num * num;
+    }
+}
+
+// Kullanım
+int sonuc = Matematik.KareAl(5);
+Console.WriteLine(sonuc);  // Çıktı: 25
+
+// Özet: 'KareAl', bir sayının karesini hesaplayan statik bir metottur.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Ctor:
+
+class Veritabani
+{
+    public static string BaglantiDizesi;
+
+    static Veritabani()
+    {
+        BaglantiDizesi = "VeritabanınaBağlan";
+        // Burada daha karmaşık başlatma işlemleri de gerçekleştirilebilir.
+    }
+}
+
+// Kullanım
+Console.WriteLine(Veritabani.BaglantiDizesi);  // Çıktı: "VeritabanınaBağlan"
+
+// Özet: Statik yapıcı, sınıfın statik üyelerini başlatmak için kullanılır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Basit Static Sınıf
+
+public static class Yardimci
+{
+    public static void MesajYaz(string mesaj)
+    {
+        Console.WriteLine(mesaj);
+    }
+}
+
+// Kullanım
+Yardimci.MesajYaz("Merhaba Dünya!");
+
+// Özet: "Yardimci" adında bir static sınıf oluşturuldu ve direkt sınıf üzerinden kullanıldı.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+Static Yapıcı ile Static Sınıf
+
+public static class Ayarlar
+{
+    public static string BaglantiDizesi { get; private set; }
+
+    static Ayarlar()
+    {
+        BaglantiDizesi = "VeritabanıBağlantıDizesi";
+    }
+}
+
+// Kullanım
+Console.WriteLine(Ayarlar.BaglantiDizesi);
+
+// Özet: Static yapıcı kullanılarak, sınıfın başlatılması sırasında başlangıç değeri atanmıştır.
+
+______________________________________________________________________________________________________________________________________________________________________
+
+______________________________________________________________________________________________________________________________________________________________________
+
+______________________________________________________________________________________________________________________________________________________________________
+

@@ -1,0 +1,12 @@
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.deps.json
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\bin\Debug\net6.0\1-EFCoreProjectSetupGuide.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.csproj.AssemblyReference.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.AssemblyInfoInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.AssemblyInfo.cs
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.csproj.CoreCompileInputs.cache
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\refint\1-EFCoreProjectSetupGuide.dll
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\1-EFCoreProjectSetupGuide.pdb
+C:\Users\iegof\Desktop\BA-ZT-Yazılım Uzman Yardımcısı\BT-ZA-Codes\EntityFrameworkCore\1-EFCoreProjectSetupGuide\obj\Debug\net6.0\ref\1-EFCoreProjectSetupGuide.dll

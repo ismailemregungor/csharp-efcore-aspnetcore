@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "BurgerKingEXE/1.0.0": {
+        "dependencies": {
+          "BurgerKingDLL": "1.0.0"
+        },
+        "runtime": {
+          "BurgerKingEXE.dll": {}
+        }
+      },
+      "BurgerKingDLL/1.0.0": {
+        "runtime": {
+          "BurgerKingDLL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BurgerKingEXE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BurgerKingDLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

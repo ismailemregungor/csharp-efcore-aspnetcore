@@ -1,0 +1,134 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Generic Contraints - Generic Kısıtlamalar:
+
+Tür Güvenliği Artırır: Kısıtlamalar, yanlış tür kullanımını önleyerek tür güvenliğini artırır.
+Kod Anlaşılırlığını İyileştirir: Hangi türlerin desteklendiğini belirterek, kodun anlamını ve beklentilerini açıklığa kavuşturur.
+Derleme Zamanı Denetimi Sağlar: Kısıtlamalar, uyumsuz türlerin derleme zamanında tespit edilmesini sağlayarak çalışma zamanı hatalarını azaltır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+Metod Fonksiyonelliği: Belirli metodları veya özellikleri olan türlerle çalışırken.
+Kod Yeniden Kullanılabilirliği: Farklı türlerle çalışırken kodun yeniden kullanılabilirliğini korurken, tür güvenliğini de sağlamak.
+Yüksek Performans: Boxing ve unboxing işlemlerinin olumsuz etkilerini ortadan kaldırarak performansı artırır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kısıtlama Türleri:
+
+where T : struct: T, değer türü olmalıdır.
+where T : class: T, referans türü olmalıdır.
+where T : new(): T, parametresiz bir yapıcıya sahip olmalıdır.
+where T : [base class name]: T, belirtilen temel sınıf türünden türetilmiş olmalıdır.
+where T : [interface name]: T, belirtilen arayüzü uygulamalıdır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kısıtlama Sıralaması:
+
+Birden fazla kısıtlama uygulandığında, sıralama şu şekilde olmalıdır:
+
+Başlangıçta class veya struct.
+Sonrasında sınıflar (classes).
+Ardından arayüzler (interfaces).
+Son olarak new().
+
+*Bir yapıya birden fazla kısıt uygulaanbilir.
+*Sadece new() kısıtı en son kısıt olarak yazılmalıdır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+where T : class (Referans Tip Sınırlaması): Bu sınırlama, 
+generic tür parametresinin yalnızca referans türlerini (class) 
+kabul edebileceğini belirtir. Değer türleri (struct) kabul edilmez.
+
+public class MyClass<T> where T : class
+{
+    // T yalnızca referans tipleri kabul eder.
+}
+
+// Kullanım
+MyClass<string> strClass = new MyClass<string>(); // Geçerli
+MyClass<int> intClass = new MyClass<int>();       // Hata: int bir referans türü değil.
+
+
+public void Display<T>(T item) where T : Animal
+{
+    item.MakeSound();
+}
+
+// Özet: Bu metod, yalnızca 'Animal' sınıfından türetilmiş türler için geçerlidir ve bu türlerin 'MakeSound' metodunu çağırır.
+
+
+________________________________________________________________________________________________________________________________________________________________________
+
+where T : struct (Değer Tipi Sınırlaması): Bu sınırlama, 
+generic tür parametresinin yalnızca değer türlerini (struct) 
+kabul edebileceğini belirtir. Referans türleri (class) kabul edilmez.
+
+public class MyGenericClass<T> where T : struct
+{
+    // T yalnızca değer tiplerini kabul eder.
+}
+
+// Kullanım
+MyGenericClass<int> intClass = new MyGenericClass<int>();       // Geçerli
+MyGenericClass<string> strClass = new MyGenericClass<string>(); // Hata: string bir değer türü değil.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+where T : new() (Parametresiz Kurucu Metod Sınırlaması): Bu sınırlama, 
+generic tür parametresinin bir parametresiz kurucu metoda sahip olması gerektiğini belirtir.
+
+public class MyGenericClass<T> where T : new()
+{
+    public T CreateInstance()
+    {
+        return new T();
+    }
+}
+
+// Kullanım
+MyGenericClass<MyClass> myClassInstance = new MyGenericClass<MyClass>();
+MyClass instance = myClassInstance.CreateInstance(); // MyClass türünden bir örnek oluşturabiliriz.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+where T : ClassName (Bir Üst Sınıf Sınırlaması): Bu sınırlama, 
+generic tür parametresinin belirli bir sınıfın türetilmiş sınıfı olması gerektiğini belirtir.
+
+public class MyGenericClass<T> where T : MyBaseClass
+{
+    // T yalnızca MyBaseClass sınıfından türetilen sınıfları kabul eder.
+}
+
+public class MyBaseClass { }
+
+public class MyDerivedClass : MyBaseClass { }
+
+// Kullanım
+MyGenericClass<MyBaseClass> baseClass = new MyGenericClass<MyBaseClass>();       // Geçerli
+MyGenericClass<MyDerivedClass> derivedClass = new MyGenericClass<MyDerivedClass>(); // Geçerli
+MyGenericClass<string> strClass = new MyGenericClass<string>();                 // Hata: string MyBaseClass'tan türetilmemiştir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+where T : InterfaceName (Arayüz Sınırlaması): Bu sınırlama, 
+generic tür parametresinin belirli bir arayüzü uygulaması gerektiğini belirtir.
+
+
+public class MyGenericClass<T> where T : IComparable
+{
+    // T yalnızca IComparable arayüzünü uygulayan türleri kabul eder.
+}
+
+// Kullanım
+MyGenericClass<int> intClass = new MyGenericClass<int>();             // Hata: int IComparable arayüzünü uygulamaz.
+MyGenericClass<string> strClass = new MyGenericClass<string>();       // Hata: string IComparable arayüzünü uygulamaz.
+MyGenericClass<SomeComparableClass> customClass = new MyGenericClass<SomeComparableClass>(); // Geçerli
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+

@@ -1,0 +1,27 @@
+﻿________________________________________________________________________________________________________________________________________________________________________
+
+Generics:
+
+Generic'lerin Özellikleri:
+
+Generic ile type'larda bir değişken gibi davranır.
+
+*Tür Güvenliği: Jenerikler, runtime'da hatalar yerine derleme zamanında hatalar almanızı sağlar, böylece tür uyumsuzlukları daha erken yakalanır.
+*Yeniden Kullanılabilirlik: Aynı işlevselliği farklı veri türleriyle kullanmanızı sağlar, böylece kod tekrarını azaltır.
+*Performans: Boxing ve unboxing işlemlerinin gerekliliğini ortadan kaldırarak performansı artırır.
+*Türden Bağımsız Kod: Jenerikler, belirli bir tür için değil, herhangi bir tür için kod yazmanıza olanak tanır.
+*Generic ile type'larda bir değişken gibi davranır.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+Kullanım Amaçları ve Senaryoları:
+
+*Koleksiyonlar: En yaygın kullanım, tür güvenli koleksiyonlar oluşturmaktır. Örneğin, List<T>, Dictionary<TKey, TValue>, vb.
+*Metodlar: Jenerik metodlar, farklı türlerle çalışacak şekilde yazılabilir, böylece metod overloading'e olan ihtiyacı azaltır.
+*Sınıflar: Jenerik sınıflar, içerdikleri metodlar veya özellikler için belirli bir tür yerine bir tür parametresi alır.
+*Delege ve Olaylar: Jenerikler, delegate ve event tanımlarında da kullanılabilir, böylece daha esnek ve tür güvenli API'lar oluşturulabilir.
+
+________________________________________________________________________________________________________________________________________________________________________
+
+
+________________________________________________________________________________________________________________________________________________________________________
